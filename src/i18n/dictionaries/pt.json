@@ -27,7 +27,14 @@
     "step": "Passo",
     "readModule": "Ler módulo",
     "relatedContacts": "Contatos relacionados",
-    "noContacts": "Nenhum contato cadastrado neste módulo ainda."
+    "noContacts": "Nenhum contato cadastrado neste módulo ainda.",
+    "topicsInModule": "Tópicos deste módulo",
+    "backToModule": "Voltar para o módulo",
+    "topic": "Tópico",
+    "topicOf": "de",
+    "relatedTopicContacts": "Contatos relacionados a este tópico",
+    "previousTopic": "Anterior",
+    "nextTopic": "Próximo"
   },
   "contacts": {
     "title": "Contatos úteis",

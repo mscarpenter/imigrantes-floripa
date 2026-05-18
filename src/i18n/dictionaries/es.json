@@ -27,7 +27,14 @@
     "step": "Paso",
     "readModule": "Leer módulo",
     "relatedContacts": "Contactos relacionados",
-    "noContacts": "Ningún contacto registrado en este módulo todavía."
+    "noContacts": "Ningún contacto registrado en este módulo todavía.",
+    "topicsInModule": "Temas de este módulo",
+    "backToModule": "Volver al módulo",
+    "topic": "Tema",
+    "topicOf": "de",
+    "relatedTopicContacts": "Contactos relacionados a este tema",
+    "previousTopic": "Anterior",
+    "nextTopic": "Siguiente"
   },
   "contacts": {
     "title": "Contactos útiles",

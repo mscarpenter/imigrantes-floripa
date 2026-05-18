@@ -4,7 +4,21 @@ import type { ModuleColor } from "./colors";
 export interface ModuleTranslation {
   title: string;
   summary: string;
+  /** When the module has topics, this is a short intro shown before the topic list. */
   body: string;
+}
+
+export interface TopicTranslation {
+  title: string;
+  summary: string;
+  body: string;
+}
+
+export interface Topic {
+  slug: string;
+  order: number;
+  contactIds: string[];
+  translations: Record<Locale, TopicTranslation>;
 }
 
 export interface Module {
@@ -14,6 +28,7 @@ export interface Module {
   color: ModuleColor;
   contactIds: string[];
   translations: Record<Locale, ModuleTranslation>;
+  topics?: Topic[];
 }
 
 export interface CategoryTranslation {

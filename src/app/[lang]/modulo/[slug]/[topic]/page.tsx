@@ -8,63 +8,64 @@ import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   getAllModules,
-  getModuleBySlug,
+  getTopicBySlug,
   getContactsByIds,
 } from "@/lib/data/queries";
 import { Icon } from "@/components/Icon";
 import { ContactCard } from "@/components/ContactCard";
-import { TopicCard } from "@/components/TopicCard";
 import { Separator } from "@/components/ui/separator";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {
   const modules = getAllModules();
-  return modules.map((m) => ({ slug: m.slug }));
+  return modules.flatMap((m) =>
+    (m.topics ?? []).map((t) => ({ slug: m.slug, topic: t.slug })),
+  );
 }
 
 export async function generateMetadata({
   params,
-}: PageProps<"/[lang]/modulo/[slug]">): Promise<Metadata> {
-  const { lang, slug } = await params;
+}: PageProps<"/[lang]/modulo/[slug]/[topic]">): Promise<Metadata> {
+  const { lang, slug, topic: topicSlug } = await params;
   if (!isLocale(lang)) return {};
-  const module = getModuleBySlug(slug);
-  if (!module) return {};
-  const t = module.translations[lang];
+  const found = getTopicBySlug(slug, topicSlug);
+  if (!found) return {};
+  const t = found.topic.translations[lang];
   return {
     title: t.title,
     description: t.summary,
   };
 }
 
-export default async function ModulePage({
+export default async function TopicPage({
   params,
-}: PageProps<"/[lang]/modulo/[slug]">) {
-  const { lang, slug } = await params;
+}: PageProps<"/[lang]/modulo/[slug]/[topic]">) {
+  const { lang, slug, topic: topicSlug } = await params;
   if (!isLocale(lang)) notFound();
 
-  const module = getModuleBySlug(slug);
-  if (!module) notFound();
+  const found = getTopicBySlug(slug, topicSlug);
+  if (!found) notFound();
 
+  const { module, topic } = found;
   const dict = await getDictionary(lang);
-  const t = module.translations[lang];
+  const t = topic.translations[lang];
+  const moduleT = module.translations[lang];
   const colors = colorsFor(module.color);
-  const allModules = getAllModules();
-  const currentIndex = allModules.findIndex((m) => m.slug === module.slug);
-  const previousModule = currentIndex > 0 ? allModules[currentIndex - 1] : null;
-  const nextModule =
-    currentIndex < allModules.length - 1 ? allModules[currentIndex + 1] : null;
-  const relatedContacts = getContactsByIds(module.contactIds);
-  const topics = module.topics ?? [];
-  const hasTopics = topics.length > 0;
+  const topics = [...(module.topics ?? [])].sort((a, b) => a.order - b.order);
+  const currentIndex = topics.findIndex((x) => x.slug === topic.slug);
+  const previousTopic = currentIndex > 0 ? topics[currentIndex - 1] : null;
+  const nextTopic =
+    currentIndex < topics.length - 1 ? topics[currentIndex + 1] : null;
+  const relatedContacts = getContactsByIds(topic.contactIds);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-10 md:py-14">
       <Link
-        href={`/${lang}/trilha`}
+        href={`/${lang}/modulo/${module.slug}`}
         className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> {dict.nav.trail}
+        <ArrowLeft className="size-4" /> {moduleT.title}
       </Link>
 
       <div className="mt-6 flex items-center gap-3">
@@ -77,7 +78,7 @@ export default async function ModulePage({
             colors.stepText,
           )}
         >
-          {dict.trail.step} {module.order}
+          {dict.trail.topic} {topic.order} {dict.trail.topicOf} {topics.length}
         </p>
       </div>
 
@@ -92,29 +93,11 @@ export default async function ModulePage({
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{t.body}</ReactMarkdown>
       </div>
 
-      {hasTopics && (
-        <section className="mt-10">
-          <h2 className="text-xl font-semibold">{dict.trail.topicsInModule}</h2>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {topics
-              .slice()
-              .sort((a, b) => a.order - b.order)
-              .map((topic) => (
-                <TopicCard
-                  key={topic.slug}
-                  topic={topic}
-                  moduleSlug={module.slug}
-                  moduleColor={module.color}
-                  locale={lang}
-                />
-              ))}
-          </div>
-        </section>
-      )}
-
       {relatedContacts.length > 0 && (
         <section className="mt-12">
-          <h2 className="text-xl font-semibold">{dict.trail.relatedContacts}</h2>
+          <h2 className="text-xl font-semibold">
+            {dict.trail.relatedTopicContacts}
+          </h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {relatedContacts.map((contact) => (
               <ContactCard
@@ -129,26 +112,27 @@ export default async function ModulePage({
       )}
 
       <nav className="mt-12 flex items-center justify-between gap-4 border-t pt-6 text-sm">
-        {previousModule ? (
+        {previousTopic ? (
           <Link
-            href={`/${lang}/modulo/${previousModule.slug}`}
+            href={`/${lang}/modulo/${module.slug}/${previousTopic.slug}`}
             className="group flex flex-1 items-center gap-2 text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-0.5" />
             <span className="truncate">
-              {previousModule.translations[lang].title}
+              {dict.trail.previousTopic}:{" "}
+              {previousTopic.translations[lang].title}
             </span>
           </Link>
         ) : (
           <span className="flex-1" />
         )}
-        {nextModule && (
+        {nextTopic && (
           <Link
-            href={`/${lang}/modulo/${nextModule.slug}`}
+            href={`/${lang}/modulo/${module.slug}/${nextTopic.slug}`}
             className="group flex flex-1 items-center justify-end gap-2 text-right text-muted-foreground hover:text-foreground"
           >
             <span className="truncate">
-              {nextModule.translations[lang].title}
+              {dict.trail.nextTopic}: {nextTopic.translations[lang].title}
             </span>
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
           </Link>

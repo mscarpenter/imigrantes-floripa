@@ -1,0 +1,58 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import type { Topic } from "@/lib/data/types";
+import type { ModuleColor } from "@/lib/data/colors";
+import type { Locale } from "@/i18n/config";
+import { colorsFor } from "@/lib/data/colors";
+import { cn } from "@/lib/utils";
+
+interface TopicCardProps {
+  topic: Topic;
+  moduleSlug: string;
+  moduleColor: ModuleColor;
+  locale: Locale;
+}
+
+export function TopicCard({
+  topic,
+  moduleSlug,
+  moduleColor,
+  locale,
+}: TopicCardProps) {
+  const t = topic.translations[locale];
+  const colors = colorsFor(moduleColor);
+  return (
+    <Link
+      href={`/${locale}/modulo/${moduleSlug}/${topic.slug}`}
+      className="group block focus:outline-none"
+    >
+      <Card
+        className={cn(
+          "h-full p-5 transition-colors group-focus-visible:ring-2 group-focus-visible:ring-ring",
+          colors.cardBorder,
+        )}
+      >
+        <div className="flex items-start gap-4">
+          <span
+            className={cn(
+              "flex size-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold",
+              colors.iconBg,
+              colors.iconText,
+            )}
+          >
+            {topic.order}
+          </span>
+          <div className="flex-1">
+            <h3 className="font-semibold leading-tight">{t.title}</h3>
+            <p className="mt-1.5 text-sm text-muted-foreground">{t.summary}</p>
+          </div>
+          <ArrowRight
+            className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5"
+            aria-hidden
+          />
+        </div>
+      </Card>
+    </Link>
+  );
+}
