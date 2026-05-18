@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -13,7 +11,7 @@ import {
 } from "@/lib/data/queries";
 import { Icon } from "@/components/Icon";
 import { ContactCard } from "@/components/ContactCard";
-import { Separator } from "@/components/ui/separator";
+import { MarkdownContent } from "@/components/MarkdownContent";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
@@ -32,10 +30,7 @@ export async function generateMetadata({
   const found = getTopicBySlug(slug, topicSlug);
   if (!found) return {};
   const t = found.topic.translations[lang];
-  return {
-    title: t.title,
-    description: t.summary,
-  };
+  return { title: t.title, description: t.summary };
 }
 
 export default async function TopicPage({
@@ -60,84 +55,136 @@ export default async function TopicPage({
   const relatedContacts = getContactsByIds(topic.contactIds);
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-10 md:py-14">
-      <Link
-        href={`/${lang}/modulo/${module.slug}`}
-        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" /> {moduleT.title}
-      </Link>
+    <article>
+      {/* Rich colored header */}
+      <header className={cn("border-b", colors.softBg)}>
+        <div className="mx-auto max-w-3xl px-4 py-10 md:py-12">
+          <Link
+            href={`/${lang}/modulo/${module.slug}`}
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="size-4" />
+            {moduleT.title}
+          </Link>
 
-      <div className="mt-6 flex items-center gap-3">
-        <div className={cn("rounded-lg p-2.5", colors.iconBg, colors.iconText)}>
-          <Icon name={module.icon} className="size-6" />
-        </div>
-        <p
-          className={cn(
-            "text-sm font-semibold uppercase tracking-wide",
-            colors.stepText,
-          )}
-        >
-          {dict.trail.topic} {topic.order} {dict.trail.topicOf} {topics.length}
-        </p>
-      </div>
-
-      <h1 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-        {t.title}
-      </h1>
-      <p className="mt-3 text-lg text-muted-foreground">{t.summary}</p>
-
-      <Separator className="my-8" />
-
-      <div className="prose prose-stone max-w-none dark:prose-invert prose-headings:scroll-mt-20 prose-h2:text-2xl prose-h3:text-lg prose-a:text-primary">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{t.body}</ReactMarkdown>
-      </div>
-
-      {relatedContacts.length > 0 && (
-        <section className="mt-12">
-          <h2 className="text-xl font-semibold">
-            {dict.trail.relatedTopicContacts}
-          </h2>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            {relatedContacts.map((contact) => (
-              <ContactCard
-                key={contact.id}
-                contact={contact}
-                locale={lang}
-                dict={dict}
-              />
-            ))}
+          <div className="mt-6 flex items-center gap-3">
+            <div
+              className={cn(
+                "flex size-11 items-center justify-center rounded-xl border bg-background",
+                colors.iconText,
+              )}
+            >
+              <Icon name={module.icon} className="size-5" />
+            </div>
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide">
+              <span className={colors.stepText}>
+                {dict.trail.topic} {topic.order} {dict.trail.topicOf}{" "}
+                {topics.length}
+              </span>
+              <span className="text-muted-foreground/40">·</span>
+              <span className="text-muted-foreground">{moduleT.title}</span>
+            </div>
           </div>
-        </section>
-      )}
 
-      <nav className="mt-12 flex items-center justify-between gap-4 border-t pt-6 text-sm">
-        {previousTopic ? (
-          <Link
-            href={`/${lang}/modulo/${module.slug}/${previousTopic.slug}`}
-            className="group flex flex-1 items-center gap-2 text-muted-foreground hover:text-foreground"
-          >
-            <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-0.5" />
-            <span className="truncate">
-              {dict.trail.previousTopic}:{" "}
-              {previousTopic.translations[lang].title}
-            </span>
-          </Link>
-        ) : (
-          <span className="flex-1" />
+          <h1 className="mt-5 text-3xl font-bold tracking-tight md:text-4xl">
+            {t.title}
+          </h1>
+          <p className="mt-3 text-lg leading-relaxed text-muted-foreground">
+            {t.summary}
+          </p>
+
+          {/* Topic chips at the bottom of header */}
+          {topics.length > 1 && (
+            <nav
+              aria-label="Topics in this module"
+              className="mt-6 flex flex-wrap gap-2"
+            >
+              {topics.map((other) => {
+                const isCurrent = other.slug === topic.slug;
+                return (
+                  <Link
+                    key={other.slug}
+                    href={`/${lang}/modulo/${module.slug}/${other.slug}`}
+                    aria-current={isCurrent ? "page" : undefined}
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+                      isCurrent
+                        ? colors.pillActive
+                        : "border-border bg-background text-muted-foreground hover:border-foreground/40 hover:text-foreground",
+                    )}
+                  >
+                    <span className="text-[10px] opacity-70">{other.order}</span>
+                    <span>{other.translations[lang].title}</span>
+                  </Link>
+                );
+              })}
+            </nav>
+          )}
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
+        <MarkdownContent body={t.body} color={module.color} />
+
+        {relatedContacts.length > 0 && (
+          <section className="mt-14">
+            <h2 className="flex items-center gap-3 text-xl font-bold tracking-tight">
+              <span
+                aria-hidden
+                className={cn(
+                  "inline-block h-5 w-1 shrink-0 rounded-full",
+                  colors.solidBg,
+                )}
+              />
+              {dict.trail.relatedTopicContacts}
+            </h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {relatedContacts.map((contact) => (
+                <ContactCard
+                  key={contact.id}
+                  contact={contact}
+                  locale={lang}
+                  dict={dict}
+                />
+              ))}
+            </div>
+          </section>
         )}
-        {nextTopic && (
-          <Link
-            href={`/${lang}/modulo/${module.slug}/${nextTopic.slug}`}
-            className="group flex flex-1 items-center justify-end gap-2 text-right text-muted-foreground hover:text-foreground"
-          >
-            <span className="truncate">
-              {dict.trail.nextTopic}: {nextTopic.translations[lang].title}
-            </span>
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-        )}
-      </nav>
+
+        {/* Prev/next topic navigation as cards */}
+        <nav className="mt-14 grid gap-3 sm:grid-cols-2">
+          {previousTopic ? (
+            <Link
+              href={`/${lang}/modulo/${module.slug}/${previousTopic.slug}`}
+              className="group flex flex-col rounded-xl border bg-card p-4 transition-colors hover:border-foreground/40"
+            >
+              <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                <ArrowLeft className="size-3" />
+                {dict.trail.previousTopic}
+              </span>
+              <span className="mt-1.5 font-semibold leading-tight">
+                {previousTopic.translations[lang].title}
+              </span>
+            </Link>
+          ) : (
+            <span className="hidden sm:block" />
+          )}
+          {nextTopic && (
+            <Link
+              href={`/${lang}/modulo/${module.slug}/${nextTopic.slug}`}
+              className="group flex flex-col items-end rounded-xl border bg-card p-4 text-right transition-colors hover:border-foreground/40 sm:col-start-2"
+            >
+              <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                {dict.trail.nextTopic}
+                <ArrowRight className="size-3" />
+              </span>
+              <span className="mt-1.5 font-semibold leading-tight">
+                {nextTopic.translations[lang].title}
+              </span>
+            </Link>
+          )}
+        </nav>
+      </div>
     </article>
   );
 }

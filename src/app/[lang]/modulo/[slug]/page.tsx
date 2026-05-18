@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -14,7 +12,7 @@ import {
 import { Icon } from "@/components/Icon";
 import { ContactCard } from "@/components/ContactCard";
 import { TopicCard } from "@/components/TopicCard";
-import { Separator } from "@/components/ui/separator";
+import { MarkdownContent } from "@/components/MarkdownContent";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
@@ -31,10 +29,7 @@ export async function generateMetadata({
   const module = getModuleBySlug(slug);
   if (!module) return {};
   const t = module.translations[lang];
-  return {
-    title: t.title,
-    description: t.summary,
-  };
+  return { title: t.title, description: t.summary };
 }
 
 export default async function ModulePage({
@@ -55,51 +50,69 @@ export default async function ModulePage({
   const nextModule =
     currentIndex < allModules.length - 1 ? allModules[currentIndex + 1] : null;
   const relatedContacts = getContactsByIds(module.contactIds);
-  const topics = module.topics ?? [];
+  const topics = [...(module.topics ?? [])].sort((a, b) => a.order - b.order);
   const hasTopics = topics.length > 0;
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-10 md:py-14">
-      <Link
-        href={`/${lang}/trilha`}
-        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" /> {dict.nav.trail}
-      </Link>
+    <article>
+      {/* Rich colored header */}
+      <header className={cn("border-b", colors.softBg)}>
+        <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
+          <Link
+            href={`/${lang}/trilha`}
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="size-4" />
+            {dict.nav.trail}
+          </Link>
 
-      <div className="mt-6 flex items-center gap-3">
-        <div className={cn("rounded-lg p-2.5", colors.iconBg, colors.iconText)}>
-          <Icon name={module.icon} className="size-6" />
+          <div className="mt-6 flex items-center gap-3">
+            <div
+              className={cn(
+                "flex size-14 items-center justify-center rounded-2xl border bg-background shadow-sm",
+                colors.iconText,
+              )}
+            >
+              <Icon name={module.icon} className="size-7" />
+            </div>
+            <div>
+              <p
+                className={cn(
+                  "text-xs font-semibold uppercase tracking-wide",
+                  colors.stepText,
+                )}
+              >
+                {dict.trail.step} {module.order}
+              </p>
+              <h1 className="mt-0.5 text-3xl font-bold tracking-tight md:text-4xl">
+                {t.title}
+              </h1>
+            </div>
+          </div>
+
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            {t.summary}
+          </p>
         </div>
-        <p
-          className={cn(
-            "text-sm font-semibold uppercase tracking-wide",
-            colors.stepText,
-          )}
-        >
-          {dict.trail.step} {module.order}
-        </p>
-      </div>
+      </header>
 
-      <h1 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-        {t.title}
-      </h1>
-      <p className="mt-3 text-lg text-muted-foreground">{t.summary}</p>
+      <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
+        <MarkdownContent body={t.body} color={module.color} />
 
-      <Separator className="my-8" />
-
-      <div className="prose prose-stone max-w-none dark:prose-invert prose-headings:scroll-mt-20 prose-h2:text-2xl prose-h3:text-lg prose-a:text-primary">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{t.body}</ReactMarkdown>
-      </div>
-
-      {hasTopics && (
-        <section className="mt-10">
-          <h2 className="text-xl font-semibold">{dict.trail.topicsInModule}</h2>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {topics
-              .slice()
-              .sort((a, b) => a.order - b.order)
-              .map((topic) => (
+        {hasTopics && (
+          <section className="mt-12">
+            <h2 className="flex items-center gap-3 text-xl font-bold tracking-tight">
+              <span
+                aria-hidden
+                className={cn(
+                  "inline-block h-5 w-1 shrink-0 rounded-full",
+                  colors.solidBg,
+                )}
+              />
+              {dict.trail.topicsInModule}
+            </h2>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {topics.map((topic) => (
                 <TopicCard
                   key={topic.slug}
                   topic={topic}
@@ -108,52 +121,69 @@ export default async function ModulePage({
                   locale={lang}
                 />
               ))}
-          </div>
-        </section>
-      )}
+            </div>
+          </section>
+        )}
 
-      {relatedContacts.length > 0 && (
-        <section className="mt-12">
-          <h2 className="text-xl font-semibold">{dict.trail.relatedContacts}</h2>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            {relatedContacts.map((contact) => (
-              <ContactCard
-                key={contact.id}
-                contact={contact}
-                locale={lang}
-                dict={dict}
+        {relatedContacts.length > 0 && (
+          <section className="mt-14">
+            <h2 className="flex items-center gap-3 text-xl font-bold tracking-tight">
+              <span
+                aria-hidden
+                className={cn(
+                  "inline-block h-5 w-1 shrink-0 rounded-full",
+                  colors.solidBg,
+                )}
               />
-            ))}
-          </div>
-        </section>
-      )}
+              {dict.trail.relatedContacts}
+            </h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {relatedContacts.map((contact) => (
+                <ContactCard
+                  key={contact.id}
+                  contact={contact}
+                  locale={lang}
+                  dict={dict}
+                />
+              ))}
+            </div>
+          </section>
+        )}
 
-      <nav className="mt-12 flex items-center justify-between gap-4 border-t pt-6 text-sm">
-        {previousModule ? (
-          <Link
-            href={`/${lang}/modulo/${previousModule.slug}`}
-            className="group flex flex-1 items-center gap-2 text-muted-foreground hover:text-foreground"
-          >
-            <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-0.5" />
-            <span className="truncate">
-              {previousModule.translations[lang].title}
-            </span>
-          </Link>
-        ) : (
-          <span className="flex-1" />
-        )}
-        {nextModule && (
-          <Link
-            href={`/${lang}/modulo/${nextModule.slug}`}
-            className="group flex flex-1 items-center justify-end gap-2 text-right text-muted-foreground hover:text-foreground"
-          >
-            <span className="truncate">
-              {nextModule.translations[lang].title}
-            </span>
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-        )}
-      </nav>
+        {/* Prev/next module navigation as cards */}
+        <nav className="mt-14 grid gap-3 sm:grid-cols-2">
+          {previousModule ? (
+            <Link
+              href={`/${lang}/modulo/${previousModule.slug}`}
+              className="group flex flex-col rounded-xl border bg-card p-4 transition-colors hover:border-foreground/40"
+            >
+              <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                <ArrowLeft className="size-3" />
+                {dict.trail.previousTopic}
+              </span>
+              <span className="mt-1.5 font-semibold leading-tight">
+                {previousModule.translations[lang].title}
+              </span>
+            </Link>
+          ) : (
+            <span className="hidden sm:block" />
+          )}
+          {nextModule && (
+            <Link
+              href={`/${lang}/modulo/${nextModule.slug}`}
+              className="group flex flex-col items-end rounded-xl border bg-card p-4 text-right transition-colors hover:border-foreground/40 sm:col-start-2"
+            >
+              <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                {dict.trail.nextTopic}
+                <ArrowRight className="size-3" />
+              </span>
+              <span className="mt-1.5 font-semibold leading-tight">
+                {nextModule.translations[lang].title}
+              </span>
+            </Link>
+          )}
+        </nav>
+      </div>
     </article>
   );
 }

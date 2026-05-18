@@ -28,6 +28,14 @@ export interface ColorClasses {
   badge: string;
   /** Active filter pill (used in /contatos). */
   pillActive: string;
+  /** Soft tinted background for callouts. */
+  softBg: string;
+  /** Soft border for callouts. */
+  softBorder: string;
+  /** Solid color used for h2 accent bars and step numbers. */
+  solidBg: string;
+  /** Background for prose tables' header row. */
+  tableHeadBg: string;
 }
 
 export const colorClasses: Record<ModuleColor, ColorClasses> = {
@@ -38,6 +46,10 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
     stepText: "text-blue-700 dark:text-blue-300",
     badge: "bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300",
     pillActive: "border-blue-500 bg-blue-500 text-white hover:bg-blue-600",
+    softBg: "bg-blue-50 dark:bg-blue-950/30",
+    softBorder: "border-blue-200 dark:border-blue-900",
+    solidBg: "bg-blue-500",
+    tableHeadBg: "bg-blue-50 dark:bg-blue-950/40",
   },
   rose: {
     iconBg: "bg-rose-100 dark:bg-rose-950/40",
@@ -46,6 +58,10 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
     stepText: "text-rose-700 dark:text-rose-300",
     badge: "bg-rose-100 text-rose-800 dark:bg-rose-950/50 dark:text-rose-300",
     pillActive: "border-rose-500 bg-rose-500 text-white hover:bg-rose-600",
+    softBg: "bg-rose-50 dark:bg-rose-950/30",
+    softBorder: "border-rose-200 dark:border-rose-900",
+    solidBg: "bg-rose-500",
+    tableHeadBg: "bg-rose-50 dark:bg-rose-950/40",
   },
   orange: {
     iconBg: "bg-orange-100 dark:bg-orange-950/40",
@@ -57,6 +73,10 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
       "bg-orange-100 text-orange-800 dark:bg-orange-950/50 dark:text-orange-300",
     pillActive:
       "border-orange-500 bg-orange-500 text-white hover:bg-orange-600",
+    softBg: "bg-orange-50 dark:bg-orange-950/30",
+    softBorder: "border-orange-200 dark:border-orange-900",
+    solidBg: "bg-orange-500",
+    tableHeadBg: "bg-orange-50 dark:bg-orange-950/40",
   },
   emerald: {
     iconBg: "bg-emerald-100 dark:bg-emerald-950/40",
@@ -68,6 +88,10 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
       "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300",
     pillActive:
       "border-emerald-500 bg-emerald-500 text-white hover:bg-emerald-600",
+    softBg: "bg-emerald-50 dark:bg-emerald-950/30",
+    softBorder: "border-emerald-200 dark:border-emerald-900",
+    solidBg: "bg-emerald-500",
+    tableHeadBg: "bg-emerald-50 dark:bg-emerald-950/40",
   },
   violet: {
     iconBg: "bg-violet-100 dark:bg-violet-950/40",
@@ -79,6 +103,10 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
       "bg-violet-100 text-violet-800 dark:bg-violet-950/50 dark:text-violet-300",
     pillActive:
       "border-violet-500 bg-violet-500 text-white hover:bg-violet-600",
+    softBg: "bg-violet-50 dark:bg-violet-950/30",
+    softBorder: "border-violet-200 dark:border-violet-900",
+    solidBg: "bg-violet-500",
+    tableHeadBg: "bg-violet-50 dark:bg-violet-950/40",
   },
   teal: {
     iconBg: "bg-teal-100 dark:bg-teal-950/40",
@@ -87,6 +115,10 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
     stepText: "text-teal-700 dark:text-teal-300",
     badge: "bg-teal-100 text-teal-800 dark:bg-teal-950/50 dark:text-teal-300",
     pillActive: "border-teal-500 bg-teal-500 text-white hover:bg-teal-600",
+    softBg: "bg-teal-50 dark:bg-teal-950/30",
+    softBorder: "border-teal-200 dark:border-teal-900",
+    solidBg: "bg-teal-500",
+    tableHeadBg: "bg-teal-50 dark:bg-teal-950/40",
   },
   amber: {
     iconBg: "bg-amber-100 dark:bg-amber-950/40",
@@ -96,6 +128,10 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
     stepText: "text-amber-700 dark:text-amber-300",
     badge: "bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300",
     pillActive: "border-amber-500 bg-amber-500 text-white hover:bg-amber-600",
+    softBg: "bg-amber-50 dark:bg-amber-950/30",
+    softBorder: "border-amber-200 dark:border-amber-900",
+    solidBg: "bg-amber-500",
+    tableHeadBg: "bg-amber-50 dark:bg-amber-950/40",
   },
   red: {
     iconBg: "bg-red-100 dark:bg-red-950/40",
@@ -104,6 +140,10 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
     stepText: "text-red-700 dark:text-red-300",
     badge: "bg-red-100 text-red-800 dark:bg-red-950/50 dark:text-red-300",
     pillActive: "border-red-500 bg-red-500 text-white hover:bg-red-600",
+    softBg: "bg-red-50 dark:bg-red-950/30",
+    softBorder: "border-red-200 dark:border-red-900",
+    solidBg: "bg-red-500",
+    tableHeadBg: "bg-red-50 dark:bg-red-950/40",
   },
 };
 
