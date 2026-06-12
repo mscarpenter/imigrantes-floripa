@@ -23,6 +23,8 @@ const iconMap: Record<string, LucideIcon> = {
   Compass,
 };
 
+export const validIconNames = Object.keys(iconMap);
+
 interface IconProps {
   name: string;
   className?: string;

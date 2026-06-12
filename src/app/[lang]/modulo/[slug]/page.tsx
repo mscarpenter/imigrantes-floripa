@@ -26,9 +26,9 @@ export async function generateMetadata({
 }: PageProps<"/[lang]/modulo/[slug]">): Promise<Metadata> {
   const { lang, slug } = await params;
   if (!isLocale(lang)) return {};
-  const module = getModuleBySlug(slug);
-  if (!module) return {};
-  const t = module.translations[lang];
+  const mod = getModuleBySlug(slug);
+  if (!mod) return {};
+  const t = mod.translations[lang];
   return { title: t.title, description: t.summary };
 }
 
@@ -38,19 +38,19 @@ export default async function ModulePage({
   const { lang, slug } = await params;
   if (!isLocale(lang)) notFound();
 
-  const module = getModuleBySlug(slug);
-  if (!module) notFound();
+  const mod = getModuleBySlug(slug);
+  if (!mod) notFound();
 
   const dict = await getDictionary(lang);
-  const t = module.translations[lang];
-  const colors = colorsFor(module.color);
+  const t = mod.translations[lang];
+  const colors = colorsFor(mod.color);
   const allModules = getAllModules();
-  const currentIndex = allModules.findIndex((m) => m.slug === module.slug);
+  const currentIndex = allModules.findIndex((m) => m.slug === mod.slug);
   const previousModule = currentIndex > 0 ? allModules[currentIndex - 1] : null;
   const nextModule =
     currentIndex < allModules.length - 1 ? allModules[currentIndex + 1] : null;
-  const relatedContacts = getContactsByIds(module.contactIds);
-  const topics = [...(module.topics ?? [])].sort((a, b) => a.order - b.order);
+  const relatedContacts = getContactsByIds(mod.contactIds);
+  const topics = [...(mod.topics ?? [])].sort((a, b) => a.order - b.order);
   const hasTopics = topics.length > 0;
 
   return (
@@ -73,7 +73,7 @@ export default async function ModulePage({
                 colors.iconText,
               )}
             >
-              <Icon name={module.icon} className="size-7" />
+              <Icon name={mod.icon} className="size-7" />
             </div>
             <div>
               <p
@@ -82,7 +82,7 @@ export default async function ModulePage({
                   colors.stepText,
                 )}
               >
-                {dict.trail.step} {module.order}
+                {dict.trail.step} {mod.order}
               </p>
               <h1 className="mt-0.5 text-3xl font-bold tracking-tight md:text-4xl">
                 {t.title}
@@ -97,7 +97,7 @@ export default async function ModulePage({
       </header>
 
       <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
-        <MarkdownContent body={t.body} color={module.color} />
+        <MarkdownContent body={t.body} color={mod.color} />
 
         {hasTopics && (
           <section className="mt-12">
@@ -116,8 +116,8 @@ export default async function ModulePage({
                 <TopicCard
                   key={topic.slug}
                   topic={topic}
-                  moduleSlug={module.slug}
-                  moduleColor={module.color}
+                  moduleSlug={mod.slug}
+                  moduleColor={mod.color}
                   locale={lang}
                 />
               ))}

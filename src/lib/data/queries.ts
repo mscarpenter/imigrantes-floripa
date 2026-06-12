@@ -34,18 +34,18 @@ export function getCategoryBySlug(slug: string): Category | undefined {
 }
 
 export function getTopicsForModule(moduleSlug: string): Topic[] {
-  const module = getModuleBySlug(moduleSlug);
-  if (!module?.topics) return [];
-  return [...module.topics].sort((a, b) => a.order - b.order);
+  const mod = getModuleBySlug(moduleSlug);
+  if (!mod?.topics) return [];
+  return [...mod.topics].sort((a, b) => a.order - b.order);
 }
 
 export function getTopicBySlug(
   moduleSlug: string,
   topicSlug: string,
 ): { module: Module; topic: Topic } | undefined {
-  const module = getModuleBySlug(moduleSlug);
-  if (!module?.topics) return undefined;
-  const topic = module.topics.find((t) => t.slug === topicSlug);
+  const mod = getModuleBySlug(moduleSlug);
+  if (!mod?.topics) return undefined;
+  const topic = mod.topics.find((t) => t.slug === topicSlug);
   if (!topic) return undefined;
-  return { module, topic };
+  return { module: mod, topic };
 }
