@@ -2,6 +2,7 @@ import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Lightbulb } from "lucide-react";
 import { colorsFor, type ModuleColor } from "@/lib/data/colors";
+import { nodeToText, slugify } from "@/lib/markdown/toc";
 import { cn } from "@/lib/utils";
 
 // Composite selectors must appear literally in source for Tailwind v4 to
@@ -29,7 +30,10 @@ export function MarkdownContent({ body, color }: MarkdownContentProps) {
 
   const components: Components = {
     h2: ({ children }) => (
-      <h2 className="mt-12 mb-4 flex items-start gap-3 text-2xl font-bold tracking-tight">
+      <h2
+        id={slugify(nodeToText(children))}
+        className="mt-12 mb-4 flex scroll-mt-28 items-start gap-3 text-2xl font-bold tracking-tight"
+      >
         <span
           aria-hidden
           className={cn(

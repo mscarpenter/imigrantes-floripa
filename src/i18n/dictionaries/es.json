@@ -6,11 +6,13 @@
   "nav": {
     "home": "Inicio",
     "trail": "Ruta",
+    "guidance": "Orientación",
     "contacts": "Contactos",
     "about": "Sobre",
     "signIn": "Entrar",
     "profile": "Mi perfil",
-    "admin": "Admin"
+    "admin": "Admin",
+    "faq": "FAQ"
   },
   "home": {
     "heroTitle": "¿Llegaste a Floripa? Te ayudamos a orientarte.",
@@ -18,8 +20,8 @@
     "ctaTrail": "Empezar la ruta",
     "ctaContacts": "Ver contactos útiles",
     "sectionModules": "Qué vas a encontrar aquí",
-    "sectionAbout": "Por qué existe este proyecto",
-    "aboutBody": "Quien llega a una ciudad nueva tiene que resolver varias cosas al mismo tiempo y no siempre sabe por dónde empezar. Este portal organiza información práctica — gratis — para inmigrantes que están en Florianópolis o que se preparan para venir."
+    "sectionAbout": "Esta es una iniciativa para acoger",
+    "aboutBody": "Quien llega a una ciudad nueva necesita resolver varias cosas al mismo tiempo y no siempre sabe por dónde empezar. Este portal reúne información práctica y gratuita para inmigrantes que ya están en Florianópolis o que se están preparando para llegar."
   },
   "trail": {
     "title": "Ruta de orientación",
@@ -29,6 +31,7 @@
     "relatedContacts": "Contactos relacionados",
     "noContacts": "Ningún contacto registrado en este módulo todavía.",
     "topicsInModule": "Temas de este módulo",
+    "onThisPage": "En esta página",
     "backToModule": "Volver al módulo",
     "topic": "Tema",
     "topicOf": "de",
@@ -106,6 +109,47 @@
   "footer": {
     "madeWith": "Hecho por voluntarios en Florianópolis.",
     "contribute": "Contribuir en GitHub"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Dudas comunes sobre cómo usar el portal Imigrantes Floripa.",
+    "stillNeedHelpTitle": "¿Todavía con dudas?",
+    "stillNeedHelpBody": "Si no encontraste lo que buscabas, echa un vistazo a los contactos de apoyo en Florianópolis.",
+    "stillNeedHelpCta": "Ver contactos útiles",
+    "items": [
+      {
+        "q": "¿El portal es gratuito?",
+        "a": "Sí. Imigrantes Floripa es un proyecto abierto y gratuito. No pagas nada para acceder a ninguna información."
+      },
+      {
+        "q": "¿Necesito crear una cuenta para usarlo?",
+        "a": "No. Todo el contenido está disponible sin iniciar sesión. La cuenta sirve solo para guardar tu progreso en la ruta de orientación, si quieres seguir lo que ya leíste."
+      },
+      {
+        "q": "¿En qué idiomas está disponible el portal?",
+        "a": "En portugués y español. Puedes cambiar de idioma en cualquier momento en el selector ubicado en la parte superior de la página."
+      },
+      {
+        "q": "¿La información es oficial?",
+        "a": "Reunimos y organizamos información de fuentes públicas para servir como orientación inicial. Puede cambiar con el tiempo, así que confirma siempre en los organismos oficiales antes de tomar una decisión importante."
+      },
+      {
+        "q": "¿Cómo funciona la ruta de orientación?",
+        "a": "Es un paso a paso con los temas más importantes de los primeros días en la ciudad: documentos, salud, transporte, trabajo y más. Puedes seguir el orden sugerido o ir directo a lo que necesitas ahora."
+      },
+      {
+        "q": "Encontré una información incorrecta o desactualizada. ¿Qué hago?",
+        "a": "Avísanos. Puedes abrir una sugerencia en el repositorio del proyecto en GitHub o usar los contactos indicados en la página Sobre. Ese aporte ayuda a mantener todo correcto."
+      },
+      {
+        "q": "Necesito atención presencial. ¿El portal ayuda?",
+        "a": "Sí. En la página de Contactos y en el Mapa encuentras organismos públicos, ONG y servicios de apoyo en Florianópolis, con dirección y formas de contacto."
+      },
+      {
+        "q": "¿Quién mantiene el portal?",
+        "a": "Es un proyecto de extensión académica, mantenido por voluntarios, en alianza con Círculos de Hospitalidade. El código y el contenido son abiertos para quien quiera contribuir."
+      }
+    ]
   },
   "common": {
     "loading": "Cargando...",

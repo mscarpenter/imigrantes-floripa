@@ -4,6 +4,7 @@ import { GraduationCap, AlertCircle } from "lucide-react";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Card } from "@/components/ui/card";
+import { Reveal } from "@/components/motion/Reveal";
 import { cn } from "@/lib/utils";
 
 const GITHUB_URL = "https://github.com/PR3Stoot/imigrantes-floripa";
@@ -31,26 +32,28 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
-      <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
-        {dict.about.title}
-      </h1>
+      <Reveal>
+        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+          {dict.about.title}
+        </h1>
 
-      <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-        {dict.about.intro}
-      </p>
+        <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+          {dict.about.intro}
+        </p>
+      </Reveal>
 
       <Card className="relative mt-10 overflow-hidden p-6 pl-8">
         <span
           aria-hidden
-          className="absolute inset-y-0 left-0 w-1 bg-teal-500"
+          className="absolute inset-y-0 left-0 w-1 bg-primary"
         />
         <div className="flex items-start gap-4">
-          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-teal-100 text-teal-700 dark:bg-teal-950/40 dark:text-teal-300">
+          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
             <GraduationCap className="size-5" aria-hidden />
           </div>
           <div className="flex-1">
             <h2 className="text-lg font-semibold">{dict.about.academicTitle}</h2>
-            <p className="mt-1 text-sm font-medium italic text-teal-700 dark:text-teal-300">
+            <p className="mt-1 text-sm font-medium italic text-primary">
               {dict.about.academicLead}
             </p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

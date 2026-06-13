@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Icon } from "./Icon";
 import type { Module } from "@/lib/data/types";
@@ -11,11 +12,23 @@ interface ModuleCardProps {
   module: Module;
   locale: Locale;
   dict: Dictionary;
+  /** When true, ignore the per-category color and follow the theme tokens. */
+  plain?: boolean;
 }
 
-export function ModuleCard({ module, locale, dict }: ModuleCardProps) {
+export function ModuleCard({
+  module,
+  locale,
+  dict,
+  plain = false,
+}: ModuleCardProps) {
   const t = module.translations[locale];
   const colors = colorsFor(module.color);
+  const iconChip = plain
+    ? "bg-primary/10 text-primary"
+    : cn(colors.iconBg, colors.iconText);
+  const stepColor = plain ? "text-primary" : colors.stepText;
+  const borderHover = plain ? "group-hover:border-primary/40" : colors.cardBorder;
   return (
     <Link
       href={`/${locale}/modulo/${module.slug}`}
@@ -23,19 +36,29 @@ export function ModuleCard({ module, locale, dict }: ModuleCardProps) {
     >
       <Card
         className={cn(
-          "h-full p-6 transition-colors group-focus-visible:ring-2 group-focus-visible:ring-ring",
-          colors.cardBorder,
+          "relative h-full overflow-hidden p-6 transition-all duration-300 ease-out",
+          "group-hover:-translate-y-1 group-hover:shadow-lg group-focus-visible:ring-2 group-focus-visible:ring-ring",
+          borderHover,
         )}
       >
+        <ArrowUpRight
+          className="absolute right-4 top-4 size-5 text-muted-foreground/40 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary group-hover:opacity-100"
+          aria-hidden
+        />
         <div className="flex items-start gap-4">
-          <div className={cn("rounded-lg p-2.5", colors.iconBg, colors.iconText)}>
-            <Icon name={module.icon} className="size-6" />
+          <div
+            className={cn(
+              "rounded-2xl p-3 transition-transform duration-300 group-hover:scale-105",
+              iconChip,
+            )}
+          >
+            <Icon name={module.icon} className="size-7" />
           </div>
           <div className="flex-1">
             <p
               className={cn(
                 "text-xs font-semibold uppercase tracking-wide",
-                colors.stepText,
+                stepColor,
               )}
             >
               {dict.trail.step} {module.order}

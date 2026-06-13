@@ -13,6 +13,9 @@ import { Icon } from "@/components/Icon";
 import { ContactCard } from "@/components/ContactCard";
 import { TopicCard } from "@/components/TopicCard";
 import { MarkdownContent } from "@/components/MarkdownContent";
+import { TableOfContents } from "@/components/article/TableOfContents";
+import { ReadingProgress } from "@/components/article/ReadingProgress";
+import { extractHeadings } from "@/lib/markdown/toc";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
@@ -52,12 +55,14 @@ export default async function ModulePage({
   const relatedContacts = getContactsByIds(mod.contactIds);
   const topics = [...(mod.topics ?? [])].sort((a, b) => a.order - b.order);
   const hasTopics = topics.length > 0;
+  const headings = extractHeadings(t.body);
 
   return (
     <article>
+      <ReadingProgress />
       {/* Rich colored header */}
       <header className={cn("border-b", colors.softBg)}>
-        <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
+        <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
           <Link
             href={`/${lang}/trilha`}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
@@ -114,8 +119,18 @@ export default async function ModulePage({
         </div>
       </header>
 
-      <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
-        <MarkdownContent body={t.body} color={mod.color} />
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_15rem] lg:gap-14">
+          <main className="min-w-0">
+            {headings.length > 0 && (
+              <TableOfContents
+                headings={headings}
+                label={dict.trail.onThisPage}
+                variant="mobile"
+              />
+            )}
+
+            <MarkdownContent body={t.body} color={mod.color} />
 
         {hasTopics && (
           <section className="mt-12">
@@ -201,6 +216,18 @@ export default async function ModulePage({
             </Link>
           )}
         </nav>
+          </main>
+
+          <aside className="hidden lg:block">
+            {headings.length > 0 && (
+              <TableOfContents
+                headings={headings}
+                label={dict.trail.onThisPage}
+                variant="desktop"
+              />
+            )}
+          </aside>
+        </div>
       </div>
     </article>
   );

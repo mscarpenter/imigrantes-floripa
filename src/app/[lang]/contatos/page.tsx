@@ -6,6 +6,7 @@ import { getAllContacts, getAllCategories } from "@/lib/data/queries";
 import { ContactsBrowser } from "@/components/ContactsBrowser";
 import { Card } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
+import { Reveal } from "@/components/motion/Reveal";
 import { cn } from "@/lib/utils";
 
 const CIRCULOS_CONTACT_URL = "https://circulosdehospitalidade.org/contato/";
@@ -22,20 +23,22 @@ export default async function ContactsPage({
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
-      <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
-        {dict.contacts.title}
-      </h1>
-      <p className="mt-2 max-w-2xl text-muted-foreground">
-        {dict.contacts.subtitle}
-      </p>
+      <Reveal>
+        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+          {dict.contacts.title}
+        </h1>
+        <p className="mt-2 max-w-2xl text-muted-foreground">
+          {dict.contacts.subtitle}
+        </p>
+      </Reveal>
 
-      <Card className="relative mt-8 overflow-hidden border-violet-200 bg-violet-50/60 p-6 pl-8 dark:border-violet-900 dark:bg-violet-950/20">
+      <Card className="relative mt-8 overflow-hidden border-primary/20 bg-primary/5 p-6 pl-8">
         <span
           aria-hidden
-          className="absolute inset-y-0 left-0 w-1 bg-violet-500"
+          className="absolute inset-y-0 left-0 w-1 bg-primary"
         />
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-violet-700 dark:bg-violet-950/40 dark:text-violet-300">
+          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
             <HandHeart className="size-5" aria-hidden />
           </div>
           <div className="flex-1">

@@ -6,11 +6,13 @@
   "nav": {
     "home": "Início",
     "trail": "Trilha",
+    "guidance": "Orientação",
     "contacts": "Contatos",
     "about": "Sobre",
     "signIn": "Entrar",
     "profile": "Meu perfil",
-    "admin": "Admin"
+    "admin": "Admin",
+    "faq": "FAQ"
   },
   "home": {
     "heroTitle": "Chegou em Floripa? A gente te ajuda a se orientar.",
@@ -18,8 +20,8 @@
     "ctaTrail": "Começar a trilha",
     "ctaContacts": "Ver contatos úteis",
     "sectionModules": "O que você vai encontrar aqui",
-    "sectionAbout": "Por que esse projeto existe",
-    "aboutBody": "Quem chega em uma cidade nova precisa resolver várias coisas ao mesmo tempo e nem sempre sabe por onde começar. Esse portal organiza informações práticas — gratuitamente — para imigrantes que estão em Florianópolis ou se preparando para vir."
+    "sectionAbout": "Essa é uma iniciativa para acolher",
+    "aboutBody": "Quem chega em uma cidade nova precisa resolver várias coisas ao mesmo tempo e nem sempre sabe por onde começar. Este portal reúne informações práticas e gratuitas para imigrantes que já estão em Florianópolis ou que estão se preparando para chegar."
   },
   "trail": {
     "title": "Trilha de orientação",
@@ -29,6 +31,7 @@
     "relatedContacts": "Contatos relacionados",
     "noContacts": "Nenhum contato cadastrado neste módulo ainda.",
     "topicsInModule": "Tópicos deste módulo",
+    "onThisPage": "Nesta página",
     "backToModule": "Voltar para o módulo",
     "topic": "Tópico",
     "topicOf": "de",
@@ -106,6 +109,47 @@
   "footer": {
     "madeWith": "Feito por voluntários em Florianópolis.",
     "contribute": "Contribuir no GitHub"
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Dúvidas comuns sobre como usar o portal Imigrantes Floripa.",
+    "stillNeedHelpTitle": "Ainda com dúvidas?",
+    "stillNeedHelpBody": "Se você não encontrou o que procurava, dê uma olhada nos contatos de apoio em Florianópolis.",
+    "stillNeedHelpCta": "Ver contatos úteis",
+    "items": [
+      {
+        "q": "O portal é gratuito?",
+        "a": "Sim. O Imigrantes Floripa é um projeto aberto e gratuito. Você não paga nada para acessar nenhuma informação."
+      },
+      {
+        "q": "Preciso criar uma conta para usar?",
+        "a": "Não. Todo o conteúdo fica disponível sem login. A conta serve apenas para salvar o seu progresso na trilha de orientação, caso você queira acompanhar o que já leu."
+      },
+      {
+        "q": "Em quais idiomas o portal está disponível?",
+        "a": "Em português e espanhol. Você pode trocar de idioma a qualquer momento no seletor no topo da página."
+      },
+      {
+        "q": "As informações são oficiais?",
+        "a": "Reunimos e organizamos informações de fontes públicas para servir como orientação inicial. Elas podem mudar com o tempo, então confirme sempre nos órgãos oficiais antes de tomar uma decisão importante."
+      },
+      {
+        "q": "Como funciona a trilha de orientação?",
+        "a": "É um passo a passo com os temas mais importantes dos primeiros dias na cidade: documentos, saúde, transporte, trabalho e mais. Você pode seguir na ordem sugerida ou ir direto para o que precisa agora."
+      },
+      {
+        "q": "Encontrei uma informação errada ou desatualizada. O que faço?",
+        "a": "Avise a gente. Você pode abrir uma sugestão no repositório do projeto no GitHub ou usar os contatos indicados na página Sobre. Esse retorno ajuda a manter tudo correto."
+      },
+      {
+        "q": "Preciso de atendimento presencial. O portal ajuda?",
+        "a": "Sim. Na página de Contatos e no Mapa você encontra órgãos públicos, ONGs e serviços de apoio em Florianópolis, com endereço e formas de contato."
+      },
+      {
+        "q": "Quem mantém o portal?",
+        "a": "É um projeto de extensão acadêmica, mantido por voluntários, em parceria com a Círculos de Hospitalidade. O código e o conteúdo são abertos a quem quiser contribuir."
+      }
+    ]
   },
   "common": {
     "loading": "Carregando...",

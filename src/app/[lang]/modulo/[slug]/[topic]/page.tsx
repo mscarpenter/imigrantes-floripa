@@ -12,6 +12,9 @@ import {
 import { Icon } from "@/components/Icon";
 import { ContactCard } from "@/components/ContactCard";
 import { MarkdownContent } from "@/components/MarkdownContent";
+import { TableOfContents } from "@/components/article/TableOfContents";
+import { ReadingProgress } from "@/components/article/ReadingProgress";
+import { extractHeadings } from "@/lib/markdown/toc";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
@@ -53,12 +56,14 @@ export default async function TopicPage({
   const nextTopic =
     currentIndex < topics.length - 1 ? topics[currentIndex + 1] : null;
   const relatedContacts = getContactsByIds(topic.contactIds);
+  const headings = extractHeadings(t.body);
 
   return (
     <article>
+      <ReadingProgress />
       {/* Rich colored header */}
       <header className={cn("border-b", colors.softBg)}>
-        <div className="mx-auto max-w-3xl px-4 py-10 md:py-12">
+        <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
           <Link
             href={`/${lang}/modulo/${module.slug}`}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
@@ -123,67 +128,85 @@ export default async function TopicPage({
         </div>
       </header>
 
-      <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
-        <MarkdownContent body={t.body} color={module.color} />
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_15rem] lg:gap-14">
+          <main className="min-w-0">
+            <TableOfContents
+              headings={headings}
+              label={dict.trail.onThisPage}
+              variant="mobile"
+            />
 
-        {relatedContacts.length > 0 && (
-          <section className="mt-14">
-            <h2 className="flex items-center gap-3 text-xl font-bold tracking-tight">
-              <span
-                aria-hidden
-                className={cn(
-                  "inline-block h-5 w-1 shrink-0 rounded-full",
-                  colors.solidBg,
-                )}
-              />
-              {dict.trail.relatedTopicContacts}
-            </h2>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {relatedContacts.map((contact) => (
-                <ContactCard
-                  key={contact.id}
-                  contact={contact}
-                  locale={lang}
-                  dict={dict}
-                />
-              ))}
-            </div>
-          </section>
-        )}
+            <MarkdownContent body={t.body} color={module.color} />
 
-        {/* Prev/next topic navigation as cards */}
-        <nav className="mt-14 grid gap-3 sm:grid-cols-2">
-          {previousTopic ? (
-            <Link
-              href={`/${lang}/modulo/${module.slug}/${previousTopic.slug}`}
-              className="group flex flex-col rounded-xl border bg-card p-4 transition-colors hover:border-foreground/40"
-            >
-              <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                <ArrowLeft className="size-3" />
-                {dict.trail.previousTopic}
-              </span>
-              <span className="mt-1.5 font-semibold leading-tight">
-                {previousTopic.translations[lang].title}
-              </span>
-            </Link>
-          ) : (
-            <span className="hidden sm:block" />
-          )}
-          {nextTopic && (
-            <Link
-              href={`/${lang}/modulo/${module.slug}/${nextTopic.slug}`}
-              className="group flex flex-col items-end rounded-xl border bg-card p-4 text-right transition-colors hover:border-foreground/40 sm:col-start-2"
-            >
-              <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                {dict.trail.nextTopic}
-                <ArrowRight className="size-3" />
-              </span>
-              <span className="mt-1.5 font-semibold leading-tight">
-                {nextTopic.translations[lang].title}
-              </span>
-            </Link>
-          )}
-        </nav>
+            {relatedContacts.length > 0 && (
+              <section className="mt-14">
+                <h2 className="flex items-center gap-3 text-xl font-bold tracking-tight">
+                  <span
+                    aria-hidden
+                    className={cn(
+                      "inline-block h-5 w-1 shrink-0 rounded-full",
+                      colors.solidBg,
+                    )}
+                  />
+                  {dict.trail.relatedTopicContacts}
+                </h2>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  {relatedContacts.map((contact) => (
+                    <ContactCard
+                      key={contact.id}
+                      contact={contact}
+                      locale={lang}
+                      dict={dict}
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Prev/next topic navigation as cards */}
+            <nav className="mt-14 grid gap-3 sm:grid-cols-2">
+              {previousTopic ? (
+                <Link
+                  href={`/${lang}/modulo/${module.slug}/${previousTopic.slug}`}
+                  className="group flex flex-col rounded-xl border bg-card p-4 transition-colors hover:border-foreground/40"
+                >
+                  <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                    <ArrowLeft className="size-3" />
+                    {dict.trail.previousTopic}
+                  </span>
+                  <span className="mt-1.5 font-semibold leading-tight">
+                    {previousTopic.translations[lang].title}
+                  </span>
+                </Link>
+              ) : (
+                <span className="hidden sm:block" />
+              )}
+              {nextTopic && (
+                <Link
+                  href={`/${lang}/modulo/${module.slug}/${nextTopic.slug}`}
+                  className="group flex flex-col items-end rounded-xl border bg-card p-4 text-right transition-colors hover:border-foreground/40 sm:col-start-2"
+                >
+                  <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                    {dict.trail.nextTopic}
+                    <ArrowRight className="size-3" />
+                  </span>
+                  <span className="mt-1.5 font-semibold leading-tight">
+                    {nextTopic.translations[lang].title}
+                  </span>
+                </Link>
+              )}
+            </nav>
+          </main>
+
+          <aside className="hidden lg:block">
+            <TableOfContents
+              headings={headings}
+              label={dict.trail.onThisPage}
+              variant="desktop"
+            />
+          </aside>
+        </div>
       </div>
     </article>
   );

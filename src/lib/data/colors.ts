@@ -147,6 +147,24 @@ export const colorClasses: Record<ModuleColor, ColorClasses> = {
   },
 };
 
-export function colorsFor(color: ModuleColor | undefined): ColorClasses {
-  return colorClasses[color ?? "blue"];
+// Paleta monocromática roxa — identidade enxuta do portal. Todas as
+// categorias compartilham os mesmos tokens de tema (primary), evitando o
+// excesso de cores. As classes abaixo precisam aparecer literalmente para o
+// scanner do Tailwind v4.
+const monochrome: ColorClasses = {
+  iconBg: "bg-primary/10",
+  iconText: "text-primary",
+  cardBorder: "group-hover:border-primary/40",
+  stepText: "text-primary",
+  badge: "bg-primary/10 text-primary",
+  pillActive: "border-primary bg-primary text-primary-foreground hover:bg-primary/90",
+  softBg: "bg-primary/5",
+  softBorder: "border-primary/20",
+  solidBg: "bg-primary",
+  tableHeadBg: "bg-muted",
+};
+
+export function colorsFor(_color?: ModuleColor): ColorClasses {
+  // Mantemos o parâmetro por compatibilidade, mas a identidade é única (roxo).
+  return monochrome;
 }
