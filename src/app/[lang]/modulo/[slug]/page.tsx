@@ -93,6 +93,24 @@ export default async function ModulePage({
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
             {t.summary}
           </p>
+
+          {topics.length > 1 && (
+            <nav
+              aria-label={dict.trail.topicsInModule}
+              className="mt-6 flex flex-wrap gap-2"
+            >
+              {topics.map((topic) => (
+                <Link
+                  key={topic.slug}
+                  href={`/${lang}/modulo/${mod.slug}/${topic.slug}`}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground"
+                >
+                  <span className="text-[10px] opacity-70">{topic.order}</span>
+                  <span>{topic.translations[lang].title}</span>
+                </Link>
+              ))}
+            </nav>
+          )}
         </div>
       </header>
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GraduationCap, AlertCircle } from "lucide-react";
 import { isLocale } from "@/i18n/config";
@@ -6,6 +7,8 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const GITHUB_URL = "https://github.com/PR3Stoot/imigrantes-floripa";
+const UNICESUSC_URL = "https://unicesusc.edu.br/";
+const CIRCULOS_URL = "https://circulosdehospitalidade.org/";
 
 function GithubMark({ className }: { className?: string }) {
   return (
@@ -51,7 +54,25 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
               {dict.about.academicLead}
             </p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {dict.about.academicBody}
+              {dict.about.academicBodyBeforeUnicesusc}
+              <a
+                href={UNICESUSC_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
+              >
+                {dict.about.academicUnicesuscLabel}
+              </a>
+              {dict.about.academicBodyBeforeCirculos}
+              <a
+                href={CIRCULOS_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
+              >
+                {dict.about.academicCirculosLabel}
+              </a>
+              {dict.about.academicBodyAfterCirculos}
             </p>
           </div>
         </div>
@@ -105,7 +126,14 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
               {dict.about.disclaimerTitle}
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {dict.about.disclaimer}
+              {dict.about.disclaimerBeforeContact}
+              <Link
+                href={`/${lang}/contatos`}
+                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
+              >
+                {dict.about.disclaimerContactLink}
+              </Link>
+              {dict.about.disclaimerAfterContact}
             </p>
           </div>
         </div>

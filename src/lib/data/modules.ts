@@ -1320,16 +1320,17 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
     order: 5,
     icon: "HandHeart",
     color: "violet",
-    contactIds: ["cras-floripa", "caritas-sc"],
+    contactIds: ["cras-floripa", "caritas-sc", "circulos-hospitalidade"],
     translations: {
       pt: {
-        title: "Assistência social",
+        title: "Assistência Social",
         summary:
-          "CRAS, ONGs e serviços de apoio para famílias em situação de vulnerabilidade.",
+          "Círculos de Hospitalidade e serviços de apoio para famílias em situação de vulnerabilidade.",
         body: `**O Brasil tem uma rede pública e privada de assistência social que atende migrantes — gratuitamente.** Você não precisa estar em situação extrema pra procurar. É um direito.
 
-Há três portas principais:
+Há quatro portas principais:
 
+- **Círculos de Hospitalidade** para acolhimento, orientação e apoio a migrantes e famílias.
 - **CRAS** pra cadastro, benefícios e orientação geral.
 - **CREAS** pra situações específicas (violência, exploração, situação de rua).
 - **ONGs especializadas** em migrantes e refugiados (Cáritas, Pastoral do Migrante, parceiros do ACNUR).
@@ -1337,13 +1338,14 @@ Há três portas principais:
 > **Não tenha vergonha de pedir ajuda.** Esses serviços existem exatamente pra isso e são pagos com seu imposto também.`,
       },
       es: {
-        title: "Asistencia social",
+        title: "Asistencia Social",
         summary:
-          "CRAS, ONGs y servicios de apoyo para familias en situación de vulnerabilidad.",
+          "Círculos de Hospitalidade y servicios de apoyo para familias en situación de vulnerabilidad.",
         body: `**Brasil tiene una red pública y privada de asistencia social que atiende migrantes — gratuitamente.** No tenés que estar en situación extrema para buscarla. Es un derecho.
 
-Hay tres puertas principales:
+Hay cuatro puertas principales:
 
+- **Círculos de Hospitalidade** para acogida, orientación y apoyo a migrantes y familias.
 - **CRAS** para registro, beneficios y orientación general.
 - **CREAS** para situaciones específicas (violencia, explotación, situación de calle).
 - **ONGs especializadas** en migrantes y refugiados (Cáritas, Pastoral del Migrante, socios del ACNUR).
@@ -1354,7 +1356,7 @@ Hay tres puertas principales:
     topics: [
       {
         slug: "cras-cadunico",
-        order: 1,
+        order: 2,
         contactIds: ["cras-floripa"],
         translations: {
           pt: {
@@ -1453,7 +1455,7 @@ Además del CadÚnico, el CRAS ofrece:
       },
       {
         slug: "creas",
-        order: 2,
+        order: 3,
         contactIds: [],
         translations: {
           pt: {
@@ -1542,7 +1544,7 @@ En Florianópolis funciona el **Centro POP** (vinculado al CREAS), con:
       },
       {
         slug: "ongs-migrantes",
-        order: 3,
+        order: 4,
         contactIds: ["caritas-sc"],
         translations: {
           pt: {
@@ -1636,6 +1638,57 @@ Si sos **solicitante de refugio** (esperando decisión del CONARE) o **refugiado
 - Estás en situación **muy vulnerable** y el sistema público está demorando.
 
 > **Las ONGs y el sistema público trabajan juntos.** No es "o uno o el otro" — podés (y debés) usar los dos en paralelo.`,
+          },
+        },
+      },
+      {
+        slug: "circulos-de-hospitalidade",
+        order: 1,
+        contactIds: ["circulos-hospitalidade"],
+        translations: {
+          pt: {
+            title: "Círculos de Hospitalidade",
+            summary:
+              "Rede de apoio e acolhimento para migrantes e famílias. Parceira deste portal.",
+            body: `**Os Círculos de Hospitalidade são uma rede de apoio e acolhimento** para migrantes e famílias que chegam ou vivem em Florianópolis. O projeto é parceiro deste portal e oferece orientação prática sobre integração na cidade.
+
+## O que é?
+
+Os Círculos de Hospitalidade conectam pessoas, comunidades e instituições para **acolher quem chega de fora** — com informação, encaminhamento e apoio humano. A iniciativa trabalha com **hospitalidade** no sentido mais amplo: receber, orientar e integrar migrantes na vida local.
+
+## Como acessar?
+
+1. Acesse o [site oficial dos Círculos de Hospitalidade](https://circulosdehospitalidade.org/).
+2. Confira os **programas, materiais e orientações** disponíveis para migrantes.
+3. Se precisar de atendimento direto, use a página de contato abaixo.
+
+## Entre em contato
+
+Para falar com a equipe, acesse a [página de contato dos Círculos de Hospitalidade](https://circulosdehospitalidade.org/contato/).
+
+> **Quer mais detalhes?** Veja as informações completas no [site dos Círculos de Hospitalidade](https://circulosdehospitalidade.org/).`,
+          },
+          es: {
+            title: "Círculos de Hospitalidade",
+            summary:
+              "Red de apoyo y acogida para migrantes y familias. Aliada de este portal.",
+            body: `**Los Círculos de Hospitalidade son una red de apoyo y acogida** para migrantes y familias que llegan o viven en Florianópolis. El proyecto es aliado de este portal y ofrece orientación práctica sobre integración en la ciudad.
+
+## ¿Qué es?
+
+Los Círculos de Hospitalidade conectan personas, comunidades e instituciones para **acoger a quien llega de afuera** — con información, derivaciones y apoyo humano. La iniciativa trabaja la **hospitalidad** en el sentido más amplio: recibir, orientar e integrar migrantes en la vida local.
+
+## ¿Cómo acceder?
+
+1. Ingresá al [sitio oficial de Círculos de Hospitalidade](https://circulosdehospitalidade.org/).
+2. Revisá los **programas, materiales y orientaciones** disponibles para migrantes.
+3. Si necesitás atención directa, usá la página de contacto indicada abajo.
+
+## Contactanos
+
+Para hablar con el equipo, accedé a la [página de contacto de Círculos de Hospitalidade](https://circulosdehospitalidade.org/contato/).
+
+> **¿Querés más detalles?** Consultá la información completa en el [sitio de Círculos de Hospitalidade](https://circulosdehospitalidade.org/).`,
           },
         },
       },

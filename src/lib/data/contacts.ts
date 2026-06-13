@@ -81,6 +81,23 @@ export const contacts: Contact[] = [
     },
   },
   {
+    id: "circulos-hospitalidade",
+    categorySlug: "assistencia-social",
+    website: "https://circulosdehospitalidade.org/",
+    translations: {
+      pt: {
+        name: "Círculos de Hospitalidade",
+        description:
+          "Rede de apoio e acolhimento para migrantes e famílias em Florianópolis. Parceira deste portal.",
+      },
+      es: {
+        name: "Círculos de Hospitalidade",
+        description:
+          "Red de apoyo y acogida para migrantes y familias en Florianópolis. Aliada de este portal.",
+      },
+    },
+  },
+  {
     id: "sus-cartao",
     categorySlug: "saude",
     phone: "136",

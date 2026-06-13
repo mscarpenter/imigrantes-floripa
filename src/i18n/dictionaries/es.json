@@ -47,19 +47,28 @@
     "email": "Correo",
     "address": "Dirección",
     "website": "Sitio",
-    "hours": "Horario"
+    "hours": "Horario",
+    "featuredTitle": "Atención presencial y online",
+    "featuredBody": "¿Sos migrante o refugiado y vivís en Santa Catarina? El equipo de Círculos de Hospitalidade ofrece acogida y orientación gratuitas, de forma presencial y online. Hacé tu registro en su página — el contacto se realiza por WhatsApp.",
+    "featuredCta": "Hablar con Círculos de Hospitalidade"
   },
   "about": {
     "title": "Sobre el proyecto",
     "intro": "Imigrantes Floripa es un portal abierto y gratuito que organiza información práctica para quien llega — o se prepara para llegar — a Florianópolis. La idea es reducir el caos de los primeros días en la ciudad: documentos, transporte, salud, trabajo, vivienda y todo lo que suele trabarse por falta de orientación centralizada y en más de un idioma.",
     "academicTitle": "Proyecto de extensión de CESUTech",
     "academicLead": "Conectando Generaciones e Impulsando el Futuro y el Protagonismo Digital",
-    "academicBody": "Este portal fue desarrollado como parte de un proyecto de extensión de CESUTech, vinculado al Centro Universitário Cesusc (CESUSC), en Florianópolis. A pesar del origen académico, el foco es práctico: ser una herramienta real de utilidad pública para migrantes en la ciudad.",
+    "academicBodyBeforeUnicesusc": "Este portal fue desarrollado como parte de un proyecto de extensión de CESUTech, vinculado al Centro Universitário Cesusc (",
+    "academicUnicesuscLabel": "UNICESUSC",
+    "academicBodyBeforeCirculos": "), en Florianópolis, con la alianza de ",
+    "academicCirculosLabel": "Círculos de Hospitalidade",
+    "academicBodyAfterCirculos": ". A pesar del origen académico, el foco es práctico: ser una herramienta real de utilidad pública para migrantes en la ciudad.",
     "openSourceTitle": "Open source",
     "openSource": "El código y el contenido son abiertos. Quien quiera contribuir con textos, traducciones, nuevos contactos o mejoras técnicas puede acceder al repositorio en GitHub:",
     "openSourceLink": "PR3Stoot/imigrantes-floripa",
     "disclaimerTitle": "Aviso importante",
-    "disclaimer": "La información aquí es una orientación inicial y puede cambiar con el tiempo. Siempre confirmá en los órganos oficiales antes de tomar una decisión importante. Si encontrás algo equivocado o desactualizado, por favor avisanos por GitHub."
+    "disclaimerBeforeContact": "Si encontrás algo equivocado o desactualizado, por favor avisanos ",
+    "disclaimerContactLink": "contactándonos",
+    "disclaimerAfterContact": "."
   },
   "auth": {
     "signInTitle": "Entrar",
