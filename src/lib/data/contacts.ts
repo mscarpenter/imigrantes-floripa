@@ -6,6 +6,8 @@ export const contacts: Contact[] = [
     categorySlug: "documentos",
     phone: "(48) 3281-6500",
     address: "Av. Gov. Gustavo Richard, 367 - Centro, Florianópolis - SC",
+    lat: -27.603255,
+    lng: -48.549379,
     website: "https://www.gov.br/pf/pt-br",
     hours: "Seg-Sex 08:00-17:00 (mediante agendamento)",
     translations: {
@@ -26,6 +28,8 @@ export const contacts: Contact[] = [
     categorySlug: "documentos",
     phone: "146",
     address: "Rua Felipe Schmidt, 235 - Centro, Florianópolis - SC",
+    lat: -27.592792,
+    lng: -48.558155,
     website: "https://www.gov.br/receitafederal/pt-br",
     hours: "Seg-Sex 09:00-16:00",
     translations: {
@@ -66,6 +70,8 @@ export const contacts: Contact[] = [
     phone: "(48) 3224-0566",
     email: "secretaria@caritas.org.br",
     address: "Rua Esteves Júnior, 447 - Centro, Florianópolis - SC",
+    lat: -27.590829,
+    lng: -48.553526,
     website: "https://caritas.org.br",
     translations: {
       pt: {
@@ -120,6 +126,8 @@ export const contacts: Contact[] = [
     categorySlug: "saude",
     phone: "(48) 3271-1500",
     address: "Rod. SC-405, 4150 - Rio Tavares, Florianópolis - SC",
+    lat: -27.649214,
+    lng: -48.519612,
     hours: "24 horas",
     translations: {
       pt: {
@@ -139,6 +147,8 @@ export const contacts: Contact[] = [
     categorySlug: "transporte",
     phone: "(48) 3271-7488",
     address: "Terminal de Integração do Centro (TICEN)",
+    lat: -27.59859,
+    lng: -48.55382,
     website: "https://www.consorciofenix.com.br/passe-rapido",
     hours: "Seg-Sex 06:00-20:00, Sáb 06:00-13:00",
     translations: {
@@ -159,6 +169,8 @@ export const contacts: Contact[] = [
     categorySlug: "trabalho",
     phone: "158",
     address: "Av. Mauro Ramos, 722 - Centro, Florianópolis - SC",
+    lat: -27.588482,
+    lng: -48.543081,
     website: "https://www.gov.br/trabalho-e-emprego/pt-br",
     hours: "Seg-Sex 08:00-17:00",
     translations: {
@@ -197,6 +209,8 @@ export const contacts: Contact[] = [
     categorySlug: "emergencias",
     phone: "(48) 3251-7400",
     address: "Rua Paschoal Apóstolo Pítsica, 4863 - Agronômica, Florianópolis - SC",
+    lat: -27.579226,
+    lng: -48.524953,
     website: "https://www.dpu.def.br",
     hours: "Seg-Sex 12:00-18:00",
     translations: {

@@ -68,6 +68,35 @@ describe("static data integrity", () => {
     expect(invalid, "invalid color or icon references").toEqual([]);
   });
 
+  it("has consistent and plausible coordinates for mappable contacts", () => {
+    const invalid: string[] = [];
+
+    for (const contact of contacts) {
+      const hasLat = typeof contact.lat === "number";
+      const hasLng = typeof contact.lng === "number";
+
+      if (hasLat !== hasLng) {
+        invalid.push(`${contact.id} → lat/lng must be set together`);
+        continue;
+      }
+      if (!hasLat) continue;
+
+      // Greater Florianópolis bounding box (sanity check on geocoding).
+      if (contact.lat! < -28.1 || contact.lat! > -27.2) {
+        invalid.push(`${contact.id} → lat out of range:${contact.lat}`);
+      }
+      if (contact.lng! < -48.8 || contact.lng! > -48.3) {
+        invalid.push(`${contact.id} → lng out of range:${contact.lng}`);
+      }
+    }
+
+    expect(invalid, "invalid contact coordinates").toEqual([]);
+    expect(
+      contacts.some((c) => typeof c.lat === "number"),
+      "at least one contact should be mappable",
+    ).toBe(true);
+  });
+
   it("has pt and es translations for all modules, topics and contacts", () => {
     const missing: string[] = [];
 

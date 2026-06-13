@@ -57,5 +57,8 @@ export interface Contact {
   address?: string;
   website?: string;
   hours?: string;
+  /** Geographic coordinates (when the contact has a physical address). */
+  lat?: number;
+  lng?: number;
   translations: Record<Locale, ContactTranslation>;
 }

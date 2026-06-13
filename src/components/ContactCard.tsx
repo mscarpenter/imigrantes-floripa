@@ -1,5 +1,14 @@
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Globe, Clock, MessageCircle } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Clock,
+  MessageCircle,
+  Map as MapIcon,
+} from "lucide-react";
 import type { Contact } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -116,6 +125,16 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
               )}
             </dl>
           </>
+        )}
+
+        {contact.lat != null && contact.lng != null && (
+          <Link
+            href={`/${locale}/mapa?contato=${contact.id}`}
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+          >
+            <MapIcon className="size-4" />
+            {dict.map.viewOnMap}
+          </Link>
         )}
       </div>
     </Card>

@@ -25,6 +25,17 @@ export function getContactsByCategory(categorySlug: string): Contact[] {
   return contacts.filter((c) => c.categorySlug === categorySlug);
 }
 
+export function getContactById(id: string): Contact | undefined {
+  return contacts.find((c) => c.id === id);
+}
+
+/** Contacts that can be placed on the map (have geographic coordinates). */
+export function getMappableContacts(): Contact[] {
+  return contacts.filter(
+    (c) => typeof c.lat === "number" && typeof c.lng === "number",
+  );
+}
+
 export function getAllCategories(): Category[] {
   return [...categories].sort((a, b) => a.order - b.order);
 }

@@ -52,6 +52,28 @@
     "featuredBody": "É migrante ou refugiado e vive em Santa Catarina? A equipe da Círculos de Hospitalidade oferece acolhimento e orientação gratuitos, de forma presencial e online. Faça seu cadastro na página deles — o contato é feito por WhatsApp.",
     "featuredCta": "Falar com a Círculos de Hospitalidade"
   },
+  "map": {
+    "title": "Mapa de contatos",
+    "subtitle": "Encontre no mapa os serviços de apoio com endereço em Florianópolis.",
+    "backToContacts": "Voltar para contatos",
+    "viewOnMap": "Ver no mapa",
+    "sidebarTitle": "Categorias",
+    "sidebarHint": "Escolha uma categoria e clique em um contato para localizá-lo no mapa.",
+    "locateMe": "Onde estou",
+    "locating": "Localizando…",
+    "locateError": "Não foi possível localizar",
+    "howToGet": "Como chegar",
+    "noAddress": "Sem endereço no mapa",
+    "gestureTouch": "Use dois dedos para mover o mapa",
+    "gestureScroll": "Use Ctrl + scroll para aproximar o mapa",
+    "gestureScrollMac": "Use ⌘ + scroll para aproximar o mapa",
+    "busStopsShow": "Pontos de ônibus",
+    "busStopsHide": "Ocultar pontos",
+    "busStopsLoading": "Carregando…",
+    "busStop": "Ponto de ônibus",
+    "busStopShelter": "Parada com abrigo",
+    "busStopSign": "Parada com placa"
+  },
   "about": {
     "title": "Sobre o projeto",
     "intro": "Imigrantes Floripa é um portal aberto e gratuito que organiza informações práticas pra quem chega — ou se prepara pra chegar — em Florianópolis. A ideia é reduzir o caos dos primeiros dias na cidade: documentos, transporte, saúde, trabalho, moradia e tudo mais que costuma travar por falta de orientação centralizada e em mais de um idioma.",
