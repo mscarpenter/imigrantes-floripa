@@ -5,7 +5,7 @@
   },
   "nav": {
     "home": "Início",
-    "trail": "Trilha",
+    "trail": "Orientação",
     "contacts": "Contatos",
     "about": "Sobre",
     "signIn": "Entrar",
@@ -59,6 +59,8 @@
     "viewOnMap": "Ver no mapa",
     "sidebarTitle": "Categorias",
     "sidebarHint": "Escolha uma categoria e clique em um contato para localizá-lo no mapa.",
+    "collapseList": "Minimizar lista",
+    "expandList": "Expandir lista",
     "locateMe": "Onde estou",
     "locating": "Localizando…",
     "locateError": "Não foi possível localizar",

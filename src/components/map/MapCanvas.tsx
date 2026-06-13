@@ -2,7 +2,14 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  ZoomControl,
+  useMap,
+} from "react-leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet.markercluster";
 import "leaflet/dist/leaflet.css";
@@ -290,11 +297,12 @@ export default function MapCanvas({
   );
 
   return (
-    <div className="relative h-[60vh] min-h-[420px] overflow-hidden rounded-xl border lg:h-[72vh]">
+    <div className="relative size-full">
       <MapContainer
         center={FLORIPA_CENTER}
         zoom={DEFAULT_ZOOM}
         className="size-full"
+        zoomControl={false}
         gestureHandling
         gestureHandlingOptions={{
           text: {
@@ -305,6 +313,7 @@ export default function MapCanvas({
           duration: 2200,
         }}
       >
+        <ZoomControl position="bottomleft" />
         <TileLayer
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>'
@@ -374,13 +383,15 @@ export default function MapCanvas({
         type="button"
         onClick={() => setShowBusStops((v) => !v)}
         aria-pressed={showBusStops}
-        className={`absolute left-3 top-3 z-[1000] inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-medium shadow-md backdrop-blur transition-colors ${
+        className={`absolute left-3 top-16 z-[1000] inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-medium shadow-md backdrop-blur transition-colors md:top-3 ${
           showBusStops
             ? "border-sky-600 bg-sky-600 text-white hover:bg-sky-700"
             : "border-border bg-background/95 hover:bg-background"
         }`}
       >
-        <Bus className={`size-4 ${busStatus === "loading" ? "animate-pulse" : ""}`} />
+        <Bus
+          className={`size-4 ${busStatus === "loading" ? "animate-pulse" : ""}`}
+        />
         {busStatus === "loading"
           ? dict.map.busStopsLoading
           : showBusStops

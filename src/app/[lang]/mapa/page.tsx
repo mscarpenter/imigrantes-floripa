@@ -20,23 +20,23 @@ export default async function MapPage({
   const initialContactId = typeof contato === "string" ? contato : undefined;
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+    <div className="mx-auto max-w-6xl px-4 pb-10 pt-4 md:py-14">
       <Link
         href={`/${lang}/contatos`}
-        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        className="hidden items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground md:inline-flex"
       >
         <ArrowLeft className="size-4" />
         {dict.map.backToContacts}
       </Link>
 
-      <h1 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
+      <h1 className="hidden text-3xl font-bold tracking-tight md:mt-4 md:block md:text-4xl">
         {dict.map.title}
       </h1>
-      <p className="mt-2 max-w-2xl text-muted-foreground">
+      <p className="hidden max-w-2xl text-muted-foreground md:mt-2 md:block">
         {dict.map.subtitle}
       </p>
 
-      <div className="mt-8">
+      <div className="md:mt-8">
         <ContactsMap
           contacts={contacts}
           categories={categories}
