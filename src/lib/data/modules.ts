@@ -45,11 +45,11 @@ A boa notícia: é **gratuito** na Receita Federal e sai pronto no mesmo balcão
 
 ## Como tirar (passo a passo)
 
-1. Vá a uma agência da **Receita Federal**. Em Florianópolis, fica no centro — **Rua Felipe Schmidt, 235**.
+1. **Agende** no site da Receita Federal e vá à unidade de Florianópolis — **Rua Claudino Bento da Silva, 11**, no centro. (Dá pra fazer **online**, de graça, sem sair de casa.)
 2. Apresente os documentos abaixo.
 3. Receba o número de CPF na hora.
 
-> **Atendimento rápido.** O CPF pra migrantes costuma sair em 15–30 minutos. Não precisa de agendamento prévio.
+> **Atendimento rápido.** O CPF para migrantes costuma sair em 15–30 minutos. O atendimento presencial na Receita é **mediante agendamento**; as entidades conveniadas (Correios, Banco do Brasil, Caixa) atendem sem agendar, com taxa de R$ 7.
 
 ## O que levar
 
@@ -85,11 +85,11 @@ Buena noticia: es **gratis** en la Receita Federal y sale listo en el mismo most
 
 ## Cómo sacarlo (paso a paso)
 
-1. Andá a una agencia de la **Receita Federal**. En Florianópolis está en el centro — **Rua Felipe Schmidt, 235**.
+1. **Agendá** en el sitio de la Receita Federal y andá a la unidad de Florianópolis — **Rua Claudino Bento da Silva, 11**, en el centro. (Se puede hacer **online**, gratis, sin salir de casa.)
 2. Presentá los documentos abajo.
 3. Recibís el número de CPF en el momento.
 
-> **Atención rápida.** El CPF para migrantes suele salir en 15–30 minutos. No necesita agendamiento previo.
+> **Atención rápida.** El CPF para migrantes suele salir en 15–30 minutos. La atención presencial en la Receita es **con cita previa**; las entidades convenidas (Correios, Banco do Brasil, Caixa) atienden sin cita, con tasa de R$ 7.
 
 ## Qué llevar
 
@@ -133,7 +133,7 @@ Si no tenés apuro, la Receita conviene por el precio.
 ## Como tirar (passo a passo)
 
 1. **Agende** pelo site da Polícia Federal: [gov.br/pf](https://www.gov.br/pf). **Atendimento sem agendamento não acontece.**
-2. **Gere e pague a GRU** (Guia de Recolhimento da União). Custo entre **R$ 200 e R$ 300**, depende do tipo de visto.
+2. **Gere e pague as GRUs** (Guias de Recolhimento da União): **R$ 168,13** (processamento do pedido de residência) + **R$ 204,77** (emissão da CRNM), cerca de **R$ 373** no total. Não há isenção da taxa de emissão.
 3. **Reúna os documentos** abaixo.
 4. **Compareça à PF na data agendada** com tudo em mãos.
 
@@ -149,8 +149,8 @@ Si no tenés apuro, la Receita conviene por el precio.
 
 ## Onde fica
 
-**Delegacia da Polícia Federal de Florianópolis**
-Av. Gov. Gustavo Richard, 367 — Centro
+**Posto de Migração da Polícia Federal (Floripa Shopping)**
+Loja 132 — Rod. SC-401, 3116, Saco Grande · Seg-Sex 10:00-17:00
 
 Só atende com agendamento.
 
@@ -180,7 +180,7 @@ Renove **antes de expirar** — perder o prazo gera multa e burocracia extra.`,
 ## Cómo sacarla (paso a paso)
 
 1. **Agendá** por el sitio de la Policía Federal: [gov.br/pf](https://www.gov.br/pf). **Atención sin agendamiento no se da.**
-2. **Generá y pagá la GRU** (Guía de Recaudación de la Unión). Costo entre **R$ 200 y R$ 300**, depende del tipo de visa.
+2. **Generá y pagá las GRU** (Guías de Recaudación de la Unión): **R$ 168,13** (procesamiento del pedido de residencia) + **R$ 204,77** (emisión de la CRNM), cerca de **R$ 373** en total. No hay exención de la tasa de emisión.
 3. **Juntá los documentos** abajo.
 4. **Andá a la PF en la fecha agendada** con todo en mano.
 
@@ -196,8 +196,8 @@ Renove **antes de expirar** — perder o prazo gera multa e burocracia extra.`,
 
 ## Dónde queda
 
-**Delegación de la Policía Federal de Florianópolis**
-Av. Gov. Gustavo Richard, 367 — Centro
+**Puesto de Migración de la Policía Federal (Floripa Shopping)**
+Local 132 — Rod. SC-401, 3116, Saco Grande · Lun-Vie 10:00-17:00
 
 Solo atiende con agendamiento.
 
@@ -304,7 +304,7 @@ Existen **tres niveles de verificación**:
     order: 2,
     icon: "HeartPulse",
     color: "rose",
-    contactIds: ["sus-cartao", "upa-sul", "samu-192"],
+    contactIds: ["sus-cartao", "alo-saude-floripa", "upa-sul", "samu-192"],
     translations: {
       pt: {
         title: "Saúde pública (SUS)",
@@ -312,7 +312,7 @@ Existen **tres niveles de verificación**:
           "Atendimento médico gratuito pelo SUS, como conseguir o cartão e onde procurar atendimento.",
         body: `**No Brasil, qualquer pessoa tem direito a atendimento gratuito pelo SUS** — incluindo migrantes em situação irregular. Não precisa de visto, CPF ou comprovante de renda pra ser atendido numa emergência.
 
-O sistema é dividido em níveis: a **UBS** do bairro pra coisas comuns, a **UPA** pra urgências, o **hospital** pra casos graves, e o **SAMU (192)** pra ambulância.
+O sistema é dividido em níveis: a **UBS** do bairro pra coisas comuns, a **UPA** pra urgências, o **hospital** pra casos graves, e o **SAMU (192)** pra ambulância. Em Floripa há ainda o **Alô Saúde Floripa (0800 333 3233)** — atendimento médico gratuito por telefone, 24h, que resolve muito caso à distância.
 
 > **Salve no celular** o telefone e o endereço da UBS mais próxima da sua casa. Numa emergência, você vai precisar dessa informação rápido.`,
       },
@@ -322,7 +322,7 @@ O sistema é dividido em níveis: a **UBS** do bairro pra coisas comuns, a **UPA
           "Atención médica gratuita por el SUS, cómo conseguir la tarjeta y dónde buscar atención.",
         body: `**En Brasil, cualquier persona tiene derecho a atención gratuita por el SUS** — incluso migrantes en situación irregular. No necesitás visa, CPF ni comprobante de ingresos para ser atendido en una emergencia.
 
-El sistema se divide en niveles: la **UBS** del barrio para cosas comunes, la **UPA** para urgencias, el **hospital** para casos graves, y el **SAMU (192)** para ambulancia.
+El sistema se divide en niveles: la **UBS** del barrio para cosas comunes, la **UPA** para urgencias, el **hospital** para casos graves, y el **SAMU (192)** para ambulancia. En Floripa hay además el **Alô Saúde Floripa (0800 333 3233)** — atención médica gratuita por teléfono, 24h, que resuelve muchos casos a distancia.
 
 > **Guardá en el celular** el teléfono y la dirección de la UBS más cercana a tu casa. En una emergencia, vas a necesitar esa información rápido.`,
       },
@@ -400,13 +400,23 @@ Buena noticia: es **gratuita** y se saca en el centro de salud de tu barrio.
       {
         slug: "onde-buscar-atendimento",
         order: 2,
-        contactIds: ["upa-sul"],
+        contactIds: ["alo-saude-floripa", "upa-sul"],
         translations: {
           pt: {
             title: "UBS, UPA ou hospital? Quando ir aonde",
             summary:
               "Guia rápido pra escolher a porta de entrada certa e não esperar à toa.",
             body: `**O sistema brasileiro tem 3 portas de entrada principais.** Escolher a errada faz você esperar mais ou ser mandado pra outro lugar.
+
+## Antes de sair de casa: Alô Saúde Floripa (0800 333 3233)
+
+Florianópolis tem um serviço **gratuito de atendimento médico por telefone**, **24h, todos os dias**: o **Alô Saúde Floripa**. Ligue **0800 333 3233** antes de ir a uma unidade — muito caso se resolve sem sair de casa.
+
+- **Como funciona:** começa com uma triagem por enfermagem. Conforme os sintomas, você recebe orientação, agenda consulta no Centro de Saúde, é encaminhado a uma UPA ou faz uma **teleconsulta médica por vídeo**.
+- **Receita e atestado:** se o médico prescrever remédio ou você precisar de atestado, eles chegam por **WhatsApp ou e-mail**. Com a receita, dá pra retirar o remédio na farmácia do Centro de Saúde, de graça pelo SUS.
+- **Quem pode usar:** moradores de Florianópolis com cadastro no SUS. **Não tem cadastro? Dá pra fazer na hora, durante a ligação.**
+
+> **Migrante recém-chegado:** mesmo sem Cartão SUS ainda, ligue — o cadastro é feito na própria chamada. O serviço é gratuito e não pergunta situação migratória.
 
 ## Decisão rápida
 
@@ -431,7 +441,7 @@ A **Unidade de Pronto Atendimento** funciona 24 horas, sem agendamento. Você ch
 
 - Pra casos que **não dão pra esperar até a UBS abrir**.
 - A triagem usa **cores**: **vermelho** atende imediato, **amarelo** rápido, **verde** e **azul** podem demorar horas.
-- Em Floripa há UPAs no **Sul, Norte, Continente e Centro**.
+- Em Floripa há **3 UPAs 24h**: **Sul** (Carianos), **Norte** (Vargem Grande) e **Continente** (Estreito).
 
 ## Hospital de emergência
 
@@ -444,6 +454,16 @@ Pra casos graves que exigem cirurgia ou internação. **Geralmente você chega v
             summary:
               "Guía rápida para elegir la puerta de entrada correcta y no esperar al cuete.",
             body: `**El sistema brasileño tiene 3 puertas de entrada principales.** Elegir la equivocada hace que esperes más o que te manden a otro lado.
+
+## Antes de salir de casa: Alô Saúde Floripa (0800 333 3233)
+
+Florianópolis tiene un servicio **gratuito de atención médica por teléfono**, **24h, todos los días**: el **Alô Saúde Floripa**. Llamá al **0800 333 3233** antes de ir a una unidad — muchos casos se resuelven sin salir de casa.
+
+- **Cómo funciona:** empieza con un triage por enfermería. Según los síntomas, recibís orientación, agendás consulta en el Centro de Salud, te derivan a una UPA o hacés una **teleconsulta médica por video**.
+- **Receta y certificado:** si el médico receta un remedio o necesitás un certificado, llegan por **WhatsApp o e-mail**. Con la receta, podés retirar el remedio en la farmacia del Centro de Salud, gratis por el SUS.
+- **Quién puede usarlo:** residentes de Florianópolis con registro en el SUS. **¿No tenés registro? Se puede hacer en el momento, durante la llamada.**
+
+> **Migrante recién llegado:** aunque todavía no tengas Tarjeta SUS, llamá — el registro se hace en la propia llamada. El servicio es gratuito y no pregunta situación migratoria.
 
 ## Decisión rápida
 
@@ -468,7 +488,7 @@ La **Unidad de Atención Inmediata** funciona 24 horas, sin agendamiento. Llegá
 
 - Para casos que **no pueden esperar hasta que abra la UBS**.
 - El triage usa **colores**: **rojo** atiende inmediato, **amarillo** rápido, **verde** y **azul** pueden demorar horas.
-- En Floripa hay UPAs en el **Sur, Norte, Continente y Centro**.
+- En Floripa hay **3 UPAs 24h**: **Sur** (Carianos), **Norte** (Vargem Grande) y **Continente** (Estreito).
 
 ## Hospital de emergencia
 
@@ -610,7 +630,7 @@ Crianças têm calendário muito mais extenso — pergunte na UBS sobre o esquem
 
 ## Vacinas pra viagens internacionais
 
-Voltar de visita ao seu país de origem? Algumas regiões pedem **comprovante de febre amarela** pra entrar ou sair. A UBS emite o **Certificado Internacional de Vacinação gratuitamente**.`,
+Voltar de visita ao seu país de origem? Algumas regiões pedem **comprovante de febre amarela** pra entrar ou sair. Tome a vacina na UBS (gratuita) e depois emita o **Certificado Internacional de Vacinação (CIVP) de graça pela Anvisa**, pelo [gov.br](https://www.gov.br) ou num posto da Anvisa no aeroporto.`,
           },
           es: {
             title: "Vacunación gratuita por el SUS",
@@ -646,7 +666,7 @@ Los niños tienen un calendario mucho más extenso — preguntá en la UBS sobre
 
 ## Vacunas para viajes internacionales
 
-¿Volvés de visita a tu país de origen? Algunas regiones piden **comprobante de fiebre amarilla** para entrar o salir. La UBS emite el **Certificado Internacional de Vacunación gratis**.`,
+¿Volvés de visita a tu país de origen? Algunas regiones piden **comprobante de fiebre amarilla** para entrar o salir. Vacunate en la UBS (gratis) y después emití el **Certificado Internacional de Vacunación (CIVP) gratis por la Anvisa**, por [gov.br](https://www.gov.br) o en un puesto de la Anvisa en el aeropuerto.`,
           },
         },
       },
@@ -1045,7 +1065,7 @@ Para ser contratado en CLT necesitás **CPF** y **CRNM** (u otro documento de re
 
 ## Canais oficiais
 
-- **SINE** (Sistema Nacional de Emprego): cadastro gratuito pra vagas formais. Tem posto físico no centro (Av. Mauro Ramos, 722) e pelo site [gov.br/sine](https://www.gov.br/empregabrasil/pt-br).
+- **SINE** (Sistema Nacional de Emprego): cadastro gratuito pra vagas formais. Tem posto físico no centro (Terminal Rita Maria, 2º andar — Av. Paulo Fontes, 1101) e pelo site [gov.br/sine](https://www.gov.br/empregabrasil/pt-br).
 - **App Sine Fácil**: vagas, encaminhamento e habilitação do seguro-desemprego no celular.
 
 ## Plataformas online
@@ -1088,7 +1108,7 @@ Busque por "Vagas Floripa", "Empregos Florianópolis", "Vagas Hotelaria SC". Tem
 
 ## Canales oficiales
 
-- **SINE** (Sistema Nacional de Empleo): registro gratuito para vacantes formales. Tiene puesto físico en el centro (Av. Mauro Ramos, 722) y por el sitio [gov.br/sine](https://www.gov.br/empregabrasil/pt-br).
+- **SINE** (Sistema Nacional de Empleo): registro gratuito para vacantes formales. Tiene puesto físico en el centro (Terminal Rita Maria, 2º piso — Av. Paulo Fontes, 1101) y por el sitio [gov.br/sine](https://www.gov.br/empregabrasil/pt-br).
 - **App Sine Fácil**: vacantes, derivación y solicitud del seguro de desempleo desde el celular.
 
 ## Plataformas online
@@ -1326,7 +1346,9 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
         title: "Assistência Social",
         summary:
           "Círculos de Hospitalidade e serviços de apoio para famílias em situação de vulnerabilidade.",
-        body: `**O Brasil tem uma rede pública e privada de assistência social que atende migrantes — gratuitamente.** Você não precisa estar em situação extrema pra procurar. É um direito.
+        body: `**O Brasil tem uma rede pública e privada de assistência social que atende migrantes gratuitamente.** Você não precisa estar em situação extrema pra procurar. É um direito.
+
+> A ONG **Círculos de Hospitalidade** também oferece serviços gratuitos de acolhimento e orientação a migrantes. Confira [aqui](/pt/modulo/assistencia-social/circulos-de-hospitalidade) como ela pode te ajudar.
 
 Há quatro portas principais:
 
@@ -1341,7 +1363,9 @@ Há quatro portas principais:
         title: "Asistencia Social",
         summary:
           "Círculos de Hospitalidade y servicios de apoyo para familias en situación de vulnerabilidad.",
-        body: `**Brasil tiene una red pública y privada de asistencia social que atiende migrantes — gratuitamente.** No tenés que estar en situación extrema para buscarla. Es un derecho.
+        body: `**Brasil tiene una red pública y privada de asistencia social que atiende migrantes gratuitamente.** No tenés que estar en situación extrema para buscarla. Es un derecho.
+
+> La ONG **Círculos de Hospitalidade** también ofrece servicios gratuitos de acogida y orientación a migrantes. Mirá [aquí](/es/modulo/assistencia-social/circulos-de-hospitalidade) cómo puede ayudarte.
 
 Hay cuatro puertas principales:
 
@@ -1564,7 +1588,7 @@ Faz parte de uma rede internacional ligada à Igreja Católica, mas **atende qua
 - **Cursos** de português e capacitação profissional.
 - **Ajuda emergencial** (alimentação, roupa, kit de higiene) em casos críticos.
 
-Sede em Floripa: Rua Esteves Júnior, 447 — Centro.
+Atendimento a migrantes na Casa de Direitos — R. Antônio Mariano de Souza, 1135, São José (Seg-Sex 13:30-18:00).
 
 ## Pastoral do Migrante
 
@@ -1610,7 +1634,7 @@ Forma parte de una red internacional vinculada a la Iglesia Católica, pero **at
 - **Cursos** de portugués y capacitación profesional.
 - **Ayuda de emergencia** (alimentos, ropa, kit de higiene) en casos críticos.
 
-Sede en Floripa: Rua Esteves Júnior, 447 — Centro.
+Atención a migrantes en la Casa de Direitos — R. Antônio Mariano de Souza, 1135, São José (Lun-Vie 13:30-18:00).
 
 ## Pastoral del Migrante
 

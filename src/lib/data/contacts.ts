@@ -5,11 +5,12 @@ export const contacts: Contact[] = [
     id: "policia-federal-floripa",
     categorySlug: "documentos",
     phone: "(48) 3281-6500",
-    address: "Av. Gov. Gustavo Richard, 367 - Centro, Florianópolis - SC",
-    lat: -27.603255,
-    lng: -48.549379,
+    address:
+      "Floripa Shopping (Loja 132) - Rod. SC-401, 3116, Saco Grande, Florianópolis - SC",
+    lat: -27.554043,
+    lng: -48.498529,
     website: "https://www.gov.br/pf/pt-br",
-    hours: "Seg-Sex 08:00-17:00 (mediante agendamento)",
+    hours: "Seg-Sex 10:00-17:00 (mediante agendamento)",
     translations: {
       pt: {
         name: "Polícia Federal - Delegacia de Migração",
@@ -27,11 +28,11 @@ export const contacts: Contact[] = [
     id: "receita-federal-floripa",
     categorySlug: "documentos",
     phone: "146",
-    address: "Rua Felipe Schmidt, 235 - Centro, Florianópolis - SC",
-    lat: -27.592792,
-    lng: -48.558155,
+    address: "Rua Claudino Bento da Silva, 11 - Centro, Florianópolis - SC",
+    lat: -27.594728,
+    lng: -48.560605,
     website: "https://www.gov.br/receitafederal/pt-br",
-    hours: "Seg-Sex 09:00-16:00",
+    hours: "Seg-Sex 08:00-16:00 (mediante agendamento)",
     translations: {
       pt: {
         name: "Receita Federal - CPF",
@@ -48,47 +49,50 @@ export const contacts: Contact[] = [
   {
     id: "cras-floripa",
     categorySlug: "assistencia-social",
-    phone: "(48) 3251-6300",
     website: "https://www.pmf.sc.gov.br/entidades/semas/",
-    hours: "Seg-Sex 08:00-17:00",
+    hours: "Seg-Sex 08:00-18:00",
     translations: {
       pt: {
         name: "CRAS - Centros de Referência de Assistência Social",
         description:
-          "Apoio social, cadastro único, Bolsa Família e orientação para famílias em situação de vulnerabilidade. Há unidades em vários bairros.",
+          "Apoio social, Cadastro Único, Bolsa Família e orientação para famílias em situação de vulnerabilidade. Há 10 unidades em vários bairros — procure a do seu território (lista no site da SEMAS); atendimento mediante agendamento.",
       },
       es: {
         name: "CRAS - Centros de Referencia de Asistencia Social",
         description:
-          "Apoyo social, registro único (CadÚnico), Bolsa Família y orientación para familias en situación de vulnerabilidad. Hay unidades en varios barrios.",
+          "Apoyo social, registro único (CadÚnico), Bolsa Família y orientación para familias en situación de vulnerabilidad. Hay 10 unidades en varios barrios — busque la de su territorio (lista en el sitio de SEMAS); atención con cita previa.",
       },
     },
   },
   {
     id: "caritas-sc",
     categorySlug: "assistencia-social",
-    phone: "(48) 3224-0566",
-    email: "secretaria@caritas.org.br",
-    address: "Rua Esteves Júnior, 447 - Centro, Florianópolis - SC",
-    lat: -27.590829,
-    lng: -48.553526,
-    website: "https://caritas.org.br",
+    phone: "(48) 3234-7033",
+    email: "caritassc@caritas.org.br",
+    address:
+      "Casa de Direitos - Rua Antônio Mariano de Souza, 1135 - Ipiranga, São José - SC",
+    lat: -27.564678,
+    lng: -48.626107,
+    website: "https://www.sc.caritas.org.br",
+    hours: "Seg-Sex 13:30-18:00",
     translations: {
       pt: {
         name: "Cáritas Brasileira - Regional SC",
         description:
-          "Atendimento a migrantes, refugiados e solicitantes de refúgio. Orientação jurídica, social e encaminhamentos.",
+          "Atendimento a migrantes, refugiados e solicitantes de refúgio (parceira do ACNUR). Orientação sobre acesso a direitos e serviços públicos e encaminhamentos. Atendimento na Casa de Direitos, em São José.",
       },
       es: {
         name: "Cáritas Brasileña - Regional SC",
         description:
-          "Atención a migrantes, refugiados y solicitantes de refugio. Orientación jurídica, social y derivaciones.",
+          "Atención a migrantes, refugiados y solicitantes de refugio (aliada del ACNUR). Orientación sobre acceso a derechos y servicios públicos y derivaciones. Atención en la Casa de Direitos, en São José.",
       },
     },
   },
   {
     id: "circulos-hospitalidade",
     categorySlug: "assistencia-social",
+    whatsapp: "(48) 99638-0528",
+    email: "contato@circulosdehospitalidade.org",
     website: "https://circulosdehospitalidade.org/",
     translations: {
       pt: {
@@ -122,12 +126,31 @@ export const contacts: Contact[] = [
     },
   },
   {
+    id: "alo-saude-floripa",
+    categorySlug: "saude",
+    phone: "0800 333 3233",
+    hours: "24 horas, todos os dias",
+    translations: {
+      pt: {
+        name: "Alô Saúde Floripa (teleatendimento médico)",
+        description:
+          "Atendimento médico gratuito por telefone, 24h, pelo SUS. Triagem por enfermagem e teleconsulta médica por vídeo; receitas e atestados chegam por WhatsApp ou e-mail. Para moradores de Florianópolis com cadastro no SUS (pode ser feito na hora, durante a ligação).",
+      },
+      es: {
+        name: "Alô Saúde Floripa (teleatención médica)",
+        description:
+          "Atención médica gratuita por teléfono, 24h, por el SUS. Triage por enfermería y teleconsulta médica por video; recetas y certificados llegan por WhatsApp o e-mail. Para residentes de Florianópolis con registro en el SUS (puede hacerse en el momento, durante la llamada).",
+      },
+    },
+  },
+  {
     id: "upa-sul",
     categorySlug: "saude",
-    phone: "(48) 3271-1500",
-    address: "Rod. SC-405, 4150 - Rio Tavares, Florianópolis - SC",
-    lat: -27.649214,
-    lng: -48.519612,
+    phone: "0800 000 4310",
+    address:
+      "MultiHospital - Av. Dep. Diomício Freitas, 3393 - Carianos, Florianópolis - SC",
+    lat: -27.66495,
+    lng: -48.544795,
     hours: "24 horas",
     translations: {
       pt: {
@@ -145,12 +168,13 @@ export const contacts: Contact[] = [
   {
     id: "consorcio-fenix",
     categorySlug: "transporte",
-    phone: "(48) 3271-7488",
-    address: "Terminal de Integração do Centro (TICEN)",
+    phone: "(48) 3112-1850",
+    email: "cadastro@passerapido.com.br",
+    address: "Av. Paulo Fontes, 701 - TICEN, Centro, Florianópolis - SC",
     lat: -27.59859,
     lng: -48.55382,
     website: "https://www.consorciofenix.com.br/passe-rapido",
-    hours: "Seg-Sex 06:00-20:00, Sáb 06:00-13:00",
+    hours: "Seg-Sex 08:00-17:00 (venda de créditos no TICEN até 22h)",
     translations: {
       pt: {
         name: "Passe Rápido - Consórcio Fênix",
@@ -167,12 +191,14 @@ export const contacts: Contact[] = [
   {
     id: "sine-floripa",
     categorySlug: "trabalho",
-    phone: "158",
-    address: "Av. Mauro Ramos, 722 - Centro, Florianópolis - SC",
-    lat: -27.588482,
-    lng: -48.543081,
+    phone: "(48) 3664-0625",
+    email: "florianopolis@sine.sc.gov.br",
+    address:
+      "Terminal Rita Maria (2º andar) - Av. Paulo Fontes, 1101, Centro, Florianópolis - SC",
+    lat: -27.597167,
+    lng: -48.558026,
     website: "https://www.gov.br/trabalho-e-emprego/pt-br",
-    hours: "Seg-Sex 08:00-17:00",
+    hours: "Seg-Sex 08:00-18:00",
     translations: {
       pt: {
         name: "SINE - Sistema Nacional de Emprego",
@@ -189,40 +215,37 @@ export const contacts: Contact[] = [
   {
     id: "plac-ufsc",
     categorySlug: "educacao",
-    email: "plac.ufsc@gmail.com",
-    website: "https://plac.paginas.ufsc.br",
+    email: "neplac.ufsc@gmail.com",
+    website: "https://neplac.paginas.ufsc.br",
     translations: {
       pt: {
-        name: "PLAc UFSC - Português como Língua de Acolhimento",
+        name: "NePLAc UFSC - Português como Língua de Acolhimento",
         description:
-          "Cursos gratuitos de português para imigrantes e refugiados oferecidos pela UFSC.",
+          "Cursos gratuitos de português para imigrantes e refugiados — projeto Rodamundo do NePLAc/UFSC. Inscrições online por edital a cada semestre; aulas presenciais no campus Trindade.",
       },
       es: {
-        name: "PLAc UFSC - Portugués como Lengua de Acogida",
+        name: "NePLAc UFSC - Portugués como Lengua de Acogida",
         description:
-          "Cursos gratuitos de portugués para inmigrantes y refugiados ofrecidos por la UFSC.",
+          "Cursos gratuitos de portugués para inmigrantes y refugiados — proyecto Rodamundo del NePLAc/UFSC. Inscripciones online por convocatoria cada semestre; clases presenciales en el campus Trindade.",
       },
     },
   },
   {
     id: "defensoria-publica-uniao",
     categorySlug: "emergencias",
-    phone: "(48) 3251-7400",
-    address: "Rua Paschoal Apóstolo Pítsica, 4863 - Agronômica, Florianópolis - SC",
-    lat: -27.579226,
-    lng: -48.524953,
+    phone: "(48) 99937-0645",
     website: "https://www.dpu.def.br",
-    hours: "Seg-Sex 12:00-18:00",
+    hours: "Seg-Sex 09:00-17:00 (atendimento remoto)",
     translations: {
       pt: {
         name: "Defensoria Pública da União",
         description:
-          "Assistência jurídica gratuita, inclusive para migrantes e solicitantes de refúgio.",
+          "Assistência jurídica gratuita, inclusive para migrantes e solicitantes de refúgio. Atendimento remoto (sem posto físico em Floripa): agendamento pelo telefone/WhatsApp, pelo site (siage.dpu.def.br) ou pelo app DPU Cidadão.",
       },
       es: {
         name: "Defensoría Pública de la Unión",
         description:
-          "Asistencia jurídica gratuita, también para migrantes y solicitantes de refugio.",
+          "Asistencia jurídica gratuita, también para migrantes y solicitantes de refugio. Atención remota (sin oficina física en Floripa): agendamiento por teléfono/WhatsApp, por el sitio (siage.dpu.def.br) o por la app DPU Cidadão.",
       },
     },
   },
