@@ -72,7 +72,13 @@ export function getTopicBySlug(
 
 /** Blog posts, most recent first. */
 export function getAllPosts(): Post[] {
-  return [...posts].sort((a, b) => b.date.localeCompare(a.date));
+  return [...posts].sort((a, b) => {
+    // Published posts first, "coming soon" teasers last.
+    if (Boolean(a.comingSoon) !== Boolean(b.comingSoon)) {
+      return a.comingSoon ? 1 : -1;
+    }
+    return b.date.localeCompare(a.date);
+  });
 }
 
 export function getPostBySlug(slug: string): Post | undefined {

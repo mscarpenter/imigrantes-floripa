@@ -30,6 +30,8 @@ export interface CarouselIntro {
   eyebrow: string;
   title: string;
   subtitle: string;
+  /** Optional banner illustration for the welcome slide. */
+  image?: string;
   /** Accessible label for the welcome slide's dot. */
   label: string;
 }
@@ -77,6 +79,7 @@ export function TrilhaCarousel({
           {
             key: "intro",
             icon: "Compass",
+            image: intro.image,
             eyebrow: intro.eyebrow,
             title: intro.title,
             body: intro.subtitle,
@@ -255,7 +258,7 @@ export function TrilhaCarousel({
                         <Link
                           href={slide.href}
                           tabIndex={isActive ? 0 : -1}
-                          className="group/cta mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
+                          className="group/cta mt-6 inline-flex items-center gap-2 rounded-full bg-warm px-5 py-2.5 text-sm font-semibold text-warm-foreground shadow-sm transition-all hover:bg-warm/90 hover:shadow-md"
                         >
                           {slide.cta}
                           <ArrowRight className="size-4 transition-transform group-hover/cta:translate-x-1" />
@@ -315,7 +318,7 @@ export function TrilhaCarousel({
           href={trailHref}
           className={cn(
             buttonVariants({ size: "lg" }),
-            "h-12 rounded-full px-8 text-base shadow-soft hover:bg-primary/90 hover:shadow-soft-lg",
+            "h-12 rounded-full bg-warm px-8 text-base text-warm-foreground shadow-soft hover:bg-warm/90 hover:shadow-soft-lg",
           )}
         >
           <BookOpen className="size-5" />

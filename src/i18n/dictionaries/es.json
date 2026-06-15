@@ -10,9 +10,6 @@
     "blog": "Blog",
     "contacts": "Contactos",
     "about": "Sobre",
-    "signIn": "Entrar",
-    "profile": "Mi perfil",
-    "admin": "Admin",
     "faq": "FAQ"
   },
   "home": {
@@ -22,7 +19,14 @@
     "ctaContacts": "Ver contactos útiles",
     "sectionModules": "Qué vas a encontrar aquí",
     "sectionAbout": "Esta es una iniciativa para acoger",
-    "aboutBody": "Quien llega a una ciudad nueva necesita resolver varias cosas al mismo tiempo y no siempre sabe por dónde empezar. Este portal reúne información práctica y gratuita para inmigrantes que ya están en Florianópolis o que se están preparando para llegar."
+    "aboutBody": "Quien llega a una ciudad nueva necesita resolver varias cosas al mismo tiempo y no siempre sabe por dónde empezar. Este portal reúne información práctica y gratuita para inmigrantes que ya están en Florianópolis o que se están preparando para llegar.",
+    "aboutMoreLabel": "Ver más",
+    "aboutMoreTitle": "Una iniciativa colaborativa",
+    "aboutMoreBody": [
+      "Este portal es fruto de una colaboración entre UNICESUSC y los Círculos de Hospitalidade, uniendo la universidad y la sociedad civil en torno a un mismo objetivo: acoger a quien llega a Florianópolis.",
+      "UNICESUSC aporta la base académica y la estructura de un proyecto de extensión. Los Círculos de Hospitalidade traen la experiencia de quienes trabajan cada día en la acogida de inmigrantes y refugiados en la ciudad.",
+      "El resultado es una guía abierta, gratuita y hecha por alumnos. La información está organizada para reducir la ansiedad de los primeros días y ayudarte a orientarte con más autonomía."
+    ]
   },
   "blog": {
     "title": "Blog",
@@ -32,7 +36,8 @@
     "publishedOn": "Publicado el",
     "backToBlog": "Volver al blog",
     "availableInPt": "Este texto todavía está disponible solo en portugués. Una versión en español llegará pronto.",
-    "empty": "Pronto, nuevos textos por aquí."
+    "empty": "Pronto, nuevos textos por aquí.",
+    "comingSoon": "Próximamente"
   },
   "trail": {
     "title": "Ruta de orientación",
@@ -106,17 +111,6 @@
     "disclaimerBeforeContact": "Si encontrás algo equivocado o desactualizado, por favor avisanos ",
     "disclaimerContactLink": "contactándonos",
     "disclaimerAfterContact": "."
-  },
-  "auth": {
-    "signInTitle": "Entrar",
-    "signInSubtitle": "Usá tu correo para recibir un enlace de acceso. Sin contraseña.",
-    "emailLabel": "Tu correo",
-    "emailPlaceholder": "vos@ejemplo.com",
-    "sendLink": "Enviar enlace de acceso",
-    "configMissing": "El acceso todavía no está disponible. Estamos terminando la integración con la base de datos.",
-    "profileTitle": "Mi perfil",
-    "progressTitle": "Tu progreso en la ruta",
-    "progressEmpty": "Todavía no marcaste ningún módulo como completado."
   },
   "footer": {
     "madeWith": "Hecho por voluntarios en Florianópolis.",

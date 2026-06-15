@@ -24,7 +24,7 @@ export default async function ContactsPage({
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
       <Reveal>
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
           {dict.contacts.title}
         </h1>
         <p className="mt-2 max-w-2xl text-muted-foreground">
@@ -32,9 +32,9 @@ export default async function ContactsPage({
         </p>
       </Reveal>
 
-      <Card className="mt-8 gap-0 rounded-2xl border-primary/15 bg-primary/5 p-6 shadow-soft ring-0 sm:p-7">
+      <Card className="mt-8 gap-0 rounded-2xl border-[#6E5594]/20 bg-[#6E5594]/5 p-6 shadow-soft ring-0 sm:p-7">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#6E5594]/15 text-[#6E5594]">
             <HandHeart className="size-6" aria-hidden />
           </div>
           <div className="flex-1">
@@ -48,7 +48,10 @@ export default async function ContactsPage({
               href={CIRCULOS_CONTACT_URL}
               target="_blank"
               rel="noreferrer"
-              className={cn(buttonVariants({ size: "sm" }), "mt-4")}
+              className={cn(
+                buttonVariants({ size: "sm" }),
+                "mt-4 bg-[#6E5594] text-white hover:bg-[#6E5594]/90",
+              )}
             >
               {dict.contacts.featuredCta}
               <ArrowRight className="size-4" />

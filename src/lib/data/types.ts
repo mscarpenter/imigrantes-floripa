@@ -49,7 +49,7 @@ export interface PostTranslation {
   excerpt: string;
   /** Localized category label (e.g. "Mobilidade", "Saúde"). */
   tag: string;
-  /** Article content in Markdown. */
+  /** Article content in Markdown. Empty for upcoming ("coming soon") posts. */
   body: string;
 }
 
@@ -63,6 +63,8 @@ export interface Post {
   cover: string;
   /** Locale the content was originally written in (used as fallback). */
   sourceLocale: Locale;
+  /** When true, the post is a teaser ("Em breve"): no link, no detail page. */
+  comingSoon?: boolean;
   /** Content per locale. May be partial — missing locales fall back to source. */
   translations: Partial<Record<Locale, PostTranslation>>;
 }

@@ -14,7 +14,6 @@ import type { Contact } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { getCategoryBySlug } from "@/lib/data/queries";
-import { colorsFor } from "@/lib/data/colors";
 import { Icon } from "./Icon";
 import { cn } from "@/lib/utils";
 
@@ -28,7 +27,6 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
   const t = contact.translations[locale];
   const category = getCategoryBySlug(contact.categorySlug);
   const categoryName = category?.translations[locale].name;
-  const colors = colorsFor(category?.color);
 
   const hasDetails = Boolean(
     contact.phone ||
@@ -52,7 +50,7 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
             <span
               className={cn(
                 "inline-flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium",
-                colors.badge,
+                "bg-primary/10 text-primary",
               )}
             >
               {category && <Icon name={category.icon} className="size-3" />}
@@ -71,7 +69,7 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
               <Row icon={<Phone className="size-4" />} label={dict.contacts.phone}>
                 <a
                   href={`tel:${contact.phone.replace(/\D/g, "")}`}
-                  className="font-medium text-foreground transition-colors hover:text-primary"
+                  className="font-medium text-foreground transition-colors hover:text-[#6E5594]"
                 >
                   {contact.phone}
                 </a>
@@ -86,7 +84,7 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
                   href={`https://wa.me/${contact.whatsapp.replace(/\D/g, "")}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-medium text-foreground transition-colors hover:text-primary"
+                  className="font-medium text-foreground transition-colors hover:text-[#6E5594]"
                 >
                   {contact.whatsapp}
                 </a>
@@ -96,7 +94,7 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
               <Row icon={<Mail className="size-4" />} label={dict.contacts.email}>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="font-medium text-foreground transition-colors hover:text-primary break-all"
+                  className="font-medium text-foreground transition-colors hover:text-[#6E5594] break-all"
                 >
                   {contact.email}
                 </a>
@@ -116,7 +114,7 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
                   href={contact.website}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-medium text-foreground transition-colors hover:text-primary break-all"
+                  className="font-medium text-foreground transition-colors hover:text-[#6E5594] break-all"
                 >
                   {contact.website.replace(/^https?:\/\//, "")}
                 </a>
@@ -136,9 +134,9 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
           href={`/${locale}/mapa?contato=${contact.id}`}
           className="group/map flex items-center gap-2.5 border-t border-border/60 bg-muted/40 px-5 py-3.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-foreground sm:px-6"
         >
-          <MapIcon className="size-4 text-primary" />
+          <MapIcon className="size-4 text-[#6E5594]" />
           {dict.map.viewOnMap}
-          <span className="ml-auto flex size-6 items-center justify-center rounded-full bg-background text-muted-foreground ring-1 ring-border/60 transition-all group-hover/map:bg-primary group-hover/map:text-primary-foreground group-hover/map:ring-primary">
+          <span className="ml-auto flex size-6 items-center justify-center rounded-full bg-background text-muted-foreground ring-1 ring-border/60 transition-all group-hover/map:bg-[#6E5594] group-hover/map:text-white group-hover/map:ring-[#6E5594]">
             <ArrowRight className="size-3.5 transition-transform group-hover/map:translate-x-px" />
           </span>
         </Link>

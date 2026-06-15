@@ -5,7 +5,6 @@ import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Card } from "@/components/ui/card";
 import { Reveal } from "@/components/motion/Reveal";
-import { cn } from "@/lib/utils";
 
 const GITHUB_URL = "https://github.com/PR3Stoot/imigrantes-floripa";
 const UNICESUSC_URL = "https://unicesusc.edu.br/";
@@ -33,7 +32,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 md:py-14">
       <Reveal>
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
           {dict.about.title}
         </h1>
 
@@ -42,33 +41,26 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
         </p>
       </Reveal>
 
-      <Card className="mt-10 gap-0 rounded-2xl border-border/60 p-6 shadow-soft ring-0 sm:p-7">
+      {/* Card 1 — Laranja (terracota) */}
+      <Card className="mt-10 gap-0 rounded-2xl border-warm/20 bg-warm/5 p-6 shadow-soft ring-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg sm:p-7">
         <div className="flex items-start gap-4">
-          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-warm/15 text-warm">
             <GraduationCap className="size-6" aria-hidden />
           </div>
           <div className="flex-1">
             <h2 className="text-lg font-semibold">{dict.about.academicTitle}</h2>
-            <p className="mt-1 text-sm font-medium italic text-primary">
+            <p className="mt-1 text-sm font-medium italic text-warm">
               {dict.about.academicLead}
             </p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {dict.about.academicBodyBeforeUnicesusc}
-              <a
-                href={UNICESUSC_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
-              >
+              <a href={UNICESUSC_URL} target="_blank" rel="noreferrer"
+                className="font-medium text-foreground underline underline-offset-2 hover:text-warm">
                 {dict.about.academicUnicesuscLabel}
               </a>
               {dict.about.academicBodyBeforeCirculos}
-              <a
-                href={CIRCULOS_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
-              >
+              <a href={CIRCULOS_URL} target="_blank" rel="noreferrer"
+                className="font-medium text-foreground underline underline-offset-2 hover:text-warm">
                 {dict.about.academicCirculosLabel}
               </a>
               {dict.about.academicBodyAfterCirculos}
@@ -77,9 +69,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
         </div>
       </Card>
 
-      <Card className="mt-4 gap-0 rounded-2xl border-border/60 p-6 shadow-soft ring-0 sm:p-7">
+      {/* Card 2 — Azul (primary) */}
+      <Card className="mt-4 gap-0 rounded-2xl border-[#6E5594]/20 bg-[#6E5594]/5 p-6 shadow-soft ring-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg sm:p-7">
         <div className="flex items-start gap-4">
-          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl border bg-background">
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#6E5594]/15 text-[#6E5594]">
             <GithubMark className="size-6" />
           </div>
           <div className="flex-1">
@@ -89,12 +82,8 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               {dict.about.openSource}
             </p>
-            <a
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground underline underline-offset-2 hover:text-primary"
-            >
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer"
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground underline underline-offset-2 hover:text-[#6E5594]">
               <GithubMark className="size-3.5" />
               {dict.about.openSourceLink}
             </a>
@@ -102,14 +91,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
         </div>
       </Card>
 
-      <Card
-        className={cn(
-          "mt-4 gap-0 rounded-2xl border-amber-200 bg-amber-50/60 p-6 shadow-soft ring-0 sm:p-7",
-          "dark:border-amber-900 dark:bg-amber-950/20",
-        )}
-      >
+      {/* Card 3 — Amarelo */}
+      <Card className="mt-4 gap-0 rounded-2xl border-yellow-300/60 bg-yellow-50/70 p-6 shadow-soft ring-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-lg dark:border-yellow-800/40 dark:bg-yellow-950/20 sm:p-7">
         <div className="flex items-start gap-4">
-          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300">
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-yellow-100 text-yellow-700 dark:bg-yellow-950/40 dark:text-yellow-300">
             <AlertCircle className="size-6" aria-hidden />
           </div>
           <div className="flex-1">
@@ -118,10 +103,8 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               {dict.about.disclaimerBeforeContact}
-              <Link
-                href={`/${lang}/contatos`}
-                className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
-              >
+              <Link href={`/${lang}/contatos`}
+                className="font-medium text-foreground underline underline-offset-2 hover:text-yellow-700">
                 {dict.about.disclaimerContactLink}
               </Link>
               {dict.about.disclaimerAfterContact}

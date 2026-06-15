@@ -1,13 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
-import { ContactCard } from "./ContactCard";
+import { ContactRow } from "./ContactRow";
 import { Icon } from "./Icon";
 import type { Contact, Category } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
 interface ContactsBrowserProps {
@@ -25,6 +24,15 @@ export function ContactsBrowser({
 }: ContactsBrowserProps) {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [openedId, setOpenedId] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const itemRefs = useRef<Map<string, HTMLElement>>(new Map());
+
+  // Highlights: the scroll-focused row always glows (mobile only). The
+  // last-opened contact stays highlighted on desktop, but NOT on mobile.
+  const isHighlighted = (id: string) =>
+    id === activeId || (!isMobile && id === openedId);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -41,6 +49,58 @@ export function ContactsBrowser({
     });
   }, [contacts, query, activeCategory, locale]);
 
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  // Scroll-driven highlight: the row closest to the viewport center gets a warm
+  // (terracota) border. Only on the single-column mobile layout.
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    let raf = 0;
+
+    const compute = () => {
+      raf = 0;
+      if (!mq.matches) {
+        setActiveId((prev) => (prev === null ? prev : null));
+        return;
+      }
+      const centerY = window.innerHeight / 2;
+      let best: string | null = null;
+      let bestDist = Infinity;
+      itemRefs.current.forEach((el, id) => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        const c = r.top + r.height / 2;
+        const d = Math.abs(c - centerY);
+        if (d < bestDist) {
+          bestDist = d;
+          best = id;
+        }
+      });
+      setActiveId(best);
+    };
+
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(compute);
+    };
+
+    compute();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    mq.addEventListener("change", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      mq.removeEventListener("change", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [filtered]);
+
   return (
     <div>
       <Input
@@ -50,39 +110,44 @@ export function ContactsBrowser({
         className="max-w-md"
       />
 
-      <div className="mt-4 flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={() => setActiveCategory(null)}
-          className={cn(
-            "rounded-full border px-3 py-1 text-sm transition-colors",
-            activeCategory === null
-              ? "border-foreground bg-foreground text-background"
-              : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground",
-          )}
-        >
-          {dict.contacts.filterAll}
-        </button>
-        {categories.map((category) => {
-          const isActive = activeCategory === category.slug;
-          const colors = colorsFor(category.color);
-          return (
-            <button
-              key={category.slug}
-              type="button"
-              onClick={() => setActiveCategory(category.slug)}
-              className={cn(
-                "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm transition-colors",
-                isActive
-                  ? colors.pillActive
-                  : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground",
-              )}
-            >
-              <Icon name={category.icon} className="size-3.5" />
-              {category.translations[locale].name}
-            </button>
-          );
-        })}
+      <div className="relative mt-4">
+        <div className="flex flex-nowrap gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <button
+            type="button"
+            onClick={() => setActiveCategory(null)}
+            className={cn(
+              "shrink-0 rounded-full border px-3 py-1 text-sm transition-colors",
+              activeCategory === null
+                ? "border-primary bg-primary text-primary-foreground hover:bg-primary/90"
+                : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground",
+            )}
+          >
+            {dict.contacts.filterAll}
+          </button>
+          {categories.map((category) => {
+            const isActive = activeCategory === category.slug;
+            return (
+              <button
+                key={category.slug}
+                type="button"
+                onClick={() => setActiveCategory(category.slug)}
+                className={cn(
+                  "inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-sm transition-colors",
+                  isActive
+                    ? "border-warm bg-warm text-warm-foreground hover:bg-warm/90"
+                    : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground",
+                )}
+              >
+                <Icon name={category.icon} className="size-3.5" />
+                {category.translations[locale].name}
+              </button>
+            );
+          })}
+        </div>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-background to-transparent"
+        />
       </div>
 
       {filtered.length === 0 ? (
@@ -90,14 +155,23 @@ export function ContactsBrowser({
           {dict.contacts.noResults}
         </p>
       ) : (
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {filtered.map((contact) => (
-            <ContactCard
+            <div
               key={contact.id}
-              contact={contact}
-              locale={locale}
-              dict={dict}
-            />
+              ref={(el) => {
+                if (el) itemRefs.current.set(contact.id, el);
+                else itemRefs.current.delete(contact.id);
+              }}
+            >
+              <ContactRow
+                contact={contact}
+                locale={locale}
+                dict={dict}
+                active={isHighlighted(contact.id)}
+                onOpen={() => setOpenedId(contact.id)}
+              />
+            </div>
           ))}
         </div>
       )}

@@ -33,13 +33,13 @@ export function TopicCard({
           "group-hover:-translate-y-1 group-hover:shadow-soft-lg",
           "group-active:translate-y-0 group-active:scale-[0.98] group-active:shadow-soft",
           "group-focus-visible:ring-2 group-focus-visible:ring-ring",
-          colors.cardBorder,
+          "group-hover:border-warm/50",
         )}
       >
         <div className="flex items-start gap-4">
           <span
             className={cn(
-              "flex size-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold",
+              "flex size-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold transition-colors duration-300 group-hover:bg-warm/15 group-hover:text-warm",
               colors.iconBg,
               colors.iconText,
             )}
@@ -51,7 +51,7 @@ export function TopicCard({
             <p className="mt-1.5 text-sm text-muted-foreground">{t.summary}</p>
           </div>
           <ArrowRight
-            className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5"
+            className="size-4 shrink-0 text-muted-foreground transition-all group-hover:translate-x-0.5 group-hover:text-warm"
             aria-hidden
           />
         </div>

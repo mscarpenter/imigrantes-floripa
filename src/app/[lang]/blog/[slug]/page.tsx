@@ -20,7 +20,9 @@ import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.slug }));
+  return getAllPosts()
+    .filter((p) => !p.comingSoon)
+    .map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -41,7 +43,7 @@ export default async function PostPage({
   if (!isLocale(lang)) notFound();
 
   const post = getPostBySlug(slug);
-  if (!post) notFound();
+  if (!post || post.comingSoon) notFound();
 
   const dict = await getDictionary(lang);
   const { t, isFallback } = getPostTranslation(post, lang);

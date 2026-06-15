@@ -289,4 +289,54 @@ Não sabe qual é a sua? Há três caminhos rápidos:
       },
     },
   },
+  {
+    slug: "trabalho-e-renda-em-florianopolis",
+    date: "2026-06-08",
+    color: "emerald",
+    icon: "Briefcase",
+    cover: "/illustrations/trabalho.png",
+    sourceLocale: "pt",
+    comingSoon: true,
+    translations: {
+      pt: {
+        title: "Trabalho e renda: por onde começar em Florianópolis",
+        tag: "Trabalho",
+        excerpt:
+          "Carteira de trabalho, primeiro emprego, validação de profissão e onde buscar vagas e apoio. Um guia prático para gerar renda na cidade está chegando.",
+        body: "",
+      },
+      es: {
+        title: "Trabajo e ingresos: por dónde empezar en Florianópolis",
+        tag: "Trabajo",
+        excerpt:
+          "Documento laboral, primer empleo, validación de profesión y dónde buscar vacantes y apoyo. Una guía práctica para generar ingresos en la ciudad está por llegar.",
+        body: "",
+      },
+    },
+  },
+  {
+    slug: "educacao-em-florianopolis",
+    date: "2026-06-06",
+    color: "amber",
+    icon: "GraduationCap",
+    cover: "/illustrations/educacao.png",
+    sourceLocale: "pt",
+    comingSoon: true,
+    translations: {
+      pt: {
+        title: "Educação: matrícula, escola pública e cursos gratuitos",
+        tag: "Educação",
+        excerpt:
+          "Como matricular as crianças na escola pública, aprender português, revalidar diplomas e encontrar cursos gratuitos. Estamos preparando este guia com cuidado.",
+        body: "",
+      },
+      es: {
+        title: "Educación: matrícula, escuela pública y cursos gratuitos",
+        tag: "Educación",
+        excerpt:
+          "Cómo matricular a los niños en la escuela pública, aprender portugués, revalidar diplomas y encontrar cursos gratuitos. Estamos preparando esta guía con cuidado.",
+        body: "",
+      },
+    },
+  },
 ];

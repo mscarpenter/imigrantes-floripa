@@ -78,12 +78,6 @@ export function Header({ locale, dict }: HeaderProps) {
 
         <div className="flex items-center gap-3">
           <LanguageSwitcher current={locale} />
-          <Link
-            href={`/${locale}/entrar`}
-            className="hidden text-sm font-medium transition-colors hover:text-primary sm:inline"
-          >
-            {dict.nav.signIn}
-          </Link>
         </div>
       </div>
 

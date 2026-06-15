@@ -18,6 +18,7 @@ import { ReadingProgress } from "@/components/article/ReadingProgress";
 import { extractHeadings } from "@/lib/markdown/toc";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
+import { ModuleVisitTracker } from "@/components/ModuleVisitTracker";
 
 export async function generateStaticParams() {
   const modules = getAllModules();
@@ -59,6 +60,7 @@ export default async function ModulePage({
 
   return (
     <article>
+      <ModuleVisitTracker slug={slug} />
       <ReadingProgress />
       {/* Rich colored header */}
       <header className={cn("border-b", colors.softBg)}>
