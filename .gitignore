@@ -41,3 +41,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# cursor agent kit (local only)
+/.cursor/
+
+# media / gravações de exemplo (não versionar binários pesados)
+/media/
+*.webm
+*.mp4
+*.mov
+
+# referência local (não versionar)
+/docs/referencias/
+
+# docs gerados/rascunho/notas locais (não versionar)
+/docs/journey/
+/docs/notas/

@@ -6,14 +6,14 @@ Portal público e open-source para imigrantes que chegam ou se preparam para mor
 
 Projeto de extensão da **CESUTech** — *Conectando Gerações e Impulsionando o Futuro e o Protagonismo Digital* — vinculado ao Centro Universitário Cesusc (CESUSC), em Florianópolis.
 
-> Status: **MVP em desenvolvimento.** O site público funciona com dados estáticos. A integração com Supabase (login opcional + painel admin) será habilitada na próxima etapa.
+> Status: **MVP em desenvolvimento.** O site público funciona com dados estáticos (conteúdo em `src/lib/data/`).
 
 ## Stack
 
 - **Next.js 16** (App Router, Turbopack)
 - **React 19** + **TypeScript**
 - **Tailwind CSS v4** + **shadcn/ui** (Base UI)
-- **Supabase** (Postgres + Auth) — schema definido em `supabase/migrations/`, integração ainda não ativa
+- Conteúdo estático em `src/lib/data/` (sem banco de dados)
 - i18n nativo do Next 16 (dictionaries em `src/i18n/dictionaries/`)
 
 ## Rodar localmente
@@ -36,33 +36,16 @@ src/
 │   ├── trilha/         # lista de módulos
 │   ├── modulo/[slug]/  # conteúdo de um módulo
 │   ├── contatos/       # diretório de contatos
-│   ├── sobre/
-│   ├── entrar/         # login (placeholder — aguardando Supabase)
-│   ├── perfil/         # progresso do usuário (placeholder)
-│   └── admin/          # painel admin (placeholder)
+│   ├── mapa/           # mapa dos contatos
+│   ├── blog/           # artigos
+│   ├── faq/
+│   └── sobre/
 ├── components/         # Header, Footer, LanguageSwitcher, cards
 ├── i18n/               # config + dictionaries pt/es
 ├── lib/
-│   ├── data/           # dados mock (módulos, categorias, contatos)
-│   └── supabase/       # clientes (browser, server, admin)
+│   └── data/           # conteúdo estático (módulos, categorias, contatos)
 └── proxy.ts            # detecção de locale + redirect (era middleware no Next 15)
-
-supabase/
-├── migrations/         # schema SQL + RLS
-└── seed.sql            # vazio por enquanto
 ```
-
-## Configurar Supabase (passo opcional, ainda não obrigatório)
-
-1. Crie um projeto em [supabase.com](https://supabase.com).
-2. Copie `.env.local.example` para `.env.local` e preencha as 3 chaves do dashboard (Settings → API).
-3. No SQL Editor, cole o conteúdo de `supabase/migrations/0001_initial_schema.sql` e execute.
-4. (Opcional) Promova seu usuário a admin:
-   ```sql
-   update profiles set role = 'admin' where id = '<seu-uuid>';
-   ```
-
-Enquanto não houver `.env.local`, as páginas de login e admin mostram um aviso amigável e o resto do site funciona normalmente.
 
 ## Contribuir
 

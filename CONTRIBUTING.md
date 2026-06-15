@@ -35,4 +35,3 @@ Para tudo isso, basta abrir uma issue no GitHub.
 | Adicionar contato | `src/lib/data/contacts.ts` |
 | Texto da interface | `src/i18n/dictionaries/{pt,es}.json` |
 | Layout / cores | `src/app/[lang]/layout.tsx`, `src/app/globals.css` |
-| Schema do banco | `supabase/migrations/` |

@@ -10,8 +10,8 @@ import {
   Compass,
   PhoneCall,
   MapPin,
-  type Icon as PhosphorIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
 /**
  * Mapeamento dos nomes usados nos dados (mantidos por compatibilidade)

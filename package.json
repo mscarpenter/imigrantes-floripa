@@ -8,13 +8,14 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "data:health": "node scripts/fetch-health-units.mjs",
+    "data:schools": "node scripts/fetch-schools.mjs",
+    "journey": "node scripts/record-journey.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
     "@phosphor-icons/react": "^2.1.10",
-    "@supabase/ssr": "^0.10.3",
-    "@supabase/supabase-js": "^2.105.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "leaflet": "^1.9.4",
@@ -43,6 +44,6 @@
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.8"
   }
 }
