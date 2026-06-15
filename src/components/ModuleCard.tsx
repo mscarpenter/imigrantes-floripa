@@ -36,8 +36,10 @@ export function ModuleCard({
     >
       <Card
         className={cn(
-          "relative h-full overflow-hidden p-6 transition-all duration-300 ease-out",
-          "group-hover:-translate-y-1 group-hover:shadow-lg group-focus-visible:ring-2 group-focus-visible:ring-ring",
+          "relative h-full overflow-hidden rounded-2xl p-6 shadow-soft transition-all duration-300 ease-out",
+          "group-hover:-translate-y-1 group-hover:shadow-soft-lg",
+          "group-active:translate-y-0 group-active:scale-[0.98] group-active:shadow-soft",
+          "group-focus-visible:ring-2 group-focus-visible:ring-ring",
           borderHover,
         )}
       >

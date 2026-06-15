@@ -24,12 +24,15 @@ export function TopicCard({
   const colors = colorsFor(moduleColor);
   return (
     <Link
-      href={`/${locale}/modulo/${moduleSlug}/${topic.slug}`}
+      href={`/${locale}/modulo/${moduleSlug}/${topic.slug}#conteudo`}
       className="group block focus:outline-none"
     >
       <Card
         className={cn(
-          "h-full p-5 transition-colors group-focus-visible:ring-2 group-focus-visible:ring-ring",
+          "h-full rounded-2xl p-5 shadow-soft transition-all duration-300 ease-out",
+          "group-hover:-translate-y-1 group-hover:shadow-soft-lg",
+          "group-active:translate-y-0 group-active:scale-[0.98] group-active:shadow-soft",
+          "group-focus-visible:ring-2 group-focus-visible:ring-ring",
           colors.cardBorder,
         )}
       >

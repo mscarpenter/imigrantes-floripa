@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -16,6 +17,8 @@ import { cn } from "@/lib/utils";
 export interface CarouselCard {
   id: string;
   icon: string;
+  /** Banner illustration path in /public. */
+  image?: string;
   tag: string;
   title: string;
   intro: string;
@@ -45,6 +48,7 @@ interface TrilhaCarouselProps {
 interface Slide {
   key: string;
   icon: string;
+  image?: string;
   eyebrow: string;
   title: string;
   body: string;
@@ -84,6 +88,7 @@ export function TrilhaCarousel({
       (c): Slide => ({
         key: c.id,
         icon: c.icon,
+        image: c.image,
         eyebrow: c.tag,
         title: c.title,
         body: c.intro,
@@ -214,16 +219,19 @@ export function TrilhaCarousel({
                   >
                     <div className="animate-float-slow absolute -right-24 -top-28 size-80 rounded-full bg-primary/5" />
                     <div className="animate-drift absolute -bottom-32 left-1/4 size-96 rounded-full bg-primary/[0.04]" />
-                    <Icon
-                      name={slide.icon}
-                      className={cn(
-                        "absolute right-4 top-1/2 size-72 -translate-y-1/2 text-primary/[0.07] transition-transform duration-700 ease-out md:right-24",
-                        isActive ? "scale-100" : "scale-90",
-                      )}
-                    />
+                    {/* slide de boas-vindas (sem imagem) mantém o ícone gigante */}
+                    {!slide.image && (
+                      <Icon
+                        name={slide.icon}
+                        className={cn(
+                          "absolute right-4 top-1/2 size-72 -translate-y-1/2 text-primary/[0.07] transition-transform duration-700 ease-out md:right-24",
+                          isActive ? "scale-100" : "scale-90",
+                        )}
+                      />
+                    )}
                   </div>
 
-                  <div className="relative mx-auto w-full max-w-7xl px-12 py-12 sm:px-14 md:px-20 lg:px-8">
+                  <div className="relative mx-auto grid w-full max-w-7xl items-center gap-8 px-12 py-12 sm:px-14 md:grid-cols-2 md:gap-12 md:px-20 lg:px-8">
                     <div
                       className="max-w-2xl transition-all duration-700 ease-out"
                       style={{
@@ -254,6 +262,26 @@ export function TrilhaCarousel({
                         </Link>
                       )}
                     </div>
+
+                    {slide.image && (
+                      <div
+                        className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl border bg-muted/40 shadow-sm transition-all duration-700 ease-out"
+                        style={{
+                          opacity: isActive ? 1 : 0.35,
+                          transform: isActive
+                            ? "translate3d(0,0,0)"
+                            : "translate3d(0,14px,0)",
+                        }}
+                      >
+                        <Image
+                          src={slide.image}
+                          alt=""
+                          fill
+                          sizes="(min-width: 768px) 40vw, 100vw"
+                          className="object-cover transition-transform duration-700 ease-out group-hover/slide:scale-[1.03]"
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </li>
@@ -287,7 +315,7 @@ export function TrilhaCarousel({
           href={trailHref}
           className={cn(
             buttonVariants({ size: "lg" }),
-            "h-12 bg-[#BC4A2C] px-8 text-base text-white hover:bg-[#9C3B22]",
+            "h-12 rounded-full px-8 text-base shadow-soft hover:bg-primary/90 hover:shadow-soft-lg",
           )}
         >
           <BookOpen className="size-5" />

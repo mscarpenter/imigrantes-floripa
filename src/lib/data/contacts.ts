@@ -55,12 +55,12 @@ export const contacts: Contact[] = [
       pt: {
         name: "CRAS - Centros de Referência de Assistência Social",
         description:
-          "Apoio social, Cadastro Único, Bolsa Família e orientação para famílias em situação de vulnerabilidade. Há 10 unidades em vários bairros — procure a do seu território (lista no site da SEMAS); atendimento mediante agendamento.",
+          "Apoio social, Cadastro Único, Bolsa Família e orientação para famílias em situação de vulnerabilidade. Há 10 unidades em vários bairros. Procure a do seu território (lista no site da SEMAS); atendimento mediante agendamento.",
       },
       es: {
         name: "CRAS - Centros de Referencia de Asistencia Social",
         description:
-          "Apoyo social, registro único (CadÚnico), Bolsa Família y orientación para familias en situación de vulnerabilidad. Hay 10 unidades en varios barrios — busque la de su territorio (lista en el sitio de SEMAS); atención con cita previa.",
+          "Apoyo social, registro único (CadÚnico), Bolsa Família y orientación para familias en situación de vulnerabilidad. Hay 10 unidades en varios barrios. Busque la de su territorio (lista en el sitio de SEMAS); atención con cita previa.",
       },
     },
   },
@@ -221,12 +221,12 @@ export const contacts: Contact[] = [
       pt: {
         name: "NePLAc UFSC - Português como Língua de Acolhimento",
         description:
-          "Cursos gratuitos de português para imigrantes e refugiados — projeto Rodamundo do NePLAc/UFSC. Inscrições online por edital a cada semestre; aulas presenciais no campus Trindade.",
+          "Cursos gratuitos de português para imigrantes e refugiados, pelo projeto Rodamundo do NePLAc/UFSC. Inscrições online por edital a cada semestre; aulas presenciais no campus Trindade.",
       },
       es: {
         name: "NePLAc UFSC - Portugués como Lengua de Acogida",
         description:
-          "Cursos gratuitos de portugués para inmigrantes y refugiados — proyecto Rodamundo del NePLAc/UFSC. Inscripciones online por convocatoria cada semestre; clases presenciales en el campus Trindade.",
+          "Cursos gratuitos de portugués para inmigrantes y refugiados, por el proyecto Rodamundo del NePLAc/UFSC. Inscripciones online por convocatoria cada semestre; clases presenciales en el campus Trindade.",
       },
     },
   },

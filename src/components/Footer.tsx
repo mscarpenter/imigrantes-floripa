@@ -11,7 +11,8 @@ interface FooterProps {
 export function Footer({ dict, locale }: FooterProps) {
   const links = [
     { href: `/${locale}`, label: dict.nav.home },
-    { href: `/${locale}/trilha`, label: dict.nav.trail },
+    { href: `/${locale}/orientacao`, label: dict.nav.trail },
+    { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/contatos`, label: dict.nav.contacts },
     { href: `/${locale}/sobre`, label: dict.nav.about },
     { href: `/${locale}/faq`, label: dict.nav.faq },

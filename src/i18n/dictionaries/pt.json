@@ -7,6 +7,7 @@
     "home": "Início",
     "trail": "Trilha",
     "guidance": "Orientação",
+    "blog": "Blog",
     "contacts": "Contatos",
     "about": "Sobre",
     "signIn": "Entrar",
@@ -23,6 +24,16 @@
     "sectionAbout": "Essa é uma iniciativa para acolher",
     "aboutBody": "Quem chega em uma cidade nova precisa resolver várias coisas ao mesmo tempo e nem sempre sabe por onde começar. Este portal reúne informações práticas e gratuitas para imigrantes que já estão em Florianópolis ou que estão se preparando para chegar."
   },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Histórias e guias práticos para você se sentir em casa em Florianópolis.",
+    "intro": "Aqui a gente vai além do passo a passo: são textos acolhedores e introdutórios sobre o dia a dia na cidade, como transporte, saúde, trabalho e educação, e tudo que ajuda você a criar raízes. Conteúdo aberto, escrito pensando em quem está chegando.",
+    "readingTime": "min de leitura",
+    "publishedOn": "Publicado em",
+    "backToBlog": "Voltar para o blog",
+    "availableInPt": "Este texto ainda está disponível apenas em português. Uma versão em espanhol chega em breve.",
+    "empty": "Em breve, novos textos por aqui."
+  },
   "trail": {
     "title": "Trilha de orientação",
     "subtitle": "Siga na ordem sugerida ou pule direto para o que você precisa agora.",
@@ -37,7 +48,8 @@
     "topicOf": "de",
     "relatedTopicContacts": "Contatos relacionados a este tópico",
     "previousTopic": "Anterior",
-    "nextTopic": "Próximo"
+    "nextTopic": "Próximo",
+    "nextStep": "Próximo passo"
   },
   "contacts": {
     "title": "Contatos úteis",
@@ -52,7 +64,7 @@
     "website": "Site",
     "hours": "Horário",
     "featuredTitle": "Atendimento presencial e online",
-    "featuredBody": "É migrante ou refugiado e vive em Santa Catarina? A equipe da Círculos de Hospitalidade oferece acolhimento e orientação gratuitos, de forma presencial e online. Faça seu cadastro na página deles — o contato é feito por WhatsApp.",
+    "featuredBody": "É migrante ou refugiado e vive em Santa Catarina? A equipe da Círculos de Hospitalidade oferece acolhimento e orientação gratuitos, de forma presencial e online. Faça seu cadastro na página deles. O contato é feito por WhatsApp.",
     "featuredCta": "Falar com a Círculos de Hospitalidade"
   },
   "map": {
@@ -79,7 +91,7 @@
   },
   "about": {
     "title": "Sobre o projeto",
-    "intro": "Imigrantes Floripa é um portal aberto e gratuito que organiza informações práticas pra quem chega — ou se prepara pra chegar — em Florianópolis. A ideia é reduzir o caos dos primeiros dias na cidade: documentos, transporte, saúde, trabalho, moradia e tudo mais que costuma travar por falta de orientação centralizada e em mais de um idioma.",
+    "intro": "Imigrantes Floripa é um portal aberto e gratuito que organiza informações práticas pra quem chega (ou se prepara pra chegar) em Florianópolis. A ideia é reduzir o caos dos primeiros dias na cidade: documentos, transporte, saúde, trabalho, moradia e tudo mais que costuma travar por falta de orientação centralizada e em mais de um idioma.",
     "academicTitle": "Projeto de extensão da CESUTech",
     "academicLead": "Conectando Gerações e Impulsionando o Futuro e o Protagonismo Digital",
     "academicBodyBeforeUnicesusc": "Este portal foi desenvolvido como parte de um projeto de extensão da CESUTech, vinculado ao Centro Universitário Cesusc (",

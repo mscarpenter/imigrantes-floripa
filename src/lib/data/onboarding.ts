@@ -15,6 +15,8 @@ export interface OnboardingCard {
   icon: string;
   /** Path WITHOUT the locale prefix (e.g. "/contatos"). */
   path: string;
+  /** Banner illustration in /public (same for both locales, no text). */
+  image: string;
   translations: Record<Locale, OnboardingTranslation>;
 }
 
@@ -27,6 +29,7 @@ export const onboardingCards: OnboardingCard[] = [
     id: "documentos",
     icon: "FileText",
     path: "/modulo/documentos-essenciais",
+    image: "/illustrations/documentos.png",
     translations: {
       pt: {
         tag: "Documentos",
@@ -48,6 +51,7 @@ export const onboardingCards: OnboardingCard[] = [
     id: "saude",
     icon: "HeartPulse",
     path: "/modulo/saude-sus",
+    image: "/illustrations/saude.png",
     translations: {
       pt: {
         tag: "Saúde",
@@ -69,6 +73,7 @@ export const onboardingCards: OnboardingCard[] = [
     id: "transporte",
     icon: "Bus",
     path: "/modulo/transporte-publico",
+    image: "/illustrations/transporte.png",
     translations: {
       pt: {
         tag: "Transporte",
@@ -90,6 +95,7 @@ export const onboardingCards: OnboardingCard[] = [
     id: "assistencia",
     icon: "HandHeart",
     path: "/modulo/assistencia-social",
+    image: "/illustrations/assistencia.png",
     translations: {
       pt: {
         tag: "Assistência social",
@@ -111,6 +117,7 @@ export const onboardingCards: OnboardingCard[] = [
     id: "contatos",
     icon: "PhoneCall",
     path: "/contatos",
+    image: "/illustrations/contatos.png",
     translations: {
       pt: {
         tag: "Contatos",
@@ -132,6 +139,7 @@ export const onboardingCards: OnboardingCard[] = [
     id: "mapa",
     icon: "MapPin",
     path: "/mapa",
+    image: "/illustrations/mapa.png",
     translations: {
       pt: {
         tag: "Mapa",

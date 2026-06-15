@@ -39,7 +39,11 @@ export default async function LangLayout({
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang} className={cn("font-sans", geist.variable)}>
+    <html
+      lang={lang}
+      data-scroll-behavior="smooth"
+      className={cn("font-sans", geist.variable)}
+    >
       <body className="min-h-dvh flex flex-col bg-background text-foreground">
         <Header locale={lang} dict={dict} />
         <main className="flex-1">{children}</main>

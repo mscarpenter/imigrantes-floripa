@@ -1,7 +1,16 @@
 import { modules } from "./modules";
 import { contacts } from "./contacts";
 import { categories } from "./categories";
-import type { Module, Contact, Category, Topic } from "./types";
+import { posts } from "./posts";
+import type {
+  Module,
+  Contact,
+  Category,
+  Topic,
+  Post,
+  PostTranslation,
+} from "./types";
+import type { Locale } from "@/i18n/config";
 
 export function getAllModules(): Module[] {
   return [...modules].sort((a, b) => a.order - b.order);
@@ -59,4 +68,35 @@ export function getTopicBySlug(
   const topic = mod.topics.find((t) => t.slug === topicSlug);
   if (!topic) return undefined;
   return { module: mod, topic };
+}
+
+/** Blog posts, most recent first. */
+export function getAllPosts(): Post[] {
+  return [...posts].sort((a, b) => b.date.localeCompare(a.date));
+}
+
+export function getPostBySlug(slug: string): Post | undefined {
+  return posts.find((p) => p.slug === slug);
+}
+
+/**
+ * Returns the post translation for a locale. When the requested locale is
+ * missing, falls back to the post's source locale and flags `isFallback`.
+ */
+export function getPostTranslation(
+  post: Post,
+  locale: Locale,
+): { t: PostTranslation; isFallback: boolean } {
+  const requested = post.translations[locale];
+  if (requested) return { t: requested, isFallback: false };
+  const fallback =
+    post.translations[post.sourceLocale] ??
+    Object.values(post.translations)[0];
+  return { t: fallback as PostTranslation, isFallback: true };
+}
+
+/** Rough reading-time estimate in minutes (~200 words/min). */
+export function readingMinutes(body: string): number {
+  const words = body.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 200));
 }

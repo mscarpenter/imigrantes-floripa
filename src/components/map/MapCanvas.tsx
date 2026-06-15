@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
@@ -9,7 +9,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
-import { LocateFixed, Navigation, Bus } from "lucide-react";
+import { Navigation } from "lucide-react";
 import type { Contact } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -260,6 +260,10 @@ interface MapCanvasProps {
   selected: Contact | null;
   locale: Locale;
   dict: Dictionary;
+  locateNonce: number;
+  showBusStops: boolean;
+  onLocateStatus: (status: "idle" | "locating" | "error") => void;
+  onBusStatus: (status: "idle" | "loading") => void;
 }
 
 export default function MapCanvas({
@@ -267,18 +271,12 @@ export default function MapCanvas({
   selected,
   locale,
   dict,
+  locateNonce,
+  showBusStops,
+  onLocateStatus,
+  onBusStatus,
 }: MapCanvasProps) {
   const markerRefs = useRef<Record<string, L.Marker | null>>({});
-  const [locateNonce, setLocateNonce] = useState(0);
-  const [locateStatus, setLocateStatus] = useState<
-    "idle" | "locating" | "error"
-  >("idle");
-  const [showBusStops, setShowBusStops] = useState(false);
-  const [busStatus, setBusStatus] = useState<"idle" | "loading">("idle");
-  const onBusStatus = useCallback(
-    (status: "idle" | "loading") => setBusStatus(status),
-    [],
-  );
   const busLabels = useMemo(
     () => ({
       fallback: dict.map.busStop,
@@ -362,47 +360,13 @@ export default function MapCanvas({
         })}
 
         <FlyToSelected selected={selected} markerRefs={markerRefs} />
-        <GeolocationLayer nonce={locateNonce} onStatus={setLocateStatus} />
+        <GeolocationLayer nonce={locateNonce} onStatus={onLocateStatus} />
         <BusStopsLayer
           show={showBusStops}
           labels={busLabels}
           onStatus={onBusStatus}
         />
       </MapContainer>
-
-      <button
-        type="button"
-        onClick={() => setShowBusStops((v) => !v)}
-        aria-pressed={showBusStops}
-        className={`absolute left-3 top-3 z-[1000] inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-xs font-medium shadow-md backdrop-blur transition-colors ${
-          showBusStops
-            ? "border-sky-600 bg-sky-600 text-white hover:bg-sky-700"
-            : "border-border bg-background/95 hover:bg-background"
-        }`}
-      >
-        <Bus className={`size-4 ${busStatus === "loading" ? "animate-pulse" : ""}`} />
-        {busStatus === "loading"
-          ? dict.map.busStopsLoading
-          : showBusStops
-            ? dict.map.busStopsHide
-            : dict.map.busStopsShow}
-      </button>
-
-      <button
-        type="button"
-        onClick={() => setLocateNonce((n) => n + 1)}
-        className="absolute right-3 top-3 z-[1000] inline-flex items-center gap-1.5 rounded-lg border border-border bg-background/95 px-3 py-2 text-xs font-medium shadow-md backdrop-blur transition-colors hover:bg-background"
-        aria-label={dict.map.locateMe}
-      >
-        <LocateFixed
-          className={`size-4 ${locateStatus === "locating" ? "animate-pulse" : ""}`}
-        />
-        {locateStatus === "locating"
-          ? dict.map.locating
-          : locateStatus === "error"
-            ? dict.map.locateError
-            : dict.map.locateMe}
-      </button>
     </div>
   );
 }

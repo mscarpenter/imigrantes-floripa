@@ -43,6 +43,30 @@ export interface Category {
   translations: Record<Locale, CategoryTranslation>;
 }
 
+export interface PostTranslation {
+  title: string;
+  /** Short summary shown on cards and as meta description. */
+  excerpt: string;
+  /** Localized category label (e.g. "Mobilidade", "Saúde"). */
+  tag: string;
+  /** Article content in Markdown. */
+  body: string;
+}
+
+export interface Post {
+  slug: string;
+  /** ISO date (YYYY-MM-DD) used for ordering and display. */
+  date: string;
+  color: ModuleColor;
+  icon: string;
+  /** Cover image path in /public. */
+  cover: string;
+  /** Locale the content was originally written in (used as fallback). */
+  sourceLocale: Locale;
+  /** Content per locale. May be partial — missing locales fall back to source. */
+  translations: Partial<Record<Locale, PostTranslation>>;
+}
+
 export interface ContactTranslation {
   name: string;
   description: string;

@@ -5,7 +5,9 @@ import { getAllModules } from "@/lib/data/queries";
 import { ModuleCard } from "@/components/ModuleCard";
 import { Reveal } from "@/components/motion/Reveal";
 
-export default async function TrailPage({ params }: PageProps<"/[lang]/trilha">) {
+export default async function GuidancePage({
+  params,
+}: PageProps<"/[lang]/orientacao">) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
 

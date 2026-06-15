@@ -64,7 +64,7 @@ export default async function ModulePage({
       <header className={cn("border-b", colors.softBg)}>
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
           <Link
-            href={`/${lang}/trilha`}
+            href={`/${lang}/orientacao`}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="size-4" />
@@ -107,7 +107,7 @@ export default async function ModulePage({
               {topics.map((topic) => (
                 <Link
                   key={topic.slug}
-                  href={`/${lang}/modulo/${mod.slug}/${topic.slug}`}
+                  href={`/${lang}/modulo/${mod.slug}/${topic.slug}#conteudo`}
                   className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground"
                 >
                   <span className="text-[10px] opacity-70">{topic.order}</span>
@@ -184,18 +184,22 @@ export default async function ModulePage({
         )}
 
         {/* Prev/next module navigation as cards */}
-        <nav className="mt-14 grid gap-3 sm:grid-cols-2">
+        <nav className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {previousModule ? (
             <Link
               href={`/${lang}/modulo/${previousModule.slug}`}
-              className="group flex flex-col rounded-xl border bg-card p-4 transition-colors hover:border-foreground/40"
+              className="group flex items-center gap-3 rounded-2xl border border-border/60 bg-card p-4 shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft-lg active:translate-y-0 active:scale-[0.98]"
             >
-              <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                <ArrowLeft className="size-3" />
-                {dict.trail.previousTopic}
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-0.5" />
               </span>
-              <span className="mt-1.5 font-semibold leading-tight">
-                {previousModule.translations[lang].title}
+              <span className="min-w-0">
+                <span className="block text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                  {dict.trail.previousTopic}
+                </span>
+                <span className="mt-0.5 block truncate font-semibold leading-tight">
+                  {previousModule.translations[lang].title}
+                </span>
               </span>
             </Link>
           ) : (
@@ -204,14 +208,18 @@ export default async function ModulePage({
           {nextModule && (
             <Link
               href={`/${lang}/modulo/${nextModule.slug}`}
-              className="group flex flex-col items-end rounded-xl border bg-card p-4 text-right transition-colors hover:border-foreground/40 sm:col-start-2"
+              className="group flex items-center justify-end gap-3 rounded-2xl border border-border/60 bg-card p-4 text-right shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft-lg active:translate-y-0 active:scale-[0.98] sm:col-start-2"
             >
-              <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                {dict.trail.nextTopic}
-                <ArrowRight className="size-3" />
+              <span className="min-w-0">
+                <span className="block text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                  {dict.trail.nextTopic}
+                </span>
+                <span className="mt-0.5 block truncate font-semibold leading-tight">
+                  {nextModule.translations[lang].title}
+                </span>
               </span>
-              <span className="mt-1.5 font-semibold leading-tight">
-                {nextModule.translations[lang].title}
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </span>
             </Link>
           )}

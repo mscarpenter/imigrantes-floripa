@@ -12,9 +12,9 @@ export const modules: Module[] = [
         title: "Documentos essenciais",
         summary:
           "Os primeiros documentos que você precisa tirar ao chegar: CPF, CRNM e CTPS.",
-        body: `**Pra ter vida prática no Brasil, você precisa de dois documentos: CPF e CRNM.** Sem eles, banco, hospital, escola, contrato — quase tudo trava.
+        body: `**Pra ter vida prática no Brasil, você precisa de dois documentos: CPF e CRNM.** Sem eles, quase tudo trava: banco, hospital, escola, contrato.
 
-A boa notícia: o **CPF é gratuito e sai no mesmo dia**. A CRNM exige agendamento na Polícia Federal e tem custo, mas é o seu documento oficial enquanto você estiver no país. A Carteira de Trabalho hoje é totalmente digital — você nem sai de casa pra ter.
+A boa notícia: o **CPF é gratuito e sai no mesmo dia**. A CRNM exige agendamento na Polícia Federal e tem custo, mas é o seu documento oficial enquanto você estiver no país. A Carteira de Trabalho hoje é totalmente digital: você nem sai de casa pra ter.
 
 > **Comece pelo CPF.** Ele é exigido até pra emitir a CRNM. Sem CPF, você trava nos outros documentos também.`,
       },
@@ -22,9 +22,9 @@ A boa notícia: o **CPF é gratuito e sai no mesmo dia**. A CRNM exige agendamen
         title: "Documentos esenciales",
         summary:
           "Los primeros documentos que necesitás sacar al llegar: CPF, CRNM y CTPS.",
-        body: `**Para tener vida práctica en Brasil, necesitás dos documentos: CPF y CRNM.** Sin ellos, banco, hospital, escuela, contrato — casi todo se traba.
+        body: `**Para tener vida práctica en Brasil, necesitás dos documentos: CPF y CRNM.** Sin ellos, casi todo se traba: banco, hospital, escuela, contrato.
 
-La buena noticia: el **CPF es gratis y sale el mismo día**. La CRNM exige agendamiento en la Policía Federal y tiene costo, pero es tu documento oficial mientras estés en el país. La Libreta de Trabajo hoy es totalmente digital — ni siquiera salís de casa para tenerla.
+La buena noticia: el **CPF es gratis y sale el mismo día**. La CRNM exige agendamiento en la Policía Federal y tiene costo, pero es tu documento oficial mientras estés en el país. La Libreta de Trabajo hoy es totalmente digital: ni siquiera salís de casa para tenerla.
 
 > **Empezá por el CPF.** Lo van a pedir hasta para emitir la CRNM. Sin CPF, te trabás también para los otros documentos.`,
       },
@@ -45,7 +45,7 @@ A boa notícia: é **gratuito** na Receita Federal e sai pronto no mesmo balcão
 
 ## Como tirar (passo a passo)
 
-1. **Agende** no site da Receita Federal e vá à unidade de Florianópolis — **Rua Claudino Bento da Silva, 11**, no centro. (Dá pra fazer **online**, de graça, sem sair de casa.)
+1. **Agende** no site da Receita Federal e vá à unidade de Florianópolis, na **Rua Claudino Bento da Silva, 11**, no centro. (Dá pra fazer **online**, de graça, sem sair de casa.)
 2. Apresente os documentos abaixo.
 3. Receba o número de CPF na hora.
 
@@ -85,7 +85,7 @@ Buena noticia: es **gratis** en la Receita Federal y sale listo en el mismo most
 
 ## Cómo sacarlo (paso a paso)
 
-1. **Agendá** en el sitio de la Receita Federal y andá a la unidad de Florianópolis — **Rua Claudino Bento da Silva, 11**, en el centro. (Se puede hacer **online**, gratis, sin salir de casa.)
+1. **Agendá** en el sitio de la Receita Federal y andá a la unidad de Florianópolis, en **Rua Claudino Bento da Silva, 11**, en el centro. (Se puede hacer **online**, gratis, sin salir de casa.)
 2. Presentá los documentos abajo.
 3. Recibís el número de CPF en el momento.
 
@@ -126,7 +126,7 @@ Si no tenés apuro, la Receita conviene por el precio.
             title: "CRNM (Carteira de Registro Nacional Migratório)",
             summary:
               "Seu documento oficial de identidade como migrante no Brasil. Substitui o antigo RNE.",
-            body: `**A CRNM é a sua identidade oficial no Brasil** — funciona como o RG dos brasileiros. Você vai usar em banco, hospital, viagens, contratos.
+            body: `**A CRNM é a sua identidade oficial no Brasil**: funciona como o RG dos brasileiros. Você vai usar em banco, hospital, viagens, contratos.
 
 > **Pré-requisito:** você precisa **já ter um visto válido OU protocolo do CONARE (refúgio)**. Sem um dos dois, a Polícia Federal não emite.
 
@@ -150,11 +150,11 @@ Si no tenés apuro, la Receita conviene por el precio.
 ## Onde fica
 
 **Posto de Migração da Polícia Federal (Floripa Shopping)**
-Loja 132 — Rod. SC-401, 3116, Saco Grande · Seg-Sex 10:00-17:00
+Loja 132: Rod. SC-401, 3116, Saco Grande · Seg-Sex 10:00-17:00
 
 Só atende com agendamento.
 
-## Depois da PF — atenção ao protocolo provisório
+## Depois da PF: atenção ao protocolo provisório
 
 A **CRNM física demora meses** pra chegar pelos Correios. Enquanto não chega, a PF te entrega um **protocolo provisório em papel** que vale como documento oficial.
 
@@ -167,13 +167,13 @@ A CRNM tem **prazo de validade**:
 - **9 anos** para residentes permanentes.
 - Prazos menores para trabalho temporário, estudo, etc.
 
-Renove **antes de expirar** — perder o prazo gera multa e burocracia extra.`,
+Renove **antes de expirar**: perder o prazo gera multa e burocracia extra.`,
           },
           es: {
             title: "CRNM (Cédula de Registro Nacional Migratorio)",
             summary:
               "Tu documento oficial de identidad como migrante en Brasil. Reemplaza la antigua RNE.",
-            body: `**La CRNM es tu identidad oficial en Brasil** — funciona como el DNI de los brasileños. La vas a usar en banco, hospital, viajes, contratos.
+            body: `**La CRNM es tu identidad oficial en Brasil**: funciona como el DNI de los brasileños. La vas a usar en banco, hospital, viajes, contratos.
 
 > **Requisito previo:** necesitás **ya tener una visa válida O protocolo del CONARE (refugio)**. Sin uno de los dos, la Policía Federal no la emite.
 
@@ -197,11 +197,11 @@ Renove **antes de expirar** — perder o prazo gera multa e burocracia extra.`,
 ## Dónde queda
 
 **Puesto de Migración de la Policía Federal (Floripa Shopping)**
-Local 132 — Rod. SC-401, 3116, Saco Grande · Lun-Vie 10:00-17:00
+Local 132: Rod. SC-401, 3116, Saco Grande · Lun-Vie 10:00-17:00
 
 Solo atiende con agendamiento.
 
-## Después de la PF — atención al protocolo provisorio
+## Después de la PF: atención al protocolo provisorio
 
 La **CRNM física tarda meses** en llegar por correo. Mientras no llega, la PF te entrega un **protocolo provisorio en papel** que vale como documento oficial.
 
@@ -214,7 +214,7 @@ La CRNM tiene **plazo de validez**:
 - **9 años** para residentes permanentes.
 - Plazos menores para trabajo temporario, estudio, etc.
 
-Renovala **antes de que venza** — perder el plazo genera multa y burocracia extra.`,
+Renovala **antes de que venza**: perder el plazo genera multa y burocracia extra.`,
           },
         },
       },
@@ -227,7 +227,7 @@ Renovala **antes de que venza** — perder el plazo genera multa y burocracia ex
             title: "CTPS Digital (Carteira de Trabalho)",
             summary:
               "Carteira de trabalho 100% digital e gratuita. Não precisa ir a lugar nenhum.",
-            body: `**A carteira de trabalho de papel azul acabou.** Hoje é tudo digital, gratuito, e você não vai a lugar nenhum. Tudo que o empregador registra — contratação, demissão, salário, férias, FGTS — aparece automaticamente no seu app.
+            body: `**A carteira de trabalho de papel azul acabou.** Hoje é tudo digital, gratuito, e você não vai a lugar nenhum. Tudo que o empregador registra (contratação, demissão, salário, férias, FGTS) aparece automaticamente no seu app.
 
 ## Como ter a sua (3 passos)
 
@@ -263,7 +263,7 @@ Existem **três níveis de verificação**:
             title: "CTPS Digital (Libreta de Trabajo)",
             summary:
               "Libreta de trabajo 100% digital y gratuita. No tenés que ir a ningún lado.",
-            body: `**La libreta de trabajo de papel azul terminó.** Hoy es todo digital, gratuito, y no vas a ningún lado. Todo lo que el empleador registra — contratación, despido, salario, vacaciones, FGTS — aparece automáticamente en tu app.
+            body: `**La libreta de trabajo de papel azul terminó.** Hoy es todo digital, gratuito, y no vas a ningún lado. Todo lo que el empleador registra (contratación, despido, salario, vacaciones, FGTS) aparece automáticamente en tu app.
 
 ## Cómo tener la tuya (3 pasos)
 
@@ -310,9 +310,9 @@ Existen **tres niveles de verificación**:
         title: "Saúde pública (SUS)",
         summary:
           "Atendimento médico gratuito pelo SUS, como conseguir o cartão e onde procurar atendimento.",
-        body: `**No Brasil, qualquer pessoa tem direito a atendimento gratuito pelo SUS** — incluindo migrantes em situação irregular. Não precisa de visto, CPF ou comprovante de renda pra ser atendido numa emergência.
+        body: `**No Brasil, qualquer pessoa tem direito a atendimento gratuito pelo SUS**, incluindo migrantes em situação irregular. Não precisa de visto, CPF ou comprovante de renda pra ser atendido numa emergência.
 
-O sistema é dividido em níveis: a **UBS** do bairro pra coisas comuns, a **UPA** pra urgências, o **hospital** pra casos graves, e o **SAMU (192)** pra ambulância. Em Floripa há ainda o **Alô Saúde Floripa (0800 333 3233)** — atendimento médico gratuito por telefone, 24h, que resolve muito caso à distância.
+O sistema é dividido em níveis: a **UBS** do bairro pra coisas comuns, a **UPA** pra urgências, o **hospital** pra casos graves, e o **SAMU (192)** pra ambulância. Em Floripa há ainda o **Alô Saúde Floripa (0800 333 3233)**: atendimento médico gratuito por telefone, 24h, que resolve muito caso à distância.
 
 > **Salve no celular** o telefone e o endereço da UBS mais próxima da sua casa. Numa emergência, você vai precisar dessa informação rápido.`,
       },
@@ -320,9 +320,9 @@ O sistema é dividido em níveis: a **UBS** do bairro pra coisas comuns, a **UPA
         title: "Salud pública (SUS)",
         summary:
           "Atención médica gratuita por el SUS, cómo conseguir la tarjeta y dónde buscar atención.",
-        body: `**En Brasil, cualquier persona tiene derecho a atención gratuita por el SUS** — incluso migrantes en situación irregular. No necesitás visa, CPF ni comprobante de ingresos para ser atendido en una emergencia.
+        body: `**En Brasil, cualquier persona tiene derecho a atención gratuita por el SUS**, incluso migrantes en situación irregular. No necesitás visa, CPF ni comprobante de ingresos para ser atendido en una emergencia.
 
-El sistema se divide en niveles: la **UBS** del barrio para cosas comunes, la **UPA** para urgencias, el **hospital** para casos graves, y el **SAMU (192)** para ambulancia. En Floripa hay además el **Alô Saúde Floripa (0800 333 3233)** — atención médica gratuita por teléfono, 24h, que resuelve muchos casos a distancia.
+El sistema se divide en niveles: la **UBS** del barrio para cosas comunes, la **UPA** para urgencias, el **hospital** para casos graves, y el **SAMU (192)** para ambulancia. En Floripa hay además el **Alô Saúde Floripa (0800 333 3233)**: atención médica gratuita por teléfono, 24h, que resuelve muchos casos a distancia.
 
 > **Guardá en el celular** el teléfono y la dirección de la UBS más cercana a tu casa. En una emergencia, vas a necesitar esa información rápido.`,
       },
@@ -337,7 +337,7 @@ El sistema se divide en niveles: la **UBS** del barrio para cosas comunes, la **
             title: "Cartão SUS",
             summary:
               "Documento que identifica você no sistema de saúde. Gratuito e tira no posto de saúde do seu bairro.",
-            body: `**O Cartão Nacional de Saúde é o seu identificador no SUS.** Você não precisa dele numa emergência — qualquer unidade atende. Mas pra consultas marcadas, vacinas, exames de rotina e receitas, ter o cartão facilita muito.
+            body: `**O Cartão Nacional de Saúde é o seu identificador no SUS.** Você não precisa dele numa emergência: qualquer unidade atende. Mas pra consultas marcadas, vacinas, exames de rotina e receitas, ter o cartão facilita muito.
 
 A boa notícia: é **gratuito** e tira no posto de saúde do seu bairro.
 
@@ -354,7 +354,7 @@ A boa notícia: é **gratuito** e tira no posto de saúde do seu bairro.
 - **CPF** (se já tiver).
 - **Comprovante de residência** atualizado, mesmo provisório.
 
-> **Não tem nenhum dos documentos?** Mesmo assim, a unidade te atende em emergência. O cartão é pra consultas planejadas — emergência é universal.
+> **Não tem nenhum dos documentos?** Mesmo assim, a unidade te atende em emergência. O cartão é pra consultas planejadas. Emergência é universal.
 
 ## Pra que serve
 
@@ -368,7 +368,7 @@ A boa notícia: é **gratuito** e tira no posto de saúde do seu bairro.
             title: "Tarjeta SUS",
             summary:
               "Documento que te identifica en el sistema de salud. Gratis y se saca en el centro de salud de tu barrio.",
-            body: `**La Tarjeta Nacional de Salud es tu identificador en el SUS.** No la necesitás en una emergencia — cualquier unidad atiende. Pero para consultas agendadas, vacunas, estudios de rutina y recetas, tener la tarjeta facilita mucho.
+            body: `**La Tarjeta Nacional de Salud es tu identificador en el SUS.** No la necesitás en una emergencia: cualquier unidad atiende. Pero para consultas agendadas, vacunas, estudios de rutina y recetas, tener la tarjeta facilita mucho.
 
 Buena noticia: es **gratuita** y se saca en el centro de salud de tu barrio.
 
@@ -385,7 +385,7 @@ Buena noticia: es **gratuita** y se saca en el centro de salud de tu barrio.
 - **CPF** (si ya lo tenés).
 - **Comprobante de domicilio** actualizado, incluso provisorio.
 
-> **¿No tenés ninguno de los documentos?** Igual la unidad te atiende en emergencia. La tarjeta es para consultas planificadas — la emergencia es universal.
+> **¿No tenés ninguno de los documentos?** Igual la unidad te atiende en emergencia. La tarjeta es para consultas planificadas. La emergencia es universal.
 
 ## Para qué sirve
 
@@ -410,13 +410,13 @@ Buena noticia: es **gratuita** y se saca en el centro de salud de tu barrio.
 
 ## Antes de sair de casa: Alô Saúde Floripa (0800 333 3233)
 
-Florianópolis tem um serviço **gratuito de atendimento médico por telefone**, **24h, todos os dias**: o **Alô Saúde Floripa**. Ligue **0800 333 3233** antes de ir a uma unidade — muito caso se resolve sem sair de casa.
+Florianópolis tem um serviço **gratuito de atendimento médico por telefone**, **24h, todos os dias**: o **Alô Saúde Floripa**. Ligue **0800 333 3233** antes de ir a uma unidade: muito caso se resolve sem sair de casa.
 
 - **Como funciona:** começa com uma triagem por enfermagem. Conforme os sintomas, você recebe orientação, agenda consulta no Centro de Saúde, é encaminhado a uma UPA ou faz uma **teleconsulta médica por vídeo**.
 - **Receita e atestado:** se o médico prescrever remédio ou você precisar de atestado, eles chegam por **WhatsApp ou e-mail**. Com a receita, dá pra retirar o remédio na farmácia do Centro de Saúde, de graça pelo SUS.
 - **Quem pode usar:** moradores de Florianópolis com cadastro no SUS. **Não tem cadastro? Dá pra fazer na hora, durante a ligação.**
 
-> **Migrante recém-chegado:** mesmo sem Cartão SUS ainda, ligue — o cadastro é feito na própria chamada. O serviço é gratuito e não pergunta situação migratória.
+> **Migrante recém-chegado:** mesmo sem Cartão SUS ainda, ligue: o cadastro é feito na própria chamada. O serviço é gratuito e não pergunta situação migratória.
 
 ## Decisão rápida
 
@@ -426,7 +426,7 @@ Florianópolis tem um serviço **gratuito de atendimento médico por telefone**,
 | Urgência: febre alta, machucado feio, crise asmática, mordida de animal | **UPA** (24h) |
 | Emergência grave: AVC, infarto, parto, sangramento intenso | **Ligar 192 (SAMU)** ou hospital |
 
-## UBS — atendimento comum
+## UBS: atendimento comum
 
 A **Unidade Básica de Saúde** é o seu posto de bairro. Marca consulta, faz vacina, acompanha gravidez, cuida de doenças crônicas (diabetes, pressão alta).
 
@@ -435,7 +435,7 @@ A **Unidade Básica de Saúde** é o seu posto de bairro. Marca consulta, faz va
 - Pra consulta planejada, marque com antecedência.
 - Pra urgências leves no horário de atendimento, dá pra ir e esperar.
 
-## UPA — urgência e emergência 24h
+## UPA: urgência e emergência 24h
 
 A **Unidade de Pronto Atendimento** funciona 24 horas, sem agendamento. Você chega, faz triagem, e é atendido por prioridade (não por ordem de chegada).
 
@@ -445,7 +445,7 @@ A **Unidade de Pronto Atendimento** funciona 24 horas, sem agendamento. Você ch
 
 ## Hospital de emergência
 
-Pra casos graves que exigem cirurgia ou internação. **Geralmente você chega via SAMU ou encaminhado pela UPA** — ir direto sem isso pode te deixar esperando muito.
+Pra casos graves que exigem cirurgia ou internação. **Geralmente você chega via SAMU ou encaminhado pela UPA**: ir direto sem isso pode te deixar esperando muito.
 
 > **Em dúvida?** Ligue **136** (Disque Saúde) ou **192** (SAMU). Eles orientam pra onde ir.`,
           },
@@ -457,13 +457,13 @@ Pra casos graves que exigem cirurgia ou internação. **Geralmente você chega v
 
 ## Antes de salir de casa: Alô Saúde Floripa (0800 333 3233)
 
-Florianópolis tiene un servicio **gratuito de atención médica por teléfono**, **24h, todos los días**: el **Alô Saúde Floripa**. Llamá al **0800 333 3233** antes de ir a una unidad — muchos casos se resuelven sin salir de casa.
+Florianópolis tiene un servicio **gratuito de atención médica por teléfono**, **24h, todos los días**: el **Alô Saúde Floripa**. Llamá al **0800 333 3233** antes de ir a una unidad: muchos casos se resuelven sin salir de casa.
 
 - **Cómo funciona:** empieza con un triage por enfermería. Según los síntomas, recibís orientación, agendás consulta en el Centro de Salud, te derivan a una UPA o hacés una **teleconsulta médica por video**.
 - **Receta y certificado:** si el médico receta un remedio o necesitás un certificado, llegan por **WhatsApp o e-mail**. Con la receta, podés retirar el remedio en la farmacia del Centro de Salud, gratis por el SUS.
 - **Quién puede usarlo:** residentes de Florianópolis con registro en el SUS. **¿No tenés registro? Se puede hacer en el momento, durante la llamada.**
 
-> **Migrante recién llegado:** aunque todavía no tengas Tarjeta SUS, llamá — el registro se hace en la propia llamada. El servicio es gratuito y no pregunta situación migratoria.
+> **Migrante recién llegado:** aunque todavía no tengas Tarjeta SUS, llamá: el registro se hace en la propia llamada. El servicio es gratuito y no pregunta situación migratoria.
 
 ## Decisión rápida
 
@@ -473,7 +473,7 @@ Florianópolis tiene un servicio **gratuito de atención médica por teléfono**
 | Urgencia: fiebre alta, herida fea, crisis asmática, mordedura de animal | **UPA** (24h) |
 | Emergencia grave: ACV, infarto, parto, sangrado intenso | **Llamar al 192 (SAMU)** u hospital |
 
-## UBS — atención común
+## UBS: atención común
 
 La **Unidad Básica de Salud** es tu centro de salud del barrio. Agenda consultas, vacuna, acompaña embarazos, cuida enfermedades crónicas (diabetes, presión alta).
 
@@ -482,7 +482,7 @@ La **Unidad Básica de Salud** es tu centro de salud del barrio. Agenda consulta
 - Para consulta planificada, agendá con antelación.
 - Para urgencias leves dentro del horario de atención, podés ir y esperar.
 
-## UPA — urgencia y emergencia 24h
+## UPA: urgencia y emergencia 24h
 
 La **Unidad de Atención Inmediata** funciona 24 horas, sin agendamiento. Llegás, hacés triage, y te atienden por prioridad (no por orden de llegada).
 
@@ -492,7 +492,7 @@ La **Unidad de Atención Inmediata** funciona 24 horas, sin agendamiento. Llegá
 
 ## Hospital de emergencia
 
-Para casos graves que exigen cirugía o internación. **Generalmente llegás vía SAMU o derivado por la UPA** — ir directo sin eso te puede dejar esperando mucho.
+Para casos graves que exigen cirugía o internación. **Generalmente llegás vía SAMU o derivado por la UPA**: ir directo sin eso te puede dejar esperando mucho.
 
 > **¿En duda?** Llamá al **136** (Disque Saúde) o al **192** (SAMU). Te orientan adónde ir.`,
           },
@@ -507,7 +507,7 @@ Para casos graves que exigen cirugía o internación. **Generalmente llegás ví
             title: "SAMU (192) e emergências médicas",
             summary:
               "Quando ligar 192, o que falar e o que fazer enquanto a ambulância chega.",
-            body: `**O SAMU (192) é o serviço público de ambulância.** Ligação **gratuita**, **24h**, atende qualquer pessoa — não precisa de cartão SUS, CPF ou documento.
+            body: `**O SAMU (192) é o serviço público de ambulância.** Ligação **gratuita**, **24h**, atende qualquer pessoa: não precisa de cartão SUS, CPF ou documento.
 
 ## Quando ligar 192
 
@@ -533,7 +533,7 @@ Para casos graves que exigen cirugía o internación. **Generalmente llegás ví
 - **Mantenha a pessoa onde está**, a menos que haja perigo imediato (fogo, trânsito).
 - Se a pessoa **estiver consciente**, conforte e fale com ela.
 - Se **inconsciente, vire de lado** pra não engasgar.
-- Se **não respira**, comece massagem cardíaca — o atendente do 192 te guia por telefone.
+- Se **não respira**, comece massagem cardíaca: o atendente do 192 te guia por telefone.
 
 ## Outros números úteis
 
@@ -550,7 +550,7 @@ Para casos graves que exigen cirugía o internación. **Generalmente llegás ví
             title: "SAMU (192) y emergencias médicas",
             summary:
               "Cuándo llamar al 192, qué decir y qué hacer mientras llega la ambulancia.",
-            body: `**El SAMU (192) es el servicio público de ambulancia.** Llamada **gratuita**, **24h**, atiende a cualquier persona — no necesitás tarjeta SUS, CPF ni documento.
+            body: `**El SAMU (192) es el servicio público de ambulancia.** Llamada **gratuita**, **24h**, atiende a cualquier persona: no necesitás tarjeta SUS, CPF ni documento.
 
 ## Cuándo llamar al 192
 
@@ -576,7 +576,7 @@ Para casos graves que exigen cirugía o internación. **Generalmente llegás ví
 - **Mantené a la persona donde está**, salvo que haya peligro inmediato (fuego, tránsito).
 - Si la persona **está consciente**, calmala y hablale.
 - Si **inconsciente, ponela de costado** para que no se ahogue.
-- Si **no respira**, empezá masaje cardíaco — el operador del 192 te guía por teléfono.
+- Si **no respira**, empezá masaje cardíaco: el operador del 192 te guía por teléfono.
 
 ## Otros números útiles
 
@@ -600,18 +600,18 @@ Para casos graves que exigen cirugía o internación. **Generalmente llegás ví
             title: "Vacinação gratuita pelo SUS",
             summary:
               "Calendário gratuito, com ou sem documentos, e o que levar pra UBS atualizar suas vacinas.",
-            body: `**Todas as vacinas do calendário nacional são gratuitas pelo SUS** — pra brasileiros e migrantes, com ou sem documentos. Crianças, adultos e idosos têm calendários próprios.
+            body: `**Todas as vacinas do calendário nacional são gratuitas pelo SUS**: pra brasileiros e migrantes, com ou sem documentos. Crianças, adultos e idosos têm calendários próprios.
 
 ## Onde vacinar
 
-- **Sua UBS** (posto de saúde do bairro) — opção principal.
+- **Sua UBS** (posto de saúde do bairro): opção principal.
 - **Campanhas itinerantes** (em escolas, shoppings, terminais) em datas específicas.
 - **Hospitais e UPAs** vacinam em situações de risco (exposição a sangue, mordida de animal).
 
 ## O que levar
 
 - **Documento de identificação** (qualquer um).
-- **Cartão de vacinação anterior** do seu país, se tiver — pra UBS atualizar e evitar repetir doses.
+- **Cartão de vacinação anterior** do seu país, se tiver, pra UBS atualizar e evitar repetir doses.
 - **Cartão SUS** ajuda, mas não é obrigatório.
 
 > **Trouxe vacinas do seu país?** Leve o cartão original (mesmo em outro idioma). A UBS transcreve pro padrão brasileiro e indica o que está faltando.
@@ -626,7 +626,7 @@ Vacinas que provavelmente vão te oferecer se você ainda não tomou:
 - **Febre amarela** (especialmente importante no Brasil).
 - **COVID-19** e **influenza** (anuais).
 
-Crianças têm calendário muito mais extenso — pergunte na UBS sobre o esquema completo.
+Crianças têm calendário muito mais extenso: pergunte na UBS sobre o esquema completo.
 
 ## Vacinas pra viagens internacionais
 
@@ -636,18 +636,18 @@ Voltar de visita ao seu país de origem? Algumas regiões pedem **comprovante de
             title: "Vacunación gratuita por el SUS",
             summary:
               "Calendario gratuito, con o sin documentos, y qué llevar para que la UBS actualice tus vacunas.",
-            body: `**Todas las vacunas del calendario nacional son gratuitas por el SUS** — para brasileños y migrantes, con o sin documentos. Niños, adultos y adultos mayores tienen calendarios propios.
+            body: `**Todas las vacunas del calendario nacional son gratuitas por el SUS**: para brasileños y migrantes, con o sin documentos. Niños, adultos y adultos mayores tienen calendarios propios.
 
 ## Dónde vacunarse
 
-- **Tu UBS** (centro de salud del barrio) — opción principal.
+- **Tu UBS** (centro de salud del barrio): opción principal.
 - **Campañas itinerantes** (en escuelas, shoppings, terminales) en fechas específicas.
 - **Hospitales y UPAs** vacunan en situaciones de riesgo (exposición a sangre, mordedura de animal).
 
 ## Qué llevar
 
 - **Documento de identificación** (cualquiera).
-- **Carnet de vacunación anterior** de tu país, si tenés — para que la UBS actualice y evite repetir dosis.
+- **Carnet de vacunación anterior** de tu país, si tenés, para que la UBS actualice y evite repetir dosis.
 - **Tarjeta SUS** ayuda, pero no es obligatoria.
 
 > **¿Trajiste vacunas de tu país?** Llevá el carnet original (incluso en otro idioma). La UBS transcribe al estándar brasileño e indica lo que está faltando.
@@ -662,7 +662,7 @@ Vacunas que probablemente te van a ofrecer si todavía no te las diste:
 - **Fiebre amarilla** (especialmente importante en Brasil).
 - **COVID-19** e **influenza** (anuales).
 
-Los niños tienen un calendario mucho más extenso — preguntá en la UBS sobre el esquema completo.
+Los niños tienen un calendario mucho más extenso: preguntá en la UBS sobre el esquema completo.
 
 ## Vacunas para viajes internacionales
 
@@ -683,7 +683,7 @@ Los niños tienen un calendario mucho más extenso — preguntá en la UBS sobre
         title: "Transporte público",
         summary:
           "Ônibus, integração e como conseguir o cartão Passe Rápido em Florianópolis.",
-        body: `**O transporte público de Floripa é principalmente ônibus**, operado pelo Consórcio Fênix. O sistema tem **6 terminais de integração** que permitem trocar de linha sem pagar tarifa nova — vantagem grande pra trajetos longos.
+        body: `**O transporte público de Floripa é principalmente ônibus**, operado pelo Consórcio Fênix. O sistema tem **6 terminais de integração** que permitem trocar de linha sem pagar tarifa nova: vantagem grande pra trajetos longos.
 
 > **Quem paga com cartão paga menos** que quem paga em dinheiro. Vale tirar o Passe Rápido logo nos primeiros dias.
 
@@ -695,7 +695,7 @@ Em **horário de pico (07h–09h e 17h–19h)**, o trânsito pesa, principalment
         title: "Transporte público",
         summary:
           "Colectivos, integración y cómo conseguir la tarjeta Passe Rápido en Florianópolis.",
-        body: `**El transporte público de Floripa es principalmente colectivos (ônibus)**, operado por el Consorcio Fênix. El sistema tiene **6 terminales de integración** que permiten cambiar de línea sin pagar tarifa nueva — gran ventaja para trayectos largos.
+        body: `**El transporte público de Floripa es principalmente colectivos (ônibus)**, operado por el Consorcio Fênix. El sistema tiene **6 terminales de integración** que permiten cambiar de línea sin pagar tarifa nueva: gran ventaja para trayectos largos.
 
 > **Quien paga con tarjeta paga menos** que quien paga en efectivo. Vale sacar el Passe Rápido en los primeros días.
 
@@ -714,11 +714,11 @@ En **hora pico (07h–09h y 17h–19h)**, el tránsito pesa, sobre todo en el ce
             title: "Cartão Passe Rápido",
             summary:
               "Como tirar e recarregar o cartão de ônibus. Pagar com cartão sai mais barato.",
-            body: `**O Passe Rápido é o cartão de ônibus de Floripa. Quem paga com cartão paga menos do que quem paga em dinheiro** — diferença que se acumula rápido se você anda todo dia.
+            body: `**O Passe Rápido é o cartão de ônibus de Floripa. Quem paga com cartão paga menos do que quem paga em dinheiro**: diferença que se acumula rápido se você anda todo dia.
 
 ## Onde tirar
 
-- **TICEN** (Terminal de Integração do Centro) — posto principal, com várias guichês.
+- **TICEN** (Terminal de Integração do Centro): posto principal, com várias guichês.
 - **Outros terminais de integração** espalhados pela cidade.
 
 **Leve:** documento com foto + CPF. O cartão sai na hora.
@@ -749,11 +749,11 @@ Você pode trocar de linha **sem pagar tarifa nova** em qualquer um dos **6 term
             title: "Tarjeta Passe Rápido",
             summary:
               "Cómo sacar y recargar la tarjeta del colectivo. Pagar con tarjeta sale más barato.",
-            body: `**El Passe Rápido es la tarjeta del colectivo de Floripa. Quien paga con tarjeta paga menos que quien paga en efectivo** — diferencia que se acumula rápido si andás todos los días.
+            body: `**El Passe Rápido es la tarjeta del colectivo de Floripa. Quien paga con tarjeta paga menos que quien paga en efectivo**: diferencia que se acumula rápido si andás todos los días.
 
 ## Dónde sacarla
 
-- **TICEN** (Terminal de Integración del Centro) — punto principal, con varias ventanillas.
+- **TICEN** (Terminal de Integración del Centro): punto principal, con varias ventanillas.
 - **Otros terminales de integración** distribuidos por la ciudad.
 
 **Llevá:** documento con foto + CPF. La tarjeta sale en el momento.
@@ -791,7 +791,7 @@ Podés cambiar de línea **sin pagar tarifa nueva** en cualquiera de los **6 ter
             title: "Tarifa social (Passe Rápido Social)",
             summary:
               "Tarifa reduzida ou gratuita pra famílias de baixa renda cadastradas no CadÚnico.",
-            body: `**Pessoas em situação de baixa renda têm direito a tarifa reduzida — ou totalmente gratuita — no ônibus de Floripa.** O programa se chama **Passe Rápido Social**.
+            body: `**Pessoas em situação de baixa renda têm direito a tarifa reduzida (ou totalmente gratuita) no ônibus de Floripa.** O programa se chama **Passe Rápido Social**.
 
 > Idosos a partir de 65 anos, estudantes e pessoas com deficiência também têm benefícios próprios, com regras diferentes.
 
@@ -815,7 +815,7 @@ Podés cambiar de línea **sin pagar tarifa nueva** en cualquiera de los **6 ter
 2. Leve documentos de **todos os membros da família**:
    - **CPF** de cada um.
    - **Comprovante de residência**.
-   - **Comprovante de renda** (mesmo informal — declaração serve).
+   - **Comprovante de renda** (mesmo informal, declaração serve).
 3. A entrevista dura **cerca de 1 hora**.
 4. O cadastro fica ativo em poucos dias.
 
@@ -837,7 +837,7 @@ O benefício é **renovado periodicamente**. Se seu CadÚnico desatualizar, voc�
             title: "Tarifa social (Passe Rápido Social)",
             summary:
               "Tarifa reducida o gratuita para familias de bajos ingresos registradas en el CadÚnico.",
-            body: `**Personas en situación de bajos ingresos tienen derecho a tarifa reducida — o totalmente gratuita — en el colectivo de Floripa.** El programa se llama **Passe Rápido Social**.
+            body: `**Personas en situación de bajos ingresos tienen derecho a tarifa reducida (o totalmente gratuita) en el colectivo de Floripa.** El programa se llama **Passe Rápido Social**.
 
 > Adultos mayores desde los 65 años, estudiantes y personas con discapacidad también tienen beneficios propios, con reglas diferentes.
 
@@ -861,7 +861,7 @@ O benefício é **renovado periodicamente**. Se seu CadÚnico desatualizar, voc�
 2. Llevá documentos de **todos los miembros de la familia**:
    - **CPF** de cada uno.
    - **Comprobante de domicilio**.
-   - **Comprobante de ingresos** (incluso informal — una declaración sirve).
+   - **Comprobante de ingresos** (incluso informal, una declaración sirve).
 3. La entrevista dura **alrededor de 1 hora**.
 4. El registro queda activo en pocos días.
 
@@ -877,7 +877,7 @@ Después de registrado en el CadÚnico:
 
 El beneficio se **renueva periódicamente**. Si tu CadÚnico se desactualiza, **perdés el beneficio** hasta actualizarlo de nuevo.
 
-> **Volvé al CRAS por lo menos una vez al año** para revisar tu registro. Vale como rutina — junto con un cumpleaños familiar o el inicio del año.`,
+> **Volvé al CRAS por lo menos una vez al año** para revisar tu registro. Vale como rutina, junto con un cumpleaños familiar o el inicio del año.`,
           },
         },
       },
@@ -890,7 +890,7 @@ El beneficio se **renueva periódicamente**. Si tu CadÚnico se desactualiza, **
             title: "Aplicativos úteis",
             summary:
               "Apps que ajudam a achar a linha certa, ver horários e recarregar o cartão.",
-            body: `**Três aplicativos resolvem quase tudo no dia a dia do transporte em Floripa.** Não precisa instalar todos — escolha conforme o uso.
+            body: `**Três aplicativos resolvem quase tudo no dia a dia do transporte em Floripa.** Não precisa instalar todos: escolha conforme o uso.
 
 ## Pra achar rota e horário
 
@@ -911,13 +911,13 @@ Os dois funcionam offline pra rotas já consultadas, mas precisam de internet pr
 - **Cuidado com a bateria:** o Moovit roda GPS o tempo todo e drena rápido. Em viagens longas, leve um carregador portátil.
 - **Wifi nos terminais:** o TICEN tem wifi grátis do Consórcio. Útil pra conferir rota antes de embarcar sem gastar seus dados.
 
-> **Antes de fechar aluguel em um bairro,** rode no Maps o trajeto até o trabalho/escola. Floripa tem trânsito sazonal — o que parece perto pode levar 1h em janeiro.`,
+> **Antes de fechar aluguel em um bairro,** rode no Maps o trajeto até o trabalho/escola. Floripa tem trânsito sazonal: o que parece perto pode levar 1h em janeiro.`,
           },
           es: {
             title: "Apps útiles",
             summary:
               "Apps que ayudan a encontrar la línea correcta, ver horarios y recargar la tarjeta.",
-            body: `**Tres aplicaciones resuelven casi todo en el día a día del transporte en Floripa.** No necesitás instalar todas — elegí según el uso.
+            body: `**Tres aplicaciones resuelven casi todo en el día a día del transporte en Floripa.** No necesitás instalar todas: elegí según el uso.
 
 ## Para encontrar ruta y horario
 
@@ -938,7 +938,7 @@ Los dos funcionan offline para rutas ya consultadas, pero necesitan internet par
 - **Cuidado con la batería:** Moovit corre GPS todo el tiempo y consume rápido. En viajes largos, llevá un cargador portátil.
 - **Wifi en los terminales:** el TICEN tiene wifi gratis del Consorcio. Útil para chequear ruta antes de embarcar sin gastar tus datos.
 
-> **Antes de cerrar alquiler en un barrio,** corré en Maps el trayecto hasta el trabajo/escuela. Floripa tiene tránsito estacional — lo que parece cerca puede llevar 1h en enero.`,
+> **Antes de cerrar alquiler en un barrio,** corré en Maps el trayecto hasta el trabajo/escuela. Floripa tiene tránsito estacional: lo que parece cerca puede llevar 1h en enero.`,
           },
         },
       },
@@ -959,7 +959,7 @@ Los dos funcionan offline para rutas ya consultadas, pero necesitan internet par
 
 Floripa tem um mercado de trabalho mais quente que a média do país, principalmente em **turismo e hotelaria** (alta temporada dezembro–março), **gastronomia, construção civil** e **tecnologia** (várias startups locais).
 
-> **Os tópicos abaixo te ajudam a se orientar:** o que é CLT e quais são seus direitos, onde achar vagas, alternativas à CLT (MEI, autônomo, apps) e como se proteger de golpes — comuns com quem está começando.`,
+> **Os tópicos abaixo te ajudam a se orientar:** o que é CLT e quais são seus direitos, onde achar vagas, alternativas à CLT (MEI, autônomo, apps) e como se proteger de golpes, comuns com quem está começando.`,
       },
       es: {
         title: "Trabajo e ingresos",
@@ -969,7 +969,7 @@ Floripa tem um mercado de trabalho mais quente que a média do país, principalm
 
 Floripa tiene un mercado de trabajo más caliente que la media del país, sobre todo en **turismo y hotelería** (alta temporada diciembre–marzo), **gastronomía, construcción** y **tecnología** (varias startups locales).
 
-> **Los temas debajo te ayudan a orientarte:** qué es la CLT y cuáles son tus derechos, dónde encontrar vacantes, alternativas a la CLT (MEI, autónomo, apps) y cómo protegerte de estafas — comunes con quien está empezando.`,
+> **Los temas debajo te ayudan a orientarte:** qué es la CLT y cuáles son tus derechos, dónde encontrar vacantes, alternativas a la CLT (MEI, autónomo, apps) y cómo protegerte de estafas, comunes con quien está empezando.`,
       },
     },
     topics: [
@@ -981,8 +981,8 @@ Floripa tiene un mercado de trabajo más caliente que la media del país, sobre 
           pt: {
             title: "CLT: como funciona e seus direitos",
             summary:
-              "Trabalho de carteira assinada — o que o empregador é obrigado a te dar.",
-            body: `**CLT é o regime de trabalho formal no Brasil — o famoso "carteira assinada".** Te dá um conjunto de direitos que vão muito além do salário.
+              "Trabalho de carteira assinada: o que o empregador é obrigado a te dar.",
+            body: `**CLT é o regime de trabalho formal no Brasil, o famoso "carteira assinada".** Te dá um conjunto de direitos que vão muito além do salário.
 
 Pra ser contratado em CLT você precisa de **CPF** e **CRNM** (ou outro documento de regularização migratória). Sem isso, só trabalho informal.
 
@@ -990,7 +990,7 @@ Pra ser contratado em CLT você precisa de **CPF** e **CRNM** (ou outro document
 
 | Direito | Como funciona |
 | --- | --- |
-| **Salário mínimo** | R$ 1.518 em 2025 — ou o piso da sua categoria, o que for maior |
+| **Salário mínimo** | R$ 1.518 em 2025, ou o piso da sua categoria, o que for maior |
 | **13º salário** | Um salário extra por ano, pago em duas parcelas (nov e dez) |
 | **Férias** | 30 dias corridos por ano + adicional de 1/3 do salário |
 | **FGTS** | 8% do seu salário depositado mensalmente numa conta no seu nome |
@@ -1017,8 +1017,8 @@ Pra ser contratado em CLT você precisa de **CPF** e **CRNM** (ou outro document
           es: {
             title: "CLT: cómo funciona y tus derechos",
             summary:
-              "Trabajo en blanco (carteira assinada) — lo que el empleador está obligado a darte.",
-            body: `**CLT es el régimen de trabajo formal en Brasil — el famoso "carteira assinada".** Te da un conjunto de derechos que va mucho más allá del salario.
+              "Trabajo en blanco (carteira assinada): lo que el empleador está obligado a darte.",
+            body: `**CLT es el régimen de trabajo formal en Brasil, el famoso "carteira assinada".** Te da un conjunto de derechos que va mucho más allá del salario.
 
 Para ser contratado en CLT necesitás **CPF** y **CRNM** (u otro documento de regularización migratoria). Sin eso, solo trabajo informal.
 
@@ -1026,7 +1026,7 @@ Para ser contratado en CLT necesitás **CPF** y **CRNM** (u otro documento de re
 
 | Derecho | Cómo funciona |
 | --- | --- |
-| **Salario mínimo** | R$ 1.518 en 2025 — o el piso de tu categoría, el que sea mayor |
+| **Salario mínimo** | R$ 1.518 en 2025, o el piso de tu categoría, el que sea mayor |
 | **13° sueldo (aguinaldo)** | Un sueldo extra por año, pagado en dos cuotas (nov y dic) |
 | **Vacaciones** | 30 días corridos por año + adicional de 1/3 del sueldo |
 | **FGTS** | 8% de tu sueldo depositado mensualmente en una cuenta a tu nombre |
@@ -1061,11 +1061,11 @@ Para ser contratado en CLT necesitás **CPF** y **CRNM** (u otro documento de re
             title: "Onde procurar vagas em Floripa",
             summary:
               "SINE, plataformas online, grupos de WhatsApp e setores em alta na cidade.",
-            body: `**Floripa tem várias frentes de busca por trabalho. Use mais de uma em paralelo** — quem espera vaga numa fonte só perde tempo.
+            body: `**Floripa tem várias frentes de busca por trabalho. Use mais de uma em paralelo**: quem espera vaga numa fonte só perde tempo.
 
 ## Canais oficiais
 
-- **SINE** (Sistema Nacional de Emprego): cadastro gratuito pra vagas formais. Tem posto físico no centro (Terminal Rita Maria, 2º andar — Av. Paulo Fontes, 1101) e pelo site [gov.br/sine](https://www.gov.br/empregabrasil/pt-br).
+- **SINE** (Sistema Nacional de Emprego): cadastro gratuito pra vagas formais. Tem posto físico no centro (Terminal Rita Maria, 2º andar, Av. Paulo Fontes, 1101) e pelo site [gov.br/sine](https://www.gov.br/empregabrasil/pt-br).
 - **App Sine Fácil**: vagas, encaminhamento e habilitação do seguro-desemprego no celular.
 
 ## Plataformas online
@@ -1098,17 +1098,17 @@ Busque por "Vagas Floripa", "Empregos Florianópolis", "Vagas Hotelaria SC". Tem
 | **Construção civil** | Estável. Sempre tem demanda em obras. |
 | **Limpeza e serviços gerais** | Ano todo. Procura via empresas terceirizadas. |
 
-> **Dica pra alta temporada:** muitos hotéis e restaurantes começam a contratar **em outubro/novembro**. Não espere dezembro — quando a temporada começa, as vagas já estão preenchidas.`,
+> **Dica pra alta temporada:** muitos hotéis e restaurantes começam a contratar **em outubro/novembro**. Não espere dezembro: quando a temporada começa, as vagas já estão preenchidas.`,
           },
           es: {
             title: "Dónde buscar vacantes en Floripa",
             summary:
               "SINE, plataformas online, grupos de WhatsApp y sectores en alta en la ciudad.",
-            body: `**Floripa tiene varios frentes de búsqueda laboral. Usá más de uno en paralelo** — quien espera una vacante de una sola fuente pierde tiempo.
+            body: `**Floripa tiene varios frentes de búsqueda laboral. Usá más de uno en paralelo**: quien espera una vacante de una sola fuente pierde tiempo.
 
 ## Canales oficiales
 
-- **SINE** (Sistema Nacional de Empleo): registro gratuito para vacantes formales. Tiene puesto físico en el centro (Terminal Rita Maria, 2º piso — Av. Paulo Fontes, 1101) y por el sitio [gov.br/sine](https://www.gov.br/empregabrasil/pt-br).
+- **SINE** (Sistema Nacional de Empleo): registro gratuito para vacantes formales. Tiene puesto físico en el centro (Terminal Rita Maria, 2º piso, Av. Paulo Fontes, 1101) y por el sitio [gov.br/sine](https://www.gov.br/empregabrasil/pt-br).
 - **App Sine Fácil**: vacantes, derivación y solicitud del seguro de desempleo desde el celular.
 
 ## Plataformas online
@@ -1141,7 +1141,7 @@ Buscá "Vagas Floripa", "Empregos Florianópolis", "Vagas Hotelaria SC". Hay gru
 | **Construcción** | Estable. Siempre hay demanda en obras. |
 | **Limpieza y servicios generales** | Todo el año. Búsqueda por empresas tercerizadas. |
 
-> **Tip para alta temporada:** muchos hoteles y restaurantes empiezan a contratar **en octubre/noviembre**. No esperes a diciembre — cuando la temporada empieza, las vacantes ya están cubiertas.`,
+> **Tip para alta temporada:** muchos hoteles y restaurantes empiezan a contratar **en octubre/noviembre**. No esperes a diciembre: cuando la temporada empieza, las vacantes ya están cubiertas.`,
           },
         },
       },
@@ -1154,7 +1154,7 @@ Buscá "Vagas Floripa", "Empregos Florianópolis", "Vagas Hotelaria SC". Hay gru
             title: "Alternativas à CLT: MEI, autônomo e apps",
             summary:
               "Quando registrar como MEI vale a pena, e o que considerar em trabalho por plataforma.",
-            body: `**Nem todo trabalho é CLT.** Boa parte de quem chega começa em modalidades mais flexíveis — MEI, autônomo, plataformas. Cada uma tem suas regras.
+            body: `**Nem todo trabalho é CLT.** Boa parte de quem chega começa em modalidades mais flexíveis: MEI, autônomo, plataformas. Cada uma tem suas regras.
 
 ## MEI (Microempreendedor Individual)
 
@@ -1175,7 +1175,7 @@ Pra quem trabalha por conta própria com faturamento até **R$ 81 mil/ano** (em 
 
 ## Autônomo (sem MEI)
 
-Se você presta serviço esporádico e não atinge o faturamento de MEI, dá pra trabalhar como autônomo simples — sem CNPJ.
+Se você presta serviço esporádico e não atinge o faturamento de MEI, dá pra trabalhar como autônomo simples, sem CNPJ.
 
 - Você emite **RPA (Recibo de Pagamento Autônomo)** ao receber.
 - Paga INSS por carnê, se quiser cobertura previdenciária.
@@ -1183,7 +1183,7 @@ Se você presta serviço esporádico e não atinge o faturamento de MEI, dá pra
 
 ## Apps (Uber, iFood, 99, etc.)
 
-Trabalho por plataforma é legal no Brasil — mas **você não é empregado** da plataforma. É autônomo, sem direitos CLT.
+Trabalho por plataforma é legal no Brasil, mas **você não é empregado** da plataforma. É autônomo, sem direitos CLT.
 
 **Vantagens:**
 - Começa rápido. Geralmente exige CNH (Uber) ou bicicleta/moto/carro (iFood, 99).
@@ -1193,15 +1193,15 @@ Trabalho por plataforma é legal no Brasil — mas **você não é empregado** d
 - **Sem férias, 13º, FGTS ou seguro-desemprego.**
 - **Seguro próprio**: se você se machucar trabalhando, a plataforma raramente cobre.
 - **Custos por sua conta**: gasolina, manutenção, seguro do veículo.
-- **Renda variável** — em meses fracos pode ficar bem abaixo do mínimo.
+- **Renda variável**: em meses fracos pode ficar bem abaixo do mínimo.
 
-> **Plataformas pagam por entrega/corrida, não por hora.** Faça as contas — se descontar gasolina, manutenção e tempo "parado", o ganho real costuma ser bem menor que o bruto.`,
+> **Plataformas pagam por entrega/corrida, não por hora.** Faça as contas: se descontar gasolina, manutenção e tempo "parado", o ganho real costuma ser bem menor que o bruto.`,
           },
           es: {
             title: "Alternativas a la CLT: MEI, autónomo y apps",
             summary:
               "Cuándo conviene registrarse como MEI y qué considerar en trabajo por plataforma.",
-            body: `**No todo trabajo es CLT.** Buena parte de quien llega arranca con modalidades más flexibles — MEI, autónomo, plataformas. Cada una tiene sus reglas.
+            body: `**No todo trabajo es CLT.** Buena parte de quien llega arranca con modalidades más flexibles: MEI, autónomo, plataformas. Cada una tiene sus reglas.
 
 ## MEI (Microemprendedor Individual)
 
@@ -1222,7 +1222,7 @@ Para quien trabaja por cuenta propia con facturación hasta **R$ 81 mil/año** (
 
 ## Autónomo (sin MEI)
 
-Si prestás servicio esporádico y no llegás a la facturación de MEI, podés trabajar como autónomo simple — sin CNPJ.
+Si prestás servicio esporádico y no llegás a la facturación de MEI, podés trabajar como autónomo simple, sin CNPJ.
 
 - Emitís **RPA (Recibo de Pago Autónomo)** al cobrar.
 - Pagás INSS por libreta, si querés cobertura previsional.
@@ -1230,7 +1230,7 @@ Si prestás servicio esporádico y no llegás a la facturación de MEI, podés t
 
 ## Apps (Uber, iFood, 99, etc.)
 
-El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la plataforma. Sos autónomo, sin derechos CLT.
+El trabajo por plataforma es legal en Brasil, pero **no sos empleado** de la plataforma. Sos autónomo, sin derechos CLT.
 
 **Ventajas:**
 - Empezás rápido. En general exige licencia (Uber) o bici/moto/auto (iFood, 99).
@@ -1240,9 +1240,9 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
 - **Sin vacaciones, aguinaldo, FGTS ni seguro de desempleo.**
 - **Seguro propio**: si te lastimás trabajando, la plataforma raramente cubre.
 - **Costos por tu cuenta**: nafta, mantenimiento, seguro del vehículo.
-- **Ingreso variable** — en meses flojos puede quedar bastante por debajo del mínimo.
+- **Ingreso variable**: en meses flojos puede quedar bastante por debajo del mínimo.
 
-> **Las plataformas pagan por entrega/viaje, no por hora.** Hacé las cuentas — si descontás nafta, mantenimiento y tiempo "parado", la ganancia real suele ser bastante menor que la bruta.`,
+> **Las plataformas pagan por entrega/viaje, no por hora.** Hacé las cuentas: si descontás nafta, mantenimiento y tiempo "parado", la ganancia real suele ser bastante menor que la bruta.`,
           },
         },
       },
@@ -1255,7 +1255,7 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
             title: "Cuidado com golpes em vagas de emprego",
             summary:
               "Sinais de alerta e como verificar se uma oferta é real antes de dar dados ou pagar qualquer coisa.",
-            body: `**Migrante recém-chegado é alvo preferido de golpistas.** Quando estiver procurando trabalho, desconfie sempre — e nunca pague nada antes de ser contratado de verdade.
+            body: `**Migrante recém-chegado é alvo preferido de golpistas.** Quando estiver procurando trabalho, desconfie sempre, e nunca pague nada antes de ser contratado de verdade.
 
 ## Sinais clássicos de golpe
 
@@ -1266,11 +1266,11 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
 - **Pedem dados bancários ou foto de documento** antes da entrevista.
 - **Vaga "100% remota" em empresa que você nunca ouviu falar**, com contato só por WhatsApp.
 - **Empresa não tem site, LinkedIn ou endereço físico verificável.**
-- **"Trabalho de digitação", "encartelagem", "pirâmide com escalada de bônus"** — golpes clássicos.
+- **"Trabalho de digitação", "encartelagem", "pirâmide com escalada de bônus"**: golpes clássicos.
 
 ## Como conferir se uma vaga é real
 
-1. **Procure a empresa no Google** — tem site, redes sociais, endereço?
+1. **Procure a empresa no Google**: tem site, redes sociais, endereço?
 2. **Veja se tem reclamações** no Reclame Aqui ou no Glassdoor.
 3. **Liga pra empresa direto** (telefone que você achou no Google, não o que o "recrutador" te passou).
 4. **Veja se o recrutador tem perfil real no LinkedIn**, com histórico coerente.
@@ -1284,10 +1284,10 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
 
 ## Onde denunciar
 
-- **Procon SC** — denúncias de consumidor (golpes de "empresas").
-- **Polícia Civil** — estelionato, registre boletim de ocorrência online.
-- **Disque 100** — abuso a migrantes, exploração no trabalho.
-- **Ministério Público do Trabalho (MPT)** — trabalho análogo à escravidão, exploração.
+- **Procon SC**: denúncias de consumidor (golpes de "empresas").
+- **Polícia Civil**: estelionato, registre boletim de ocorrência online.
+- **Disque 100**: abuso a migrantes, exploração no trabalho.
+- **Ministério Público do Trabalho (MPT)**: trabalho análogo à escravidão, exploração.
 
 > **Trabalho análogo à escravidão existe.** Se te ofereceram "alojamento", documentaram seus papéis e estão te impedindo de sair: **ligue 100 ou peça ajuda à Cáritas imediatamente**.`,
           },
@@ -1295,7 +1295,7 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
             title: "Cuidado con estafas en vacantes de empleo",
             summary:
               "Señales de alerta y cómo verificar si una oferta es real antes de dar datos o pagar nada.",
-            body: `**El migrante recién llegado es blanco preferido de estafadores.** Cuando estés buscando trabajo, desconfiá siempre — y nunca pagues nada antes de ser contratado de verdad.
+            body: `**El migrante recién llegado es blanco preferido de estafadores.** Cuando estés buscando trabajo, desconfiá siempre, y nunca pagues nada antes de ser contratado de verdad.
 
 ## Señales clásicas de estafa
 
@@ -1306,11 +1306,11 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
 - **Piden datos bancarios o foto de documento** antes de la entrevista.
 - **Vacante "100% remota" en una empresa de la que nunca escuchaste**, con contacto solo por WhatsApp.
 - **La empresa no tiene sitio, LinkedIn ni dirección física verificable.**
-- **"Trabajo de tipeo", "armado de sobres", "pirámide con escala de bonos"** — estafas clásicas.
+- **"Trabajo de tipeo", "armado de sobres", "pirámide con escala de bonos"**: estafas clásicas.
 
 ## Cómo confirmar si una vacante es real
 
-1. **Buscá la empresa en Google** — ¿tiene sitio, redes sociales, dirección?
+1. **Buscá la empresa en Google**: ¿tiene sitio, redes sociales, dirección?
 2. **Mirá si tiene quejas** en Reclame Aqui o Glassdoor.
 3. **Llamá a la empresa directo** (teléfono que encontraste en Google, no el que el "reclutador" te pasó).
 4. **Mirá si el reclutador tiene perfil real en LinkedIn**, con historial coherente.
@@ -1324,10 +1324,10 @@ El trabajo por plataforma es legal en Brasil — pero **no sos empleado** de la 
 
 ## Dónde denunciar
 
-- **Procon SC** — denuncias de consumidor (estafas de "empresas").
-- **Policía Civil** — estafa, hacé denuncia online.
-- **Disque 100** — abuso a migrantes, explotación laboral.
-- **Ministério Público do Trabalho (MPT)** — trabajo análogo a esclavitud, explotación.
+- **Procon SC**: denuncias de consumidor (estafas de "empresas").
+- **Policía Civil**: estafa, hacé denuncia online.
+- **Disque 100**: abuso a migrantes, explotación laboral.
+- **Ministério Público do Trabalho (MPT)**: trabajo análogo a esclavitud, explotación.
 
 > **El trabajo análogo a esclavitud existe.** Si te ofrecieron "alojamiento", retuvieron tus papeles y te están impidiendo salir: **llamá al 100 o pedí ayuda a Cáritas inmediatamente**.`,
           },
@@ -1387,7 +1387,7 @@ Hay cuatro puertas principales:
             title: "CRAS e Cadastro Único",
             summary:
               "Porta de entrada da assistência social. Destrava Bolsa Família, tarifa social e mais.",
-            body: `**O CRAS (Centro de Referência de Assistência Social) é o lugar pra qualquer assunto social do governo.** Em Florianópolis existem várias unidades — uma em cada região da cidade.
+            body: `**O CRAS (Centro de Referência de Assistência Social) é o lugar pra qualquer assunto social do governo.** Em Florianópolis existem várias unidades: uma em cada região da cidade.
 
 A primeira coisa que o CRAS faz com você é o **Cadastro Único (CadÚnico)**, que destrava praticamente todos os benefícios sociais.
 
@@ -1416,7 +1416,7 @@ A primeira coisa que o CRAS faz com você é o **Cadastro Único (CadÚnico)**, 
 - **CPF** de cada membro da família.
 - **Documento de identidade** (passaporte, CRNM, certidão de nascimento das crianças).
 - **Comprovante de residência** atualizado.
-- **Comprovante de renda** de quem trabalha (mesmo que informal — uma declaração escrita serve).
+- **Comprovante de renda** de quem trabalha (mesmo que informal, uma declaração escrita serve).
 
 ## Outros serviços do CRAS
 
@@ -1433,7 +1433,7 @@ Além do CadÚnico, o CRAS oferece:
             title: "CRAS y Cadastro Único",
             summary:
               "Puerta de entrada de la asistencia social. Destraba Bolsa Família, tarifa social y más.",
-            body: `**El CRAS (Centro de Referencia de Asistencia Social) es el lugar para cualquier asunto social del gobierno.** En Florianópolis existen varias unidades — una en cada región de la ciudad.
+            body: `**El CRAS (Centro de Referencia de Asistencia Social) es el lugar para cualquier asunto social del gobierno.** En Florianópolis existen varias unidades: una en cada región de la ciudad.
 
 Lo primero que el CRAS hace con vos es el **Cadastro Único (CadÚnico)**, que destraba prácticamente todos los beneficios sociales.
 
@@ -1462,7 +1462,7 @@ Lo primero que el CRAS hace con vos es el **Cadastro Único (CadÚnico)**, que d
 - **CPF** de cada miembro de la familia.
 - **Documento de identidad** (pasaporte, CRNM, partida de nacimiento de los niños).
 - **Comprobante de domicilio** actualizado.
-- **Comprobante de ingresos** de quien trabaja (incluso informal — una declaración escrita sirve).
+- **Comprobante de ingresos** de quien trabaja (incluso informal, una declaración escrita sirve).
 
 ## Otros servicios del CRAS
 
@@ -1483,7 +1483,7 @@ Además del CadÚnico, el CRAS ofrece:
         contactIds: [],
         translations: {
           pt: {
-            title: "CREAS — quando procurar",
+            title: "CREAS: quando procurar",
             summary:
               "Casos de violência, situação de rua, exploração, abandono. Atendimento especializado.",
             body: `**O CREAS (Centro de Referência Especializado de Assistência Social) atende situações graves de violação de direitos.** Diferente do CRAS, que é a porta de entrada geral, o CREAS é especializado em casos mais delicados.
@@ -1517,14 +1517,14 @@ Em Florianópolis funciona o **Centro POP** (vinculado ao CREAS), com:
 
 ## Pra mulheres em situação de violência
 
-- **Ligue 180** (Central de Atendimento à Mulher) — gratuito, 24h.
+- **Ligue 180** (Central de Atendimento à Mulher): gratuito, 24h.
 - Vá à **DEAM** (Delegacia Especializada de Atendimento à Mulher).
 - O CREAS articula com **abrigos de proteção** pra mulheres e crianças em risco.
 
-> **Você tem direito a intérprete.** Se não fala português, peça — em violência doméstica, comunicação é crítica.`,
+> **Você tem direito a intérprete.** Se não fala português, peça: em violência doméstica, comunicação é crítica.`,
           },
           es: {
-            title: "CREAS — cuándo recurrir",
+            title: "CREAS: cuándo recurrir",
             summary:
               "Casos de violencia, situación de calle, explotación, abandono. Atención especializada.",
             body: `**El CREAS (Centro de Referencia Especializado de Asistencia Social) atiende situaciones graves de violación de derechos.** A diferencia del CRAS, que es la puerta de entrada general, el CREAS está especializado en casos más delicados.
@@ -1558,11 +1558,11 @@ En Florianópolis funciona el **Centro POP** (vinculado al CREAS), con:
 
 ## Para mujeres en situación de violencia
 
-- **Llamá al 180** (Central de Atención a la Mujer) — gratuito, 24h.
+- **Llamá al 180** (Central de Atención a la Mujer): gratuito, 24h.
 - Andá a la **DEAM** (Delegación Especializada de Atención a la Mujer).
 - El CREAS articula con **refugios de protección** para mujeres y niños en riesgo.
 
-> **Tenés derecho a intérprete.** Si no hablás portugués, pedilo — en violencia doméstica, la comunicación es crítica.`,
+> **Tenés derecho a intérprete.** Si no hablás portugués, pedilo: en violencia doméstica, la comunicación es crítica.`,
           },
         },
       },
@@ -1588,7 +1588,7 @@ Faz parte de uma rede internacional ligada à Igreja Católica, mas **atende qua
 - **Cursos** de português e capacitação profissional.
 - **Ajuda emergencial** (alimentação, roupa, kit de higiene) em casos críticos.
 
-Atendimento a migrantes na Casa de Direitos — R. Antônio Mariano de Souza, 1135, São José (Seg-Sex 13:30-18:00).
+Atendimento a migrantes na Casa de Direitos: R. Antônio Mariano de Souza, 1135, São José (Seg-Sex 13:30-18:00).
 
 ## Pastoral do Migrante
 
@@ -1615,7 +1615,7 @@ Se você é **solicitante de refúgio** (esperando decisão do CONARE) ou **refu
 - Quer participar de **comunidade de migrantes** pra trocar experiência.
 - Está em situação **muito vulnerável** e o sistema público está demorando.
 
-> **As ONGs e o sistema público trabalham juntos.** Não é "ou um ou outro" — você pode (e deve) usar os dois em paralelo.`,
+> **As ONGs e o sistema público trabalham juntos.** Não é "ou um ou outro": você pode (e deve) usar os dois em paralelo.`,
           },
           es: {
             title: "ONGs y entidades de apoyo a migrantes",
@@ -1634,7 +1634,7 @@ Forma parte de una red internacional vinculada a la Iglesia Católica, pero **at
 - **Cursos** de portugués y capacitación profesional.
 - **Ayuda de emergencia** (alimentos, ropa, kit de higiene) en casos críticos.
 
-Atención a migrantes en la Casa de Direitos — R. Antônio Mariano de Souza, 1135, São José (Lun-Vie 13:30-18:00).
+Atención a migrantes en la Casa de Direitos: R. Antônio Mariano de Souza, 1135, São José (Lun-Vie 13:30-18:00).
 
 ## Pastoral del Migrante
 
@@ -1661,7 +1661,7 @@ Si sos **solicitante de refugio** (esperando decisión del CONARE) o **refugiado
 - Querés participar de **comunidad de migrantes** para intercambiar experiencias.
 - Estás en situación **muy vulnerable** y el sistema público está demorando.
 
-> **Las ONGs y el sistema público trabajan juntos.** No es "o uno o el otro" — podés (y debés) usar los dos en paralelo.`,
+> **Las ONGs y el sistema público trabajan juntos.** No es "o uno o el otro": podés (y debés) usar los dos en paralelo.`,
           },
         },
       },
@@ -1678,7 +1678,7 @@ Si sos **solicitante de refugio** (esperando decisión del CONARE) o **refugiado
 
 ## O que é?
 
-Os Círculos de Hospitalidade conectam pessoas, comunidades e instituições para **acolher quem chega de fora** — com informação, encaminhamento e apoio humano. A iniciativa trabalha com **hospitalidade** no sentido mais amplo: receber, orientar e integrar migrantes na vida local.
+Os Círculos de Hospitalidade conectam pessoas, comunidades e instituições para **acolher quem chega de fora**: com informação, encaminhamento e apoio humano. A iniciativa trabalha com **hospitalidade** no sentido mais amplo: receber, orientar e integrar migrantes na vida local.
 
 ## Como acessar?
 
@@ -1700,7 +1700,7 @@ Para falar com a equipe, acesse a [página de contato dos Círculos de Hospitali
 
 ## ¿Qué es?
 
-Los Círculos de Hospitalidade conectan personas, comunidades e instituciones para **acoger a quien llega de afuera** — con información, derivaciones y apoyo humano. La iniciativa trabaja la **hospitalidad** en el sentido más amplio: recibir, orientar e integrar migrantes en la vida local.
+Los Círculos de Hospitalidade conectan personas, comunidades e instituciones para **acoger a quien llega de afuera**: con información, derivaciones y apoyo humano. La iniciativa trabaja la **hospitalidad** en el sentido más amplio: recibir, orientar e integrar migrantes en la vida local.
 
 ## ¿Cómo acceder?
 
@@ -1729,7 +1729,7 @@ Para hablar con el equipo, accedé a la [página de contacto de Círculos de Hos
         title: "Educação",
         summary:
           "Matrícula em escola pública, cursos gratuitos de português e revalidação de diploma.",
-        body: `**A educação pública no Brasil é gratuita** e, no caso das crianças, **garantida por lei** — inclusive a migrantes em situação irregular. Você tem direito a:
+        body: `**A educação pública no Brasil é gratuita** e, no caso das crianças, **garantida por lei**, inclusive a migrantes em situação irregular. Você tem direito a:
 
 - **Matricular** seus filhos na escola, mesmo sem CRNM.
 - Aprender **português gratuitamente** em programas como o PLAc da UFSC.
@@ -1742,7 +1742,7 @@ Para hablar con el equipo, accedé a la [página de contacto de Círculos de Hos
         title: "Educación",
         summary:
           "Matrícula en escuela pública, cursos gratuitos de portugués y revalidación de título.",
-        body: `**La educación pública en Brasil es gratuita** y, en el caso de los niños, **garantizada por ley** — incluso a migrantes en situación irregular. Tenés derecho a:
+        body: `**La educación pública en Brasil es gratuita** y, en el caso de los niños, **garantizada por ley**, incluso a migrantes en situación irregular. Tenés derecho a:
 
 - **Matricular** a tus hijos en la escuela, incluso sin CRNM.
 - Aprender **portugués gratis** en programas como el PLAc de la UFSC.
@@ -1778,7 +1778,7 @@ Em Floripa, a rede pública atende desde a creche até o ensino médio.
 ## Como fazer
 
 1. **Encontre a Secretaria de Educação** correspondente. Em Floripa, a municipal é na **Rua Conselheiro Mafra, 656** (Centro). A estadual fica em endereços diferentes.
-2. **Apresente os documentos** abaixo. Se faltar algum, peça orientação — quase sempre dá pra resolver.
+2. **Apresente os documentos** abaixo. Se faltar algum, peça orientação: quase sempre dá pra resolver.
 3. **A vaga é atribuída** geralmente em escola próxima da sua casa.
 4. Em alguns casos pode ter **lista de espera** pra creches.
 
@@ -1787,10 +1787,10 @@ Em Floripa, a rede pública atende desde a creche até o ensino médio.
 - **Documento da criança**: passaporte, certidão de nascimento (original ou tradução), CRNM se já tiver.
 - **Documento do responsável** (você): qualquer um.
 - **Comprovante de residência**.
-- **Histórico escolar** do país anterior, se tiver — ajuda a colocar no ano certo. Tradução não-juramentada é aceita pra começar.
+- **Histórico escolar** do país anterior, se tiver, ajuda a colocar no ano certo. Tradução não-juramentada é aceita pra começar.
 - **Cartão de vacinação** atualizado (não impede a matrícula, mas a escola pode te encaminhar pra UBS).
 
-> **Se a Secretaria criar dificuldade alegando falta de documento, procure o CRAS ou a Defensoria Pública.** Recusar matrícula a uma criança é ilegal — eles te ajudam a contornar.
+> **Se a Secretaria criar dificuldade alegando falta de documento, procure o CRAS ou a Defensoria Pública.** Recusar matrícula a uma criança é ilegal: eles te ajudam a contornar.
 
 ## Almoço e material escolar
 
@@ -1818,7 +1818,7 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
 ## Cómo hacer
 
 1. **Encontrá la Secretaría de Educación** correspondiente. En Floripa, la municipal está en la **Rua Conselheiro Mafra, 656** (Centro). La estadual queda en direcciones diferentes.
-2. **Presentá los documentos** abajo. Si falta alguno, pedí orientación — casi siempre se puede resolver.
+2. **Presentá los documentos** abajo. Si falta alguno, pedí orientación: casi siempre se puede resolver.
 3. **La vacante se asigna** generalmente en una escuela cerca de tu casa.
 4. En algunos casos puede haber **lista de espera** para jardín.
 
@@ -1827,10 +1827,10 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
 - **Documento del niño**: pasaporte, partida de nacimiento (original o traducción), CRNM si ya tiene.
 - **Documento del responsable** (vos): cualquiera.
 - **Comprobante de domicilio**.
-- **Historial escolar** del país anterior, si tenés — ayuda a ubicarlo en el grado correcto. Una traducción no jurada se acepta para empezar.
+- **Historial escolar** del país anterior, si tenés, ayuda a ubicarlo en el grado correcto. Una traducción no jurada se acepta para empezar.
 - **Carnet de vacunación** actualizado (no impide la matrícula, pero la escuela puede derivarte a la UBS).
 
-> **Si la Secretaría pone trabas alegando falta de documento, andá al CRAS o a la Defensoría Pública.** Negar matrícula a un niño es ilegal — ellos te ayudan a sortearlo.
+> **Si la Secretaría pone trabas alegando falta de documento, andá al CRAS o a la Defensoría Pública.** Negar matrícula a un niño es ilegal: ellos te ayudan a sortearlo.
 
 ## Almuerzo y material escolar
 
@@ -1849,7 +1849,7 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
             title: "Aprender português (PLAc UFSC e outros)",
             summary:
               "Cursos gratuitos de português pra migrantes e refugiados em Floripa.",
-            body: `**Em Floripa há cursos gratuitos de português específicos pra migrantes e refugiados** — o principal é o **PLAc da UFSC**. Não é só "aula de idioma": o foco é português pra você se virar no Brasil (banco, médico, escola, trabalho).
+            body: `**Em Floripa há cursos gratuitos de português específicos pra migrantes e refugiados**: o principal é o **PLAc da UFSC**. Não é só "aula de idioma": o foco é português pra você se virar no Brasil (banco, médico, escola, trabalho).
 
 ## PLAc UFSC (principal opção)
 
@@ -1874,12 +1874,12 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
 - **Cáritas SC**: oferece cursos pontuais de português, geralmente associados a outras orientações.
 - **Pastoral do Migrante**: tem grupos de conversação informais.
 - **Igrejas e ONGs locais**: muitas oferecem aulas de português pra suas comunidades. Pergunte na sua região.
-- **Aplicativos**: Duolingo, Tandem (pra praticar com falantes nativos) — bons complementos, não substituem aula presencial.
+- **Aplicativos**: Duolingo, Tandem (pra praticar com falantes nativos). Bons complementos, não substituem aula presencial.
 
 ## Dicas pra aprender mais rápido
 
 - **Combine aula com prática diária**: ouça rádio brasileiro, assista TV/Netflix com legendas, leia jornal online (G1, Folha).
-- **Faça amigos brasileiros** — o sotaque catarinense é puxado, mas você se acostuma.
+- **Faça amigos brasileiros**: o sotaque catarinense é puxado, mas você se acostuma.
 - **Pratique até com erros**. Brasileiros são muito tolerantes com pronúncia de migrante.
 - **Foque em situações reais**: banco, supermercado, médico. Essas são as palavras que você vai usar primeiro.
 
@@ -1889,7 +1889,7 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
             title: "Aprender portugués (PLAc UFSC y otros)",
             summary:
               "Cursos gratuitos de portugués para migrantes y refugiados en Floripa.",
-            body: `**En Floripa hay cursos gratuitos de portugués específicos para migrantes y refugiados** — el principal es el **PLAc de la UFSC**. No es solo "clase de idioma": el foco es el portugués para que te puedas mover en Brasil (banco, médico, escuela, trabajo).
+            body: `**En Floripa hay cursos gratuitos de portugués específicos para migrantes y refugiados**: el principal es el **PLAc de la UFSC**. No es solo "clase de idioma": el foco es el portugués para que te puedas mover en Brasil (banco, médico, escuela, trabajo).
 
 ## PLAc UFSC (opción principal)
 
@@ -1914,12 +1914,12 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
 - **Cáritas SC**: ofrece cursos puntuales de portugués, generalmente asociados a otras orientaciones.
 - **Pastoral del Migrante**: tiene grupos de conversación informales.
 - **Iglesias y ONGs locales**: muchas ofrecen clases de portugués para sus comunidades. Preguntá en tu región.
-- **Aplicaciones**: Duolingo, Tandem (para practicar con hablantes nativos) — buenos complementos, no reemplazan la clase presencial.
+- **Aplicaciones**: Duolingo, Tandem (para practicar con hablantes nativos). Buenos complementos, no reemplazan la clase presencial.
 
 ## Tips para aprender más rápido
 
 - **Combiná clase con práctica diaria**: escuchá radio brasileña, mirá TV/Netflix con subtítulos, leé diario online (G1, Folha).
-- **Hacé amigos brasileños** — el acento de Santa Catarina es cerrado, pero te acostumbrás.
+- **Hacé amigos brasileños**: el acento de Santa Catarina es cerrado, pero te acostumbrás.
 - **Practicá incluso con errores.** Los brasileños son muy tolerantes con la pronunciación del migrante.
 - **Enfocate en situaciones reales**: banco, supermercado, médico. Esas son las palabras que vas a usar primero.
 
@@ -1936,7 +1936,7 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
             title: "Revalidar diploma do exterior",
             summary:
               "Como dar validade brasileira ao seu título de ensino médio, graduação ou pós.",
-            body: `**Revalidar diploma é o processo de tornar oficial no Brasil o título que você obteve em outro país.** Sem revalidação, você pode trabalhar em vários cargos — mas não nos que **exigem registro profissional** (médico, advogado, engenheiro, professor de carreira, etc.).
+            body: `**Revalidar diploma é o processo de tornar oficial no Brasil o título que você obteve em outro país.** Sem revalidação, você pode trabalhar em vários cargos, mas não nos que **exigem registro profissional** (médico, advogado, engenheiro, professor de carreira, etc.).
 
 ## Por nível de ensino
 
@@ -1984,7 +1984,7 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
             title: "Revalidar título del exterior",
             summary:
               "Cómo darle validez brasileña a tu título de secundario, universitario o posgrado.",
-            body: `**Revalidar título es el proceso de hacer oficial en Brasil el título que obtuviste en otro país.** Sin revalidación, podés trabajar en varios cargos — pero no en los que **exigen registro profesional** (médico, abogado, ingeniero, docente de carrera, etc.).
+            body: `**Revalidar título es el proceso de hacer oficial en Brasil el título que obtuviste en otro país.** Sin revalidación, podés trabajar en varios cargos, pero no en los que **exigen registro profesional** (médico, abogado, ingeniero, docente de carrera, etc.).
 
 ## Por nivel de educación
 
@@ -2038,10 +2038,10 @@ En Floripa, la red pública atiende desde el jardín hasta la secundaria.
           pt: {
             title: "Cursos técnicos e profissionalizantes",
             summary:
-              "SENAI, SENAC, IFSC — gratuitos, rápidos e ótimos pra entrar no mercado brasileiro.",
+              "SENAI, SENAC, IFSC: gratuitos, rápidos e ótimos pra entrar no mercado brasileiro.",
             body: `**Cursos técnicos e profissionalizantes são o caminho mais rápido pra trabalhar com qualificação no Brasil.** Boa parte é gratuita, dura de poucas semanas a 2 anos, e tem alta empregabilidade.
 
-São abertos a migrantes — basta ter CPF.
+São abertos a migrantes: basta ter CPF.
 
 ## Principais instituições
 
@@ -2075,17 +2075,17 @@ São abertos a migrantes — basta ter CPF.
 - **Mais rápido** (semanas a 2 anos vs 4–5 anos de graduação).
 - **Mais barato** (muitos gratuitos).
 - **Mais prático** (foco em "saber fazer", não em teoria).
-- **Mercado valoriza** — em vários setores, certificado técnico abre tantas portas quanto diploma.
+- **Mercado valoriza**: em vários setores, certificado técnico abre tantas portas quanto diploma.
 
 > **Estratégia que funciona pra muitos migrantes:** comece com um curso técnico curto, entre no mercado de trabalho, e use o salário pra bancar a revalidação do diploma original em paralelo.`,
           },
           es: {
             title: "Cursos técnicos y profesionales",
             summary:
-              "SENAI, SENAC, IFSC — gratuitos, rápidos y excelentes para entrar al mercado brasileño.",
+              "SENAI, SENAC, IFSC: gratuitos, rápidos y excelentes para entrar al mercado brasileño.",
             body: `**Los cursos técnicos y profesionales son el camino más rápido para trabajar con calificación en Brasil.** Buena parte es gratuita, duran de pocas semanas a 2 años, y tienen alta empleabilidad.
 
-Están abiertos a migrantes — solo necesitás CPF.
+Están abiertos a migrantes: solo necesitás CPF.
 
 ## Principales instituciones
 
@@ -2119,7 +2119,7 @@ Están abiertos a migrantes — solo necesitás CPF.
 - **Más rápido** (semanas a 2 años vs 4–5 años de universidad).
 - **Más barato** (muchos gratuitos).
 - **Más práctico** (foco en "saber hacer", no en teoría).
-- **El mercado valora** — en varios sectores, el certificado técnico abre tantas puertas como un título universitario.
+- **El mercado valora**: en varios sectores, el certificado técnico abre tantas puertas como un título universitario.
 
 > **Estrategia que funciona para muchos migrantes:** empezá con un curso técnico corto, entrá al mercado de trabajo, y usá el sueldo para bancar la revalidación del título original en paralelo.`,
           },
@@ -2164,8 +2164,8 @@ Los temas debajo cubren desde cómo alquilar de forma tradicional (con las exige
           pt: {
             title: "Como alugar um imóvel em Floripa",
             summary:
-              "Fiador, seguro fiança ou caução — entenda as 3 garantias e qual é mais viável pra você.",
-            body: `**Pra alugar um imóvel pelas imobiliárias em Floripa, você precisa apresentar uma garantia.** São 3 modalidades — escolha conforme sua situação.
+              "Fiador, seguro fiança ou caução: entenda as 3 garantias e qual é mais viável pra você.",
+            body: `**Pra alugar um imóvel pelas imobiliárias em Floripa, você precisa apresentar uma garantia.** São 3 modalidades: escolha conforme sua situação.
 
 ## As 3 garantias possíveis
 
@@ -2179,7 +2179,7 @@ Los temas debajo cubren desde cómo alquilar de forma tradicional (con las exige
 
 A imobiliária quer alguém com **imóvel próprio em Florianópolis** que assina garantindo o pagamento. Se você não pagar, o fiador é cobrado.
 
-- **Difícil pra migrante recém-chegado** — quase ninguém conhece pessoa local com imóvel disposta a assumir o risco.
+- **Difícil pra migrante recém-chegado**: quase ninguém conhece pessoa local com imóvel disposta a assumir o risco.
 - Se conseguir, é a opção **mais barata** (sem custo extra mensal).
 
 ### 2. Seguro fiança
@@ -2194,7 +2194,7 @@ Você contrata uma seguradora que garante o aluguel. Custa **~10–15% do valor 
 
 Você deposita o **valor de 3 aluguéis** numa conta vinculada. Sai do bolso, mas é devolvido com correção ao fim do contrato (se entregar o imóvel em boa condição).
 
-- **Sem análise de crédito complicada** — quem tem o dinheiro alugou.
+- **Sem análise de crédito complicada**: quem tem o dinheiro alugou.
 - **Bom pra freelancer, MEI ou autônomo** sem holerite.
 - Cuidado: alguns contratos retêm parte da caução por avarias mínimas.
 
@@ -2203,17 +2203,17 @@ Você deposita o **valor de 3 aluguéis** numa conta vinculada. Sai do bolso, ma
 Além do aluguel mensal, prepare-se pra:
 
 - **IPTU** (imposto da prefeitura), geralmente pago pelo inquilino.
-- **Condomínio** (em apartamento) — pode chegar a 1/3 do aluguel.
-- **Água, luz, internet, gás** — por sua conta.
+- **Condomínio** (em apartamento): pode chegar a 1/3 do aluguel.
+- **Água, luz, internet, gás**: por sua conta.
 - **Taxa de cadastro** da imobiliária (~R$ 100–500).
 
-> **Sempre veja o imóvel pessoalmente.** Foto e descrição online enganam — vista o lugar, confira pressão da água, mofo, vizinhos, ventilação. Vá em horários diferentes pra avaliar barulho.`,
+> **Sempre veja o imóvel pessoalmente.** Foto e descrição online enganam: vista o lugar, confira pressão da água, mofo, vizinhos, ventilação. Vá em horários diferentes pra avaliar barulho.`,
           },
           es: {
             title: "Cómo alquilar un inmueble en Floripa",
             summary:
-              "Garante, seguro fianza o caución — entendé las 3 garantías y cuál es más viable para vos.",
-            body: `**Para alquilar un inmueble por las inmobiliarias en Floripa, tenés que presentar una garantía.** Son 3 modalidades — elegí según tu situación.
+              "Garante, seguro fianza o caución: entendé las 3 garantías y cuál es más viable para vos.",
+            body: `**Para alquilar un inmueble por las inmobiliarias en Floripa, tenés que presentar una garantía.** Son 3 modalidades: elegí según tu situación.
 
 ## Las 3 garantías posibles
 
@@ -2227,7 +2227,7 @@ Além do aluguel mensal, prepare-se pra:
 
 La inmobiliaria quiere a alguien con **inmueble propio en Florianópolis** que firme garantizando el pago. Si no pagás, le cobran al garante.
 
-- **Difícil para migrante recién llegado** — casi nadie conoce a una persona local con inmueble dispuesta a asumir el riesgo.
+- **Difícil para migrante recién llegado**: casi nadie conoce a una persona local con inmueble dispuesta a asumir el riesgo.
 - Si lo conseguís, es la opción **más barata** (sin costo extra mensual).
 
 ### 2. Seguro fianza
@@ -2242,7 +2242,7 @@ Contratás una aseguradora que garantiza el alquiler. Cuesta **~10–15% del val
 
 Depositás el **valor de 3 alquileres** en una cuenta vinculada. Sale del bolsillo, pero se devuelve con corrección al final del contrato (si entregás el inmueble en buena condición).
 
-- **Sin análisis de crédito complicado** — quien tiene la plata alquila.
+- **Sin análisis de crédito complicado**: quien tiene la plata alquila.
 - **Bueno para freelancer, MEI o autónomo** sin recibo de sueldo.
 - Cuidado: algunos contratos retienen parte de la caución por daños mínimos.
 
@@ -2251,11 +2251,11 @@ Depositás el **valor de 3 alquileres** en una cuenta vinculada. Sale del bolsil
 Además del alquiler mensual, preparate para:
 
 - **IPTU** (impuesto de la municipalidad), generalmente pagado por el inquilino.
-- **Expensas (condomínio)** en departamentos — pueden llegar a 1/3 del alquiler.
-- **Agua, luz, internet, gas** — por tu cuenta.
+- **Expensas (condomínio)** en departamentos: pueden llegar a 1/3 del alquiler.
+- **Agua, luz, internet, gas**: por tu cuenta.
 - **Tasa de registro** de la inmobiliaria (~R$ 100–500).
 
-> **Visitá siempre el inmueble personalmente.** La foto y descripción online engañan — andá al lugar, fijate la presión del agua, moho, vecinos, ventilación. Andá en horarios distintos para evaluar el ruido.`,
+> **Visitá siempre el inmueble personalmente.** La foto y descripción online engañan: andá al lugar, fijate la presión del agua, moho, vecinos, ventilación. Andá en horarios distintos para evaluar el ruido.`,
           },
         },
       },
@@ -2267,7 +2267,7 @@ Además del alquiler mensual, preparate para:
           pt: {
             title: "Alternativas pra começar (sem fiador, sem caução)",
             summary:
-              "República, aluguel direto, pousadas — o que serve enquanto você se estabiliza.",
+              "República, aluguel direto, pousadas: o que serve enquanto você se estabiliza.",
             body: `**Se você acabou de chegar, ainda não tem renda comprovada, ou não quer travar dinheiro em caução, há alternativas mais flexíveis pra começar.**
 
 ## República (compartilhado)
@@ -2275,15 +2275,15 @@ Además del alquiler mensual, preparate para:
 **Você divide aluguel e contas com outras pessoas.** É a opção **mais barata e mais flexível** pra quem chega.
 
 **Vantagens:**
-- **Sem fiador, sem caução** — quem mora paga a parte direto.
+- **Sem fiador, sem caução**: quem mora paga a parte direto.
 - **Custo baixo** (R$ 800–1.500/mês em geral, dependendo do bairro e do quarto).
 - **Contas divididas** (luz, água, internet).
 - **Já vem mobiliado**, geralmente.
 
 **Pontos de atenção:**
 - Convivência com desconhecidos exige paciência.
-- Acordos verbais — leia atentamente as regras da casa antes de entrar.
-- Em alguns casos, o "morador veterano" cobra "luvas" (taxa de entrada) — desconfie.
+- Acordos verbais: leia atentamente as regras da casa antes de entrar.
+- Em alguns casos, o "morador veterano" cobra "luvas" (taxa de entrada). Desconfie.
 
 **Onde achar:**
 - Grupos do **Facebook** "República Florianópolis", "Vagas República UFSC".
@@ -2292,7 +2292,7 @@ Además del alquiler mensual, preparate para:
 
 ## Aluguel direto com proprietário
 
-**Sem imobiliária** — você fala direto com o dono do imóvel. Costuma ser **mais negociável** (menos burocracia, menos garantia exigida).
+**Sem imobiliária**: você fala direto com o dono do imóvel. Costuma ser **mais negociável** (menos burocracia, menos garantia exigida).
 
 - Procure em **grupos de Facebook**, **OLX**, **QuintoAndar Direto**.
 - Pode topar conversar sobre **caução parcelada**, dispensar fiador em troca de aluguel maior, etc.
@@ -2315,7 +2315,7 @@ Algumas ONGs e igrejas oferecem **hospedagem temporária** (3–15 dias) pra mig
           es: {
             title: "Alternativas para empezar (sin garante, sin caución)",
             summary:
-              "Compartido, alquiler directo, hostels — lo que sirve mientras te estabilizás.",
+              "Compartido, alquiler directo, hostels: lo que sirve mientras te estabilizás.",
             body: `**Si recién llegás, todavía no tenés ingresos comprobados, o no querés trabar plata en caución, hay alternativas más flexibles para empezar.**
 
 ## Compartido (república)
@@ -2323,15 +2323,15 @@ Algumas ONGs e igrejas oferecem **hospedagem temporária** (3–15 dias) pra mig
 **Dividís alquiler y cuentas con otras personas.** Es la opción **más barata y flexible** para quien llega.
 
 **Ventajas:**
-- **Sin garante, sin caución** — quien vive paga su parte directo.
+- **Sin garante, sin caución**: quien vive paga su parte directo.
 - **Costo bajo** (R$ 800–1.500/mes en general, depende del barrio y del cuarto).
 - **Cuentas divididas** (luz, agua, internet).
 - **Suele venir amoblado.**
 
 **Puntos de atención:**
 - Convivir con desconocidos exige paciencia.
-- Acuerdos verbales — leé atentamente las reglas de la casa antes de entrar.
-- En algunos casos, el "veterano" cobra "llave" (tasa de entrada) — desconfiá.
+- Acuerdos verbales: leé atentamente las reglas de la casa antes de entrar.
+- En algunos casos, el "veterano" cobra "llave" (tasa de entrada). Desconfiá.
 
 **Dónde encontrar:**
 - Grupos de **Facebook** "República Florianópolis", "Vagas República UFSC".
@@ -2340,7 +2340,7 @@ Algumas ONGs e igrejas oferecem **hospedagem temporária** (3–15 dias) pra mig
 
 ## Alquiler directo con propietario
 
-**Sin inmobiliaria** — hablás directo con el dueño del inmueble. Suele ser **más negociable** (menos burocracia, menos garantía exigida).
+**Sin inmobiliaria**: hablás directo con el dueño del inmueble. Suele ser **más negociable** (menos burocracia, menos garantía exigida).
 
 - Buscá en **grupos de Facebook**, **OLX**, **QuintoAndar Direto**.
 - Puede aceptar conversar sobre **caución en cuotas**, dispensar garante a cambio de alquiler más alto, etc.
@@ -2370,8 +2370,8 @@ Algunas ONGs e iglesias ofrecen **hospedaje temporario** (3–15 días) para mig
           pt: {
             title: "Em situação de emergência habitacional",
             summary:
-              "Sem onde dormir, com a família na rua, despejo iminente — onde buscar ajuda imediata.",
-            body: `**Se você está sem onde dormir ou em risco de despejo, existem serviços públicos e privados que atendem em emergência.** Procure imediatamente — não espere a situação piorar.
+              "Sem onde dormir, com a família na rua, despejo iminente: onde buscar ajuda imediata.",
+            body: `**Se você está sem onde dormir ou em risco de despejo, existem serviços públicos e privados que atendem em emergência.** Procure imediatamente: não espere a situação piorar.
 
 ## Primeiro passo: o CRAS
 
@@ -2379,7 +2379,7 @@ O **CRAS** é a porta de entrada pra qualquer emergência social, **inclusive ha
 
 > **Não tem como chegar ao CRAS?** Ligue **100** (Direitos Humanos) ou **156** (Ouvidoria Geral de Florianópolis). Eles orientam.
 
-## Centro POP — pra adultos em situação de rua
+## Centro POP: pra adultos em situação de rua
 
 O **Centro POP** (vinculado ao CREAS) atende **adultos em situação de rua** com:
 
@@ -2412,7 +2412,7 @@ A **Cáritas SC** mantém ou indica abrigos pra migrantes especificamente. Em si
 Se o proprietário está te ameaçando de despejo:
 
 1. **Não saia de imediato.** Despejo só é legal por ordem judicial.
-2. **Procure a Defensoria Pública da União (DPU)** — atendimento gratuito.
+2. **Procure a Defensoria Pública da União (DPU)**: atendimento gratuito.
 3. **Reúna provas**: contrato, recibos de aluguel pago, mensagens.
 4. A DPU pode pedir **prazo extra** ou negociar com o proprietário.
 
@@ -2421,8 +2421,8 @@ Se o proprietário está te ameaçando de despejo:
           es: {
             title: "En situación de emergencia habitacional",
             summary:
-              "Sin dónde dormir, con la familia en la calle, desalojo inminente — dónde buscar ayuda inmediata.",
-            body: `**Si estás sin dónde dormir o en riesgo de desalojo, existen servicios públicos y privados que atienden en emergencia.** Andá inmediatamente — no esperes a que empeore.
+              "Sin dónde dormir, con la familia en la calle, desalojo inminente: dónde buscar ayuda inmediata.",
+            body: `**Si estás sin dónde dormir o en riesgo de desalojo, existen servicios públicos y privados que atienden en emergencia.** Andá inmediatamente: no esperes a que empeore.
 
 ## Primer paso: el CRAS
 
@@ -2430,7 +2430,7 @@ El **CRAS** es la puerta de entrada para cualquier emergencia social, **incluso 
 
 > **¿No tenés cómo llegar al CRAS?** Llamá al **100** (Derechos Humanos) o al **156** (Defensoría Vecinal de Florianópolis). Te orientan.
 
-## Centro POP — para adultos en situación de calle
+## Centro POP: para adultos en situación de calle
 
 El **Centro POP** (vinculado al CREAS) atiende **adultos en situación de calle** con:
 
@@ -2463,7 +2463,7 @@ La **Cáritas SC** mantiene o indica refugios para migrantes específicamente. E
 Si el propietario te amenaza con desalojo:
 
 1. **No salgas de inmediato.** El desalojo solo es legal por orden judicial.
-2. **Andá a la Defensoría Pública de la Unión (DPU)** — atención gratuita.
+2. **Andá a la Defensoría Pública de la Unión (DPU)**: atención gratuita.
 3. **Juntá pruebas**: contrato, recibos de alquiler pagado, mensajes.
 4. La DPU puede pedir **plazo extra** o negociar con el propietario.
 
@@ -2479,7 +2479,7 @@ Si el propietario te amenaza con desalojo:
           pt: {
             title: "Programas habitacionais públicos",
             summary:
-              "Minha Casa Minha Vida, aluguel social, financiamento subsidiado — quando vale a pena.",
+              "Minha Casa Minha Vida, aluguel social, financiamento subsidiado: quando vale a pena.",
             body: `**Pra quem pretende ficar de forma mais permanente no Brasil, há programas públicos que ajudam a comprar ou pagar moradia.** Pra estrangeiros, geralmente é exigido **residência regular** (CRNM ativa).
 
 ## Minha Casa Minha Vida (MCMV)
@@ -2489,7 +2489,7 @@ O principal programa federal de habitação. Financia a **compra de imóvel pró
 ### Como funciona
 
 - **Renda familiar até R$ 8 mil/mês** (em 2025; varia por faixa).
-- **Subsídio cresce conforme a renda é mais baixa** — famílias mais pobres pagam menos.
+- **Subsídio cresce conforme a renda é mais baixa**: famílias mais pobres pagam menos.
 - **Parcelas reduzidas** pela Caixa Econômica Federal.
 - Imóveis são geralmente **apartamentos novos**, em conjuntos habitacionais.
 
@@ -2504,7 +2504,7 @@ O principal programa federal de habitação. Financia a **compra de imóvel pró
 ### Como se candidatar
 
 1. **Cadastre-se na Caixa Econômica Federal** ou na **Cohab/Companhia de Habitação local** (em Floripa, a **Cohab/SC**).
-2. **Aguarde a chamada** — há filas longas, pode demorar **meses ou anos**.
+2. **Aguarde a chamada**: há filas longas, pode demorar **meses ou anos**.
 3. **Acompanhe convocações** pelo site da Caixa ou da Cohab.
 
 ## Aluguel social municipal
@@ -2517,18 +2517,18 @@ Programa da **Prefeitura de Florianópolis** que paga (parcial ou totalmente) o 
 
 ## Programa Casa Verde e Amarela / outros
 
-O nome do programa principal já mudou várias vezes (Minha Casa Minha Vida, Casa Verde e Amarela, e voltou pra Minha Casa Minha Vida). Confira no momento da inscrição qual é a marca ativa — as **regras gerais permanecem similares**.
+O nome do programa principal já mudou várias vezes (Minha Casa Minha Vida, Casa Verde e Amarela, e voltou pra Minha Casa Minha Vida). Confira no momento da inscrição qual é a marca ativa: as **regras gerais permanecem similares**.
 
 ## Cooperativas habitacionais
 
-Algumas cooperativas constroem moradia coletiva mais barata. **Pesquise reputação antes** — há cooperativas idôneas e há golpes.
+Algumas cooperativas constroem moradia coletiva mais barata. **Pesquise reputação antes**: há cooperativas idôneas e há golpes.
 
 > **Programas habitacionais são processos longos** (geralmente 1–5 anos da inscrição à chave do imóvel). Vale começar o processo logo, mas **não conte com a casa pra resolver moradia imediata**. Combine com alguma das alternativas dos outros tópicos.`,
           },
           es: {
             title: "Programas habitacionales públicos",
             summary:
-              "Minha Casa Minha Vida, alquiler social, financiación subsidiada — cuándo conviene.",
+              "Minha Casa Minha Vida, alquiler social, financiación subsidiada: cuándo conviene.",
             body: `**Para quien pretende quedarse de forma más permanente en Brasil, hay programas públicos que ayudan a comprar o pagar vivienda.** Para extranjeros, generalmente se exige **residencia regular** (CRNM activa).
 
 ## Minha Casa Minha Vida (MCMV)
@@ -2538,7 +2538,7 @@ El principal programa federal de vivienda. Financia la **compra de inmueble prop
 ### Cómo funciona
 
 - **Ingreso familiar hasta R$ 8 mil/mes** (en 2025; varía por franja).
-- **El subsidio crece a medida que el ingreso es más bajo** — familias más pobres pagan menos.
+- **El subsidio crece a medida que el ingreso es más bajo**: familias más pobres pagan menos.
 - **Cuotas reducidas** por la Caixa Econômica Federal.
 - Los inmuebles son generalmente **departamentos nuevos**, en complejos habitacionales.
 
@@ -2553,7 +2553,7 @@ El principal programa federal de vivienda. Financia la **compra de inmueble prop
 ### Cómo postularse
 
 1. **Registrate en la Caixa Econômica Federal** o en la **Cohab/Compañía de Vivienda local** (en Floripa, la **Cohab/SC**).
-2. **Esperá la convocatoria** — hay filas largas, puede demorar **meses o años**.
+2. **Esperá la convocatoria**: hay filas largas, puede demorar **meses o años**.
 3. **Seguí convocatorias** por el sitio de la Caixa o de la Cohab.
 
 ## Alquiler social municipal
@@ -2566,11 +2566,11 @@ Programa de la **Municipalidad de Florianópolis** que paga (parcial o totalment
 
 ## Programa Casa Verde y Amarela / otros
 
-El nombre del programa principal ya cambió varias veces (Minha Casa Minha Vida, Casa Verde y Amarela, y volvió a Minha Casa Minha Vida). Confirmá en el momento de la inscripción cuál es la marca activa — las **reglas generales se mantienen similares**.
+El nombre del programa principal ya cambió varias veces (Minha Casa Minha Vida, Casa Verde y Amarela, y volvió a Minha Casa Minha Vida). Confirmá en el momento de la inscripción cuál es la marca activa: las **reglas generales se mantienen similares**.
 
 ## Cooperativas habitacionales
 
-Algunas cooperativas construyen vivienda colectiva más barata. **Investigá reputación antes** — hay cooperativas serias y hay estafas.
+Algunas cooperativas construyen vivienda colectiva más barata. **Investigá reputación antes**: hay cooperativas serias y hay estafas.
 
 > **Los programas habitacionales son procesos largos** (generalmente 1–5 años desde la inscripción a la entrega de la llave). Vale empezar el trámite ya, pero **no cuentes con la casa para resolver vivienda inmediata**. Combiná con alguna de las alternativas de los otros temas.`,
           },
@@ -2595,7 +2595,7 @@ Algunas cooperativas construyen vivienda colectiva más barata. **Investigá rep
         title: "Emergências e segurança",
         summary:
           "Números de emergência, o que fazer em situação de violência e como denunciar discriminação.",
-        body: `**No Brasil existem números gratuitos que funcionam de qualquer telefone — mesmo sem chip ou crédito.** Saber qual ligar e quando faz diferença em emergência.
+        body: `**No Brasil existem números gratuitos que funcionam de qualquer telefone, mesmo sem chip ou crédito.** Saber qual ligar e quando faz diferença em emergência.
 
 | Quem ligar | Número |
 | --- | --- |
@@ -2606,15 +2606,15 @@ Algunas cooperativas construyen vivienda colectiva más barata. **Investigá rep
 | Direitos Humanos | **100** |
 | Atendimento à mulher | **180** |
 
-> **Você tem direito a intérprete em qualquer atendimento de emergência ou delegacia.** Se não fala português bem, peça — está garantido por lei.
+> **Você tem direito a intérprete em qualquer atendimento de emergência ou delegacia.** Se não fala português bem, peça: está garantido por lei.
 
-Os tópicos abaixo cobrem como agir em **violência**, **xenofobia/discriminação** e **perda de documentos** — situações que infelizmente acontecem e que têm caminhos legais e gratuitos pra resolver.`,
+Os tópicos abaixo cobrem como agir em **violência**, **xenofobia/discriminação** e **perda de documentos**: situações que infelizmente acontecem e que têm caminhos legais e gratuitos pra resolver.`,
       },
       es: {
         title: "Emergencias y seguridad",
         summary:
           "Números de emergencia, qué hacer en situación de violencia y cómo denunciar discriminación.",
-        body: `**En Brasil existen números gratuitos que funcionan desde cualquier teléfono — incluso sin chip o crédito.** Saber a quién llamar y cuándo hace diferencia en emergencia.
+        body: `**En Brasil existen números gratuitos que funcionan desde cualquier teléfono, incluso sin chip o crédito.** Saber a quién llamar y cuándo hace diferencia en emergencia.
 
 | A quién llamar | Número |
 | --- | --- |
@@ -2625,9 +2625,9 @@ Os tópicos abaixo cobrem como agir em **violência**, **xenofobia/discriminaç�
 | Derechos Humanos | **100** |
 | Atención a la mujer | **180** |
 
-> **Tenés derecho a intérprete en cualquier atención de emergencia o comisaría.** Si no hablás bien portugués, pedilo — está garantizado por ley.
+> **Tenés derecho a intérprete en cualquier atención de emergencia o comisaría.** Si no hablás bien portugués, pedilo: está garantizado por ley.
 
-Los temas debajo cubren cómo actuar en **violencia**, **xenofobia/discriminación** y **pérdida de documentos** — situaciones que lamentablemente pasan y que tienen caminos legales y gratuitos para resolver.`,
+Los temas debajo cubren cómo actuar en **violencia**, **xenofobia/discriminación** y **pérdida de documentos**: situaciones que lamentablemente pasan y que tienen caminos legales y gratuitos para resolver.`,
       },
     },
     topics: [
@@ -2639,8 +2639,8 @@ Los temas debajo cubren cómo actuar en **violencia**, **xenofobia/discriminaci�
           pt: {
             title: "Os 6 números de emergência que você precisa saber",
             summary:
-              "Polícia, ambulância, bombeiros, mulher, direitos humanos — gratuitos, 24h, sem precisar de chip.",
-            body: `**Os números abaixo funcionam de qualquer telefone no Brasil — celular sem chip, sem crédito, ou fixo.** Todos são **24h e gratuitos**. Salve no celular hoje, antes de precisar.
+              "Polícia, ambulância, bombeiros, mulher, direitos humanos: gratuitos, 24h, sem precisar de chip.",
+            body: `**Os números abaixo funcionam de qualquer telefone no Brasil: celular sem chip, sem crédito, ou fixo.** Todos são **24h e gratuitos**. Salve no celular hoje, antes de precisar.
 
 ## A lista essencial
 
@@ -2663,7 +2663,7 @@ Los temas debajo cubren cómo actuar en **violencia**, **xenofobia/discriminaci�
 
 **Diga "intérprete" ou diga o seu idioma e mantenha a ligação.** Os serviços têm sistema de tradução. Pode demorar 30 segundos a 1 minuto pra acionar, mas funciona.
 
-Se ninguém fala seu idioma, fale **devagar e em frases curtas** — o atendente entende mais do que parece.
+Se ninguém fala seu idioma, fale **devagar e em frases curtas**: o atendente entende mais do que parece.
 
 ## Diferença entre 190 (polícia) e 180 (mulher)
 
@@ -2674,15 +2674,15 @@ Se você é mulher em violência doméstica, **prefira o 180** quando possível.
 
 ## Outros números úteis (não emergência)
 
-- **136**: Disque Saúde — orientação SUS.
-- **156**: Ouvidoria de Florianópolis — reclamações sobre serviços municipais.
-- **151**: Procon SC — defesa do consumidor.`,
+- **136**: Disque Saúde (orientação SUS).
+- **156**: Ouvidoria de Florianópolis (reclamações sobre serviços municipais).
+- **151**: Procon SC (defesa do consumidor).`,
           },
           es: {
             title: "Los 6 números de emergencia que tenés que saber",
             summary:
-              "Policía, ambulancia, bomberos, mujer, derechos humanos — gratuitos, 24h, sin necesidad de chip.",
-            body: `**Los números abajo funcionan desde cualquier teléfono en Brasil — celular sin chip, sin crédito, o fijo.** Todos son **24h y gratuitos**. Guardalos en el celular hoy, antes de necesitarlos.
+              "Policía, ambulancia, bomberos, mujer, derechos humanos: gratuitos, 24h, sin necesidad de chip.",
+            body: `**Los números abajo funcionan desde cualquier teléfono en Brasil: celular sin chip, sin crédito, o fijo.** Todos son **24h y gratuitos**. Guardalos en el celular hoy, antes de necesitarlos.
 
 ## La lista esencial
 
@@ -2705,7 +2705,7 @@ Se você é mulher em violência doméstica, **prefira o 180** quando possível.
 
 **Decí "intérprete" o decí tu idioma y mantené la llamada.** Los servicios tienen sistema de traducción. Puede tardar 30 segundos a 1 minuto en accionar, pero funciona.
 
-Si nadie habla tu idioma, hablá **despacio y en frases cortas** — el operador entiende más de lo que parece.
+Si nadie habla tu idioma, hablá **despacio y en frases cortas**: el operador entiende más de lo que parece.
 
 ## Diferencia entre 190 (policía) y 180 (mujer)
 
@@ -2716,9 +2716,9 @@ Si sos mujer en violencia doméstica, **preferí el 180** cuando puedas.
 
 ## Otros números útiles (no emergencia)
 
-- **136**: Disque Saúde — orientación SUS.
-- **156**: Ouvidoria de Florianópolis — quejas sobre servicios municipales.
-- **151**: Procon SC — defensa del consumidor.`,
+- **136**: Disque Saúde (orientación SUS).
+- **156**: Ouvidoria de Florianópolis (quejas sobre servicios municipales).
+- **151**: Procon SC (defensa del consumidor).`,
           },
         },
       },
@@ -2730,8 +2730,8 @@ Si sos mujer en violencia doméstica, **preferí el 180** cuando puedas.
           pt: {
             title: "Em caso de violência (qualquer tipo)",
             summary:
-              "Onde ir, como registrar boletim, e quais direitos você tem — inclusive intérprete e proteção.",
-            body: `**Se você sofreu violência, há um caminho claro pra denunciar e se proteger no Brasil — gratuito.** O atendimento independe da sua situação migratória.
+              "Onde ir, como registrar boletim, e quais direitos você tem: inclusive intérprete e proteção.",
+            body: `**Se você sofreu violência, há um caminho claro pra denunciar e se proteger no Brasil, gratuito.** O atendimento independe da sua situação migratória.
 
 ## Primeiro: você está segura/seguro?
 
@@ -2754,7 +2754,7 @@ Si sos mujer en violencia doméstica, **preferí el 180** cuando puedas.
 
 - **Documento de identificação** (passaporte, CRNM, protocolo da PF).
 - **Provas que tiver**: fotos de lesões, mensagens, áudio, testemunhas.
-- **Roupa que usava** (em casos de violência sexual — não lave nem troque antes de ir ao hospital).
+- **Roupa que usava** (em casos de violência sexual, não lave nem troque antes de ir ao hospital).
 - **Documento médico** (se já foi ao hospital).
 
 ## Você tem direito a
@@ -2762,7 +2762,7 @@ Si sos mujer en violencia doméstica, **preferí el 180** cuando puedas.
 - **Intérprete** gratuito se não fala português.
 - **Mulher**: ser atendida por **policial mulher** se preferir. Pedir.
 - **Acompanhamento de assistente social** durante o atendimento.
-- **Medida protetiva** (afastamento do agressor, proibição de aproximação) — emitida em até 24h.
+- **Medida protetiva** (afastamento do agressor, proibição de aproximação): emitida em até 24h.
 - **Defesa jurídica gratuita** pela **Defensoria Pública**.
 
 ## Em casos de violência sexual
@@ -2774,15 +2774,15 @@ Si sos mujer en violencia doméstica, **preferí el 180** cuando puedas.
 - **Profilaxia de HIV e outras ISTs.**
 - **Contracepção de emergência** quando aplicável.
 
-Você **não precisa** decidir denunciar na hora — primeiro cuida da saúde, depois decide.
+Você **não precisa** decidir denunciar na hora: primeiro cuida da saúde, depois decide.
 
 > **Procure também a Defensoria Pública e a Cáritas SC**. Eles dão apoio jurídico, psicológico e te orientam em cada passo. **Você não precisa enfrentar isso sozinha/sozinho.**`,
           },
           es: {
             title: "En caso de violencia (cualquier tipo)",
             summary:
-              "Adónde ir, cómo hacer denuncia, y qué derechos tenés — incluido intérprete y protección.",
-            body: `**Si sufriste violencia, hay un camino claro para denunciar y protegerte en Brasil — gratuito.** La atención no depende de tu situación migratoria.
+              "Adónde ir, cómo hacer denuncia, y qué derechos tenés: incluido intérprete y protección.",
+            body: `**Si sufriste violencia, hay un camino claro para denunciar y protegerte en Brasil, gratuito.** La atención no depende de tu situación migratoria.
 
 ## Primero: ¿estás segura/seguro?
 
@@ -2805,7 +2805,7 @@ Você **não precisa** decidir denunciar na hora — primeiro cuida da saúde, d
 
 - **Documento de identificación** (pasaporte, CRNM, protocolo de la PF).
 - **Pruebas que tengas**: fotos de lesiones, mensajes, audios, testigos.
-- **Ropa que usabas** (en casos de violencia sexual — no la laves ni cambies antes de ir al hospital).
+- **Ropa que usabas** (en casos de violencia sexual, no la laves ni cambies antes de ir al hospital).
 - **Documento médico** (si ya fuiste al hospital).
 
 ## Tenés derecho a
@@ -2813,7 +2813,7 @@ Você **não precisa** decidir denunciar na hora — primeiro cuida da saúde, d
 - **Intérprete** gratuito si no hablás portugués.
 - **Mujer**: ser atendida por **policía mujer** si lo preferís. Pedilo.
 - **Acompañamiento de asistente social** durante la atención.
-- **Medida de protección** (alejamiento del agresor, prohibición de acercamiento) — emitida en hasta 24h.
+- **Medida de protección** (alejamiento del agresor, prohibición de acercamiento): emitida en hasta 24h.
 - **Defensa jurídica gratuita** por la **Defensoría Pública**.
 
 ## En casos de violencia sexual
@@ -2825,7 +2825,7 @@ Você **não precisa** decidir denunciar na hora — primeiro cuida da saúde, d
 - **Profilaxis de HIV y otras ETS.**
 - **Anticoncepción de emergencia** cuando corresponde.
 
-**No necesitás** decidir denunciar en el momento — primero cuidá la salud, después decidís.
+**No necesitás** decidir denunciar en el momento: primero cuidá la salud, después decidís.
 
 > **Buscá también la Defensoría Pública y la Cáritas SC**. Dan apoyo jurídico, psicológico y te orientan en cada paso. **No tenés que enfrentar esto sola/solo.**`,
           },
@@ -2839,8 +2839,8 @@ Você **não precisa** decidir denunciar na hora — primeiro cuida da saúde, d
           pt: {
             title: "Xenofobia e discriminação são crime",
             summary:
-              "Por nacionalidade, origem ou raça — é crime, e dá pra denunciar gratuitamente.",
-            body: `**Discriminar alguém por nacionalidade, origem ou raça é crime no Brasil** (Lei nº 7.716/89 e Lei nº 14.532/23, que tornou injúria racial imprescritível). Não importa se foi numa rua, num posto de saúde, num emprego ou na internet — **xenofobia é crime e dá processo**.
+              "Por nacionalidade, origem ou raça: é crime, e dá pra denunciar gratuitamente.",
+            body: `**Discriminar alguém por nacionalidade, origem ou raça é crime no Brasil** (Lei nº 7.716/89 e Lei nº 14.532/23, que tornou injúria racial imprescritível). Não importa se foi numa rua, num posto de saúde, num emprego ou na internet: **xenofobia é crime e dá processo**.
 
 ## O que conta como xenofobia
 
@@ -2871,7 +2871,7 @@ Você **não precisa** decidir denunciar na hora — primeiro cuida da saúde, d
 - Pra casos mais graves ou continuados (assédio sistemático no trabalho, recusa institucional).
 - Atendimento gratuito.
 
-## Provas — guarde TUDO
+## Provas: guarde TUDO
 
 - **Print de mensagens** (mostrando data, hora, autor).
 - **Áudio** se for por chamada ou áudio de mensagem.
@@ -2883,9 +2883,9 @@ Guarde em **mais de um lugar** (celular, e-mail, nuvem).
 
 ## Apoio jurídico gratuito
 
-- **Defensoria Pública da União (DPU)** — gratuito, atende migrantes especificamente.
-- **Cáritas SC** — orienta e às vezes acompanha o processo.
-- **OAB Pro Bono** (Ordem dos Advogados) — em casos selecionados, advogados voluntários.
+- **Defensoria Pública da União (DPU)**: gratuito, atende migrantes especificamente.
+- **Cáritas SC**: orienta e às vezes acompanha o processo.
+- **OAB Pro Bono** (Ordem dos Advogados): em casos selecionados, advogados voluntários.
 
 ## Pra ambientes específicos
 
@@ -2902,8 +2902,8 @@ Guarde em **mais de um lugar** (celular, e-mail, nuvem).
           es: {
             title: "Xenofobia y discriminación son delito",
             summary:
-              "Por nacionalidad, origen o raza — es delito, y se puede denunciar gratis.",
-            body: `**Discriminar a alguien por nacionalidad, origen o raza es delito en Brasil** (Ley n° 7.716/89 y Ley n° 14.532/23, que volvió la injuria racial imprescriptible). No importa si fue en la calle, en un centro de salud, en un trabajo o en internet — **la xenofobia es delito y da proceso**.
+              "Por nacionalidad, origen o raza: es delito, y se puede denunciar gratis.",
+            body: `**Discriminar a alguien por nacionalidad, origen o raza es delito en Brasil** (Ley n° 7.716/89 y Ley n° 14.532/23, que volvió la injuria racial imprescriptible). No importa si fue en la calle, en un centro de salud, en un trabajo o en internet: **la xenofobia es delito y da proceso**.
 
 ## Qué cuenta como xenofobia
 
@@ -2934,7 +2934,7 @@ Guarde em **mais de um lugar** (celular, e-mail, nuvem).
 - Para casos más graves o continuos (acoso sistemático en el trabajo, rechazo institucional).
 - Atención gratuita.
 
-## Pruebas — guardá TODO
+## Pruebas: guardá TODO
 
 - **Captura de mensajes** (mostrando fecha, hora, autor).
 - **Audio** si fue por llamada o audio de mensaje.
@@ -2946,9 +2946,9 @@ Guardá en **más de un lugar** (celular, correo, nube).
 
 ## Apoyo jurídico gratuito
 
-- **Defensoría Pública de la Unión (DPU)** — gratuita, atiende migrantes específicamente.
-- **Cáritas SC** — orienta y a veces acompaña el proceso.
-- **OAB Pro Bono** (Orden de Abogados) — en casos seleccionados, abogados voluntarios.
+- **Defensoría Pública de la Unión (DPU)**: gratuita, atiende migrantes específicamente.
+- **Cáritas SC**: orienta y a veces acompaña el proceso.
+- **OAB Pro Bono** (Orden de Abogados): en casos seleccionados, abogados voluntarios.
 
 ## Para ambientes específicos
 
@@ -2973,7 +2973,7 @@ Guardá en **más de un lugar** (celular, correo, nube).
             title: "Documentos perdidos ou roubados",
             summary:
               "Passos pra registrar BO, emitir 2ª via de CRNM e CPF, e acionar consulado se for passaporte.",
-            body: `**Perdeu seus documentos ou foi roubada/roubado? Aja rápido pra evitar fraude no seu nome.** Cada documento tem um processo próprio — siga na ordem abaixo.
+            body: `**Perdeu seus documentos ou foi roubada/roubado? Aja rápido pra evitar fraude no seu nome.** Cada documento tem um processo próprio: siga na ordem abaixo.
 
 ## Passo 1: registre boletim de ocorrência (BO)
 
@@ -2982,7 +2982,7 @@ Guardá en **más de un lugar** (celular, correo, nube).
 - **BO online**: site da Polícia Civil de SC ([pc.sc.gov.br](https://www.pc.sc.gov.br)). Vale pra perda/extravio (sem violência).
 - **BO presencial**: qualquer delegacia, atendimento gratuito.
 
-Anote o **número do BO** — você vai usar várias vezes.
+Anote o **número do BO**: você vai usar várias vezes.
 
 ## Passo 2: emita 2ª via de cada documento
 
@@ -3017,7 +3017,7 @@ Anote o **número do BO** — você vai usar várias vezes.
 
 ### Cartões bancários
 
-- **Bloqueie pelo app do banco** imediatamente — antes de tudo.
+- **Bloqueie pelo app do banco** imediatamente, antes de tudo.
 - Solicite 2ª via pelo app ou na agência.
 
 ## Passo 3: vigie por fraude
@@ -3030,13 +3030,13 @@ Por 6 meses, **monitore**:
 
 Se aparecer movimento estranho, **bloqueie e notifique o banco** na hora.
 
-> **Dica preventiva pra antes da próxima vez:** tire foto de TODOS os documentos e salve em **2 lugares** (e-mail + nuvem). Em caso de perda, agiliza muito recuperar — você terá os números e detalhes em mãos.`,
+> **Dica preventiva pra antes da próxima vez:** tire foto de TODOS os documentos e salve em **2 lugares** (e-mail + nuvem). Em caso de perda, agiliza muito recuperar: você terá os números e detalhes em mãos.`,
           },
           es: {
             title: "Documentos perdidos o robados",
             summary:
               "Pasos para hacer BO, emitir 2ª vía de CRNM y CPF, y accionar consulado si es el pasaporte.",
-            body: `**¿Perdiste tus documentos o te los robaron? Actuá rápido para evitar fraudes a tu nombre.** Cada documento tiene un proceso propio — seguí el orden abajo.
+            body: `**¿Perdiste tus documentos o te los robaron? Actuá rápido para evitar fraudes a tu nombre.** Cada documento tiene un proceso propio: seguí el orden abajo.
 
 ## Paso 1: hacé denuncia (BO – Boletim de Ocorrência)
 
@@ -3045,7 +3045,7 @@ Se aparecer movimento estranho, **bloqueie e notifique o banco** na hora.
 - **BO online**: sitio de la Policía Civil de SC ([pc.sc.gov.br](https://www.pc.sc.gov.br)). Vale para pérdida/extravío (sin violencia).
 - **BO presencial**: cualquier comisaría, atención gratuita.
 
-Anotá el **número del BO** — vas a usarlo varias veces.
+Anotá el **número del BO**: vas a usarlo varias veces.
 
 ## Paso 2: emití 2ª vía de cada documento
 
@@ -3080,7 +3080,7 @@ Anotá el **número del BO** — vas a usarlo varias veces.
 
 ### Tarjetas bancarias
 
-- **Bloqueá por la app del banco** inmediatamente — antes que nada.
+- **Bloqueá por la app del banco** inmediatamente, antes que nada.
 - Solicitá 2ª vía por la app o en la sucursal.
 
 ## Paso 3: vigilá por fraude
@@ -3093,7 +3093,7 @@ Por 6 meses, **monitoreá**:
 
 Si aparece movimiento extraño, **bloqueá y notificá al banco** en el momento.
 
-> **Tip preventivo para la próxima vez:** sacale foto a TODOS los documentos y guardalos en **2 lugares** (correo + nube). En caso de pérdida, agiliza mucho recuperar — vas a tener los números y detalles a mano.`,
+> **Tip preventivo para la próxima vez:** sacale foto a TODOS los documentos y guardalos en **2 lugares** (correo + nube). En caso de pérdida, agiliza mucho recuperar: vas a tener los números y detalles a mano.`,
           },
         },
       },

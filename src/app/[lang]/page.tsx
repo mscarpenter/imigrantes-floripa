@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -20,6 +21,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
     return {
       id: card.id,
       icon: card.icon,
+      image: card.image,
       tag: c.tag,
       title: c.title,
       intro: c.intro,
@@ -46,7 +48,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           }}
           cards={cards}
           trailLabel={dict.home.ctaTrail}
-          trailHref={`/${lang}/trilha`}
+          trailHref={`/${lang}/orientacao`}
           prevLabel={t.prev}
           nextLabel={t.next}
         />
@@ -69,14 +71,27 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       </section>
 
       {/* SOBRE */}
-      <section className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 md:py-24">
+      <section className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-          <h2 className="text-2xl font-bold tracking-tight">
-            {dict.home.sectionAbout}
-          </h2>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            {dict.home.aboutBody}
-          </p>
+          <div className="overflow-hidden rounded-3xl border border-border/60 bg-card shadow-soft md:grid md:grid-cols-2 md:items-stretch">
+            <div className="relative aspect-[16/10] w-full md:aspect-auto md:h-full md:min-h-[20rem]">
+              <Image
+                src="/illustrations/acolhimento.jpg"
+                alt=""
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="p-8 sm:p-10 md:p-12">
+              <h2 className="text-2xl font-bold tracking-tight">
+                {dict.home.sectionAbout}
+              </h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                {dict.home.aboutBody}
+              </p>
+            </div>
+          </div>
         </Reveal>
       </section>
     </div>

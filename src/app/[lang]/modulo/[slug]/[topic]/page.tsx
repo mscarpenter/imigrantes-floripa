@@ -55,6 +55,12 @@ export default async function TopicPage({
   const previousTopic = currentIndex > 0 ? topics[currentIndex - 1] : null;
   const nextTopic =
     currentIndex < topics.length - 1 ? topics[currentIndex + 1] : null;
+  const allModules = getAllModules();
+  const moduleIndex = allModules.findIndex((m) => m.slug === module.slug);
+  const nextModule =
+    !nextTopic && moduleIndex >= 0 && moduleIndex < allModules.length - 1
+      ? allModules[moduleIndex + 1]
+      : null;
   const relatedContacts = getContactsByIds(topic.contactIds);
   const headings = extractHeadings(t.body);
 
@@ -109,7 +115,7 @@ export default async function TopicPage({
                 return (
                   <Link
                     key={other.slug}
-                    href={`/${lang}/modulo/${module.slug}/${other.slug}`}
+                    href={`/${lang}/modulo/${module.slug}/${other.slug}#conteudo`}
                     aria-current={isCurrent ? "page" : undefined}
                     className={cn(
                       "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-colors",
@@ -128,7 +134,10 @@ export default async function TopicPage({
         </div>
       </header>
 
-      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <div
+        id="conteudo"
+        className="mx-auto max-w-6xl scroll-mt-24 px-4 py-10 md:py-14"
+      >
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_15rem] lg:gap-14">
           <main className="min-w-0">
             <TableOfContents
@@ -165,37 +174,62 @@ export default async function TopicPage({
             )}
 
             {/* Prev/next topic navigation as cards */}
-            <nav className="mt-14 grid gap-3 sm:grid-cols-2">
+            <nav className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {previousTopic ? (
                 <Link
                   href={`/${lang}/modulo/${module.slug}/${previousTopic.slug}`}
-                  className="group flex flex-col rounded-xl border bg-card p-4 transition-colors hover:border-foreground/40"
+                  className="group flex items-center gap-3 rounded-2xl border border-border/60 bg-card p-4 shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft-lg active:translate-y-0 active:scale-[0.98]"
                 >
-                  <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                    <ArrowLeft className="size-3" />
-                    {dict.trail.previousTopic}
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-0.5" />
                   </span>
-                  <span className="mt-1.5 font-semibold leading-tight">
-                    {previousTopic.translations[lang].title}
+                  <span className="min-w-0">
+                    <span className="block text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                      {dict.trail.previousTopic}
+                    </span>
+                    <span className="mt-0.5 block truncate font-semibold leading-tight">
+                      {previousTopic.translations[lang].title}
+                    </span>
                   </span>
                 </Link>
               ) : (
                 <span className="hidden sm:block" />
               )}
-              {nextTopic && (
+              {nextTopic ? (
                 <Link
                   href={`/${lang}/modulo/${module.slug}/${nextTopic.slug}`}
-                  className="group flex flex-col items-end rounded-xl border bg-card p-4 text-right transition-colors hover:border-foreground/40 sm:col-start-2"
+                  className="group flex items-center justify-end gap-3 rounded-2xl border border-border/60 bg-card p-4 text-right shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft-lg active:translate-y-0 active:scale-[0.98] sm:col-start-2"
                 >
-                  <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                    {dict.trail.nextTopic}
-                    <ArrowRight className="size-3" />
+                  <span className="min-w-0">
+                    <span className="block text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                      {dict.trail.nextTopic}
+                    </span>
+                    <span className="mt-0.5 block truncate font-semibold leading-tight">
+                      {nextTopic.translations[lang].title}
+                    </span>
                   </span>
-                  <span className="mt-1.5 font-semibold leading-tight">
-                    {nextTopic.translations[lang].title}
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </Link>
-              )}
+              ) : nextModule ? (
+                <Link
+                  href={`/${lang}/modulo/${nextModule.slug}`}
+                  className="group flex items-center justify-end gap-3 rounded-2xl border border-primary/30 bg-primary/5 p-4 text-right shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft-lg active:translate-y-0 active:scale-[0.98] sm:col-start-2"
+                >
+                  <span className="min-w-0">
+                    <span className="block text-xs font-medium uppercase tracking-wide text-primary">
+                      {dict.trail.nextStep}
+                    </span>
+                    <span className="mt-0.5 block truncate font-semibold leading-tight">
+                      {nextModule.translations[lang].title}
+                    </span>
+                  </span>
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </Link>
+              ) : null}
             </nav>
           </main>
 

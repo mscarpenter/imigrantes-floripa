@@ -32,14 +32,10 @@ export default async function ContactsPage({
         </p>
       </Reveal>
 
-      <Card className="relative mt-8 overflow-hidden border-primary/20 bg-primary/5 p-6 pl-8">
-        <span
-          aria-hidden
-          className="absolute inset-y-0 left-0 w-1 bg-primary"
-        />
+      <Card className="mt-8 gap-0 rounded-2xl border-primary/15 bg-primary/5 p-6 shadow-soft ring-0 sm:p-7">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-            <HandHeart className="size-5" aria-hidden />
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+            <HandHeart className="size-6" aria-hidden />
           </div>
           <div className="flex-1">
             <h2 className="text-lg font-semibold">

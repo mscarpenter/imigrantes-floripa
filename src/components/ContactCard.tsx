@@ -8,6 +8,7 @@ import {
   Clock,
   MessageCircle,
   Map as MapIcon,
+  ArrowRight,
 } from "lucide-react";
 import type { Contact } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
@@ -38,20 +39,19 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
       contact.hours,
   );
 
-  return (
-    <Card className="relative overflow-hidden p-0">
-      <span
-        aria-hidden
-        className={cn("absolute inset-y-0 left-0 w-1", colors.pillActive)}
-      />
+  const hasMap = contact.lat != null && contact.lng != null;
 
-      <div className="p-5 pl-6">
-        <div className="flex items-start justify-between gap-3">
-          <h3 className="font-semibold leading-tight">{t.name}</h3>
+  return (
+    <Card className="group flex h-full flex-col gap-0 rounded-2xl border border-border/60 p-0 shadow-soft ring-0 transition-shadow duration-300 hover:shadow-soft-lg">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <div className="flex items-start gap-3">
+          <h3 className="min-w-0 flex-1 text-base font-semibold leading-snug tracking-tight">
+            {t.name}
+          </h3>
           {categoryName && (
             <span
               className={cn(
-                "inline-flex shrink-0 items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium",
+                "inline-flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium",
                 colors.badge,
               )}
             >
@@ -60,83 +60,89 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
             </span>
           )}
         </div>
-        <p className="mt-2 text-sm text-muted-foreground">{t.description}</p>
+
+        <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
+          {t.description}
+        </p>
 
         {hasDetails && (
-          <>
-            <div className="my-4 border-t border-dashed" />
-            <dl className="space-y-2.5 text-sm">
-              {contact.phone && (
-                <Row icon={<Phone className="size-3.5" />} label={dict.contacts.phone}>
-                  <a
-                    href={`tel:${contact.phone.replace(/\D/g, "")}`}
-                    className="hover:underline"
-                  >
-                    {contact.phone}
-                  </a>
-                </Row>
-              )}
-              {contact.whatsapp && (
-                <Row
-                  icon={<MessageCircle className="size-3.5" />}
-                  label={dict.contacts.whatsapp}
+          <dl className="mt-5 space-y-3.5 border-t border-border/60 pt-5 text-sm">
+            {contact.phone && (
+              <Row icon={<Phone className="size-4" />} label={dict.contacts.phone}>
+                <a
+                  href={`tel:${contact.phone.replace(/\D/g, "")}`}
+                  className="font-medium text-foreground transition-colors hover:text-primary"
                 >
-                  <a
-                    href={`https://wa.me/${contact.whatsapp.replace(/\D/g, "")}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:underline"
-                  >
-                    {contact.whatsapp}
-                  </a>
-                </Row>
-              )}
-              {contact.email && (
-                <Row icon={<Mail className="size-3.5" />} label={dict.contacts.email}>
-                  <a href={`mailto:${contact.email}`} className="hover:underline">
-                    {contact.email}
-                  </a>
-                </Row>
-              )}
-              {contact.address && (
-                <Row
-                  icon={<MapPin className="size-3.5" />}
-                  label={dict.contacts.address}
+                  {contact.phone}
+                </a>
+              </Row>
+            )}
+            {contact.whatsapp && (
+              <Row
+                icon={<MessageCircle className="size-4" />}
+                label={dict.contacts.whatsapp}
+              >
+                <a
+                  href={`https://wa.me/${contact.whatsapp.replace(/\D/g, "")}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-foreground transition-colors hover:text-primary"
                 >
-                  <span>{contact.address}</span>
-                </Row>
-              )}
-              {contact.website && (
-                <Row icon={<Globe className="size-3.5" />} label={dict.contacts.website}>
-                  <a
-                    href={contact.website}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:underline break-all"
-                  >
-                    {contact.website.replace(/^https?:\/\//, "")}
-                  </a>
-                </Row>
-              )}
-              {contact.hours && (
-                <Row icon={<Clock className="size-3.5" />} label={dict.contacts.hours}>
-                  <span>{contact.hours}</span>
-                </Row>
-              )}
-            </dl>
-          </>
-        )}
-
-        {contact.lat != null && contact.lng != null && (
-          <Link
-            href={`/${locale}/mapa?contato=${contact.id}`}
-            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
-          >
-            <MapIcon className="size-4" />
-            {dict.map.viewOnMap}
-          </Link>
+                  {contact.whatsapp}
+                </a>
+              </Row>
+            )}
+            {contact.email && (
+              <Row icon={<Mail className="size-4" />} label={dict.contacts.email}>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="font-medium text-foreground transition-colors hover:text-primary break-all"
+                >
+                  {contact.email}
+                </a>
+              </Row>
+            )}
+            {contact.address && (
+              <Row
+                icon={<MapPin className="size-4" />}
+                label={dict.contacts.address}
+              >
+                <span className="text-foreground">{contact.address}</span>
+              </Row>
+            )}
+            {contact.website && (
+              <Row icon={<Globe className="size-4" />} label={dict.contacts.website}>
+                <a
+                  href={contact.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-foreground transition-colors hover:text-primary break-all"
+                >
+                  {contact.website.replace(/^https?:\/\//, "")}
+                </a>
+              </Row>
+            )}
+            {contact.hours && (
+              <Row icon={<Clock className="size-4" />} label={dict.contacts.hours}>
+                <span className="text-foreground">{contact.hours}</span>
+              </Row>
+            )}
+          </dl>
         )}
       </div>
+
+      {hasMap && (
+        <Link
+          href={`/${locale}/mapa?contato=${contact.id}`}
+          className="group/map flex items-center gap-2.5 border-t border-border/60 bg-muted/40 px-5 py-3.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-foreground sm:px-6"
+        >
+          <MapIcon className="size-4 text-primary" />
+          {dict.map.viewOnMap}
+          <span className="ml-auto flex size-6 items-center justify-center rounded-full bg-background text-muted-foreground ring-1 ring-border/60 transition-all group-hover/map:bg-primary group-hover/map:text-primary-foreground group-hover/map:ring-primary">
+            <ArrowRight className="size-3.5 transition-transform group-hover/map:translate-x-px" />
+          </span>
+        </Link>
+      )}
     </Card>
   );
 }
@@ -152,7 +158,7 @@ function Row({ icon, label, children }: RowProps) {
     <div className="flex items-start gap-3">
       <span
         aria-hidden
-        className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full border bg-muted/50 text-muted-foreground"
+        className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground"
       >
         {icon}
       </span>
@@ -160,7 +166,7 @@ function Row({ icon, label, children }: RowProps) {
         <dt className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
           {label}
         </dt>
-        <dd className="text-foreground leading-snug break-words">{children}</dd>
+        <dd className="leading-snug break-words">{children}</dd>
       </div>
     </div>
   );

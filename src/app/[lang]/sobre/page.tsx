@@ -42,14 +42,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
         </p>
       </Reveal>
 
-      <Card className="relative mt-10 overflow-hidden p-6 pl-8">
-        <span
-          aria-hidden
-          className="absolute inset-y-0 left-0 w-1 bg-primary"
-        />
+      <Card className="mt-10 gap-0 rounded-2xl border-border/60 p-6 shadow-soft ring-0 sm:p-7">
         <div className="flex items-start gap-4">
-          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-            <GraduationCap className="size-5" aria-hidden />
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+            <GraduationCap className="size-6" aria-hidden />
           </div>
           <div className="flex-1">
             <h2 className="text-lg font-semibold">{dict.about.academicTitle}</h2>
@@ -81,14 +77,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
         </div>
       </Card>
 
-      <Card className="relative mt-4 overflow-hidden p-6 pl-8">
-        <span
-          aria-hidden
-          className="absolute inset-y-0 left-0 w-1 bg-foreground"
-        />
+      <Card className="mt-4 gap-0 rounded-2xl border-border/60 p-6 shadow-soft ring-0 sm:p-7">
         <div className="flex items-start gap-4">
-          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border bg-background">
-            <GithubMark className="size-5" />
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl border bg-background">
+            <GithubMark className="size-6" />
           </div>
           <div className="flex-1">
             <h2 className="text-lg font-semibold">
@@ -112,17 +104,13 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/sobre">) 
 
       <Card
         className={cn(
-          "relative mt-4 overflow-hidden border-amber-200 bg-amber-50/60 p-6 pl-8",
+          "mt-4 gap-0 rounded-2xl border-amber-200 bg-amber-50/60 p-6 shadow-soft ring-0 sm:p-7",
           "dark:border-amber-900 dark:bg-amber-950/20",
         )}
       >
-        <span
-          aria-hidden
-          className="absolute inset-y-0 left-0 w-1 bg-amber-500"
-        />
         <div className="flex items-start gap-4">
-          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300">
-            <AlertCircle className="size-5" aria-hidden />
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300">
+            <AlertCircle className="size-6" aria-hidden />
           </div>
           <div className="flex-1">
             <h2 className="text-lg font-semibold">
