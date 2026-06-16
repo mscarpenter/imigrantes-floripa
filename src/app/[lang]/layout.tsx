@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { Inter, Sora, Roboto_Slab, Roboto } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -6,7 +6,15 @@ import { locales, isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import "../globals.css";
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#2a4d9b" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f1830" },
+  ],
+};
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const sora = Sora({ subsets: ["latin"], variable: "--font-display" });
@@ -33,6 +41,12 @@ export async function generateMetadata({
       template: `%s · ${dict.site.name}`,
     },
     description: dict.site.tagline,
+    applicationName: dict.site.name,
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "default",
+      title: dict.site.name,
+    },
   };
 }
 
@@ -58,6 +72,7 @@ export default async function LangLayout({
       )}
     >
       <body className="min-h-dvh flex flex-col bg-background text-foreground">
+        <ServiceWorkerRegister />
         <Header locale={lang} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer dict={dict} locale={lang} />

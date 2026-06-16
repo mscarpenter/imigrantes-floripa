@@ -32,9 +32,9 @@ export default async function ContactsPage({
         </p>
       </Reveal>
 
-      <Card className="mt-8 gap-0 rounded-2xl border-[#6E5594]/20 bg-[#6E5594]/5 p-6 shadow-soft ring-0 sm:p-7">
+      <Card className="mt-8 gap-0 rounded-2xl border-primary/20 bg-primary/5 p-6 shadow-soft ring-0 sm:p-7">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#6E5594]/15 text-[#6E5594]">
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary">
             <HandHeart className="size-6" aria-hidden />
           </div>
           <div className="flex-1">
@@ -50,7 +50,7 @@ export default async function ContactsPage({
               rel="noreferrer"
               className={cn(
                 buttonVariants({ size: "sm" }),
-                "mt-4 bg-[#6E5594] text-white hover:bg-[#6E5594]/90",
+                "mt-4 bg-primary text-primary-foreground hover:bg-primary/90",
               )}
             >
               {dict.contacts.featuredCta}

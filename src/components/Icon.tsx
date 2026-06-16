@@ -10,6 +10,7 @@ import {
   Compass,
   PhoneCall,
   MapPin,
+  DeviceMobile,
 } from "@phosphor-icons/react/dist/ssr";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
@@ -30,6 +31,7 @@ const iconMap: Record<string, PhosphorIcon> = {
   Compass,
   PhoneCall,
   MapPin,
+  Smartphone: DeviceMobile,
 };
 
 export const validIconNames = Object.keys(iconMap);

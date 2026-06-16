@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="1000" height="720" rx="20" fill="#fbf8f4"/>
+
+  <text x="40" y="52" font-size="30" font-weight="700" fill="#4a3d6b">Os 6 terminais de integracao</text>
+  <text x="40" y="80" font-size="16" fill="#5b6478">Mapa ilustrativo com posicoes aproximadas (referencia: OpenStreetMap).</text>
+
+  <!-- Continente (oeste) -->
+  <path d="M40 140 L40 620 L168 620 L168 140 Z" fill="#e8e4df" stroke="#cfc8bf" stroke-width="1.5"/>
+  <text x="104" y="400" font-size="13" font-weight="600" fill="#7a7268" text-anchor="middle" transform="rotate(-90 104 400)">Continente</text>
+
+  <!-- Ilha de Santa Catarina (forma simplificada) -->
+  <path d="M168 155
+           C220 130, 310 118, 420 125
+           C540 132, 680 150, 820 175
+           C880 188, 920 230, 910 290
+           C900 360, 860 420, 780 470
+           C700 520, 600 560, 480 580
+           C380 595, 280 590, 220 560
+           C190 545, 175 500, 168 440
+           C165 380, 168 320, 168 260
+           Z"
+        fill="#ede8f5" stroke="#6e5594" stroke-width="2.5"/>
+
+  <!-- Baia norte / Lagoa da Conceicao (recorte leste) -->
+  <path d="M620 200 C680 210, 740 250, 760 310 C770 350, 740 390, 690 410 C650 420, 610 390, 590 340 C575 290, 590 230, 620 200 Z"
+        fill="#fbf8f4" stroke="#6e5594" stroke-width="1.2" opacity="0.9"/>
+
+  <!-- Pontes (Centro) -->
+  <rect x="168" y="268" width="52" height="8" rx="2" fill="#c56a3f" opacity="0.85"/>
+  <rect x="168" y="284" width="52" height="8" rx="2" fill="#c56a3f" opacity="0.65"/>
+  <text x="194" y="312" font-size="11" font-weight="600" fill="#b1542f" text-anchor="middle">Pontes</text>
+
+  <!-- Setas cardeais -->
+  <text x="500" y="118" font-size="12" font-weight="600" fill="#9a8fb8" text-anchor="middle">Norte da Ilha</text>
+  <text x="870" y="400" font-size="12" font-weight="600" fill="#9a8fb8" text-anchor="middle">Leste</text>
+  <text x="500" y="610" font-size="12" font-weight="600" fill="#9a8fb8" text-anchor="middle">Sul da Ilha</text>
+
+  <!-- Terminais: posicoes projetadas a partir de lat/lon (OSM / Consorcio Fenix) -->
+  <!-- TICAN -27.4307, -48.4635 -->
+  <g id="tican">
+    <circle cx="798" cy="168" r="18" fill="#6e5594" stroke="#ffffff" stroke-width="3"/>
+    <text x="798" y="174" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TI</text>
+    <rect x="730" y="132" width="58" height="22" rx="6" fill="#4a3d6b"/>
+    <text x="759" y="147" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TICAN</text>
+    <text x="798" y="200" font-size="11" fill="#5b6478" text-anchor="middle">Canasvieiras</text>
+  </g>
+
+  <!-- TISAN -27.5078, -48.5235 -->
+  <g id="tisan">
+    <circle cx="348" cy="248" r="18" fill="#6e5594" stroke="#ffffff" stroke-width="3"/>
+    <text x="348" y="254" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TI</text>
+    <rect x="280" y="212" width="58" height="22" rx="6" fill="#4a3d6b"/>
+    <text x="309" y="227" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TISAN</text>
+    <text x="348" y="280" font-size="11" fill="#5b6478" text-anchor="middle">Sto. Antonio</text>
+  </g>
+
+  <!-- TITRI -27.5856, -48.5205 -->
+  <g id="titri">
+    <circle cx="378" cy="368" r="18" fill="#6e5594" stroke="#ffffff" stroke-width="3"/>
+    <text x="378" y="374" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TI</text>
+    <rect x="310" y="332" width="58" height="22" rx="6" fill="#4a3d6b"/>
+    <text x="339" y="347" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TITRI</text>
+    <text x="378" y="400" font-size="11" fill="#5b6478" text-anchor="middle">Trindade / UFSC</text>
+  </g>
+
+  <!-- TICEN -27.5949, -48.556 (hub principal) -->
+  <g id="ticen">
+    <circle cx="228" cy="388" r="24" fill="#c56a3f" stroke="#ffffff" stroke-width="3"/>
+    <text x="228" y="395" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TI</text>
+    <rect x="188" y="348" width="62" height="24" rx="6" fill="#b1542f"/>
+    <text x="219" y="364" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">TICEN</text>
+    <text x="228" y="428" font-size="11" font-weight="600" fill="#b1542f" text-anchor="middle">Hub principal · Centro</text>
+  </g>
+
+  <!-- TILAG -27.6022, -48.467 -->
+  <g id="tilag">
+    <circle cx="768" cy="408" r="18" fill="#6e5594" stroke="#ffffff" stroke-width="3"/>
+    <text x="768" y="414" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TI</text>
+    <rect x="700" y="372" width="58" height="22" rx="6" fill="#4a3d6b"/>
+    <text x="729" y="387" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TILAG</text>
+    <text x="768" y="440" font-size="11" fill="#5b6478" text-anchor="middle">Lagoa da Conceicao</text>
+  </g>
+
+  <!-- TIRIO -27.671, -48.4945 -->
+  <g id="tirio">
+    <circle cx="648" cy="548" r="18" fill="#6e5594" stroke="#ffffff" stroke-width="3"/>
+    <text x="648" y="554" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TI</text>
+    <rect x="580" y="512" width="58" height="22" rx="6" fill="#4a3d6b"/>
+    <text x="609" y="527" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TIRIO</text>
+    <text x="648" y="580" font-size="11" fill="#5b6478" text-anchor="middle">Rio Tavares</text>
+  </g>
+
+  <!-- Legenda -->
+  <rect x="40" y="640" width="920" height="56" rx="12" fill="#ffffff" stroke="#e4e2dd"/>
+  <circle cx="72" cy="668" r="10" fill="#6e5594"/>
+  <text x="92" y="673" font-size="13" fill="#3a4256">Terminal de integracao</text>
+  <circle cx="280" cy="668" r="12" fill="#c56a3f"/>
+  <text x="302" y="673" font-size="13" fill="#3a4256">TICEN (hub principal)</text>
+  <rect x="480" y="658" width="24" height="6" rx="2" fill="#c56a3f"/>
+  <text x="514" y="673" font-size="13" fill="#3a4256">Pontes Centro / Continente</text>
+  <text x="960" y="673" font-size="11" fill="#888" text-anchor="end">Posicoes: OSM · mapa ilustrativo</text>
+</svg>

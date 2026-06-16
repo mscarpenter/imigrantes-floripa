@@ -8,6 +8,146 @@ import type { Post } from "./types";
  */
 export const posts: Post[] = [
   {
+    slug: "aplicativos-essenciais-em-florianopolis",
+    date: "2026-06-14",
+    color: "violet",
+    icon: "Smartphone",
+    cover: "/illustrations/aplicativos.png",
+    sourceLocale: "pt",
+    translations: {
+      pt: {
+        title:
+          "Aplicativos essenciais para imigrantes em Florianópolis: o que instalar no primeiro dia",
+        tag: "Aplicativos",
+        excerpt:
+          "Chegar com o celular na mão é uma vantagem real, se você souber o que instalar. Uma curadoria dos apps que resolvem transporte, saúde, documentos, trabalho, idioma, finanças e moradia logo nos primeiros dias.",
+        body: `Rascunho de trabalho, Imigrantes Floripa. Baseado no briefing HIP, no PDF "Guia de Aplicativos Essenciais" e em dados verificados (jun/2026).
+
+Chegar em uma cidade nova com smartphone na mão é uma vantagem real, mas só se você souber quais apps instalar. Florianópolis tem serviços públicos bem digitalizados, e alguns aplicativos vão resolver problemas que, sem eles, levariam horas de fila ou de tentativa e erro.
+
+Este guia não é uma lista de todos os apps do Brasil. É uma curadoria para quem chegou agora e precisa se orientar rápido.
+
+## Transporte
+
+### Floripa no Ponto 2.0
+
+![Tela do aplicativo Floripa no Ponto 2.0](/app-shots/floripa-no-ponto.webp) O app oficial do sistema de ônibus de Florianópolis. Mostra em tempo real onde o ônibus está, qual linha passa pelo seu ponto e quando chega. Você também recarrega o Cartão Cidadão direto pelo app via PIX, e o crédito cai em até 30 minutos.
+
+> **Importante:** desde janeiro de 2026, dinheiro não é mais aceito dentro dos ônibus. Sem o Floripa no Ponto, você vai precisar de uma bilheteria física toda vez que o saldo acabar.
+
+### SI.GO
+
+App da Prefeitura de Florianópolis que gera um QR Code de passagem avulsa via PIX, válido por 1 hora. Útil nos primeiros dias, antes de ter o Cartão Cidadão em mãos.
+
+### Uber e 99
+
+![Ícone do app Uber](/app-icons/uber.webp) ![Ícone do app 99](/app-icons/99.webp) Ambos funcionam bem em Floripa e são a alternativa mais prática à noite, nos fins de semana ou em bairros com poucas linhas de ônibus. A 99 costuma ser um pouco mais barata em corridas curtas. Vale ter os dois instalados.
+
+## Saúde
+
+### Alô Saúde Floripa
+
+![Tela do aplicativo Alô Saúde Floripa](/app-shots/alo-saude.webp) Este é o app mais subestimado da lista, e provavelmente o mais importante.
+
+Antes de ir a qualquer unidade de saúde, abra o Alô Saúde. Uma equipe de enfermagem avalia seus sintomas por videochamada ou chat e te diz exatamente onde ir. Funciona 24 horas, 7 dias por semana, e atende em português, espanhol e inglês.
+
+Você também pode ligar: **0800 333 3233** (gratuito). O cadastro no SUS pode ser feito durante o próprio atendimento, sem precisar ir pessoalmente a nenhum lugar.
+
+Disponível para Android e iOS. Site: alosaudefloripa.com.br
+
+### Conecte SUS
+
+![Tela do aplicativo Meu SUS Digital (antigo Conecte SUS)](/app-shots/conecte-sus.webp) App oficial do Ministério da Saúde. Localiza a UBS mais próxima pelo GPS, guarda sua carteira de vacinação digital e permite agendar consultas. Essencial para quem está se cadastrando na rede pública pela primeira vez.
+
+## Documentos e cidadania
+
+### GOV.BR
+
+![Tela do aplicativo gov.br](/app-shots/govbr.webp) O portal unificado do governo federal. Com uma conta GOV.BR você consulta benefícios, emite documentos digitais, acompanha processos e acessa dezenas de serviços sem precisar ir a uma agência.
+
+Para criar a conta você precisa de CPF e senha. O processo pode ser feito online ou presencialmente nos Correios ou na Caixa Econômica Federal.
+
+### CTPS Digital: Carteira de Trabalho
+
+![Tela do aplicativo Carteira de Trabalho Digital](/app-shots/ctps-digital.webp) A Carteira de Trabalho é 100% digital no Brasil desde 2019. Pelo app você consulta seus contratos de trabalho, histórico profissional, FGTS, férias e benefícios previdenciários. Se você vai trabalhar formalmente no Brasil, este é o documento que registra todos os seus direitos, e ele fica no celular.
+
+### Clique Cidadania
+
+![Tela do aplicativo Clique Cidadania](/app-shots/clique-cidadania.webp) App criado pelo Ministério dos Direitos Humanos em parceria com a OIM (Organização Internacional para as Migrações). É o app feito especificamente para migrantes e refugiados no Brasil.
+
+Tem mais de 100 tópicos sobre regularização migratória, documentação, saúde, trabalho e assistência social. Funciona em português, espanhol e inglês. O mapa interativo mostra UBSs, UPAs, Polícia Federal, Defensoria Pública e CRAS próximos de onde você está. Parte do conteúdo funciona offline, o que é útil quando você ainda não tem chip brasileiro.
+
+Disponível gratuitamente para Android e iOS.
+
+## Trabalho
+
+### Emprega Brasil (SINE)
+
+A plataforma pública de emprego do governo federal. Gratuita e acessível a estrangeiros com documentação regular. Você pesquisa vagas, acompanha o seguro-desemprego e encontra programas de qualificação profissional gratuitos, tudo pelo app ou pelo site empregabrasil.mte.gov.br.
+
+## Idioma
+
+### DeepL
+
+![Ícone do app DeepL](/app-icons/deepl.webp) A melhor ferramenta para traduzir documentos, contratos, e-mails e conversas do dia a dia. Traduz texto, voz e até imagem: você pode apontar a câmera para uma placa ou formulário e receber a tradução na hora. Especialmente útil antes de assinar qualquer documento.
+
+### Duolingo
+
+![Ícone do app Duolingo](/app-icons/duolingo.webp) Gratuito e gamificado. Bom para construir vocabulário e gramática básica no ritmo que couber na sua rotina. Lições curtas e diárias funcionam bem para quem está ocupado resolvendo burocracia nos primeiros meses.
+
+### Tandem
+
+![Ícone do app Tandem](/app-icons/tandem.webp) Conecta você com falantes nativos de português que querem praticar o seu idioma em troca. A prática de conversação com pessoas reais acelera o aprendizado de uma forma que nenhum app de lição consegue replicar.
+
+## Finanças
+
+### Bancos digitais: Nubank, Inter ou C6
+
+![Ícone do app Nubank](/app-icons/nubank.webp) ![Ícone do app Inter](/app-icons/inter.webp) ![Ícone do app C6 Bank](/app-icons/c6.webp) O Brasil é referência global em bancos digitais: sem agência física, sem taxa de manutenção, abertura em minutos pelo celular.
+
+Para imigrantes, o requisito mínimo é o CPF (obrigatório em todos os bancos). Com a CRNM em mãos, a abertura de conta é direta. Se você ainda está com o protocolo da Polícia Federal enquanto aguarda a CRNM, muitos bancos aceitam esse documento. Confirme com a instituição escolhida antes de tentar.
+
+O Nubank aceita, em alguns casos, abertura com passaporte e CPF, mesmo sem CRNM. Inter e C6 geralmente exigem a CRNM ou documento migratório equivalente. A política de cada banco pode mudar: verifique no app ou pelo chat da instituição.
+
+### O PIX: entenda antes de chegar
+
+O PIX é o sistema de transferência instantânea do Brasil, disponível 24h e gratuito para pessoas físicas. Funciona como uma chave (CPF, e-mail ou número de celular) vinculada à sua conta. A maioria dos pagamentos no país, como aluguel, compras e serviços, já aceita ou prefere PIX. Aprenda a usar logo nos primeiros dias: vai precisar muito.
+
+## Moradia
+
+### QuintoAndar, ZAP Imóveis e OLX
+
+![Ícone do app QuintoAndar](/app-icons/quintoandar.webp) ![Ícone do app ZAP Imóveis](/app-icons/zap-imoveis.webp) ![Ícone do app OLX](/app-icons/olx.webp) As três principais plataformas para busca de imóveis para alugar em Florianópolis. O QuintoAndar tem processo mais ágil e aceita seguro-fiança (sem necessidade de fiador), o que facilita para quem acabou de chegar. O ZAP e a OLX têm mais volume de anúncios e incluem opções de proprietários diretos.
+
+> **Atenção a golpes:** grupos de WhatsApp e Facebook para imigrantes são muito usados na prática para indicações de moradia. Podem ser úteis para dicas da comunidade, mas nunca transfira dinheiro de depósito ou reserva sem visitar o imóvel pessoalmente e verificar a identidade do proprietário. Golpes de aluguel são frequentes nesses canais.
+
+## Cotidiano
+
+### iFood e Rappi
+
+![Ícone do app iFood](/app-icons/ifood.webp) ![Ícone do app Rappi](/app-icons/rappi.webp) Os dois maiores apps de delivery do Brasil. Comida, supermercado, farmácia e conveniência entregues em casa. Nos primeiros dias, quando você ainda está se orientando e sem despensa montada, são uma solução prática. Ambos aceitam PIX e cartão.
+
+## Os 5 apps para instalar hoje
+
+Se você acabou de chegar e só tem tempo para isso:
+
+1. **Floripa no Ponto 2.0:** para andar de ônibus sem depender de dinheiro em espécie.
+2. **Alô Saúde Floripa:** para saber onde buscar atendimento médico sem perder tempo.
+3. **Clique Cidadania:** mapa e guia de direitos para migrantes, em espanhol e inglês.
+4. **GOV.BR:** porta de entrada para todos os serviços do governo federal.
+5. **DeepL:** para entender documentos e contratos antes de assinar qualquer coisa.
+
+O resto você instala conforme a necessidade aparecer.
+
+> **Nota para o revisor:** um item para confirmar antes da publicação. Bancos digitais sem CRNM: a política de aceitação do protocolo da PF ou do passaporte varia por instituição e muda sem aviso. Recomendo que um voluntário confirme com Nubank, Inter e C6 o fluxo atual para imigrantes em regularização antes de publicar detalhes específicos de cada banco.
+
+> **Imagens:** as telas e os ícones são imagens oficiais das lojas de aplicativos (App Store e Google Play), usadas apenas para identificar cada app. A tela do **SI.GO** ainda é genérica (o app é white-label, sem versão dedicada a Floripa na loja) e o **Emprega Brasil/SINE** não tem app oficial próprio — é um portal web; o app federal relacionado é a CTPS Digital, já citada.
+
+> Este é um rascunho da comunidade, feito para ajudar quem está chegando. Encontrou algo desatualizado? Toda contribuição é bem-vinda. O portal é aberto.`,
+      },
+    },
+  },
+  {
     slug: "como-se-locomover-em-florianopolis",
     date: "2026-06-12",
     color: "blue",
@@ -44,6 +184,8 @@ A lógica é simples: as linhas **alimentadoras** saem dos bairros e chegam ao t
 Com o cartão Passe Rápido, você paga **uma única passagem** e pode trocar de ônibus quantas vezes precisar dentro de **3 horas**, sem limite de baldeações, desde que dentro do sistema convencional. Isso significa que ir do Centro ao Norte da Ilha, com uma troca em terminal, custa o mesmo que andar um quarteirão.
 
 Guarde este detalhe: sem o cartão, essa integração não existe. Com dinheiro ou QR Code avulso, cada embarque é uma nova cobrança.
+
+![Como funciona a integração do transporte: do seu bairro você pega a linha alimentadora até o terminal, troca para a linha troncal e chega ao centro ou a outro terminal pagando uma só passagem.](/diagrams/transporte-integracao.svg)
 
 > **Atenção:** desde 5 de janeiro de 2026, o pagamento em dinheiro não é mais aceito dentro dos ônibus. Você ainda pode pagar em dinheiro nas bilheterias dos terminais de integração, mas a bordo só vale cartão ou QR Code/PIX.
 
@@ -266,6 +408,8 @@ O Brasil oferece um dos calendários de vacinação mais completos do mundo, tot
 **Nada.** O SUS é gratuito para todos, brasileiros e estrangeiros. Você não paga no momento do atendimento e não receberá cobrança depois.
 
 ### Resumo rápido: qual porta usar?
+
+![Qual porta do SUS usar conforme a gravidade: UBS para rotina, UPA para urgência e SAMU 192 ou hospital para emergência. Na dúvida, ligue Alô Saúde Floripa 0800 333 3233.](/diagrams/saude-qual-porta.svg)
 
 | Situação | Onde ir |
 | ----- | ----- |

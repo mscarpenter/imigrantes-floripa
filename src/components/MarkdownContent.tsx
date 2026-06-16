@@ -1,6 +1,7 @@
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Lightbulb } from "lucide-react";
+import { BlogDiagram, isBlogDiagram } from "@/components/blog/diagrams";
 import { colorsFor, type ModuleColor } from "@/lib/data/colors";
 import { nodeToText, slugify } from "@/lib/markdown/toc";
 import { cn } from "@/lib/utils";
@@ -32,7 +33,7 @@ export function MarkdownContent({ body, color }: MarkdownContentProps) {
     h2: ({ children }) => (
       <h2
         id={slugify(nodeToText(children))}
-        className="mt-12 mb-4 flex scroll-mt-28 items-start gap-3 text-2xl font-bold tracking-tight"
+        className="mt-12 mb-4 flex scroll-mt-28 items-start gap-3 clear-both text-2xl font-bold tracking-tight"
       >
         <span
           aria-hidden
@@ -45,13 +46,30 @@ export function MarkdownContent({ body, color }: MarkdownContentProps) {
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mt-8 mb-3 text-lg font-semibold tracking-tight">
+      <h3 className="mt-8 mb-3 clear-both text-lg font-semibold tracking-tight">
         {children}
       </h3>
     ),
-    p: ({ children }) => (
-      <p className="my-4 leading-relaxed text-foreground/90">{children}</p>
-    ),
+    p: ({ node, children }) => {
+      // Imagem sozinha em um parágrafo: desembrulha o <p> para que figuras
+      // (mapas/diagramas de largura cheia) não fiquem aninhadas dentro de <p>,
+      // o que é HTML inválido e quebra a hidratação.
+      const kids = node?.children ?? [];
+      const meaningful = kids.filter(
+        (c) => !(c.type === "text" && c.value.trim() === ""),
+      );
+      const only = meaningful[0];
+      if (
+        meaningful.length === 1 &&
+        only.type === "element" &&
+        only.tagName === "img"
+      ) {
+        return <>{children}</>;
+      }
+      return (
+        <p className="my-4 leading-relaxed text-foreground/90">{children}</p>
+      );
+    },
     a: ({ children, href }) => (
       <a
         href={href}
@@ -121,6 +139,54 @@ export function MarkdownContent({ body, color }: MarkdownContentProps) {
     td: ({ children }) => (
       <td className="px-4 py-2.5 align-top text-foreground/90">{children}</td>
     ),
+    img: ({ src, alt }) => {
+      if (typeof src !== "string") return null;
+      if (isBlogDiagram(src)) {
+        return <BlogDiagram src={src} caption={alt ?? undefined} />;
+      }
+      // Screenshots de apps (em /app-shots/): miniatura de celular flutuando à
+      // direita, com o texto descritivo correndo ao lado (estilo guia).
+      if (src.includes("/app-shots/")) {
+        return (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={src}
+            alt={alt ?? ""}
+            loading="lazy"
+            className="float-right ml-4 mb-2 h-56 w-auto rounded-xl border border-border/60 bg-card object-contain shadow-soft sm:h-64"
+          />
+        );
+      }
+      // Ícones de apps (em /app-icons/) viram um "selo" pequeno ao lado do texto.
+      if (src.includes("/app-icons/")) {
+        return (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={src}
+            alt={alt ?? ""}
+            loading="lazy"
+            className="float-left mr-3 mb-2 inline-block size-12 rounded-2xl border border-border/60 bg-card object-contain shadow-soft"
+          />
+        );
+      }
+      // Demais imagens: figura responsiva com legenda opcional (texto alt).
+      return (
+        <figure className="my-6 clear-both">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={src}
+            alt={alt ?? ""}
+            loading="lazy"
+            className="w-full rounded-xl border border-border/60 shadow-soft"
+          />
+          {alt ? (
+            <figcaption className="mt-2 text-center text-xs text-muted-foreground">
+              {alt}
+            </figcaption>
+          ) : null}
+        </figure>
+      );
+    },
     hr: () => <hr className="my-8 border-border" />,
     code: ({ children }) => (
       <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-[0.9em]">

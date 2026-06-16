@@ -242,11 +242,13 @@ async function navClick(selector, expect) {
       page.waitForURL((u) => u.pathname.includes(expect), { timeout: 30000 }),
       locator.click(),
     ]);
-    await page.waitForLoadState("networkidle").catch(() => {});
+    await page.waitForLoadState("domcontentloaded").catch(() => {});
+    await sleep(1200); // settle (dev never reaches networkidle; some assets hang "load")
     return true;
   } catch {
     console.warn(`    (clique falhou em "${selector}" — indo direto para ${expect})`);
-    await page.goto(`${BASE}${expect}`, { waitUntil: "networkidle" });
+    await page.goto(`${BASE}${expect}`, { waitUntil: "domcontentloaded" });
+    await sleep(1200);
     return false;
   }
 }
@@ -363,8 +365,8 @@ for (const [i, step] of steps.entries()) {
   const n = String(i + 1).padStart(2, "0");
   try {
     if (step.op === "visit") {
-      await page.goto(`${BASE}${step.path}`, { waitUntil: "networkidle" });
-      await sleep(400);
+      await page.goto(`${BASE}${step.path}`, { waitUntil: "domcontentloaded" });
+      await sleep(1400); // settle (dev never reaches networkidle; assets can hang "load")
       await readPage();
     } else if (step.op === "navClick") {
       await navClick(step.selector, step.expect);

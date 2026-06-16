@@ -70,7 +70,7 @@ export function ContactRow({
             "flex size-10 shrink-0 items-center justify-center rounded-xl transition-colors",
             active
               ? "bg-warm/15 text-warm"
-              : "bg-[#6E5594]/10 text-[#6E5594] group-hover:bg-warm/15 group-hover:text-warm",
+              : "bg-primary/10 text-primary group-hover:bg-warm/15 group-hover:text-warm",
           )}
         >
           {category && <Icon name={category.icon} className="size-5" />}
