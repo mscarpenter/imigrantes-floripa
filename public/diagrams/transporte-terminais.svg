@@ -69,7 +69,7 @@
     <text x="228" y="395" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TI</text>
     <rect x="188" y="348" width="62" height="24" rx="6" fill="#b1542f"/>
     <text x="219" y="364" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">TICEN</text>
-    <text x="228" y="428" font-size="11" font-weight="600" fill="#b1542f" text-anchor="middle">Hub principal · Centro</text>
+    <text x="228" y="428" font-size="11" font-weight="600" fill="#b1542f" text-anchor="middle">Hub principal ï¿½ Centro</text>
   </g>
 
   <!-- TILAG -27.6022, -48.467 -->
@@ -98,5 +98,5 @@
   <text x="302" y="673" font-size="13" fill="#3a4256">TICEN (hub principal)</text>
   <rect x="480" y="658" width="24" height="6" rx="2" fill="#c56a3f"/>
   <text x="514" y="673" font-size="13" fill="#3a4256">Pontes Centro / Continente</text>
-  <text x="960" y="673" font-size="11" fill="#888" text-anchor="end">Posicoes: OSM · mapa ilustrativo</text>
+  <text x="960" y="673" font-size="11" fill="#888" text-anchor="end">Posicoes: OSM ï¿½ mapa ilustrativo</text>
 </svg>

@@ -25,7 +25,7 @@ export function Header({ locale, dict }: HeaderProps) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const home = `/${locale}`;
+  const home = `/${locale}/portal`;
   const navLinks = [
     { href: home, label: dict.nav.home },
     { href: `/${locale}/orientacao`, label: dict.nav.guidance },
@@ -48,11 +48,18 @@ export function Header({ locale, dict }: HeaderProps) {
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link
-          href={`/${locale}`}
-          className="flex items-center gap-2 text-lg font-semibold tracking-tight transition-opacity hover:opacity-80"
+          href={`/${locale}/portal`}
+          className="flex items-center gap-2 transition-opacity hover:opacity-80"
         >
-          <Compass className="size-5 text-primary" aria-hidden />
-          <span>{dict.site.name}</span>
+          <Compass className="size-6 shrink-0 text-primary" aria-hidden />
+          <span className="flex flex-col leading-tight">
+            <span className="text-base font-semibold tracking-tight">
+              {dict.site.name}
+            </span>
+            <span className="text-[0.62rem] font-medium tracking-tight text-muted-foreground">
+              {dict.site.brandSubtitle}
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 text-sm md:flex">

@@ -57,3 +57,16 @@ next-env.d.ts
 # docs gerados/rascunho/notas locais (não versionar)
 /docs/journey/
 /docs/notas/
+
+# python cache (scripts utilitários)
+__pycache__/
+*.pyc
+
+# materiais de trabalho / referências soltas na raiz (não versionar binários pesados)
+/Ajustes - Portal Imigrantes*.jpg
+/Guia de Aplicativos Essenciais.pdf
+/HIP - Hub de Integração e Permanência*.pdf
+/HIP - Hub de Integração e Permanência*.docx
+/exemplo_apresentacao.pdf
+/https_imigrantes-floripa-two_vercel_app_pt.png
+/HIP-Floripa-slides-guia-aplicativos/

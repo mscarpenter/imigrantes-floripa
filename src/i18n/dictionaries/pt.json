@@ -1,6 +1,7 @@
 {
   "site": {
-    "name": "Imigrantes Floripa",
+    "name": "HIP - Florianópolis",
+    "brandSubtitle": "hub de integração e permanência",
     "tagline": "Seu guia prático para começar em Florianópolis"
   },
   "nav": {
@@ -96,7 +97,7 @@
   },
   "about": {
     "title": "Sobre o projeto",
-    "intro": "Imigrantes Floripa é um portal aberto e gratuito que organiza informações práticas pra quem chega (ou se prepara pra chegar) em Florianópolis. A ideia é reduzir o caos dos primeiros dias na cidade: documentos, transporte, saúde, trabalho, moradia e tudo mais que costuma travar por falta de orientação centralizada e em mais de um idioma.",
+    "intro": "HIP - Florianópolis é um portal aberto e gratuito que organiza informações práticas pra quem chega (ou se prepara pra chegar) em Florianópolis. A ideia é reduzir o caos dos primeiros dias na cidade: documentos, transporte, saúde, trabalho, moradia e tudo mais que costuma travar por falta de orientação centralizada e em mais de um idioma.",
     "academicTitle": "Projeto de extensão da CESUTech",
     "academicLead": "Conectando Gerações e Impulsionando o Futuro e o Protagonismo Digital",
     "academicBodyBeforeUnicesusc": "Este portal foi desenvolvido como parte de um projeto de extensão da CESUTech, vinculado ao Centro Universitário Cesusc (",
@@ -104,32 +105,27 @@
     "academicBodyBeforeCirculos": "), em Florianópolis, com a parceria da ",
     "academicCirculosLabel": "Círculos de Hospitalidade",
     "academicBodyAfterCirculos": ". Apesar da origem acadêmica, o foco é prático: ser uma ferramenta real de utilidade pública para migrantes na cidade.",
-    "openSourceTitle": "Open source",
-    "openSource": "O código e o conteúdo são abertos. Quem quiser contribuir com textos, traduções, novos contatos ou melhorias técnicas pode acessar o repositório no GitHub:",
-    "openSourceLink": "PR3Stoot/imigrantes-floripa",
     "disclaimerTitle": "Aviso importante",
-    "disclaimerBeforeContact": "As informações aqui são uma orientação inicial e podem mudar com o tempo. Sempre confirme nos órgãos oficiais antes de tomar uma decisão importante. Se você encontrar algo errado ou desatualizado, por favor, nos avise pelo email: ou ",
-    "disclaimerContactLink": "entre em contato",
+    "disclaimerBeforeContact": "As informações aqui são uma orientação inicial e podem mudar com o tempo. Sempre confirme nos órgãos oficiais antes de tomar uma decisão importante. Se você encontrar algo errado ou desatualizado, favor, ",
     "disclaimerAfterContact": "."
   },
   "footer": {
-    "madeWith": "Feito por voluntários em Florianópolis.",
-    "contribute": "Contribuir no GitHub"
+    "madeWith": "Feito por voluntários em Florianópolis."
   },
   "faq": {
     "title": "Perguntas frequentes",
-    "subtitle": "Dúvidas comuns sobre como usar o portal Imigrantes Floripa.",
+    "subtitle": "Dúvidas comuns sobre como usar o portal HIP - Florianópolis.",
     "stillNeedHelpTitle": "Ainda com dúvidas?",
     "stillNeedHelpBody": "Se você não encontrou o que procurava, dê uma olhada nos contatos de apoio em Florianópolis.",
     "stillNeedHelpCta": "Ver contatos úteis",
     "items": [
       {
         "q": "O portal é gratuito?",
-        "a": "Sim. O Imigrantes Floripa é um projeto aberto e gratuito. Você não paga nada para acessar nenhuma informação."
+        "a": "Sim. O HIP - Florianópolis é um projeto aberto e gratuito. Você não paga nada para acessar nenhuma informação."
       },
       {
         "q": "Preciso criar uma conta para usar?",
-        "a": "Não. Todo o conteúdo fica disponível sem login. A conta serve apenas para salvar o seu progresso na trilha de orientação, caso você queira acompanhar o que já leu."
+        "a": "Não. Todo o conteúdo fica disponível sem login. No momento ainda não temos opção de conta — você navega livremente por tudo."
       },
       {
         "q": "Em quais idiomas o portal está disponível?",
@@ -145,7 +141,7 @@
       },
       {
         "q": "Encontrei uma informação errada ou desatualizada. O que faço?",
-        "a": "Avise a gente. Você pode abrir uma sugestão no repositório do projeto no GitHub ou usar os contatos indicados na página Sobre. Esse retorno ajuda a manter tudo correto."
+        "a": "Avise a gente. Use o botão \"nos avise\" na página Sobre ou os contatos indicados ali. Esse retorno ajuda a manter tudo correto."
       },
       {
         "q": "Preciso de atendimento presencial. O portal ajuda?",
@@ -161,5 +157,88 @@
     "loading": "Carregando...",
     "comingSoon": "Em breve",
     "language": "Idioma"
+  },
+  "welcome": {
+    "eyebrow": "Olá! Boas-vindas",
+    "title": "Acompanhe o desenvolvimento deste portal",
+    "subtitle": "Estamos construindo o HIP - Florianópolis. Deixe seu contato para receber novidades sobre o lançamento — é rápido e opcional.",
+    "form": {
+      "title": "Quero acompanhar o portal",
+      "description": "Pedimos só nome, e-mail e telefone. Usamos seu contato apenas para avisar sobre o portal — não pedimos status migratório nem dados sensíveis.",
+      "consent": "Finalidade: apenas contato sobre o portal.",
+      "unsubscribe": "Você pode sair da lista quando quiser, é só avisar.",
+      "name": "Nome",
+      "namePlaceholder": "Como podemos te chamar?",
+      "email": "E-mail",
+      "emailPlaceholder": "seu@email.com",
+      "phone": "Telefone / WhatsApp",
+      "phonePlaceholder": "(48) 90000-0000",
+      "contactHint": "Informe e-mail ou telefone (pelo menos um).",
+      "language": "Idioma (opcional)",
+      "languageOther": "Outro",
+      "languageOtherPlaceholder": "Qual idioma?",
+      "languageOptions": {
+        "Español": "Espanhol",
+        "Francês": "Francês",
+        "Inglês": "Inglês"
+      },
+      "consentLabel": "Aceito receber novidades sobre o lançamento do portal.",
+      "submit": "Quero acompanhar",
+      "sending": "Enviando…",
+      "successTitle": "Tudo certo!",
+      "successText": "Obrigado por acompanhar o HIP - Florianópolis. Avisaremos você sobre as novidades do portal.",
+      "errorRequired": "Preencha seu nome e ao menos um contato (e-mail ou telefone).",
+      "errorConsent": "Marque o consentimento para continuar.",
+      "errorSend": "Não foi possível enviar agora. Tente novamente em instantes.",
+      "cta": "Abrir no Google Forms",
+      "ctaUnavailable": "Formulário em breve"
+    },
+    "options": {
+      "title": "Ou explore agora",
+      "guide": {
+        "title": "Guia de aplicativos",
+        "description": "Reveja a apresentação com os apps essenciais para começar em Floripa."
+      },
+      "portal": {
+        "title": "Portal (versão beta)",
+        "description": "Conheça o portal HIP - Florianópolis, em construção."
+      },
+      "skip": "Pular e ir ao portal"
+    }
+  },
+  "slides": {
+    "eyebrow": "Apresentação",
+    "title": "Guia de aplicativos essenciais",
+    "subtitle": "Deslize para navegar pelos slides. Toque para ampliar.",
+    "empty": "Os slides estarão disponíveis em breve.",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "back": "Voltar ao início"
+  },
+  "feedback": {
+    "trigger": "nos avise",
+    "title": "Encontrou algo errado?",
+    "description": "Conte o que está desatualizado ou incorreto. Sua ajuda mantém o portal confiável para quem chega.",
+    "suggestion": "Sua sugestão ou correção",
+    "suggestionPlaceholder": "Descreva o que você encontrou…",
+    "name": "Nome (opcional)",
+    "namePlaceholder": "Seu nome",
+    "email": "E-mail (opcional)",
+    "emailPlaceholder": "seu@email.com",
+    "emailHint": "Deixe o e-mail se quiser que a gente responda.",
+    "submit": "Enviar sugestão",
+    "sending": "Enviando…",
+    "successTitle": "Obrigado!",
+    "successText": "Recebemos sua sugestão. Isso ajuda muito a manter o portal correto.",
+    "errorRequired": "Escreva sua sugestão antes de enviar.",
+    "errorSend": "Não foi possível enviar agora. Tente novamente em instantes.",
+    "unavailable": "Em breve",
+    "close": "Fechar"
+  },
+  "fab": {
+    "label": "Voltar às boas-vindas",
+    "message": "Estamos felizes de ter você por aqui! Deseja voltar à página de boas-vindas?",
+    "confirm": "Voltar às boas-vindas",
+    "dismiss": "Ficar aqui"
   }
 }

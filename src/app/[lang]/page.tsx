@@ -1,140 +1,164 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import {
+  ArrowRight,
+  BookOpen,
+  Compass,
+  Mail,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import { getAllModules } from "@/lib/data/queries";
-import { onboardingCards } from "@/lib/data/onboarding";
-import { ModuleScrollGrid } from "@/components/ModuleScrollGrid";
-import { TrilhaCarousel } from "@/components/home/TrilhaCarousel";
-import { AboutMoreDialog } from "@/components/home/AboutMoreDialog";
 import { Reveal } from "@/components/motion/Reveal";
+import { WelcomeForm } from "@/components/WelcomeForm";
+import { cn } from "@/lib/utils";
 
-export default async function HomePage({ params }: PageProps<"/[lang]">) {
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const dict = await getDictionary(lang);
+  return { title: dict.welcome.title };
+}
+
+export default async function WelcomePage({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
 
   const dict = await getDictionary(lang);
-  const modules = getAllModules();
-  const isEs = lang === "es";
+  const t = dict.welcome;
 
-  const cards = onboardingCards.map((card) => {
-    const c = card.translations[lang];
-    return {
-      id: card.id,
-      icon: card.icon,
-      image: card.image,
-      tag: c.tag,
-      title: c.title,
-      intro: c.intro,
-      ctaLabel: c.cta,
-      href: `/${lang}${card.path}`,
-    };
-  });
-
-  const t = {
-    prev: "Anterior",
-    next: isEs ? "Siguiente" : "Próximo",
-  };
+  const portalHref = `/${lang}/portal`;
+  const guideHref = `/${lang}/apresentacao`;
 
   return (
-    <div className="bg-background text-foreground">
-      {/* ONBOARDING EDITORIAL — carrossel full-bleed (slide 1 = boas-vindas) */}
-      <section className="bg-background pb-12 md:pb-16">
-        <TrilhaCarousel
-          intro={{
-            eyebrow: dict.site.tagline,
-            title: dict.home.heroTitle,
-            subtitle: dict.home.heroSubtitle,
-            image: "/illustrations/floripa-hero.png",
-            label: isEs ? "Bienvenida" : "Boas-vindas",
-          }}
-          cards={cards}
-          trailLabel={dict.home.ctaTrail}
-          trailHref={`/${lang}/orientacao`}
-          prevLabel={t.prev}
-          nextLabel={t.next}
-        />
-      </section>
+    <div className="relative isolate overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-primary/10 via-background to-background"
+      />
 
-      {/* GRADE — todos os temas */}
-      <section className="border-t bg-muted/30">
-        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-          <Reveal as="h2" className="text-3xl font-bold tracking-tight md:text-4xl">
-            {dict.home.sectionModules}
-          </Reveal>
-          <ModuleScrollGrid
-            modules={modules}
-            locale={lang}
-            dict={dict}
-            plain
-            gridClassName="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-          />
-        </div>
-      </section>
+      <div className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 md:py-20">
+        <Reveal className="text-center">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3.5 py-1.5 text-sm font-medium text-primary">
+            <Sparkles className="size-4" aria-hidden />
+            {t.eyebrow}
+          </span>
+          <h1 className="mt-5 text-3xl font-bold tracking-tight text-balance md:text-4xl">
+            {t.title}
+          </h1>
+          <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-muted-foreground">
+            {t.subtitle}
+          </p>
+        </Reveal>
 
-      {/* SOBRE */}
-      <section className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 md:py-24">
-        <Reveal>
-          <div className="overflow-hidden rounded-3xl border border-border/60 bg-card shadow-soft md:grid md:grid-cols-2 md:items-stretch">
-            <div className="relative aspect-[16/10] w-full md:aspect-auto md:h-full md:min-h-[20rem]">
-              <Image
-                src="/illustrations/acolhimento.jpg"
-                alt=""
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="flex flex-col p-8 sm:p-10 md:p-12">
-              <h2 className="text-2xl font-bold tracking-tight text-warm md:text-3xl">
-                {dict.home.sectionAbout}
-              </h2>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                {dict.home.aboutBody}
-              </p>
-              <div className="mt-8 flex flex-wrap items-center justify-between gap-4 md:mt-auto md:pt-8">
-                <AboutMoreDialog
-                  label={dict.home.aboutMoreLabel}
-                  title={dict.home.aboutMoreTitle}
-                  paragraphs={dict.home.aboutMoreBody}
-                />
-                <div className="flex items-center gap-5">
-                  <a
-                    href="https://unicesusc.edu.br/"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="UNICESUSC"
-                    className="transition-opacity hover:opacity-70"
-                  >
-                    <Image
-                      src="/logos/unicesusc-logo.png"
-                      alt="UNICESUSC"
-                      width={180}
-                      height={180}
-                      className="h-16 w-auto object-contain"
-                    />
-                  </a>
-                  <a
-                    href="https://circulosdehospitalidade.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Círculos de Hospitalidade"
-                    className="transition-opacity hover:opacity-70"
-                  >
-                    <Image
-                      src="/logos/circulos-da-hospitalidade-logo.png"
-                      alt="Círculos de Hospitalidade"
-                      width={200}
-                      height={110}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </a>
-                </div>
+        {/* Formulário de contato */}
+        <Reveal delay={80}>
+          <section className="mt-10 rounded-3xl border border-border/60 bg-card p-6 shadow-soft sm:p-8">
+            <div className="flex items-start gap-3">
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                <Mail className="size-5" aria-hidden />
+              </span>
+              <div>
+                <h2 className="text-lg font-semibold tracking-tight">
+                  {t.form.title}
+                </h2>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                  {t.form.description}
+                </p>
               </div>
             </div>
-          </div>
+
+            <div className="mt-4 flex items-start gap-2 rounded-2xl bg-muted/50 p-3.5 text-xs leading-relaxed text-muted-foreground">
+              <ShieldCheck
+                className="mt-0.5 size-4 shrink-0 text-primary"
+                aria-hidden
+              />
+              <span>
+                {t.form.consent} {t.form.unsubscribe}
+              </span>
+            </div>
+
+            <WelcomeForm strings={t.form} />
+          </section>
         </Reveal>
-      </section>
+
+        {/* Opções de navegação */}
+        <Reveal delay={140}>
+          <section className="mt-10">
+            <h2 className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
+              {t.options.title}
+            </h2>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <OptionCard
+                href={guideHref}
+                icon={<BookOpen className="size-5" aria-hidden />}
+                title={t.options.guide.title}
+                description={t.options.guide.description}
+              />
+              <OptionCard
+                href={portalHref}
+                icon={<Compass className="size-5" aria-hidden />}
+                title={t.options.portal.title}
+                description={t.options.portal.description}
+              />
+            </div>
+
+            <div className="mt-6 text-center">
+              <Link
+                href={portalHref}
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+              >
+                {t.options.skip}
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            </div>
+          </section>
+        </Reveal>
+      </div>
     </div>
+  );
+}
+
+function OptionCard({
+  href,
+  icon,
+  title,
+  description,
+  className,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  className?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "group flex flex-col gap-3 rounded-2xl border border-border/60 bg-card p-5 shadow-soft transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md active:scale-[0.99]",
+        className,
+      )}
+    >
+      <span className="flex size-10 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+        {icon}
+      </span>
+      <div>
+        <h3 className="flex items-center gap-1.5 font-semibold tracking-tight">
+          {title}
+          <ArrowRight
+            className="size-4 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
+            aria-hidden
+          />
+        </h3>
+        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+          {description}
+        </p>
+      </div>
+    </Link>
   );
 }

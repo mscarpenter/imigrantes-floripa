@@ -4,24 +4,24 @@
   <text x="40" y="56" font-size="34" font-weight="700" fill="#1b2440">Qual porta usar?</text>
   <text x="40" y="86" font-size="16" fill="#5b6478">Onde buscar atendimento no SUS, conforme a gravidade.</text>
 
-  <!-- Banner: Alô Saúde -->
+  <!-- Banner: Alï¿½ Saï¿½de -->
   <rect x="32" y="108" width="936" height="80" rx="16" fill="#e9eef7" stroke="#cdd8ef"/>
   <rect x="56" y="126" width="48" height="48" rx="12" fill="#2a4d9b"/>
   <g transform="translate(68,138)" fill="#ffffff">
     <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/>
   </g>
-  <text x="122" y="146" font-size="16" font-weight="700" fill="#21356e">Na dúvida, ligue primeiro:</text>
-  <text x="122" y="170" font-size="15" fill="#1b2440">Alô Saúde Floripa · 0800 333 3233 · 24h · português, espanhol e inglês</text>
+  <text x="122" y="146" font-size="16" font-weight="700" fill="#21356e">Na dï¿½vida, ligue primeiro:</text>
+  <text x="122" y="170" font-size="15" fill="#1b2440">Alï¿½ Saï¿½de Floripa ï¿½ 0800 333 3233 ï¿½ 24h ï¿½ portuguï¿½s, espanhol e inglï¿½s</text>
 
   <!-- Card 1: UBS -->
   <g>
     <rect x="32" y="210" width="936" height="120" rx="16" fill="#ffffff" stroke="#e4e2dd"/>
     <rect x="56" y="240" width="116" height="60" rx="12" fill="#3f9c6a"/>
     <text x="114" y="278" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">UBS</text>
-    <text x="190" y="260" font-size="17" font-weight="700" fill="#1b2440">Unidade Básica de Saúde</text>
-    <text x="190" y="288" font-size="14" font-weight="600" fill="#2f7d54">Rotina e prevenção</text>
-    <text x="486" y="260" font-size="14.5" fill="#3a4256">Consultas, vacinas, receitas, pré-natal e crônicas.</text>
-    <text x="486" y="288" font-size="14.5" fill="#3a4256">Porta de entrada e onde você se cadastra no SUS.</text>
+    <text x="190" y="260" font-size="17" font-weight="700" fill="#1b2440">Unidade Bï¿½sica de Saï¿½de</text>
+    <text x="190" y="288" font-size="14" font-weight="600" fill="#2f7d54">Rotina e prevenï¿½ï¿½o</text>
+    <text x="486" y="260" font-size="14.5" fill="#3a4256">Consultas, vacinas, receitas, prï¿½-natal e crï¿½nicas.</text>
+    <text x="486" y="288" font-size="14.5" fill="#3a4256">Porta de entrada e onde vocï¿½ se cadastra no SUS.</text>
   </g>
 
   <!-- Card 2: UPA -->
@@ -30,19 +30,19 @@
     <rect x="56" y="376" width="116" height="60" rx="12" fill="#e0a042"/>
     <text x="114" y="414" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">UPA</text>
     <text x="190" y="396" font-size="17" font-weight="700" fill="#1b2440">Unidade de Pronto Atendimento</text>
-    <text x="190" y="424" font-size="14" font-weight="600" fill="#b9772a">Urgência (sem risco imediato)</text>
+    <text x="190" y="424" font-size="14" font-weight="600" fill="#b9772a">Urgï¿½ncia (sem risco imediato)</text>
     <text x="486" y="396" font-size="14.5" fill="#3a4256">Febre alta, fratura, corte com pontos, dor forte.</text>
-    <text x="486" y="424" font-size="14.5" fill="#3a4256">Aberta 24h; atende por gravidade, não por chegada.</text>
+    <text x="486" y="424" font-size="14.5" fill="#3a4256">Aberta 24h; atende por gravidade, nï¿½o por chegada.</text>
   </g>
 
-  <!-- Card 3: Emergência -->
+  <!-- Card 3: Emergï¿½ncia -->
   <g>
     <rect x="32" y="482" width="936" height="120" rx="16" fill="#ffffff" stroke="#e4e2dd"/>
     <rect x="56" y="512" width="116" height="60" rx="12" fill="#c56a3f"/>
     <text x="114" y="550" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">192</text>
-    <text x="190" y="532" font-size="17" font-weight="700" fill="#1b2440">SAMU / hospital mais próximo</text>
-    <text x="190" y="560" font-size="14" font-weight="600" fill="#b1542f">Emergência (risco de vida)</text>
+    <text x="190" y="532" font-size="17" font-weight="700" fill="#1b2440">SAMU / hospital mais prï¿½ximo</text>
+    <text x="190" y="560" font-size="14" font-weight="600" fill="#b1542f">Emergï¿½ncia (risco de vida)</text>
     <text x="486" y="532" font-size="14.5" fill="#3a4256">Dor no peito, falta de ar, sinais de AVC, acidente.</text>
-    <text x="486" y="560" font-size="14.5" fill="#3a4256">Ligue 192 (gratuito, 24h) ou vá ao hospital.</text>
+    <text x="486" y="560" font-size="14.5" fill="#3a4256">Ligue 192 (gratuito, 24h) ou vï¿½ ao hospital.</text>
   </g>
 </svg>

@@ -1,8 +1,8 @@
-// Service worker do Imigrantes Floripa — instalável + suporte offline.
+// Service worker do HIP - Florianópolis — instalável + suporte offline.
 // Estratégias: network-first para navegação (com fallback offline) e
 // stale-while-revalidate para assets estáticos. Sem dependências externas.
 
-const VERSION = "v1";
+const VERSION = "v2";
 const PRECACHE = `if-precache-${VERSION}`;
 const RUNTIME = `if-runtime-${VERSION}`;
 
@@ -19,7 +19,7 @@ const OFFLINE_HTML = `<!doctype html>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sem conexão · Imigrantes Floripa</title>
+<title>Sem conexão · HIP - Florianópolis</title>
 <style>
   :root { color-scheme: light dark; }
   body {

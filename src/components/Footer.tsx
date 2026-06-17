@@ -10,7 +10,7 @@ interface FooterProps {
 
 export function Footer({ dict, locale }: FooterProps) {
   const links = [
-    { href: `/${locale}`, label: dict.nav.home },
+    { href: `/${locale}/portal`, label: dict.nav.home },
     { href: `/${locale}/orientacao`, label: dict.nav.trail },
     { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/contatos`, label: dict.nav.contacts },
@@ -27,6 +27,9 @@ export function Footer({ dict, locale }: FooterProps) {
               <Compass className="size-5 text-primary" aria-hidden />
               <span>{dict.site.name}</span>
             </div>
+            <p className="text-xs text-muted-foreground">
+              {dict.site.brandSubtitle}
+            </p>
             <p className="mt-3 text-sm text-muted-foreground">
               {dict.site.tagline}
             </p>
@@ -45,16 +48,8 @@ export function Footer({ dict, locale }: FooterProps) {
           </nav>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t pt-6 text-sm text-muted-foreground sm:flex-row">
+        <div className="mt-10 border-t pt-6 text-center text-sm text-muted-foreground">
           <p>{dict.footer.madeWith}</p>
-          <a
-            href="https://github.com/PR3Stoot/imigrantes-floripa"
-            target="_blank"
-            rel="noreferrer"
-            className="underline hover:text-foreground"
-          >
-            {dict.footer.contribute}
-          </a>
         </div>
       </div>
     </footer>

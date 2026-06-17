@@ -3,8 +3,8 @@ import { defaultLocale } from "@/i18n/config";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Imigrantes Floripa",
-    short_name: "Imigrantes",
+    name: "HIP - Florianópolis",
+    short_name: "HIP",
     description: "Seu guia prático para começar em Florianópolis",
     start_url: `/${defaultLocale}`,
     id: `/${defaultLocale}`,
@@ -30,13 +30,13 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "any",
       },
       {
-        src: "/icon-192.png",
+        src: "/icon-192-maskable.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "maskable",
       },
       {
-        src: "/icon-512.png",
+        src: "/icon-512-maskable.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
