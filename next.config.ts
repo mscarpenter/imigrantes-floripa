@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
         destination: "/:lang/orientacao",
         permanent: true,
       },
+      {
+        source: "/guia",
+        destination:
+          "https://www.figma.com/design/33yIdWdxUK2uc13Zipx7Xi/HIP-Floripa?node-id=56-2&t=VYzCBe8g9siUJaeA-1",
+        permanent: false,
+        basePath: false,
+      },
     ];
   },
   async headers() {
