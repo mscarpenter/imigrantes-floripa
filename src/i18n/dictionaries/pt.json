@@ -38,7 +38,8 @@
     "backToBlog": "Voltar para o blog",
     "availableInPt": "Este texto ainda está disponível apenas em português. Uma versão em espanhol chega em breve.",
     "empty": "Em breve, novos textos por aqui.",
-    "comingSoon": "Em breve"
+    "comingSoon": "Em breve",
+    "featured": "Destaque"
   },
   "trail": {
     "title": "Trilha de orientação",
@@ -106,7 +107,7 @@
     "academicCirculosLabel": "Círculos de Hospitalidade",
     "academicBodyAfterCirculos": ". Apesar da origem acadêmica, o foco é prático: ser uma ferramenta real de utilidade pública para migrantes na cidade.",
     "disclaimerTitle": "Aviso importante",
-    "disclaimerBeforeContact": "As informações aqui são uma orientação inicial e podem mudar com o tempo. Sempre confirme nos órgãos oficiais antes de tomar uma decisão importante. Se você encontrar algo errado ou desatualizado, favor, ",
+    "disclaimerBeforeContact": "As informações aqui são uma orientação inicial e podem mudar com o tempo. Sempre confirme nos órgãos oficiais antes de tomar uma decisão importante. Se você encontrar algo errado ou desatualizado, ",
     "disclaimerAfterContact": "."
   },
   "footer": {
@@ -164,7 +165,7 @@
     "subtitle": "Estamos construindo o HIP - Florianópolis. Deixe seu contato para receber novidades sobre o lançamento — é rápido e opcional.",
     "form": {
       "title": "Quero acompanhar o portal",
-      "description": "Pedimos só nome, e-mail e telefone. Usamos seu contato apenas para avisar sobre o portal — não pedimos status migratório nem dados sensíveis.",
+      "description": "Pedimos só nome, e-mail e telefone. Usamos seu contato apenas para avisar sobre o portal. Não pedimos status migratório nem dados sensíveis.",
       "consent": "Finalidade: apenas contato sobre o portal.",
       "unsubscribe": "Você pode sair da lista quando quiser, é só avisar.",
       "name": "Nome",

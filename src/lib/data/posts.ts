@@ -14,6 +14,7 @@ export const posts: Post[] = [
     icon: "Smartphone",
     cover: "/illustrations/aplicativos.png",
     sourceLocale: "pt",
+    featured: true,
     translations: {
       pt: {
         title:

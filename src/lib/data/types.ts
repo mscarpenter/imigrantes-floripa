@@ -65,6 +65,8 @@ export interface Post {
   sourceLocale: Locale;
   /** When true, the post is a teaser ("Em breve"): no link, no detail page. */
   comingSoon?: boolean;
+  /** When true, shows a "Destaque" badge on the card cover. */
+  featured?: boolean;
   /** Content per locale. May be partial — missing locales fall back to source. */
   translations: Partial<Record<Locale, PostTranslation>>;
 }

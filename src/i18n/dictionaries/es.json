@@ -38,7 +38,8 @@
     "backToBlog": "Volver al blog",
     "availableInPt": "Este texto todavía está disponible solo en portugués. Una versión en español llegará pronto.",
     "empty": "Pronto, nuevos textos por aquí.",
-    "comingSoon": "Próximamente"
+    "comingSoon": "Próximamente",
+    "featured": "Destacado"
   },
   "trail": {
     "title": "Ruta de orientación",
@@ -164,7 +165,7 @@
     "subtitle": "Estamos construyendo HIP - Florianópolis. Deja tu contacto para recibir novedades sobre el lanzamiento — es rápido y opcional.",
     "form": {
       "title": "Quiero acompañar el portal",
-      "description": "Pedimos solo nombre, correo y teléfono. Usamos tu contacto únicamente para avisarte sobre el portal — no pedimos estatus migratorio ni datos sensibles.",
+      "description": "Pedimos solo nombre, correo y teléfono. Usamos tu contacto únicamente para avisarte sobre el portal. No pedimos estatus migratorio ni datos sensibles.",
       "consent": "Finalidad: solo contacto sobre el portal.",
       "unsubscribe": "Puedes salir de la lista cuando quieras, solo avísanos.",
       "name": "Nombre",

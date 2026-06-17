@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Clock } from "lucide-react";
+import { Clock, Star } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { Post } from "@/lib/data/types";
@@ -75,6 +75,12 @@ export function PostCard({ post, locale, dict }: PostCardProps) {
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
+          {post.featured && (
+            <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-warm px-2.5 py-1 text-xs font-semibold text-warm-foreground shadow-sm">
+              <Star className="size-3.5 fill-current" />
+              {dict.blog.featured}
+            </span>
+          )}
         </div>
         <div className="flex flex-1 flex-col p-5">
           <span
