@@ -124,30 +124,5 @@
         "institution": "SENAC SC — Florianópolis"
       }
     }
-  },
-  {
-    "id": "sc-gov-ead-hub",
-    "slug": "sc-gov-ead-hub",
-    "status": "published",
-    "categorySlug": "educacao",
-    "format": "online",
-    "isFree": true,
-    "url": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
-    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
-    "verifiedAt": "2026-06-18",
-    "enrollmentStatus": "open",
-    "tags": ["governo", "sc", "ead", "online", "gratuito"],
-    "translations": {
-      "pt": {
-        "title": "Cursos EAD — Governo de Santa Catarina",
-        "summary": "Portal oficial do Governo de Santa Catarina com orientações e links para cursos de educação a distância. Consulte requisitos e matrículas nos sites das instituições parceiras.",
-        "institution": "Governo do Estado de Santa Catarina"
-      },
-      "es": {
-        "title": "Cursos EAD — Gobierno de Santa Catarina",
-        "summary": "Portal oficial del Gobierno de Santa Catarina con orientaciones y enlaces a cursos a distancia. (Información completa en portugués en el sitio oficial.)",
-        "institution": "Gobierno del Estado de Santa Catarina"
-      }
-    }
   }
 ]
