@@ -3,13 +3,16 @@ import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Download } from "lucide-react";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SlidesCarousel } from "@/components/SlidesCarousel";
 import { Reveal } from "@/components/motion/Reveal";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const SLIDES_DIR = "apresentacao";
+const GUIDE_PDF = "/guia-aplicativos-essenciais.pdf";
 const IMAGE_RE = /\.(png|jpe?g|webp)$/i;
 
 function getSlides(): string[] {
@@ -54,6 +57,17 @@ export default async function PresentationPage({
           {t.title}
         </h1>
         <p className="mt-2 max-w-2xl text-muted-foreground">{t.subtitle}</p>
+        <a
+          href={GUIDE_PDF}
+          download
+          className={cn(
+            buttonVariants({ variant: "outline", size: "sm" }),
+            "mt-4 inline-flex gap-2",
+          )}
+        >
+          <Download className="size-4" aria-hidden />
+          {t.downloadPdf}
+        </a>
       </Reveal>
 
       <div className="mt-8">

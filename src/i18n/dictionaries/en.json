@@ -274,7 +274,8 @@
     "empty": "Slides will be available soon.",
     "prev": "Previous",
     "next": "Next",
-    "back": "Back to home"
+    "back": "Back to home",
+    "downloadPdf": "Download guide (PDF)"
   },
   "feedback": {
     "trigger": "let us know",

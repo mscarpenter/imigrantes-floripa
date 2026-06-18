@@ -80,22 +80,23 @@ export const previewCourses: Course[] = [
     categorySlug: "educacao",
     format: "presencial",
     isFree: true,
-    url: "https://plac.ufsc.br/",
-    verifiedAt: "2026-06-17",
+    url: "https://neplac.paginas.ufsc.br/",
+    verifiedAt: "2026-06-18",
     enrollmentStatus: "coming_soon",
+    contactIds: ["plac-ufsc"],
     tags: ["português", "migrantes", "ufsc", "gratuito"],
     translations: {
       pt: {
-        title: "PLAc — Português para imigrantes e refugiados (UFSC)",
+        title: "NePLAc — Português para imigrantes e refugiados (UFSC)",
         summary:
-          "Curso gratuito de português voltado a migrantes e refugiados. Foco em comunicação do dia a dia no Brasil.",
-        institution: "UFSC — Programa de Línguas e Assimilação Cultural (PLAc)",
+          "Cursos gratuitos pelo projeto Rodamundo do NePLAc/UFSC. Inscrições por edital a cada semestre; aulas presenciais no campus Trindade.",
+        institution: "UFSC — NePLAc",
       },
       es: {
-        title: "PLAc — Portugués para inmigrantes y refugiados (UFSC)",
+        title: "NePLAc — Portugués para inmigrantes y refugiados (UFSC)",
         summary:
-          "Curso gratuito de portugués para migrantes y refugiados. Enfoque en la comunicación cotidiana en Brasil.",
-        institution: "UFSC — Programa de Línguas e Assimilação Cultural (PLAc)",
+          "Cursos gratuitos del proyecto Rodamundo del NePLAc/UFSC. Inscripciones por convocatoria cada semestre; clases presenciales en el campus Trindade.",
+        institution: "UFSC — NePLAc",
       },
     },
   },

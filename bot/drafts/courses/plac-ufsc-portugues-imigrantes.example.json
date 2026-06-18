@@ -3,7 +3,7 @@
     "draftId": "plac-ufsc-portugues-imigrantes",
     "createdAt": "2026-06-17",
     "botRunId": "example-manual",
-    "sourceUrl": "https://plac.ufsc.br/",
+    "sourceUrl": "https://neplac.paginas.ufsc.br/",
     "confidence": "high",
     "notes": "EXEMPLO — não promover sem revisar inscrições e calendário atuais no site da UFSC."
   },
@@ -13,7 +13,7 @@
     "categorySlug": "educacao",
     "format": "presencial",
     "isFree": true,
-    "url": "https://plac.ufsc.br/",
+    "url": "https://neplac.paginas.ufsc.br/",
     "tags": ["português", "migrantes", "ufsc"],
     "translations": {
       "pt": {

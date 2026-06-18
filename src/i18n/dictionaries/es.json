@@ -274,7 +274,8 @@
     "empty": "Las diapositivas estarán disponibles próximamente.",
     "prev": "Anterior",
     "next": "Siguiente",
-    "back": "Volver al inicio"
+    "back": "Volver al inicio",
+    "downloadPdf": "Descargar guía en PDF"
   },
   "feedback": {
     "trigger": "avísanos",

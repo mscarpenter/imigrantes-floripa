@@ -274,7 +274,8 @@
     "empty": "Os slides estarão disponíveis em breve.",
     "prev": "Anterior",
     "next": "Próximo",
-    "back": "Voltar ao início"
+    "back": "Voltar ao início",
+    "downloadPdf": "Baixar guia em PDF"
   },
   "feedback": {
     "trigger": "nos avise",

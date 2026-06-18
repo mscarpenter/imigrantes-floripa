@@ -144,8 +144,8 @@
     },
     {
       "id": "plac-ufsc",
-      "label": "PLAc UFSC (legado)",
-      "url": "https://plac.ufsc.br",
+      "label": "NePLAc / PLAc UFSC",
+      "url": "https://neplac.paginas.ufsc.br",
       "kind": "institution",
       "formatDefault": "presencial",
       "localOnly": true,
