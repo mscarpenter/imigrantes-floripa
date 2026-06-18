@@ -6,12 +6,8 @@ import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import {
-  GOOGLE_FORM_ACTION,
-  GOOGLE_FORM_CONSENT_VALUE,
-  GOOGLE_FORM_FIELDS,
   GOOGLE_FORM_LANGUAGE_OPTIONS,
   GOOGLE_FORM_NATIONALITY_OTHER,
-  GOOGLE_FORM_OTHER_OPTION_VALUE,
   GOOGLE_FORM_URL,
 } from "@/lib/welcome-config";
 import { NationalitySelect } from "@/components/NationalitySelect";
@@ -79,46 +75,29 @@ export function WelcomeForm({
 
     setStatus("sending");
     try {
-      const body = new URLSearchParams();
-      body.append(GOOGLE_FORM_FIELDS.firstName, firstName.trim());
-      body.append(GOOGLE_FORM_FIELDS.lastName, lastName.trim());
-      if (email.trim()) body.append(GOOGLE_FORM_FIELDS.email, email.trim());
-      body.append(GOOGLE_FORM_FIELDS.phone, phone.trim());
-      body.append(GOOGLE_FORM_FIELDS.consent, GOOGLE_FORM_CONSENT_VALUE);
-
-      if (language === OTHER) {
-        body.append(
-          GOOGLE_FORM_FIELDS.language,
-          GOOGLE_FORM_OTHER_OPTION_VALUE,
-        );
-        body.append(
-          `${GOOGLE_FORM_FIELDS.language}.other_option_response`,
-          otherLang.trim(),
-        );
-      } else {
-        body.append(GOOGLE_FORM_FIELDS.language, language);
-      }
-
-      const nationalityValue =
-        nationality === GOOGLE_FORM_NATIONALITY_OTHER
-          ? otherNationality.trim()
-          : nationality;
-      if (nationality === GOOGLE_FORM_NATIONALITY_OTHER) {
-        body.append(GOOGLE_FORM_FIELDS.nationality, GOOGLE_FORM_NATIONALITY_OTHER);
-        body.append(
-          `${GOOGLE_FORM_FIELDS.nationality}.other_option_response`,
-          nationalityValue,
-        );
-      } else {
-        body.append(GOOGLE_FORM_FIELDS.nationality, nationalityValue);
-      }
-
-      await fetch(GOOGLE_FORM_ACTION, {
+      const response = await fetch("/api/welcome", {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
+          email: email.trim() || undefined,
+          phone: phone.trim(),
+          language,
+          otherLanguage: language === OTHER ? otherLang.trim() : undefined,
+          nationality,
+          otherNationality:
+            nationality === GOOGLE_FORM_NATIONALITY_OTHER
+              ? otherNationality.trim()
+              : undefined,
+        }),
       });
+
+      if (!response.ok) {
+        setStatus("error");
+        setError(strings.errorSend);
+        return;
+      }
 
       setStatus("success");
     } catch {
