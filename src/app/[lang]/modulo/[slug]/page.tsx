@@ -19,6 +19,8 @@ import { extractHeadings } from "@/lib/markdown/toc";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 import { ModuleVisitTracker } from "@/components/ModuleVisitTracker";
+import { ContentFallbackNotice } from "@/components/ContentFallbackNotice";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 
 export async function generateStaticParams() {
   const modules = getAllModules();
@@ -32,7 +34,7 @@ export async function generateMetadata({
   if (!isLocale(lang)) return {};
   const mod = getModuleBySlug(slug);
   if (!mod) return {};
-  const t = mod.translations[lang];
+  const t = resolveTranslation(mod.translations, lang).value;
   return { title: t.title, description: t.summary };
 }
 
@@ -46,7 +48,7 @@ export default async function ModulePage({
   if (!mod) notFound();
 
   const dict = await getDictionary(lang);
-  const t = mod.translations[lang];
+  const { value: t, isFallback } = resolveTranslation(mod.translations, lang);
   const colors = colorsFor(mod.color);
   const allModules = getAllModules();
   const currentIndex = allModules.findIndex((m) => m.slug === mod.slug);
@@ -113,7 +115,7 @@ export default async function ModulePage({
                   className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground"
                 >
                   <span className="text-[10px] opacity-70">{topic.order}</span>
-                  <span>{topic.translations[lang].title}</span>
+                  <span>{resolveTranslation(topic.translations, lang).value.title}</span>
                 </Link>
               ))}
             </nav>
@@ -130,6 +132,10 @@ export default async function ModulePage({
                 label={dict.trail.onThisPage}
                 variant="mobile"
               />
+            )}
+
+            {isFallback && (
+              <ContentFallbackNotice message={dict.common.contentFallback} />
             )}
 
             <MarkdownContent body={t.body} color={mod.color} />
@@ -200,7 +206,7 @@ export default async function ModulePage({
                   {dict.trail.previousTopic}
                 </span>
                 <span className="mt-0.5 block truncate font-semibold leading-tight">
-                  {previousModule.translations[lang].title}
+                  {resolveTranslation(previousModule.translations, lang).value.title}
                 </span>
               </span>
             </Link>
@@ -217,7 +223,7 @@ export default async function ModulePage({
                   {dict.trail.nextTopic}
                 </span>
                 <span className="mt-0.5 block truncate font-semibold leading-tight">
-                  {nextModule.translations[lang].title}
+                  {resolveTranslation(nextModule.translations, lang).value.title}
                 </span>
               </span>
               <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">

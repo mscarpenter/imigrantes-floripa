@@ -1,0 +1,343 @@
+{
+  "site": {
+    "name": "HIP - Florianópolis",
+    "brandSubtitle": "integration and permanence hub",
+    "tagline": "Your practical guide to getting started in Florianópolis"
+  },
+  "nav": {
+    "home": "Home",
+    "trail": "Trail",
+    "guidance": "Guidance",
+    "news": "What's new",
+    "blog": "Blog",
+    "contacts": "Contacts",
+    "about": "About",
+    "faq": "FAQ"
+  },
+  "home": {
+    "heroTitle": "Just arrived in Floripa? We'll help you find your way.",
+    "heroSubtitle": "A simple step-by-step trail with everything you need to sort out in your first days in the city: documents, health, transport, work, and more.",
+    "ctaTrail": "Start the trail",
+    "ctaContacts": "See useful contacts",
+    "welcomeLabel": "Welcome",
+    "sectionModules": "What you'll find here",
+    "sectionAbout": "An initiative to welcome newcomers",
+    "aboutBody": "Arriving in a new city means handling many things at once, and it's not always clear where to start. This portal gathers practical, free information for immigrants already in Florianópolis or preparing to arrive.",
+    "aboutMoreLabel": "Learn more",
+    "aboutMoreTitle": "A collaborative initiative",
+    "aboutMoreBody": [
+      "This portal is the result of a collaboration between UNICESUSC and Círculos de Hospitalidade, bringing together the university and civil society around one goal: welcoming those who arrive in Florianópolis.",
+      "UNICESUSC provides the academic foundation and extension project structure. Círculos de Hospitalidade bring the day-to-day experience of welcoming immigrants and refugees in the city.",
+      "The result is an open, free guide built by students. Information is organized to ease first-day anxiety and help you navigate with more independence."
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Stories and practical guides to help you feel at home in Florianópolis.",
+    "intro": "Here we go beyond step-by-step: welcoming introductory texts about daily life in the city — transport, health, work, education — and everything that helps you put down roots. Open content written for newcomers.",
+    "readingTime": "min read",
+    "publishedOn": "Published on",
+    "backToBlog": "Back to blog",
+    "availableInPt": "This article is not yet available in English. Showing the Portuguese version.",
+    "contentFallback": "This article is not yet available in English. Showing the Portuguese version.",
+    "empty": "New posts coming soon.",
+    "comingSoon": "Coming soon",
+    "featured": "Featured"
+  },
+  "trail": {
+    "title": "Orientation trail",
+    "subtitle": "Follow the suggested order or jump straight to what you need now.",
+    "step": "Step",
+    "readModule": "Read module",
+    "relatedContacts": "Related contacts",
+    "noContacts": "No contacts listed in this module yet.",
+    "topicsInModule": "Topics in this module",
+    "onThisPage": "On this page",
+    "backToModule": "Back to module",
+    "topic": "Topic",
+    "topicOf": "of",
+    "relatedTopicContacts": "Contacts related to this topic",
+    "previousTopic": "Previous",
+    "nextTopic": "Next",
+    "nextStep": "Next step"
+  },
+  "contacts": {
+    "title": "Useful contacts",
+    "subtitle": "Public agencies, NGOs, and support services in Florianópolis.",
+    "searchPlaceholder": "Search by name...",
+    "filterAll": "All",
+    "noResults": "No contacts found with these filters.",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "website": "Website",
+    "hours": "Hours",
+    "featuredTitle": "In-person and online support",
+    "featuredBody": "Are you a migrant or refugee living in Santa Catarina? The Círculos de Hospitalidade team offers free welcome and guidance, in person and online. Register on their page. Contact is via WhatsApp.",
+    "featuredCta": "Contact Círculos de Hospitalidade"
+  },
+  "map": {
+    "title": "Contacts map",
+    "subtitle": "Find support services with an address in Florianópolis on the map.",
+    "backToContacts": "Back to contacts",
+    "viewOnMap": "View on map",
+    "sidebarTitle": "Categories",
+    "sidebarHint": "Choose a category and click a contact to locate it on the map.",
+    "locateMe": "My location",
+    "locating": "Locating…",
+    "locateError": "Could not locate",
+    "howToGet": "Directions",
+    "noAddress": "No address on map",
+    "gestureTouch": "Use two fingers to move the map",
+    "gestureScroll": "Use Ctrl + scroll to zoom the map",
+    "gestureScrollMac": "Use ⌘ + scroll to zoom the map",
+    "busStopsShow": "Bus stops",
+    "busStopsHide": "Hide stops",
+    "busStopsLoading": "Loading…",
+    "busStop": "Bus stop",
+    "busStopShelter": "Stop with shelter",
+    "busStopSign": "Stop with sign"
+  },
+  "about": {
+    "title": "About the project",
+    "intro": "HIP - Florianópolis is an open, free portal that organizes practical information for anyone arriving (or preparing to arrive) in Florianópolis. The goal is to reduce first-day chaos: documents, transport, health, work, housing, and everything that stalls without centralized guidance in more than one language.",
+    "academicTitle": "CESUTech extension project",
+    "academicLead": "Connecting Generations and Driving the Future and Digital Agency",
+    "academicBodyBeforeUnicesusc": "This portal was developed as part of a CESUTech extension project, linked to Centro Universitário Cesusc (",
+    "academicUnicesuscLabel": "UNICESUSC",
+    "academicBodyBeforeCirculos": "), in Florianópolis, in partnership with ",
+    "academicCirculosLabel": "Círculos de Hospitalidade",
+    "academicBodyAfterCirculos": ". Despite its academic origin, the focus is practical: a real public utility tool for migrants in the city.",
+    "disclaimerTitle": "Important notice",
+    "disclaimerBeforeContact": "Information here is initial guidance and may change over time. Always confirm with official agencies before making an important decision. If you find something wrong or outdated, please ",
+    "disclaimerAfterContact": "."
+  },
+  "footer": {
+    "madeWith": "Made by volunteers in Florianópolis."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Common questions about using the HIP - Florianópolis portal.",
+    "stillNeedHelpTitle": "Still have questions?",
+    "stillNeedHelpBody": "If you didn't find what you were looking for, check the support contacts in Florianópolis.",
+    "stillNeedHelpCta": "See useful contacts",
+    "items": [
+      {
+        "q": "Is the portal free?",
+        "a": "Yes. HIP - Florianópolis is an open, free project. You pay nothing to access any information."
+      },
+      {
+        "q": "Do I need to create an account?",
+        "a": "No. All content is available without login. We don't have accounts yet — you can browse everything freely."
+      },
+      {
+        "q": "What languages is the portal available in?",
+        "a": "Portuguese, Spanish, French, and English. You can switch language anytime using the selector at the top of the page. Some editorial content is still being translated — in those cases, we show the Portuguese version with a notice."
+      },
+      {
+        "q": "Is the information official?",
+        "a": "We gather and organize information from public sources as initial guidance. It may change over time, so always confirm with official agencies before making an important decision."
+      },
+      {
+        "q": "How does the orientation trail work?",
+        "a": "It's a step-by-step path through the most important first-day topics: documents, health, transport, work, and more. Follow the suggested order or go straight to what you need now."
+      },
+      {
+        "q": "I found incorrect or outdated information. What should I do?",
+        "a": "Let us know. Use the \"let us know\" button on the About page or the contacts listed there. Your feedback helps keep everything accurate."
+      },
+      {
+        "q": "I need in-person support. Can the portal help?",
+        "a": "Yes. On the Contacts page and Map you'll find public agencies, NGOs, and support services in Florianópolis, with addresses and contact details."
+      },
+      {
+        "q": "Who maintains the portal?",
+        "a": "It's an academic extension project maintained by volunteers, in partnership with Círculos de Hospitalidade. Code and content are open to contributors."
+      }
+    ]
+  },
+  "common": {
+    "loading": "Loading...",
+    "comingSoon": "Coming soon",
+    "language": "Language",
+    "contentFallback": "This content is not yet available in English. Showing the Portuguese version.",
+    "visited": "Seen"
+  },
+  "welcome": {
+    "eyebrow": "Welcome!",
+    "title": "HIP - Florianópolis",
+    "subtitle": "Arriving in Floripa or already living here? Leave your contact to follow the portal. Takes under a minute, email optional.",
+    "form": {
+      "title": "I want to follow the portal",
+      "description": "First name, last name, phone, and country of origin. We only use this to share updates, no spam.",
+      "consent": "Purpose: portal contact only.",
+      "unsubscribe": "You can leave the list anytime. Just let us know.",
+      "firstName": "First name",
+      "firstNamePlaceholder": "Your first name",
+      "lastName": "Last name",
+      "lastNamePlaceholder": "Your last name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone / WhatsApp",
+      "phonePlaceholder": "(48) 90000-0000",
+      "contactHint": "Phone is required; email is optional.",
+      "nationality": "Nationality",
+      "nationalityPlaceholder": "Country of origin",
+      "nationalitySearch": "Search country…",
+      "nationalityClose": "Close",
+      "nationalityOtherPlaceholder": "Which country?",
+      "language": "Language",
+      "languageOther": "Other",
+      "languageOtherPlaceholder": "Which language?",
+      "languageOptions": {
+        "Español": "Spanish",
+        "Francês": "French",
+        "Inglês": "English"
+      },
+      "consentLabel": "I want portal updates by WhatsApp or email.",
+      "submit": "I want to follow",
+      "sending": "Sending…",
+      "successTitle": "All set!",
+      "successText": "Thanks for following HIP - Florianópolis. We'll keep you posted on portal news.",
+      "continue": "Continue",
+      "errorRequired": "Fill in first name, last name, and phone.",
+      "errorLanguage": "Select a language.",
+      "errorNationality": "Select your nationality.",
+      "errorConsent": "Check the consent box to continue.",
+      "errorSend": "Couldn't send right now. Please try again in a moment.",
+      "cta": "Open in Google Forms",
+      "ctaUnavailable": "Form coming soon"
+    }
+  },
+  "onboarding": {
+    "entry": {
+      "eyebrow": "Welcome!",
+      "title": "HIP - Florianópolis",
+      "subtitle": "Practical, free guide for people arriving or already living in Florianópolis: documents, health, transport, and more."
+    },
+    "firstTime": {
+      "eyebrow": "Before you start",
+      "title": "Is this your first time here?",
+      "subtitle": "You can sign up in one step and we'll show you around. Or jump straight to the content.",
+      "yes": "Yes, sign me up",
+      "no": "I already know the portal",
+      "skip": "Skip and go to the portal"
+    },
+    "hub": {
+      "eyebrow": "Where to start",
+      "brandSubtitle": "integration and permanence hub",
+      "returningTitle": "Good to see you again!",
+      "returningSubtitle": "Where would you like to continue?",
+      "newUserTitle": "You're signed up!",
+      "newUserSubtitle": "Choose where to start exploring."
+    },
+    "guide": {
+      "title": "Apps guide",
+      "description": "Presentation of the apps that help most in your first days in Floripa."
+    },
+    "portal": {
+      "title": "HIP Portal",
+      "description": "Guided trail, useful contacts, map, and practical content, all in one place."
+    }
+  },
+  "intro": {
+    "title": "A quick tour of the portal",
+    "subtitle": "Under a minute. Then you choose where to start.",
+    "skip": "Skip tour",
+    "next": "Next",
+    "finish": "Choose where to start",
+    "stepLabel": "Step {current} of {total}",
+    "steps": {
+      "menu": {
+        "title": "Floating menu",
+        "body": "On the portal, tap the compass at the bottom right for updates, guides, and your registration."
+      },
+      "nav": {
+        "title": "Top menu",
+        "body": "Home, Guidance, What's new, Blog, and Contacts: that's how you get around."
+      },
+      "language": {
+        "title": "Change language",
+        "body": "The flags at the top switch the portal between Portuguese, Spanish, French, and English."
+      },
+      "trail": {
+        "title": "Guided trail",
+        "body": "Under Guidance you'll find step-by-step help on documents, health, transport, and what usually stalls people in the first days."
+      }
+    }
+  },
+  "slides": {
+    "eyebrow": "Presentation",
+    "title": "Essential apps guide",
+    "subtitle": "Swipe to navigate slides. Tap to enlarge.",
+    "empty": "Slides will be available soon.",
+    "prev": "Previous",
+    "next": "Next",
+    "back": "Back to home"
+  },
+  "feedback": {
+    "trigger": "let us know",
+    "title": "Found something wrong?",
+    "description": "Tell us what's outdated or incorrect. Your help keeps the portal reliable for newcomers.",
+    "suggestion": "Your suggestion or correction",
+    "suggestionPlaceholder": "Describe what you found…",
+    "name": "Name (optional)",
+    "namePlaceholder": "Your name",
+    "email": "Email (optional)",
+    "emailPlaceholder": "you@email.com",
+    "emailHint": "Leave your email if you'd like a reply.",
+    "submit": "Send suggestion",
+    "sending": "Sending…",
+    "successTitle": "Thank you!",
+    "successText": "We received your suggestion. It really helps keep the portal accurate.",
+    "errorRequired": "Write your suggestion before sending.",
+    "errorSend": "Couldn't send right now. Please try again in a moment.",
+    "unavailable": "Coming soon",
+    "close": "Close"
+  },
+  "portalMenu": {
+    "label": "Portal menu",
+    "title": "Menu",
+    "news": "See recent updates",
+    "guides": "Browse guides",
+    "history": "My history",
+    "profile": "Profile",
+    "soonBadge": "Coming soon",
+    "close": "Close",
+    "newsAlert": "New"
+  },
+  "fab": {
+    "label": "Back to welcome",
+    "message": "We're glad you're here! Would you like to return to the welcome page?",
+    "confirm": "Back to welcome",
+    "dismiss": "Stay here"
+  },
+  "novidades": {
+    "eyebrow": "What's new",
+    "title": "Free courses and opportunities",
+    "subtitle": "We gather free courses, study tracks and training opportunities for people building their lives in Florianópolis. The list is reviewed by people before being published.",
+    "freeCoursesTitle": "Free courses",
+    "freeCoursesSubtitle": "Selected and verified by the team. Links go to the official enrollment page.",
+    "featuredLabel": "Featured",
+    "highlightTitle": "Featured track",
+    "emptyTitle": "New courses coming soon",
+    "emptyBody": "We're verifying free courses and study tracks. Check back soon or follow our progress from the welcome page.",
+    "deadlineLabel": "Enroll by",
+    "verifiedLabel": "Verified on",
+    "freeLabel": "Free",
+    "enrollmentOpen": "Spots available",
+    "enrollmentComingSoon": "Spots opening soon",
+    "formatOnline": "Online",
+    "formatPresencial": "In person",
+    "formatHibrido": "Hybrid",
+    "enrollCta": "Open course",
+    "externalHint": "Opens the official site in a new tab",
+    "saveCta": "Save course",
+    "agendaCta": "Add to calendar",
+    "comingSoonBadge": "Coming soon",
+    "fallbackNotice": "Some courses aren't translated into your language yet and appear in Portuguese.",
+    "previewNotice": "Layout preview — example content, not yet published. Visible only in the development environment.",
+    "guideEvPtOnly": "The Bradesco Virtual School route (free certificate) is in Portuguese and requires a CPF. Use Microsoft Learn above if you don't have that document yet."
+  }
+}

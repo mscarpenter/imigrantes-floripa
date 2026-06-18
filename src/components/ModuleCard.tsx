@@ -5,6 +5,7 @@ import { Icon } from "./Icon";
 import type { Module } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
@@ -28,7 +29,7 @@ export function ModuleCard({
   visited = false,
   active = false,
 }: ModuleCardProps) {
-  const t = module.translations[locale];
+  const { value: t } = resolveTranslation(module.translations, locale);
   const colors = colorsFor(module.color);
   const iconChip = plain
     ? "bg-primary/10 text-primary"
@@ -64,7 +65,7 @@ export function ModuleCard({
         {visited && (
           <span className="absolute bottom-4 right-4 flex items-center gap-1 text-[11px] font-medium text-warm">
             <CheckCircle2 className="size-3.5" />
-            {locale === "es" ? "Visto" : "Visto"}
+            {dict.common.visited}
           </span>
         )}
 

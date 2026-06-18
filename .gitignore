@@ -62,6 +62,11 @@ next-env.d.ts
 __pycache__/
 *.pyc
 
+# relatórios gerados pelo bot (logs locais / CI artifacts)
+/bot/reports/*.log
+/bot/reports/*.json
+!/bot/reports/.gitkeep
+
 # materiais de trabalho / referências soltas na raiz (não versionar binários pesados)
 /Ajustes - Portal Imigrantes*.jpg
 /Guia de Aplicativos Essenciais.pdf

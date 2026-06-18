@@ -1,0 +1,169 @@
+{
+  "$schema": "Fontes do bot de cursos. kind: institution | catalog_free | roadmap | campaign_monitor",
+  "rotationSlots": {
+    "featured_online_roadmap": {
+      "label": "Destaque rotativo (futura página /cursos)",
+      "sourceIds": ["ev-bradesco-trilhas"],
+      "refreshDays": 30
+    }
+  },
+  "sources": [
+    {
+      "id": "neplac-ufsc",
+      "label": "NePLAc UFSC — Português como Língua de Acolhimento",
+      "url": "https://neplac.paginas.ufsc.br",
+      "kind": "institution",
+      "formatDefault": "presencial",
+      "localOnly": true,
+      "defaultConfidence": "high",
+      "categorySlug": "educacao",
+      "tags": ["português", "migrantes", "ufsc", "florianópolis"],
+      "searchQueries": [
+        "NePLAc UFSC português imigrantes inscrições",
+        "Rodamundo UFSC edital português"
+      ]
+    },
+    {
+      "id": "ev-bradesco-trilhas",
+      "label": "Escola Virtual — Fundação Bradesco (trilhas)",
+      "url": "https://www.ev.org.br/",
+      "catalogUrl": "https://www.ev.org.br/cursos",
+      "trilhasUrl": "https://www.ev.org.br/trilhas-de-conhecimento",
+      "kind": "roadmap",
+      "formatDefault": "online",
+      "outputKind": "roadmap",
+      "defaultConfidence": "high",
+      "categorySlug": "educacao",
+      "tags": ["tecnologia", "trilha", "gratuito", "online", "rotativo"],
+      "focusAreas": [
+        "Análise de Dados",
+        "Desenvolvimento Pessoal e Profissional",
+        "Educação e Tecnologia",
+        "Inteligência Artificial",
+        "Negócios e Inovação",
+        "Produtividade",
+        "Programação",
+        "Tecnologia da Informação"
+      ],
+      "notes": "Não importar catálogo inteiro. Uma publicação = roteiro de trilhas tech + link para ev.org.br. Candidato fixo ao slot rotativo.",
+      "rotationSlot": "featured_online_roadmap"
+    },
+    {
+      "id": "sebrae-ead",
+      "label": "Sebrae — Cursos EAD gratuitos",
+      "url": "https://loja.sebrae.com.br/cursos/cursos-online",
+      "kind": "catalog_free",
+      "formatDefault": "online",
+      "defaultConfidence": "medium",
+      "categorySlug": "trabalho",
+      "tags": ["empreendedorismo", "gratuito", "online"],
+      "filterKeywords": ["gratuito", "empreender", "finanças", "marketing", "atendimento"],
+      "notes": "Catálogo grande. Bot sugere só cursos com selo Gratuito + relevância para imigrantes (trabalho/renda)."
+    },
+    {
+      "id": "senac-sc-gratuitos",
+      "label": "SENAC SC — Cursos gratuitos",
+      "url": "https://portal.sc.senac.br/cursos-gratuitos",
+      "kind": "catalog_free",
+      "formatDefault": "online",
+      "defaultConfidence": "high",
+      "categorySlug": "educacao",
+      "tags": ["senac", "gratuito", "sc"],
+      "alsoCheckPresencialFloripa": true,
+      "notes": "Online SC inteiro OK. Presencial só se unidade Floripa/GRMF."
+    },
+    {
+      "id": "sc-gov-ead",
+      "label": "Governo SC — Educação a distância",
+      "url": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+      "kind": "catalog_free",
+      "formatDefault": "online",
+      "defaultConfidence": "high",
+      "categorySlug": "educacao",
+      "tags": ["governo", "sc", "ead", "gratuito"]
+    },
+    {
+      "id": "fundacao-itau-autoformativos",
+      "label": "Fundação Itaú — Escola (autoformativos)",
+      "url": "https://www.fundacaoitau.org.br/escola/autoformativos",
+      "kind": "catalog_free",
+      "formatDefault": "online",
+      "defaultConfidence": "medium",
+      "categorySlug": "educacao",
+      "tags": ["gratuito", "online", "cultura", "educação"]
+    },
+    {
+      "id": "santander-open-academy",
+      "label": "Santander Open Academy",
+      "url": "https://www.santanderopenacademy.com/pt_br/",
+      "kind": "campaign_monitor",
+      "formatDefault": "online",
+      "defaultConfidence": "medium",
+      "categorySlug": "educacao",
+      "tags": ["campanha", "gratuito", "online"],
+      "checkFrequency": "weekly",
+      "notes": "Campanhas e cursos gratuitos rotativos. Nunca high sem confirmação humana na semana."
+    },
+    {
+      "id": "udemy-free",
+      "label": "Udemy — Cursos gratuitos",
+      "url": "https://www.udemy.com/courses/free/",
+      "kind": "campaign_monitor",
+      "formatDefault": "online",
+      "defaultConfidence": "low",
+      "categorySlug": "educacao",
+      "tags": ["campanha", "udemy", "tecnologia"],
+      "checkFrequency": "weekly",
+      "maxDraftsPerRun": 3,
+      "notes": "Lista muda muito. Máx. 3 sugestões/semana com tag tecnologia/português/trabalho. Expira rápido."
+    },
+    {
+      "id": "coursera-free",
+      "label": "Coursera — Busca cursos grátis",
+      "url": "https://www.coursera.org/courses?query=cursos%20gratis",
+      "kind": "campaign_monitor",
+      "formatDefault": "online",
+      "defaultConfidence": "low",
+      "categorySlug": "educacao",
+      "tags": ["campanha", "coursera"],
+      "checkFrequency": "weekly",
+      "maxDraftsPerRun": 3,
+      "notes": "Preferir cursos com subtítulos PT ou interface PT. Auditar gratuidade (audit vs certificate)."
+    },
+    {
+      "id": "ebac-free",
+      "label": "EBAC — Cursos",
+      "url": "https://ebaconline.com.br/cursos",
+      "kind": "campaign_monitor",
+      "formatDefault": "online",
+      "defaultConfidence": "low",
+      "categorySlug": "educacao",
+      "tags": ["campanha", "ebac", "tecnologia"],
+      "checkFrequency": "weekly",
+      "notes": "Monitorar workshops/campanhas gratuitas; ignorar catálogo pago padrão."
+    },
+    {
+      "id": "plac-ufsc",
+      "label": "PLAc UFSC (legado)",
+      "url": "https://plac.ufsc.br",
+      "kind": "institution",
+      "formatDefault": "presencial",
+      "localOnly": true,
+      "defaultConfidence": "medium",
+      "categorySlug": "educacao",
+      "tags": ["português", "ufsc"],
+      "notes": "Conferir redirecionamento para NePLAc antes de publicar."
+    }
+  ],
+  "blockedHosts": [
+    "facebook.com",
+    "instagram.com",
+    "twitter.com",
+    "x.com",
+    "youtube.com",
+    "linkedin.com",
+    "wikipedia.org",
+    "bit.ly",
+    "goo.gl"
+  ]
+}

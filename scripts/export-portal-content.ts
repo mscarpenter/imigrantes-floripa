@@ -15,17 +15,23 @@ import type { Locale } from "../src/i18n/config";
 const OUT_DIR = join(process.cwd(), "conteudo-portal");
 const LOCALE: Locale = "pt";
 
+function ptText<T>(translations: Partial<Record<Locale, T>>): T {
+  const t = translations[LOCALE];
+  if (!t) throw new Error(`Missing ${LOCALE} translation`);
+  return t;
+}
+
 function contactById(id: string): Contact | undefined {
   return contacts.find((c) => c.id === id);
 }
 
 function categoryName(slug: string): string {
   const cat = categories.find((c) => c.slug === slug);
-  return cat?.translations[LOCALE].name ?? slug;
+  return cat?.translations[LOCALE]?.name ?? slug;
 }
 
 function formatContact(c: Contact): string {
-  const t = c.translations[LOCALE];
+  const t = ptText(c.translations);
   const lines = [
     `#### ${t.name}`,
     "",
@@ -55,7 +61,7 @@ function formatContactsBlock(ids: string[]): string {
 }
 
 function formatTopic(topic: Topic, moduleSlug: string): string {
-  const t = topic.translations[LOCALE];
+  const t = ptText(topic.translations);
   const lines = [
     `### ${topic.order}. ${t.title}`,
     "",
@@ -72,7 +78,7 @@ function formatTopic(topic: Topic, moduleSlug: string): string {
 }
 
 function formatModule(mod: Module): string {
-  const t = mod.translations[LOCALE];
+  const t = ptText(mod.translations);
   const topics = [...(mod.topics ?? [])].sort((a, b) => a.order - b.order);
   const lines = [
     `## ${mod.order}. ${t.title}`,
@@ -137,7 +143,7 @@ function formatAllContacts(): string {
   for (const cat of sortedCats) {
     const list = byCategory.get(cat.slug);
     if (!list?.length) continue;
-    lines.push(`### ${cat.translations[LOCALE].name}`, "");
+    lines.push(`### ${ptText(cat.translations).name}`, "");
     for (const c of list) {
       lines.push(formatContact(c));
     }
@@ -201,7 +207,7 @@ function formatFaqAndPages(): string {
   );
 
   for (const card of onboardingCards) {
-    const c = card.translations[LOCALE];
+    const c = ptText(card.translations);
     lines.push(
       `#### ${c.tag}: ${c.title}`,
       "",
@@ -220,12 +226,12 @@ function buildTableOfContents(sortedModules: Module[]): string {
   lines.push("1. [Páginas institucionais e FAQ](#páginas-institucionais-e-faq)");
   lines.push("2. [Módulos e tópicos](#módulos-e-tópicos)");
   for (const mod of sortedModules) {
-    const t = mod.translations[LOCALE];
+    const t = ptText(mod.translations);
     const anchor = `${mod.order}-${mod.slug}`.toLowerCase();
     lines.push(`   - [${mod.order}. ${t.title}](#${mod.order}-${t.title.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "")})`);
     const topics = [...(mod.topics ?? [])].sort((a, b) => a.order - b.order);
     for (const topic of topics) {
-      lines.push(`     - ${topic.order}. ${topic.translations[LOCALE].title}`);
+      lines.push(`     - ${topic.order}. ${ptText(topic.translations).title}`);
     }
   }
   lines.push("3. [Contatos úteis](#contatos-úteis-lista-completa)");
@@ -281,7 +287,7 @@ function main() {
   mkdirSync(modulesDir, { recursive: true });
 
   for (const mod of sortedModules) {
-    const t = mod.translations[LOCALE];
+    const t = ptText(mod.translations);
     const filename = `${String(mod.order).padStart(2, "0")}-${mod.slug}.md`;
     const modHeader = [
       `# ${t.title}`,

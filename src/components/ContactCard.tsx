@@ -14,6 +14,7 @@ import type { Contact } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { getCategoryBySlug } from "@/lib/data/queries";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 import { Icon } from "./Icon";
 import { cn } from "@/lib/utils";
 
@@ -24,9 +25,11 @@ interface ContactCardProps {
 }
 
 export function ContactCard({ contact, locale, dict }: ContactCardProps) {
-  const t = contact.translations[locale];
+  const { value: t } = resolveTranslation(contact.translations, locale);
   const category = getCategoryBySlug(contact.categorySlug);
-  const categoryName = category?.translations[locale].name;
+  const categoryName = category
+    ? resolveTranslation(category.translations, locale).value.name
+    : undefined;
 
   const hasDetails = Boolean(
     contact.phone ||
@@ -43,9 +46,9 @@ export function ContactCard({ contact, locale, dict }: ContactCardProps) {
     <Card className="group flex h-full flex-col gap-0 rounded-2xl border border-border/60 p-0 shadow-soft ring-0 transition-shadow duration-300 hover:shadow-soft-lg">
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <div className="flex items-start gap-3">
-          <h3 className="min-w-0 flex-1 text-base font-semibold leading-snug tracking-tight">
+          <p className="min-w-0 flex-1 text-base font-semibold leading-snug tracking-tight">
             {t.name}
-          </h3>
+          </p>
           {categoryName && (
             <span
               className={cn(

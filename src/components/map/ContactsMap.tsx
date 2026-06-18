@@ -9,6 +9,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { Icon } from "@/components/Icon";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 
 const MapCanvas = dynamic(() => import("./MapCanvas"), {
   ssr: false,
@@ -185,7 +186,7 @@ export function ContactsMap({
                       >
                         <Icon name={category.icon} className="size-3.5" />
                       </span>
-                      {category.translations[locale].name}
+                      {resolveTranslation(category.translations, locale).value.name}
                       <span className="text-xs text-muted-foreground">
                         ({list.length})
                       </span>
@@ -221,7 +222,7 @@ export function ContactsMap({
                                 <MapPin className="mt-0.5 size-3.5 shrink-0 text-muted-foreground" />
                               )}
                               <span className="min-w-0 flex-1">
-                                {contact.translations[locale].name}
+                                {resolveTranslation(contact.translations, locale).value.name}
                                 {!mappable && (
                                   <span className="block text-xs text-muted-foreground/70">
                                     {dict.map.noAddress}

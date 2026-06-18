@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-130206",
+    "createdAt": "2026-06-18",
+    "botRunId": "local",
+    "sourceUrl": "https://portal.sc.senac.br/curso/130206/palhoca/transformacao-digital-com-inteligencia-artificial",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-130206",
+    "slug": "senac-sc-130206",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/130206/palhoca/transformacao-digital-com-inteligencia-artificial",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Transformação Digital com Inteligência Artificial",
+        "summary": "Este curso tem como objetivo desenvolver a (s) seguinte (s) competência (s): aplicar inteligência artificial para impulsionar a transformação digital em empresas e organizações. É destinado às pessoas que queiram entender e aplicar a integração da IA em processos de negócios existentes, melhorando a eficiência, inovaçã",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Transformação Digital com Inteligência Artificial",
+        "summary": "Este curso tem como objetivo desenvolver a (s) seguinte (s) competência (s): aplicar inteligência artificial para impulsionar a transformação digital em empresas e organizações. É … (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

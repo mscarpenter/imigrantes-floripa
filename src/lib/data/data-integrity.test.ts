@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { modules } from "./modules";
 import { contacts } from "./contacts";
 import { categories } from "./categories";
+import { courses } from "./courses";
 import { moduleColors } from "./colors";
 import { validIconNames } from "@/components/Icon";
 import { locales } from "@/i18n/config";
@@ -99,16 +100,17 @@ describe("static data integrity", () => {
 
   it("has pt and es translations for all modules, topics and contacts", () => {
     const missing: string[] = [];
+    const requiredLocales = ["pt", "es"] as const;
 
     for (const mod of modules) {
-      for (const locale of locales) {
+      for (const locale of requiredLocales) {
         if (!mod.translations[locale]) {
           missing.push(`module:${mod.slug} → locale:${locale}`);
         }
       }
 
       for (const topic of mod.topics ?? []) {
-        for (const locale of locales) {
+        for (const locale of requiredLocales) {
           if (!topic.translations[locale]) {
             missing.push(
               `module:${mod.slug}/topic:${topic.slug} → locale:${locale}`,
@@ -119,7 +121,7 @@ describe("static data integrity", () => {
     }
 
     for (const contact of contacts) {
-      for (const locale of locales) {
+      for (const locale of requiredLocales) {
         if (!contact.translations[locale]) {
           missing.push(`contact:${contact.id} → locale:${locale}`);
         }
@@ -127,7 +129,7 @@ describe("static data integrity", () => {
     }
 
     for (const category of categories) {
-      for (const locale of locales) {
+      for (const locale of requiredLocales) {
         if (!category.translations[locale]) {
           missing.push(`category:${category.slug} → locale:${locale}`);
         }
@@ -135,5 +137,49 @@ describe("static data integrity", () => {
     }
 
     expect(missing, "missing locale translations in static data").toEqual([]);
+  });
+
+  it("documents i18n: UI uses 4 locales (see dictionaries.parity.test.ts)", () => {
+    expect(locales).toEqual(["pt", "es", "fr", "en"]);
+  });
+
+  it("has valid published courses", () => {
+    const invalid: string[] = [];
+    const ids = new Set<string>();
+    const slugs = new Set<string>();
+
+    for (const course of courses) {
+      if (ids.has(course.id)) invalid.push(`duplicate course id:${course.id}`);
+      ids.add(course.id);
+      if (slugs.has(course.slug)) invalid.push(`duplicate course slug:${course.slug}`);
+      slugs.add(course.slug);
+
+      if (!categorySlugs.has(course.categorySlug)) {
+        invalid.push(`course:${course.id} → categorySlug:${course.categorySlug}`);
+      }
+
+      for (const id of course.contactIds ?? []) {
+        if (!contactIds.has(id)) {
+          invalid.push(`course:${course.id} → contactId:${id}`);
+        }
+      }
+
+      if (course.status === "published") {
+        if (!course.translations.pt) {
+          invalid.push(`course:${course.id} → missing pt translation`);
+        }
+        if (!course.translations.es) {
+          invalid.push(`course:${course.id} → missing es translation`);
+        }
+        if (!course.verifiedAt) {
+          invalid.push(`course:${course.id} → published without verifiedAt`);
+        }
+        if (!course.enrollmentStatus) {
+          invalid.push(`course:${course.id} → published without enrollmentStatus`);
+        }
+      }
+    }
+
+    expect(invalid, "invalid courses in courses.json").toEqual([]);
   });
 });

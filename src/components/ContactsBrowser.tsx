@@ -7,6 +7,7 @@ import { Icon } from "./Icon";
 import type { Contact, Category } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 import { cn } from "@/lib/utils";
 
 interface ContactsBrowserProps {
@@ -41,7 +42,7 @@ export function ContactsBrowser({
         return false;
       }
       if (!q) return true;
-      const t = contact.translations[locale];
+      const t = resolveTranslation(contact.translations, locale).value;
       return (
         t.name.toLowerCase().includes(q) ||
         t.description.toLowerCase().includes(q)
@@ -139,7 +140,7 @@ export function ContactsBrowser({
                 )}
               >
                 <Icon name={category.icon} className="size-3.5" />
-                {category.translations[locale].name}
+                {resolveTranslation(category.translations, locale).value.name}
               </button>
             );
           })}

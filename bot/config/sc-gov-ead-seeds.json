@@ -1,0 +1,20 @@
+{
+  "$comment": "Links EAD oficiais verificados pelo bot (Gov SC). Atualize manualmente se a página SPA mudar.",
+  "hubUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+  "seeds": [
+    {
+      "id": "sed-sc-ead",
+      "title": "Secretaria de Educação de SC — Educação a distância",
+      "url": "https://www.educacao.sc.gov.br/",
+      "categorySlug": "educacao",
+      "tags": ["governo", "sc", "ead"]
+    },
+    {
+      "id": "universidade-aberta-brasil",
+      "title": "Universidade Aberta do Brasil (UAB)",
+      "url": "https://www.gov.br/mec/pt-br/acesso-a-informacao/institucional/estrutura-organizacional/orgaos-especificos-singulares/secretaria-de-educacao-profissional-e-tecnologica/uab",
+      "categorySlug": "educacao",
+      "tags": ["governo", "ead", "graduação"]
+    }
+  ]
+}

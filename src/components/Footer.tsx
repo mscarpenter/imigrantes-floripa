@@ -12,6 +12,7 @@ export function Footer({ dict, locale }: FooterProps) {
   const links = [
     { href: `/${locale}/portal`, label: dict.nav.home },
     { href: `/${locale}/orientacao`, label: dict.nav.trail },
+    { href: `/${locale}/novidades`, label: dict.nav.news },
     { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/contatos`, label: dict.nav.contacts },
     { href: `/${locale}/sobre`, label: dict.nav.about },

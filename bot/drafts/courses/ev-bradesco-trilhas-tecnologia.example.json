@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "draftId": "ev-bradesco-trilhas-tecnologia",
+    "createdAt": "2026-06-18",
+    "botRunId": "example-manual",
+    "sourceUrl": "https://www.ev.org.br/trilhas-de-conhecimento",
+    "confidence": "high",
+    "outputKind": "roadmap",
+    "notes": "EXEMPLO — publicação editorial (roteiro), não um curso único. Revisar trilhas ativas antes de promover. Candidato ao slot rotativo featured_online_roadmap."
+  },
+  "course": {
+    "id": "ev-bradesco-trilhas-tecnologia",
+    "slug": "ev-bradesco-trilhas-tecnologia",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.ev.org.br/trilhas-de-conhecimento",
+    "tags": [
+      "trilha",
+      "tecnologia",
+      "gratuito",
+      "online",
+      "inteligência artificial",
+      "programação",
+      "rotativo"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Roteiro: trilhas de tecnologia na Escola Virtual Bradesco",
+        "summary": "Catálogo gratuito e 100% online da Fundação Bradesco, com trilhas em análise de dados, IA, programação, TI e mais. Ideal para quem busca qualificação digital com flexibilidade de horário — estude no seu ritmo e valide certificados no site oficial.",
+        "institution": "Fundação Bradesco — Escola Virtual (ev.org.br)"
+      },
+      "es": {
+        "title": "Ruta: trilhas de tecnología en la Escuela Virtual Bradesco",
+        "summary": "Catálogo gratuito y 100% en línea de la Fundación Bradesco, con rutas en análisis de datos, IA, programación, TI y más. Ideal para quien busca formación digital flexible — estudia a tu ritmo y valida certificados en el sitio oficial.",
+        "institution": "Fundación Bradesco — Escuela Virtual (ev.org.br)"
+      }
+    }
+  }
+}

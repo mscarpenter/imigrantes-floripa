@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "draftId": "microsoft-learn-trilhas-tecnologia",
+    "createdAt": "2026-06-18",
+    "botRunId": "example-manual",
+    "sourceUrl": "https://learn.microsoft.com/pt-br/training/browse/",
+    "confidence": "high",
+    "outputKind": "roadmap",
+    "notes": "EXEMPLO: publicação editorial (roteiro), não um curso único. Alternativa sem CPF à EV Bradesco. Candidato ao slot rotativo featured_online_roadmap."
+  },
+  "course": {
+    "id": "microsoft-learn-trilhas-tecnologia",
+    "slug": "microsoft-learn-trilhas-tecnologia",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://learn.microsoft.com/pt-br/training/browse/",
+    "tags": [
+      "trilha",
+      "tecnologia",
+      "gratuito",
+      "online",
+      "microsoft learn",
+      "sem cpf",
+      "multilíngue",
+      "rotativo"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Roteiro: trilhas de tecnologia no Microsoft Learn (sem CPF)",
+        "summary": "Roteiros gratuitos oficiais da Microsoft. Cadastro com conta Microsoft (e-mail), sem CPF. Conteúdo em português, espanhol, inglês, francês e mais de 60 idiomas. Trilhas em IA, programação, Power BI e GitHub.",
+        "institution": "Microsoft (Microsoft Learn, learn.microsoft.com)"
+      },
+      "es": {
+        "title": "Ruta: trilhas de tecnología en Microsoft Learn (sin CPF)",
+        "summary": "Rutas gratuitas oficiales de Microsoft. Registro con cuenta Microsoft, sin CPF. Contenido multilingüe. Rutas en IA, programación, Power BI y GitHub.",
+        "institution": "Microsoft (Microsoft Learn, learn.microsoft.com)"
+      }
+    }
+  }
+}

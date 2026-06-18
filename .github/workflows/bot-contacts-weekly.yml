@@ -1,0 +1,116 @@
+name: Bot — pesquisar e checar contatos
+
+on:
+  schedule:
+    # Segundas-feiras 09:00 BRT (12:00 UTC)
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  research-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Pesquisa gratuita (DuckDuckGo) + rascunhos
+        id: research
+        run: npm run bot:research-contacts 2>&1 | tee bot/reports/research-contacts.log
+        continue-on-error: true
+
+      - name: Verificar URLs (GET, gov.br tolerado)
+        id: links
+        run: npm run bot:check-contacts 2>&1 | tee bot/reports/contact-links.log
+        continue-on-error: true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bot-contacts-report
+          path: |
+            bot/reports/
+            bot/drafts/contacts/*.pending.json
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Abrir issue se houver sugestões ou revisão manual
+        if: steps.research.outcome == 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+            const reportsDir = path.join(process.cwd(), "bot/reports");
+            const files = fs.existsSync(reportsDir)
+              ? fs.readdirSync(reportsDir).filter((f) => f.startsWith("research-contacts-") && f.endsWith(".json"))
+              : [];
+            if (files.length === 0) return;
+
+            const latest = files.sort().at(-1);
+            const data = JSON.parse(fs.readFileSync(path.join(reportsDir, latest), "utf8"));
+            const suggestions = (data.results || []).filter((r) => r.action === "suggest_update");
+            const manual = (data.results || []).filter((r) => r.action === "needs_manual_review");
+
+            if (suggestions.length === 0 && manual.length === 0) return;
+
+            let body = "Job semanal de pesquisa de contatos (busca gratuita, sem Google pago).\n\n";
+            body += `- Sugestões de atualização: **${suggestions.length}**\n`;
+            body += `- Revisão manual necessária: **${manual.length}**\n\n`;
+
+            if (suggestions.length > 0) {
+              body += "### Sugestões\n";
+              for (const s of suggestions) {
+                body += `- \`${s.contactId}\`: ${s.currentWebsite} → ${s.suggestedWebsite}\n`;
+              }
+              body += "\nBaixe o artefato **bot-contacts-report**, revise `.pending.json` e abra PR (`bot_content.md`).\n";
+            }
+
+            if (manual.length > 0) {
+              body += "\n### Revisão manual\n";
+              for (const m of manual.slice(0, 8)) {
+                body += `- \`${m.contactId}\`: ${m.notes}\n`;
+              }
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "Bot: revisar contatos (pesquisa semanal)",
+              body:
+                body +
+                "\n\nPara e-mail: **Watch** → Custom → Issues + Pull requests (labels `bot`, `bot-contacts`).",
+              labels: ["bot", "bot-contacts"],
+            });
+
+      - name: Abrir issue se checagem de links falhar
+        if: steps.links.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "Bot: links de contatos inacessíveis",
+              body: [
+                "Alguns links falharam na checagem GET (exclui gov.br bloqueado a robôs).",
+                "",
+                `Workflow: ${context.workflow} #${context.runNumber}`,
+                "Baixe o artefato **bot-contacts-report**.",
+                "Rode `npm run bot:research-contacts` localmente para sugestões via DuckDuckGo.",
+              ].join("\n"),
+              labels: ["bot", "bot-contacts"],
+            });
+
+      - name: Falhar se links realmente mortos
+        if: steps.links.outcome == 'failure'
+        run: exit 1

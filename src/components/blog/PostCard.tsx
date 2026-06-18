@@ -5,6 +5,7 @@ import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { Post } from "@/lib/data/types";
 import { getPostTranslation, readingMinutes } from "@/lib/data/queries";
+import { formatDate } from "@/i18n/intl-locale";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
@@ -58,11 +59,7 @@ export function PostCard({ post, locale, dict }: PostCardProps) {
   }
 
   const minutes = readingMinutes(t.body);
-  const date = new Intl.DateTimeFormat(locale === "es" ? "es-ES" : "pt-BR", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  }).format(new Date(post.date));
+  const date = formatDate(locale, post.date);
 
   return (
     <Link href={`/${locale}/blog/${post.slug}`} className="group block h-full">

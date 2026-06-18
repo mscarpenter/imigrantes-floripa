@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "draftId": "ev-bradesco-trilhas-tecnologia",
+    "createdAt": "2026-06-18",
+    "botRunId": "local",
+    "sourceUrl": "https://www.ev.org.br/trilhas-de-conhecimento",
+    "confidence": "high",
+    "outputKind": "roadmap",
+    "notes": "Roteiro editorial (slot rotativo). Revisar trilhas antes de promover."
+  },
+  "course": {
+    "id": "ev-bradesco-trilhas-tecnologia",
+    "slug": "ev-bradesco-trilhas-tecnologia",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.ev.org.br/trilhas-de-conhecimento",
+    "sourceUrl": "https://www.ev.org.br/trilhas-de-conhecimento",
+    "tags": [
+      "trilha",
+      "tecnologia",
+      "gratuito",
+      "online",
+      "rotativo"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Roteiro: trilhas de tecnologia na Escola Virtual Bradesco",
+        "summary": "Catálogo gratuito e 100% online da Fundação Bradesco (ev.org.br). Trilhas tech encontradas na última checagem: Excel 2016 (do b&#225;sico ao avan&#231;ado), Intelig&#234;ncia Artificial para Organiza&#231;&#245;es do Terceiro Setor, Office 365, Office na Pr&#225;tica. Estude no seu ritmo e valide certificados no site oficial.",
+        "institution": "Fundação Bradesco — Escola Virtual (ev.org.br)"
+      },
+      "es": {
+        "title": "Ruta: trilhas de tecnología en la Escuela Virtual Bradesco",
+        "summary": "Catálogo gratuito y 100% en línea. Trilhas revisadas: Excel 2016 (do b&#225;sico ao avan&#231;ado), Intelig&#234;ncia Artificial para Organiza&#231;&#245;es do Terceiro Setor, Office 365, Office na Pr&#225;tica. Estudia a tu ritmo en ev.org.br.",
+        "institution": "Fundación Bradesco — Escuela Virtual (ev.org.br)"
+      }
+    }
+  }
+}

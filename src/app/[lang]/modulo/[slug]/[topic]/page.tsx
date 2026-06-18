@@ -17,6 +17,8 @@ import { ReadingProgress } from "@/components/article/ReadingProgress";
 import { extractHeadings } from "@/lib/markdown/toc";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
+import { ContentFallbackNotice } from "@/components/ContentFallbackNotice";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 
 export async function generateStaticParams() {
   const modules = getAllModules();
@@ -32,7 +34,7 @@ export async function generateMetadata({
   if (!isLocale(lang)) return {};
   const found = getTopicBySlug(slug, topicSlug);
   if (!found) return {};
-  const t = found.topic.translations[lang];
+  const t = resolveTranslation(found.topic.translations, lang).value;
   return { title: t.title, description: t.summary };
 }
 
@@ -47,8 +49,8 @@ export default async function TopicPage({
 
   const { module, topic } = found;
   const dict = await getDictionary(lang);
-  const t = topic.translations[lang];
-  const moduleT = module.translations[lang];
+  const { value: t, isFallback } = resolveTranslation(topic.translations, lang);
+  const moduleT = resolveTranslation(module.translations, lang).value;
   const colors = colorsFor(module.color);
   const topics = [...(module.topics ?? [])].sort((a, b) => a.order - b.order);
   const currentIndex = topics.findIndex((x) => x.slug === topic.slug);
@@ -125,7 +127,7 @@ export default async function TopicPage({
                     )}
                   >
                     <span className="text-[10px] opacity-70">{other.order}</span>
-                    <span>{other.translations[lang].title}</span>
+                    <span>{resolveTranslation(other.translations, lang).value.title}</span>
                   </Link>
                 );
               })}
@@ -145,6 +147,10 @@ export default async function TopicPage({
               label={dict.trail.onThisPage}
               variant="mobile"
             />
+
+            {isFallback && (
+              <ContentFallbackNotice message={dict.common.contentFallback} />
+            )}
 
             <MarkdownContent body={t.body} color={module.color} />
 
@@ -188,7 +194,7 @@ export default async function TopicPage({
                       {dict.trail.previousTopic}
                     </span>
                     <span className="mt-0.5 block truncate font-semibold leading-tight">
-                      {previousTopic.translations[lang].title}
+                      {resolveTranslation(previousTopic.translations, lang).value.title}
                     </span>
                   </span>
                 </Link>
@@ -205,7 +211,7 @@ export default async function TopicPage({
                       {dict.trail.nextTopic}
                     </span>
                     <span className="mt-0.5 block truncate font-semibold leading-tight">
-                      {nextTopic.translations[lang].title}
+                      {resolveTranslation(nextTopic.translations, lang).value.title}
                     </span>
                   </span>
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
@@ -222,7 +228,7 @@ export default async function TopicPage({
                       {dict.trail.nextStep}
                     </span>
                     <span className="mt-0.5 block truncate font-semibold leading-tight">
-                      {nextModule.translations[lang].title}
+                      {resolveTranslation(nextModule.translations, lang).value.title}
                     </span>
                   </span>
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">

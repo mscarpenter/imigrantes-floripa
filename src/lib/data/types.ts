@@ -18,7 +18,7 @@ export interface Topic {
   slug: string;
   order: number;
   contactIds: string[];
-  translations: Record<Locale, TopicTranslation>;
+  translations: Partial<Record<Locale, TopicTranslation>>;
 }
 
 export interface Module {
@@ -27,7 +27,7 @@ export interface Module {
   icon: string;
   color: ModuleColor;
   contactIds: string[];
-  translations: Record<Locale, ModuleTranslation>;
+  translations: Partial<Record<Locale, ModuleTranslation>>;
   topics?: Topic[];
 }
 
@@ -40,7 +40,7 @@ export interface Category {
   order: number;
   icon: string;
   color: ModuleColor;
-  translations: Record<Locale, CategoryTranslation>;
+  translations: Partial<Record<Locale, CategoryTranslation>>;
 }
 
 export interface PostTranslation {
@@ -88,5 +88,78 @@ export interface Contact {
   /** Geographic coordinates (when the contact has a physical address). */
   lat?: number;
   lng?: number;
-  translations: Record<Locale, ContactTranslation>;
+  translations: Partial<Record<Locale, ContactTranslation>>;
+}
+
+export type CourseFormat = "presencial" | "online" | "hibrido";
+
+/** Whether official enrollment is open right now (human-verified). */
+export type CourseEnrollmentStatus = "open" | "coming_soon";
+
+/** Editorial lifecycle — only `published` appears on the site. */
+export type CourseStatus =
+  | "pending_review"
+  | "published"
+  | "archived";
+
+export interface CourseTranslation {
+  title: string;
+  summary: string;
+  institution: string;
+}
+
+export interface Course {
+  id: string;
+  slug: string;
+  status: CourseStatus;
+  categorySlug: string;
+  format: CourseFormat;
+  isFree: boolean;
+  /** Official enrollment or info page. */
+  url: string;
+  /** Where the bot or editor verified the listing. */
+  sourceUrl?: string;
+  /** ISO date (YYYY-MM-DD) when a human confirmed the listing. */
+  verifiedAt?: string;
+  /** ISO date — last day to enroll, if known. */
+  enrollmentDeadline?: string;
+  /** Human-verified enrollment availability on the official site. */
+  enrollmentStatus?: CourseEnrollmentStatus;
+  contactIds?: string[];
+  tags: string[];
+  translations: Partial<Record<Locale, CourseTranslation>>;
+  /** Bot run identifier (GitHub Actions run id, etc.). */
+  botRunId?: string;
+  /** ISO date — last automated freshness check. */
+  lastCheckedAt?: string;
+}
+
+export interface CourseDraftMeta {
+  draftId: string;
+  createdAt: string;
+  botRunId?: string;
+  sourceUrl: string;
+  confidence?: "low" | "medium" | "high";
+  notes?: string;
+}
+
+export interface CourseDraftFile {
+  meta: CourseDraftMeta;
+  course: Omit<Course, "status"> & { status?: "pending_review" };
+}
+
+export interface ContactPatchMeta {
+  draftId: string;
+  contactId: string;
+  sourceUrl: string;
+  checkedAt: string;
+  botRunId?: string;
+}
+
+export interface ContactPatchFile {
+  meta: ContactPatchMeta;
+  patch: Partial<
+    Pick<Contact, "phone" | "whatsapp" | "email" | "address" | "website" | "hours" | "lat" | "lng">
+  >;
+  rationale: string;
 }

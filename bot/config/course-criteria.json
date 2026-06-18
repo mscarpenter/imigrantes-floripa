@@ -1,0 +1,117 @@
+{
+  "$comment": "Critérios de inclusão/exclusão para o bot de cursos. Usado pelo research-courses (futuro) e revisão humana.",
+  "audience": "Imigrantes em Florianópolis — foco em integração, renda, idioma e autonomia digital.",
+  "formatRules": {
+    "online": {
+      "allowed": true,
+      "notes": "Maioria esperada. Brasil ou internacional com interface em PT (ou ES aceitável com ressalva no resumo)."
+    },
+    "hibrido": {
+      "allowed": true,
+      "requiresLocalPresence": true,
+      "notes": "Só se houver encontros presenciais em Florianópolis ou região metropolitana."
+    },
+    "presencial": {
+      "allowed": true,
+      "requiresFloripa": true,
+      "cityKeywords": [
+        "florianópolis",
+        "florianopolis",
+        "são josé",
+        "sao jose",
+        "palhoça",
+        "biguaçu",
+        "biguacu",
+        "santo amaro",
+        "tijucas"
+      ],
+      "notes": "Obrigatório endereço ou menção explícita à Grande Floripa. Fora disso → rejeitar ou marcar low."
+    }
+  },
+  "costRules": {
+    "mustBeFreeOrCampaign": true,
+    "accept": [
+      "gratuito",
+      "100% online gratuito",
+      "campanha gratuita por tempo limitado",
+      "bolsa / voucher 100%"
+    ],
+    "reject": [
+      "apenas pago sem campanha gratuita ativa",
+      "trial que exige cartão sem deixar claro"
+    ],
+    "campaignSources": [
+      "udemy-free",
+      "coursera-free",
+      "ebac-free",
+      "santander-open-academy"
+    ],
+    "notes": "Fontes de campanha: confidence no máximo medium até humano confirmar que ainda está grátis."
+  },
+  "relevanceTags": {
+    "highPriority": [
+      "português",
+      "integração",
+      "trabalho",
+      "empreendedorismo",
+      "tecnologia",
+      "informática",
+      "certificação",
+      "migrantes",
+      "refugiados"
+    ],
+    "mediumPriority": [
+      "finanças",
+      "marketing",
+      "atendimento",
+      "gestão",
+      "educação"
+    ],
+    "lowPriorityUnlessLocal": [
+      "agronegócio",
+      "franquias",
+      "setor específico sem ligação com imigrantes"
+    ]
+  },
+  "confidenceHeuristics": {
+    "high": [
+      "Fonte institution ou catalog_free governamental/ONG",
+      "URL de inscrição estável",
+      "Gratuidade explícita na página",
+      "PT + dados completos (título, instituição, formato)"
+    ],
+    "medium": [
+      "Catálogo grande (Sebrae, EV) — curso individual ainda válido",
+      "Campanha gratuita ativa confirmada na semana",
+      "Presencial em Floripa mas falta confirmar vagas/prazo"
+    ],
+    "low": [
+      "Só landing de campanha com UTM / página genérica",
+      "Não confirma gratuidade",
+      "Presencial fora de Floripa",
+      "Conteúdo duplicado ou link quebrado"
+    ]
+  },
+  "outputKinds": {
+    "course": "Entrada normal em courses.json (um curso).",
+    "roadmap": "Uma publicação editorial por fonte/trilha (ex.: roteiro EV Bradesco). Não importar centenas de cursos.",
+    "campaign_highlight": "Destaque rotativo de campanha gratuita (Udemy/Coursera/EBAC). Expira; revisar semanalmente."
+  },
+  "rotation": {
+    "featuredSlot": "featured_online_roadmap",
+    "description": "Na futura página /cursos, um bloco rotativo pode destacar um roteiro (ex. EV) sem listar todo o catálogo.",
+    "refreshDays": 30
+  },
+  "i18n": {
+    "draftRequires": ["pt", "es"],
+    "recommended": ["fr", "en"],
+    "uiFallbackLocale": "pt"
+  },
+  "geoBounds": {
+    "comment": "Mesma caixa de sanidade dos contatos — Grande Floripa",
+    "latMin": -28.1,
+    "latMax": -27.2,
+    "lngMin": -48.8,
+    "lngMax": -48.3
+  }
+}

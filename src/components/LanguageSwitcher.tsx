@@ -37,14 +37,14 @@ export function LanguageSwitcher({ current }: LanguageSwitcherProps) {
             aria-label={localeLabels[locale]}
             title={localeLabels[locale]}
             className={cn(
-              "inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-xs font-semibold uppercase tracking-wide transition-colors",
+              "inline-flex items-center gap-1 rounded-full px-1.5 py-1 text-xs font-semibold uppercase tracking-wide transition-colors sm:gap-1.5 sm:px-2",
               active
                 ? "bg-foreground text-background"
                 : "text-muted-foreground hover:bg-muted hover:text-foreground",
             )}
           >
-            <Flag locale={locale} className="size-4 w-5" />
-            <span>{locale}</span>
+            <Flag locale={locale} className="size-4 w-5 shrink-0" />
+            <span className="hidden min-[420px]:inline">{locale}</span>
           </button>
         );
       })}

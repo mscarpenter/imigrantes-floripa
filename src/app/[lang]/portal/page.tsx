@@ -4,10 +4,11 @@ import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getAllModules } from "@/lib/data/queries";
 import { onboardingCards } from "@/lib/data/onboarding";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 import { ModuleScrollGrid } from "@/components/ModuleScrollGrid";
 import { TrilhaCarousel } from "@/components/home/TrilhaCarousel";
 import { AboutMoreDialog } from "@/components/home/AboutMoreDialog";
-import { WelcomeFab } from "@/components/WelcomeFab";
+import { PortalMenuFab } from "@/components/PortalMenuFab";
 import { Reveal } from "@/components/motion/Reveal";
 
 export default async function PortalPage({
@@ -18,10 +19,9 @@ export default async function PortalPage({
 
   const dict = await getDictionary(lang);
   const modules = getAllModules();
-  const isEs = lang === "es";
 
   const cards = onboardingCards.map((card) => {
-    const c = card.translations[lang];
+    const { value: c } = resolveTranslation(card.translations, lang);
     return {
       id: card.id,
       icon: card.icon,
@@ -34,11 +34,6 @@ export default async function PortalPage({
     };
   });
 
-  const t = {
-    prev: "Anterior",
-    next: isEs ? "Siguiente" : "Próximo",
-  };
-
   return (
     <div className="bg-background text-foreground">
       {/* ONBOARDING EDITORIAL — carrossel full-bleed (slide 1 = boas-vindas) */}
@@ -49,13 +44,13 @@ export default async function PortalPage({
             title: dict.home.heroTitle,
             subtitle: dict.home.heroSubtitle,
             image: "/illustrations/floripa-hero.png",
-            label: isEs ? "Bienvenida" : "Boas-vindas",
+            label: dict.home.welcomeLabel,
           }}
           cards={cards}
           trailLabel={dict.home.ctaTrail}
           trailHref={`/${lang}/orientacao`}
-          prevLabel={t.prev}
-          nextLabel={t.next}
+          prevLabel={dict.slides.prev}
+          nextLabel={dict.slides.next}
         />
       </section>
 
@@ -139,7 +134,7 @@ export default async function PortalPage({
         </Reveal>
       </section>
 
-      <WelcomeFab locale={lang} strings={dict.fab} />
+      <PortalMenuFab locale={lang} strings={dict.portalMenu} />
     </div>
   );
 }

@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "draftId": "plac-ufsc-portugues-imigrantes",
+    "createdAt": "2026-06-17",
+    "botRunId": "example-manual",
+    "sourceUrl": "https://plac.ufsc.br/",
+    "confidence": "high",
+    "notes": "EXEMPLO — não promover sem revisar inscrições e calendário atuais no site da UFSC."
+  },
+  "course": {
+    "id": "plac-ufsc-portugues-imigrantes",
+    "slug": "plac-ufsc-portugues-imigrantes",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://plac.ufsc.br/",
+    "tags": ["português", "migrantes", "ufsc"],
+    "translations": {
+      "pt": {
+        "title": "PLAc — Português para imigrantes e refugiados (UFSC)",
+        "summary": "Curso gratuito de português voltado a migrantes e refugiados. Foco em comunicação do dia a dia no Brasil.",
+        "institution": "UFSC — Programa de Línguas e Assimilação Cultural (PLAc)"
+      },
+      "es": {
+        "title": "PLAc — Portugués para inmigrantes y refugiados (UFSC)",
+        "summary": "Curso gratuito de portugués para migrantes y refugiados. Enfoque en la comunicación cotidiana en Brasil.",
+        "institution": "UFSC — Programa de Línguas e Assimilação Cultural (PLAc)"
+      }
+    }
+  }
+}

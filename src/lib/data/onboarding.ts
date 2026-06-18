@@ -17,7 +17,7 @@ export interface OnboardingCard {
   path: string;
   /** Banner illustration in /public (same for both locales, no text). */
   image: string;
-  translations: Record<Locale, OnboardingTranslation>;
+  translations: Partial<Record<Locale, OnboardingTranslation>>;
 }
 
 /**

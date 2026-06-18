@@ -8,6 +8,7 @@
     "home": "Inicio",
     "trail": "Ruta",
     "guidance": "Orientación",
+    "news": "Novedades",
     "blog": "Blog",
     "contacts": "Contactos",
     "about": "Sobre",
@@ -18,6 +19,7 @@
     "heroSubtitle": "Una ruta simple, paso a paso, con todo lo que necesitas resolver en los primeros días en la ciudad: documentos, salud, transporte, trabajo y más.",
     "ctaTrail": "Empezar la ruta",
     "ctaContacts": "Ver contactos útiles",
+    "welcomeLabel": "Bienvenida",
     "sectionModules": "Qué vas a encontrar aquí",
     "sectionAbout": "Esta es una iniciativa para acoger",
     "aboutBody": "Quien llega a una ciudad nueva necesita resolver varias cosas al mismo tiempo y no siempre sabe por dónde empezar. Este portal reúne información práctica y gratuita para inmigrantes que ya están en Florianópolis o que se están preparando para llegar.",
@@ -37,6 +39,7 @@
     "publishedOn": "Publicado el",
     "backToBlog": "Volver al blog",
     "availableInPt": "Este texto todavía está disponible solo en portugués. Una versión en español llegará pronto.",
+    "contentFallback": "Este texto todavía está disponible solo en portugués. Una versión en español llegará pronto.",
     "empty": "Pronto, nuevos textos por aquí.",
     "comingSoon": "Próximamente",
     "featured": "Destacado"
@@ -130,7 +133,7 @@
       },
       {
         "q": "¿En qué idiomas está disponible el portal?",
-        "a": "En portugués y español. Puedes cambiar de idioma en cualquier momento en el selector ubicado en la parte superior de la página."
+        "a": "En portugués, español, francés e inglés. Puedes cambiar de idioma en cualquier momento en el selector ubicado en la parte superior de la página. Parte del contenido editorial aún se está traduciendo; en esos casos, mostramos la versión en portugués con un aviso."
       },
       {
         "q": "¿La información es oficial?",
@@ -157,25 +160,34 @@
   "common": {
     "loading": "Cargando...",
     "comingSoon": "Próximamente",
-    "language": "Idioma"
+    "language": "Idioma",
+    "contentFallback": "Este contenido aún no está disponible en español. Mostrando la versión en portugués.",
+    "visited": "Visto"
   },
   "welcome": {
-    "eyebrow": "¡Hola! Bienvenido(a)",
-    "title": "Acompaña el desarrollo de este portal",
-    "subtitle": "Estamos construyendo HIP - Florianópolis. Deja tu contacto para recibir novedades sobre el lanzamiento. Es rápido y opcional.",
+    "eyebrow": "¡Bienvenido(a)!",
+    "title": "HIP - Florianópolis",
+    "subtitle": "¿Llegaste a Floripa o ya vives aquí? Deja tu contacto para seguir el portal. Tarda menos de un minuto y el correo es opcional.",
     "form": {
       "title": "Quiero acompañar el portal",
-      "description": "Pedimos solo nombre, correo y teléfono. Usamos tu contacto únicamente para avisarte sobre el portal. No pedimos estatus migratorio ni datos sensibles.",
-      "consent": "Finalidad: solo contacto sobre el portal.",
-      "unsubscribe": "Puedes salir de la lista cuando quieras, solo avísanos.",
-      "name": "Nombre",
-      "namePlaceholder": "¿Cómo te llamamos?",
+      "description": "Nombre, apellido, teléfono y país de origen. Usamos estos datos solo para avisarte novedades, nada de spam.",
+      "consent": "Finalidad: contacto sobre el portal.",
+      "unsubscribe": "Puedes salir de la lista cuando quieras. Solo avísanos.",
+      "firstName": "Nombre",
+      "firstNamePlaceholder": "Tu nombre",
+      "lastName": "Apellido",
+      "lastNamePlaceholder": "Tu apellido",
       "email": "Correo",
       "emailPlaceholder": "tu@correo.com",
       "phone": "Teléfono / WhatsApp",
       "phonePlaceholder": "(48) 90000-0000",
-      "contactHint": "Indica correo o teléfono (al menos uno).",
-      "language": "Idioma (opcional)",
+      "contactHint": "El teléfono es obligatorio; el correo, si quieres dejarlo.",
+      "nationality": "Nacionalidad",
+      "nationalityPlaceholder": "País de origen",
+      "nationalitySearch": "Buscar país…",
+      "nationalityClose": "Cerrar",
+      "nationalityOtherPlaceholder": "¿Qué país?",
+      "language": "Idioma",
       "languageOther": "Otro",
       "languageOtherPlaceholder": "¿Qué idioma?",
       "languageOptions": {
@@ -183,28 +195,76 @@
         "Francês": "Francés",
         "Inglês": "Inglés"
       },
-      "consentLabel": "Acepto recibir novedades sobre el lanzamiento del portal.",
+      "consentLabel": "Quiero recibir novedades del portal por WhatsApp o correo.",
       "submit": "Quiero acompañar",
       "sending": "Enviando…",
       "successTitle": "¡Todo listo!",
       "successText": "Gracias por acompañar HIP - Florianópolis. Te avisaremos sobre las novedades del portal.",
-      "errorRequired": "Completa tu nombre y al menos un contacto (correo o teléfono).",
+      "continue": "Continuar",
+      "errorRequired": "Completa nombre, apellido y teléfono.",
+      "errorLanguage": "Selecciona un idioma.",
+      "errorNationality": "Selecciona tu nacionalidad.",
       "errorConsent": "Marca el consentimiento para continuar.",
       "errorSend": "No fue posible enviar ahora. Inténtalo de nuevo en unos instantes.",
       "cta": "Abrir en Google Forms",
       "ctaUnavailable": "Formulario próximamente"
+    }
+  },
+  "onboarding": {
+    "entry": {
+      "eyebrow": "¡Bienvenido(a)!",
+      "title": "HIP - Florianópolis",
+      "subtitle": "Guía práctica y gratuita para quien llega o ya vive en Florianópolis: documentos, salud, transporte y más."
     },
-    "options": {
-      "title": "O explora ahora",
-      "guide": {
-        "title": "Guía de aplicaciones",
-        "description": "Revisa la presentación con las apps esenciales para empezar en Floripa."
-      },
-      "portal": {
-        "title": "Portal (versión beta)",
-        "description": "Conoce el portal HIP - Florianópolis, en construcción."
-      },
+    "firstTime": {
+      "eyebrow": "Antes de empezar",
+      "title": "¿Es tu primera vez por aquí?",
+      "subtitle": "Si quieres, te registras en un paso y te mostramos cómo funciona el portal. Si prefieres, ve directo al contenido.",
+      "yes": "Sí, quiero registrarme",
+      "no": "Ya conozco el portal",
       "skip": "Saltar e ir al portal"
+    },
+    "hub": {
+      "eyebrow": "Por dónde empezar",
+      "brandSubtitle": "hub de integración y permanencia",
+      "returningTitle": "¡Qué bueno verte de nuevo!",
+      "returningSubtitle": "¿Por dónde quieres continuar?",
+      "newUserTitle": "¡Registro listo!",
+      "newUserSubtitle": "Elige por dónde quieres empezar a explorar."
+    },
+    "guide": {
+      "title": "Guía de aplicaciones",
+      "description": "Presentación con las apps que más ayudan en los primeros días en Floripa."
+    },
+    "portal": {
+      "title": "Portal HIP",
+      "description": "Ruta guiada, contactos útiles, mapa y contenidos prácticos, todo en un solo lugar."
+    }
+  },
+  "intro": {
+    "title": "Un tour rápido por el portal",
+    "subtitle": "Tarda menos de un minuto. Después eliges por dónde empezar.",
+    "skip": "Saltar tour",
+    "next": "Siguiente",
+    "finish": "Elegir por dónde empezar",
+    "stepLabel": "Paso {current} de {total}",
+    "steps": {
+      "menu": {
+        "title": "Menú flotante",
+        "body": "En el portal, toca la brújula en la esquina inferior derecha: accedes a novedades, guías y tu registro."
+      },
+      "nav": {
+        "title": "Menú superior",
+        "body": "Inicio, Orientación, Novedades, Blog y Contactos: por ahí navegas."
+      },
+      "language": {
+        "title": "Cambiar idioma",
+        "body": "Las banderas arriba cambian el portal entre portugués, español, francés e inglés."
+      },
+      "trail": {
+        "title": "Ruta guiada",
+        "body": "En Orientación está el paso a paso sobre documentos, salud, transporte y lo que suele trabarse en los primeros días."
+      }
     }
   },
   "slides": {
@@ -236,10 +296,48 @@
     "unavailable": "Próximamente",
     "close": "Cerrar"
   },
+  "portalMenu": {
+    "label": "Menú del portal",
+    "title": "Menú",
+    "news": "Ver novedades recientes",
+    "guides": "Ver guías",
+    "history": "Mi historial",
+    "profile": "Perfil",
+    "soonBadge": "Pronto",
+    "close": "Cerrar",
+    "newsAlert": "Novedad"
+  },
   "fab": {
     "label": "Volver a la bienvenida",
     "message": "¡Estamos felices de tenerte por aquí! ¿Quieres volver a la página de bienvenida?",
     "confirm": "Volver a la bienvenida",
     "dismiss": "Quedarme aquí"
+  },
+  "novidades": {
+    "eyebrow": "Novedades",
+    "title": "Cursos y oportunidades gratuitas",
+    "subtitle": "Reunimos cursos gratuitos, rutas de estudio y oportunidades de formación para quienes están construyendo su vida en Florianópolis. La lista es revisada por personas antes de publicarse.",
+    "freeCoursesTitle": "Cursos gratuitos",
+    "freeCoursesSubtitle": "Seleccionados y verificados por el equipo. Los enlaces llevan a la inscripción oficial.",
+    "featuredLabel": "Destacado",
+    "highlightTitle": "Ruta destacada",
+    "emptyTitle": "Pronto, nuevos cursos por aquí",
+    "emptyBody": "Estamos verificando cursos gratuitos y rutas de estudio. Vuelve pronto o sigue el desarrollo desde la página de bienvenida.",
+    "deadlineLabel": "Inscripciones hasta",
+    "verifiedLabel": "Verificado el",
+    "freeLabel": "Gratuito",
+    "enrollmentOpen": "Plazas disponibles",
+    "enrollmentComingSoon": "Plazas próximamente",
+    "formatOnline": "En línea",
+    "formatPresencial": "Presencial",
+    "formatHibrido": "Híbrido",
+    "enrollCta": "Acceder al curso",
+    "externalHint": "Abre el sitio oficial en una nueva pestaña",
+    "saveCta": "Guardar curso",
+    "agendaCta": "Añadir a la agenda",
+    "comingSoonBadge": "Pronto",
+    "fallbackNotice": "Algunos cursos aún no se han traducido a tu idioma y aparecen en portugués.",
+    "previewNotice": "Vista previa de diseño — contenido de ejemplo, aún no publicado. Visible solo en entorno de desarrollo.",
+    "guideEvPtOnly": "La ruta de la Escuela Virtual Bradesco (con certificado gratuito) está en portugués y exige CPF. Usa Microsoft Learn arriba si aún no tienes ese documento."
   }
 }

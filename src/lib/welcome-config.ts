@@ -23,10 +23,12 @@ export const GOOGLE_FORM_ACTION = GOOGLE_FORM_URL.replace(
 
 // Mapeamento campo -> ID da pergunta no Google Forms.
 export const GOOGLE_FORM_FIELDS = {
-  name: "entry.366340186",
+  firstName: "entry.366340186",
+  lastName: "entry.1618168832",
   email: "entry.121275218",
   phone: "entry.811564496",
   language: "entry.154772705",
+  nationality: "entry.226794735",
   consent: "entry.1869454645",
 } as const;
 
@@ -44,3 +46,8 @@ export const GOOGLE_FORM_LANGUAGE_OPTIONS = [
 // Valor especial do Google Forms quando se usa a opção "Outro" (com texto livre).
 // Requer que a pergunta "Idioma" tenha o "Outro" de verdade ativado no Forms.
 export const GOOGLE_FORM_OTHER_OPTION_VALUE = "__other_option__";
+
+export {
+  GOOGLE_FORM_NATIONALITIES,
+  GOOGLE_FORM_NATIONALITY_OTHER,
+} from "./welcome-nationalities";

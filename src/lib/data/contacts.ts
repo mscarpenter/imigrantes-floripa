@@ -73,7 +73,7 @@ export const contacts: Contact[] = [
       "Casa de Direitos - Rua Antônio Mariano de Souza, 1135 - Ipiranga, São José - SC",
     lat: -27.564678,
     lng: -48.626107,
-    website: "https://www.sc.caritas.org.br",
+    website: "https://sc.caritas.org.br",
     hours: "Seg-Sex 13:30-18:00",
     translations: {
       pt: {

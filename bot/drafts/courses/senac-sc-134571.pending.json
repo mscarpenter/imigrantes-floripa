@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-134571",
+    "createdAt": "2026-06-18",
+    "botRunId": "local",
+    "sourceUrl": "https://portal.sc.senac.br/curso/134571/florianopolis/auxiliar-de-cozinha",
+    "confidence": "high",
+    "notes": "Turma: RESTAURANTE ESCOLA SENAC. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-134571",
+    "slug": "senac-sc-134571",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/134571/florianopolis/auxiliar-de-cozinha",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Auxiliar de Cozinha",
+        "summary": "Objetivo geral: Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos: - Promover o desenvolvimento do aluno por meio de ações que articulem e mobilizem conhecimentos, habilidades, valores e atitudes de forma potencialmente criativa e que est",
+        "institution": "SENAC SC — Florianópolis"
+      },
+      "es": {
+        "title": "Auxiliar de Cozinha",
+        "summary": "Objetivo geral: Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos: - Promover o desenvolvimento do… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Florianópolis"
+      }
+    }
+  }
+}

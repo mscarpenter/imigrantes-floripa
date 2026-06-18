@@ -1,0 +1,152 @@
+[
+  {
+    "id": "plac-ufsc-portugues-imigrantes",
+    "slug": "plac-ufsc-portugues-imigrantes",
+    "status": "published",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://plac.ufsc.br/",
+    "sourceUrl": "https://plac.ufsc.br/",
+    "verifiedAt": "2026-06-17",
+    "enrollmentStatus": "coming_soon",
+    "tags": ["português", "migrantes", "ufsc", "gratuito"],
+    "translations": {
+      "pt": {
+        "title": "PLAc — Português para imigrantes e refugiados (UFSC)",
+        "summary": "Curso gratuito de português voltado a migrantes e refugiados. Foco em comunicação do dia a dia no Brasil.",
+        "institution": "UFSC — Programa de Línguas e Assimilação Cultural (PLAc)"
+      },
+      "es": {
+        "title": "PLAc — Portugués para inmigrantes y refugiados (UFSC)",
+        "summary": "Curso gratuito de portugués para migrantes y refugiados. Enfoque en la comunicación cotidiana en Brasil.",
+        "institution": "UFSC — Programa de Línguas e Assimilação Cultural (PLAc)"
+      }
+    }
+  },
+  {
+    "id": "senac-sc-130206",
+    "slug": "senac-sc-130206",
+    "status": "published",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/130206/palhoca/transformacao-digital-com-inteligencia-artificial",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "verifiedAt": "2026-06-18",
+    "enrollmentStatus": "open",
+    "tags": ["senac", "gratuito", "presencial", "tecnologia"],
+    "translations": {
+      "pt": {
+        "title": "Transformação Digital com Inteligência Artificial",
+        "summary": "Aplique inteligência artificial para impulsionar a transformação digital em empresas e organizações. Para quem quer entender e integrar IA em processos de negócio, melhorando eficiência e inovação.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Transformación digital con inteligencia artificial",
+        "summary": "Aplica inteligencia artificial para impulsar la transformación digital en empresas y organizaciones. (Información completa en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  },
+  {
+    "id": "senac-sc-135338",
+    "slug": "senac-sc-135338",
+    "status": "published",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/135338/palhoca/engenharia-de-prompts-na-comunicacao-com-ia",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "verifiedAt": "2026-06-18",
+    "enrollmentStatus": "open",
+    "tags": ["senac", "gratuito", "presencial", "tecnologia", "ia"],
+    "translations": {
+      "pt": {
+        "title": "Engenharia de Prompts na Comunicação com IA",
+        "summary": "Estruture e aplique prompts eficazes para interação com modelos de linguagem e crie soluções personalizadas em diferentes áreas de atuação.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Engenharia de Prompts na Comunicación con IA",
+        "summary": "Estructura y aplica prompts eficaces para interactuar con modelos de lenguaje. (Información completa en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  },
+  {
+    "id": "senac-sc-153661",
+    "slug": "senac-sc-153661",
+    "status": "published",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/153661/palhoca/metodologias-ageis-na-gestao-de-times",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "verifiedAt": "2026-06-18",
+    "enrollmentStatus": "open",
+    "tags": ["senac", "gratuito", "presencial", "gestão"],
+    "translations": {
+      "pt": {
+        "title": "Metodologias Ágeis na Gestão de Times",
+        "summary": "Princípios das metodologias ágeis para gestão de times com entrega constante e incremental. Destinado a líderes e profissionais de gestão de pessoas.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Metodologías ágiles en la gestión de equipos",
+        "summary": "Principios de metodologías ágiles para la gestión de equipos. (Información completa en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  },
+  {
+    "id": "senac-sc-134571",
+    "slug": "senac-sc-134571",
+    "status": "published",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/134571/florianopolis/auxiliar-de-cozinha",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "verifiedAt": "2026-06-18",
+    "enrollmentStatus": "coming_soon",
+    "tags": ["senac", "gratuito", "presencial", "trabalho"],
+    "translations": {
+      "pt": {
+        "title": "Auxiliar de Cozinha",
+        "summary": "Formação gratuita para atuar como auxiliar de cozinha, com foco em práticas profissionais, rotina de cozinha e segurança alimentar.",
+        "institution": "SENAC SC — Florianópolis"
+      },
+      "es": {
+        "title": "Auxiliar de cocina",
+        "summary": "Formación gratuita para trabajar como auxiliar de cocina. (Información completa en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Florianópolis"
+      }
+    }
+  },
+  {
+    "id": "sc-gov-ead-hub",
+    "slug": "sc-gov-ead-hub",
+    "status": "published",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "verifiedAt": "2026-06-18",
+    "enrollmentStatus": "open",
+    "tags": ["governo", "sc", "ead", "online", "gratuito"],
+    "translations": {
+      "pt": {
+        "title": "Cursos EAD — Governo de Santa Catarina",
+        "summary": "Portal oficial do Governo de Santa Catarina com orientações e links para cursos de educação a distância. Consulte requisitos e matrículas nos sites das instituições parceiras.",
+        "institution": "Governo do Estado de Santa Catarina"
+      },
+      "es": {
+        "title": "Cursos EAD — Gobierno de Santa Catarina",
+        "summary": "Portal oficial del Gobierno de Santa Catarina con orientaciones y enlaces a cursos a distancia. (Información completa en portugués en el sitio oficial.)",
+        "institution": "Gobierno del Estado de Santa Catarina"
+      }
+    }
+  }
+]

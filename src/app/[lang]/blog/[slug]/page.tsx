@@ -18,6 +18,8 @@ import { ReadingProgress } from "@/components/article/ReadingProgress";
 import { extractHeadings } from "@/lib/markdown/toc";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
+import { ContentFallbackNotice } from "@/components/ContentFallbackNotice";
+import { formatDate } from "@/i18n/intl-locale";
 
 export async function generateStaticParams() {
   return getAllPosts()
@@ -50,11 +52,7 @@ export default async function PostPage({
   const colors = colorsFor(post.color);
   const headings = extractHeadings(t.body);
   const minutes = readingMinutes(t.body);
-  const date = new Intl.DateTimeFormat(lang === "es" ? "es-ES" : "pt-BR", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  }).format(new Date(post.date));
+  const date = formatDate(lang, post.date);
 
   return (
     <article>
@@ -124,15 +122,10 @@ export default async function PostPage({
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_15rem] lg:gap-14">
           <main className="min-w-0">
             {isFallback && (
-              <div
-                className={cn(
-                  "mb-8 rounded-xl border p-4 text-sm leading-relaxed text-foreground/90",
-                  colors.softBg,
-                  colors.softBorder,
-                )}
-              >
-                {dict.blog.availableInPt}
-              </div>
+              <ContentFallbackNotice
+                message={dict.blog.contentFallback}
+                className={cn(colors.softBg, colors.softBorder)}
+              />
             )}
 
             <TableOfContents

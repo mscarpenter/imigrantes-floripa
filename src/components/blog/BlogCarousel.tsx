@@ -55,7 +55,7 @@ export function BlogCarousel({ posts, locale, dict }: BlogCarouselProps) {
       <div className="mb-4 hidden justify-end gap-2 sm:flex">
         <button
           type="button"
-          aria-label={locale === "es" ? "Anterior" : "Anterior"}
+          aria-label={dict.slides.prev}
           onClick={() => scrollByCards(-1)}
           disabled={!canPrev}
           className={arrowBtn}
@@ -64,7 +64,7 @@ export function BlogCarousel({ posts, locale, dict }: BlogCarouselProps) {
         </button>
         <button
           type="button"
-          aria-label={locale === "es" ? "Siguiente" : "Próximo"}
+          aria-label={dict.slides.next}
           onClick={() => scrollByCards(1)}
           disabled={!canNext}
           className={arrowBtn}

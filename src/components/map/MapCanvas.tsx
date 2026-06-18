@@ -14,6 +14,7 @@ import type { Contact } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { getCategoryBySlug } from "@/lib/data/queries";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 
 declare module "leaflet" {
   interface MapOptions {
@@ -314,7 +315,7 @@ export default function MapCanvas({
           if (contact.lat == null || contact.lng == null) return null;
           const category = getCategoryBySlug(contact.categorySlug);
           const hex = CATEGORY_HEX[category?.color ?? "blue"] ?? "#3b82f6";
-          const t = contact.translations[locale];
+          const t = resolveTranslation(contact.translations, locale).value;
           return (
             <Marker
               key={contact.id}
@@ -331,7 +332,7 @@ export default function MapCanvas({
                   </p>
                   {category && (
                     <p className="text-xs font-medium text-neutral-500">
-                      {category.translations[locale].name}
+                      {resolveTranslation(category.translations, locale).value.name}
                     </p>
                   )}
                   {contact.address && (

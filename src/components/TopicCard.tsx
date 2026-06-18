@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import type { Topic } from "@/lib/data/types";
 import type { ModuleColor } from "@/lib/data/colors";
 import type { Locale } from "@/i18n/config";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 import { colorsFor } from "@/lib/data/colors";
 import { cn } from "@/lib/utils";
 
@@ -20,7 +21,7 @@ export function TopicCard({
   moduleColor,
   locale,
 }: TopicCardProps) {
-  const t = topic.translations[locale];
+  const { value: t } = resolveTranslation(topic.translations, locale);
   const colors = colorsFor(moduleColor);
   return (
     <Link

@@ -74,6 +74,14 @@ export function Reveal({
     );
 
     observer.observe(node);
+
+    // Conteúdo above-the-fold ou âncora (#hash) pode não disparar o observer a tempo.
+    const rect = node.getBoundingClientRect();
+    const inView =
+      rect.top < window.innerHeight * 0.9 &&
+      rect.bottom > window.innerHeight * 0.05;
+    if (inView) setVisible(true);
+
     return () => observer.disconnect();
   }, [once]);
 

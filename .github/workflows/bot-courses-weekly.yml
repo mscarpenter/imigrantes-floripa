@@ -1,0 +1,213 @@
+name: Bot — pesquisar cursos
+
+on:
+  schedule:
+    # Quartas-feiras 09:00 BRT (12:00 UTC)
+    - cron: "0 12 * * 3"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  research-courses:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Pesquisar fontes (stub → relatório)
+        id: research
+        run: npm run bot:research-courses 2>&1 | tee bot/reports/research-courses.log
+
+      - name: Validar rascunhos existentes
+        run: npm run bot:validate
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bot-courses-report
+          path: |
+            bot/reports/research-courses-*.json
+            bot/reports/research-courses.log
+            bot/drafts/courses/*.pending.json
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: PR automático (confidence high)
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+            const { execSync } = require("child_process");
+
+            const draftsDir = path.join(process.cwd(), "bot/drafts/courses");
+            if (!fs.existsSync(draftsDir)) return;
+
+            const pending = fs
+              .readdirSync(draftsDir)
+              .filter((f) => f.endsWith(".pending.json"));
+
+            const high = [];
+            for (const file of pending) {
+              const raw = JSON.parse(
+                fs.readFileSync(path.join(draftsDir, file), "utf8"),
+              );
+              if (raw.meta?.confidence === "high") high.push({ file, raw });
+            }
+
+            if (high.length === 0) {
+              core.info("Nenhum rascunho high para PR automático.");
+              return;
+            }
+
+            const branch = `bot/courses-${context.runNumber}`;
+            execSync(`git config user.name "github-actions[bot]"`);
+            execSync(`git config user.email "github-actions[bot]@users.noreply.github.com"`);
+            execSync(`git checkout -b ${branch}`);
+            execSync(`git add bot/drafts/courses/*.pending.json`);
+            execSync(`git commit -m "bot(courses): rascunhos high para revisão [skip ci]"`);
+            execSync(`git push origin ${branch}`);
+
+            const lines = high.map(
+              (h) =>
+                `- **${h.raw.meta.draftId}** — ${h.raw.course.translations?.pt?.title ?? h.file}\n  Fonte: ${h.raw.meta.sourceUrl}\n  Confiança: high`,
+            );
+
+            const { data: pr } = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `bot(courses): ${high.length} rascunho(s) para revisão`,
+              head: branch,
+              base: "main",
+              body: [
+                "## Bot de cursos — revisão humana obrigatória",
+                "",
+                "Rascunhos com **confidence: high**. Não faz merge sem checklist em `.github/PULL_REQUEST_TEMPLATE/bot_content.md`.",
+                "",
+                ...lines,
+                "",
+                "### Idiomas",
+                "- PT + ES obrigatórios no rascunho",
+                "- FR + EN: conferir UI (`npm test`) e adicionar traduções se possível",
+                "",
+                "### Após aprovar",
+                "```bash",
+                "npm run bot:promote-course -- bot/drafts/courses/<arquivo>.pending.json",
+                "```",
+                "",
+                `Workflow: ${context.workflow} #${context.runNumber}`,
+              ].join("\n"),
+            });
+
+            core.setOutput("pr_url", pr.html_url);
+            core.info(`PR criado: ${pr.html_url}`);
+
+      - name: Issue para medium/low ou sem PR high
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+
+            const draftsDir = path.join(process.cwd(), "bot/drafts/courses");
+            const pending = fs.existsSync(draftsDir)
+              ? fs
+                  .readdirSync(draftsDir)
+                  .filter((f) => f.endsWith(".pending.json"))
+              : [];
+
+            const buckets = { high: [], medium: [], low: [], unset: [] };
+            for (const file of pending) {
+              const raw = JSON.parse(
+                fs.readFileSync(path.join(draftsDir, file), "utf8"),
+              );
+              const c = raw.meta?.confidence ?? "unset";
+              (buckets[c] ?? buckets.unset).push({ file, raw });
+            }
+
+            const reportsDir = path.join(process.cwd(), "bot/reports");
+            const reportFiles = fs.existsSync(reportsDir)
+              ? fs
+                  .readdirSync(reportsDir)
+                  .filter((f) => f.startsWith("research-courses-") && f.endsWith(".json"))
+              : [];
+            const latestReport = reportFiles.sort().at(-1);
+            let stubNote = "";
+            if (latestReport) {
+              const data = JSON.parse(
+                fs.readFileSync(path.join(reportsDir, latestReport), "utf8"),
+              );
+              if (data.draftsGenerated === 0) {
+                stubNote =
+                  "\n> Pesquisa automática ainda em stub — 0 rascunhos gerados. Fontes listadas no relatório.\n";
+              }
+            }
+
+            const needsIssue =
+              buckets.medium.length > 0 ||
+              buckets.low.length > 0 ||
+              buckets.unset.length > 0 ||
+              stubNote !== "";
+
+            if (!needsIssue && buckets.high.length > 0) {
+              core.info("Só rascunhos high — PR já aberto.");
+              return;
+            }
+
+            if (
+              !needsIssue &&
+              pending.length === 0 &&
+              stubNote === ""
+            ) {
+              core.info("Nada a notificar.");
+              return;
+            }
+
+            let body = "Job semanal do bot de cursos.\n";
+            body += stubNote;
+            body += `\n- Rascunhos **medium**: ${buckets.medium.length}\n`;
+            body += `- Rascunhos **low**: ${buckets.low.length}\n`;
+            body += `- Sem confidence: ${buckets.unset.length}\n\n`;
+
+            for (const [level, items] of Object.entries(buckets)) {
+              if (level === "high" || items.length === 0) continue;
+              body += `### ${level}\n`;
+              for (const { file, raw } of items) {
+                body += `- \`${file}\` — ${raw.meta?.draftId ?? "?"}\n`;
+              }
+              body += "\n";
+            }
+
+            body += "Baixe o artefato **bot-courses-report** ou veja Actions.\n";
+            body += "Para receber por e-mail: **Watch** → Custom → Issues + Pull requests.\n";
+
+            const title = "Bot: revisar cursos (pesquisa semanal)";
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              labels: "bot,bot-courses",
+            });
+            if (issues.some((i) => i.title === title)) {
+              core.info("Issue já aberta — não duplicar.");
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ["bot", "bot-courses"],
+            });

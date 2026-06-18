@@ -31,7 +31,7 @@ export default async function FaqPage({ params }: PageProps<"/[lang]/faq">) {
       <div className="mt-8 flex flex-col gap-3">
         {dict.faq.items.map((item, i) => (
           <Reveal key={item.q} delay={Math.min(i * 50, 300)}>
-            <details className="group rounded-xl border bg-card transition-colors hover:border-primary/40">
+            <details className="group rounded-xl border border-border/60 bg-card shadow-soft transition-all duration-300 hover:border-warm/50">
               <summary className="flex cursor-pointer items-center justify-between gap-4 p-5 font-medium [&::-webkit-details-marker]:hidden">
                 <span>{item.q}</span>
                 <ChevronDown

@@ -17,6 +17,7 @@ import type { Contact } from "@/lib/data/types";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { getCategoryBySlug } from "@/lib/data/queries";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 import { Icon } from "./Icon";
 import { cn } from "@/lib/utils";
 
@@ -35,9 +36,11 @@ export function ContactRow({
   active = false,
   onOpen,
 }: ContactRowProps) {
-  const t = contact.translations[locale];
+  const { value: t } = resolveTranslation(contact.translations, locale);
   const category = getCategoryBySlug(contact.categorySlug);
-  const categoryName = category?.translations[locale].name;
+  const categoryName = category
+    ? resolveTranslation(category.translations, locale).value.name
+    : undefined;
   const hasMap = contact.lat != null && contact.lng != null;
 
   const hasDetails = Boolean(

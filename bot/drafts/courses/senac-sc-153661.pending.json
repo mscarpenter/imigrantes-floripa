@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-153661",
+    "createdAt": "2026-06-18",
+    "botRunId": "local",
+    "sourceUrl": "https://portal.sc.senac.br/curso/153661/palhoca/metodologias-ageis-na-gestao-de-times",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-153661",
+    "slug": "senac-sc-153661",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/153661/palhoca/metodologias-ageis-na-gestao-de-times",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "gestao-e-negocios"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Metodologias Ágeis na Gestão de Times",
+        "summary": "Este curso tem como objetivo apresentar os princípios das metodologias ágeis para a melhoria da Gestão de Times baseadas em entrega constante e incremental, visando a finalização rápida das atividades. É destinado a profissionais da área de gestão de pessoas, líderes de equipes e demais interessados.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Metodologias Ágeis na Gestão de Times",
+        "summary": "Este curso tem como objetivo apresentar os princípios das metodologias ágeis para a melhoria da Gestão de Times baseadas em entrega constante e incremental, visando a finalização r… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

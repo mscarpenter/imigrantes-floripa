@@ -2,6 +2,7 @@ import { modules } from "./modules";
 import { contacts } from "./contacts";
 import { categories } from "./categories";
 import { posts } from "./posts";
+import { courses } from "./courses";
 import type {
   Module,
   Contact,
@@ -9,8 +10,11 @@ import type {
   Topic,
   Post,
   PostTranslation,
+  Course,
+  CourseTranslation,
 } from "./types";
 import type { Locale } from "@/i18n/config";
+import { resolveTranslation } from "@/i18n/resolve-translation";
 
 export function getAllModules(): Module[] {
   return [...modules].sort((a, b) => a.order - b.order);
@@ -93,16 +97,42 @@ export function getPostTranslation(
   post: Post,
   locale: Locale,
 ): { t: PostTranslation; isFallback: boolean } {
-  const requested = post.translations[locale];
-  if (requested) return { t: requested, isFallback: false };
-  const fallback =
-    post.translations[post.sourceLocale] ??
-    Object.values(post.translations)[0];
-  return { t: fallback as PostTranslation, isFallback: true };
+  const { value, isFallback } = resolveTranslation(post.translations, locale);
+  return { t: value, isFallback };
 }
 
 /** Rough reading-time estimate in minutes (~200 words/min). */
 export function readingMinutes(body: string): number {
   const words = body.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / 200));
+}
+
+/** Published courses only, soonest enrollment deadline first. */
+export function getPublishedCourses(): Course[] {
+  return courses
+    .filter((c) => c.status === "published")
+    .sort((a, b) => {
+      if (a.enrollmentDeadline && b.enrollmentDeadline) {
+        return a.enrollmentDeadline.localeCompare(b.enrollmentDeadline);
+      }
+      if (a.enrollmentDeadline) return -1;
+      if (b.enrollmentDeadline) return 1;
+      return a.translations.pt?.title.localeCompare(b.translations.pt?.title ?? "") ?? 0;
+    });
+}
+
+export function getCourseBySlug(slug: string): Course | undefined {
+  return courses.find((c) => c.slug === slug && c.status === "published");
+}
+
+/**
+ * Returns the course translation for a locale, falling back to the default
+ * locale (pt) when the requested one isn't available yet.
+ */
+export function getCourseTranslation(
+  course: Course,
+  locale: Locale,
+): { t: CourseTranslation; isFallback: boolean } {
+  const { value, isFallback } = resolveTranslation(course.translations, locale);
+  return { t: value, isFallback };
 }

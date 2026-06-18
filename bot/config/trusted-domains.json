@@ -1,0 +1,38 @@
+{
+  "suffixes": [
+    { "pattern": ".gov.br", "score": 100, "label": "governo federal" },
+    { "pattern": ".sc.gov.br", "score": 100, "label": "governo SC" },
+    { "pattern": ".pmf.sc.gov.br", "score": 100, "label": "prefeitura Floripa" },
+    { "pattern": ".ufsc.br", "score": 95, "label": "UFSC" },
+    { "pattern": ".udesc.br", "score": 95, "label": "UDESC" },
+    { "pattern": ".ifsc.edu.br", "score": 95, "label": "IFSC" },
+    { "pattern": ".org.br", "score": 80, "label": "ONG BR" },
+    { "pattern": ".def.br", "score": 100, "label": "defensoria" },
+    { "pattern": "caritas.org.br", "score": 90, "label": "Cáritas" }
+  ],
+  "domains": [
+    { "host": "circulosdehospitalidade.org", "score": 95 },
+    { "host": "consorciofenix.com.br", "score": 90 },
+    { "host": "sc.caritas.org.br", "score": 90 }
+  ],
+  "blockedHosts": [
+    "facebook.com",
+    "instagram.com",
+    "twitter.com",
+    "x.com",
+    "youtube.com",
+    "linkedin.com",
+    "wikipedia.org",
+    "google.com",
+    "duckduckgo.com"
+  ],
+  "searchQueries": {
+    "caritas-sc": [
+      "Cáritas Brasileira Santa Catarina site oficial",
+      "caritas.org.br regional Santa Catarina"
+    ],
+    "policia-federal-floripa": [
+      "Polícia Federal migração Florianópolis site oficial"
+    ]
+  }
+}

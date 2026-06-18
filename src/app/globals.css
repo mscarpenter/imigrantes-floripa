@@ -183,6 +183,27 @@
   }
   .animate-fade-in-up { animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
+  @keyframes fab-pulse {
+    0%, 100% {
+      box-shadow:
+        0 2px 6px rgba(27, 36, 64, 0.06),
+        0 16px 40px rgba(27, 36, 64, 0.12),
+        0 0 0 0 rgba(197, 106, 63, 0.55);
+    }
+    50% {
+      box-shadow:
+        0 2px 6px rgba(27, 36, 64, 0.06),
+        0 16px 40px rgba(27, 36, 64, 0.12),
+        0 0 0 12px rgba(197, 106, 63, 0);
+    }
+  }
+  @keyframes fab-hint-rise {
+    0%, 100% { transform: translateY(6px); opacity: 0.88; }
+    50% { transform: translateY(-8px); opacity: 1; }
+  }
+  .animate-fab-pulse { animation: fab-pulse 2s ease-in-out infinite; }
+  .animate-fab-hint-rise { animation: fab-hint-rise 2.4s ease-in-out infinite; }
+
   /* Sombras "Apple" — camadas suaves, blur alto, opacidade baixa */
   .shadow-soft {
     box-shadow:
@@ -217,7 +238,9 @@
   .animate-float-slow,
   .animate-drift,
   .animate-gradient-pan,
-  .animate-fade-in-up {
+  .animate-fade-in-up,
+  .animate-fab-pulse,
+  .animate-fab-hint-rise {
     animation: none !important;
   }
 }

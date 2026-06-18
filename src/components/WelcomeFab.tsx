@@ -5,29 +5,10 @@ import { Dialog } from "@base-ui/react/dialog";
 import { X } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { CompassMark } from "@/components/CompassMark";
 import { cn } from "@/lib/utils";
 
 type FabStrings = Dictionary["fab"];
-
-function CompassMark({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 48 48" fill="none" aria-hidden className={className}>
-      <circle
-        cx="24"
-        cy="24"
-        r="17"
-        stroke="currentColor"
-        strokeWidth="3.2"
-      />
-      <polygon
-        points="27.37,15.66 28.82,25.94 20.63,32.34 19.18,22.06"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 export function WelcomeFab({
   locale,

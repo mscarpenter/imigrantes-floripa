@@ -1,4 +1,14 @@
 import type { Post } from "./types";
+import {
+  EV_BRADESCO_POST_SLUG,
+  evBradescoGuideTitle,
+  getEvBradescoPostBody,
+} from "./ev-bradesco-guide";
+import {
+  MICROSOFT_LEARN_POST_SLUG,
+  microsoftLearnGuideTitle,
+  getMicrosoftLearnPostBody,
+} from "./microsoft-learn-guide";
 
 /**
  * Posts do blog. Conteúdo editorial e acolhedor, complementar aos módulos.
@@ -7,6 +17,42 @@ import type { Post } from "./types";
  * a aplicação faz fallback para `sourceLocale` e exibe um aviso discreto.
  */
 export const posts: Post[] = [
+  {
+    slug: MICROSOFT_LEARN_POST_SLUG,
+    date: "2026-06-18",
+    color: "blue",
+    icon: "GraduationCap",
+    cover: "/illustrations/educacao.png",
+    sourceLocale: "pt",
+    featured: true,
+    translations: {
+      pt: {
+        title: microsoftLearnGuideTitle,
+        tag: "Tecnologia",
+        excerpt:
+          "O Microsoft Learn oferece roteiros gratuitos de IA, programação, Power BI e GitHub, com conta Microsoft (e-mail), sem CPF. Conteúdo em português, espanhol, inglês e mais de 60 idiomas. Montamos 5 rotas por objetivo.",
+        body: getMicrosoftLearnPostBody("pt"),
+      },
+    },
+  },
+  {
+    slug: EV_BRADESCO_POST_SLUG,
+    date: "2026-06-17",
+    color: "violet",
+    icon: "GraduationCap",
+    cover: "/illustrations/ev-bradesco.png",
+    sourceLocale: "pt",
+    featured: true,
+    translations: {
+      pt: {
+        title: evBradescoGuideTitle,
+        tag: "Tecnologia",
+        excerpt:
+          "A Escola Virtual Bradesco oferece 61 cursos gratuitos de IA, programação, Excel e mais — com certificado. Montamos 5 rotas de acordo com o seu objetivo, do FluêncIA ao Python e Power BI.",
+        body: getEvBradescoPostBody("pt"),
+      },
+    },
+  },
   {
     slug: "aplicativos-essenciais-em-florianopolis",
     date: "2026-06-14",
