@@ -4,6 +4,7 @@ import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getAllPosts } from "@/lib/data/queries";
 import { BlogCarousel } from "@/components/blog/BlogCarousel";
+import { PortalMenuFabSlot } from "@/components/PortalMenuFabSlot";
 import { Reveal } from "@/components/motion/Reveal";
 
 export async function generateMetadata({
@@ -41,6 +42,7 @@ export default async function BlogPage({ params }: PageProps<"/[lang]/blog">) {
       ) : (
         <BlogCarousel posts={posts} locale={lang} dict={dict} />
       )}
+      <PortalMenuFabSlot locale={lang} />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getAllModules } from "@/lib/data/queries";
 import { ModuleScrollGrid } from "@/components/ModuleScrollGrid";
+import { PortalMenuFabSlot } from "@/components/PortalMenuFabSlot";
 import { Reveal } from "@/components/motion/Reveal";
 
 export default async function GuidancePage({
@@ -32,6 +33,7 @@ export default async function GuidancePage({
         trackVisited
         gridClassName="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
       />
+      <PortalMenuFabSlot locale={lang} />
     </div>
   );
 }

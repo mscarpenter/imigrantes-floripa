@@ -24,9 +24,7 @@ export function buildWelcomeFormBody(input: WelcomeSubmitInput): URLSearchParams
   const body = new URLSearchParams();
   body.append(GOOGLE_FORM_FIELDS.firstName, input.firstName.trim());
   body.append(GOOGLE_FORM_FIELDS.lastName, input.lastName.trim());
-  if (input.email?.trim()) {
-    body.append(GOOGLE_FORM_FIELDS.email, input.email.trim());
-  }
+  body.append(GOOGLE_FORM_FIELDS.email, input.email!.trim());
   body.append(GOOGLE_FORM_FIELDS.phone, input.phone.trim());
   body.append(GOOGLE_FORM_FIELDS.consent, GOOGLE_FORM_CONSENT_VALUE);
 
@@ -61,7 +59,12 @@ export function buildWelcomeFormBody(input: WelcomeSubmitInput): URLSearchParams
 export function validateWelcomeSubmitInput(
   input: WelcomeSubmitInput,
 ): string | null {
-  if (!input.firstName.trim() || !input.lastName.trim() || !input.phone.trim()) {
+  if (
+    !input.firstName.trim() ||
+    !input.lastName.trim() ||
+    !input.email?.trim() ||
+    !input.phone.trim()
+  ) {
     return "required";
   }
   if (

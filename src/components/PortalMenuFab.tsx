@@ -49,7 +49,7 @@ export function PortalMenuFab({ locale, strings }: PortalMenuFabProps) {
             <span
               aria-hidden
               className={cn(
-                "animate-fab-hint-rise absolute bottom-full right-0 mb-2",
+                "animate-fab-hint-rise absolute bottom-full left-1/2 mb-2 -translate-x-1/2",
                 "whitespace-nowrap rounded-full bg-warm px-3 py-1 text-xs font-semibold text-warm-foreground shadow-soft",
               )}
             >

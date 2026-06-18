@@ -51,6 +51,7 @@ export function WelcomeForm({
     if (
       firstName.trim().length === 0 ||
       lastName.trim().length === 0 ||
+      email.trim().length === 0 ||
       phone.trim().length === 0
     ) {
       setError(strings.errorRequired);
@@ -81,7 +82,7 @@ export function WelcomeForm({
         body: JSON.stringify({
           firstName: firstName.trim(),
           lastName: lastName.trim(),
-          email: email.trim() || undefined,
+          email: email.trim(),
           phone: phone.trim(),
           language,
           otherLanguage: language === OTHER ? otherLang.trim() : undefined,
@@ -175,6 +176,7 @@ export function WelcomeForm({
             onChange={(e) => setEmail(e.target.value)}
             placeholder={strings.emailPlaceholder}
             className="h-11"
+            required
           />
         </div>
         <div className="space-y-1.5">

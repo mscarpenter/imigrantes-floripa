@@ -11,6 +11,7 @@ import { CourseCard } from "@/components/courses/CourseCard";
 import { EvBradescoHighlightCard } from "@/components/novidades/EvBradescoHighlight";
 import { MicrosoftLearnHighlightCard } from "@/components/novidades/MicrosoftLearnHighlight";
 import { ContentFallbackNotice } from "@/components/ContentFallbackNotice";
+import { PortalMenuFabSlot } from "@/components/PortalMenuFabSlot";
 import type { Course } from "@/lib/data/types";
 
 export async function generateMetadata({
@@ -147,6 +148,7 @@ export default async function NovidadesPage({
           </p>
         </section>
       )}
+      <PortalMenuFabSlot locale={lang} />
     </div>
   );
 }

@@ -105,18 +105,34 @@ export function OnboardingFlow({
   return (
     <div className="mx-auto w-full max-w-2xl">
       <div className="text-center">
-        <span className="text-sm font-semibold tracking-wide text-primary uppercase">
-          {hub.eyebrow}
-        </span>
-        <h1 className="mt-5 text-3xl font-bold tracking-tight text-balance md:text-4xl">
-          {hubTitle}
-        </h1>
-        <p className="mt-1 text-sm font-medium text-primary">
-          {hub.brandSubtitle}
-        </p>
-        <p className="mx-auto mt-3 max-w-md text-pretty leading-relaxed text-muted-foreground">
-          {hubSubtitle}
-        </p>
+        {isNewUser ? (
+          <>
+            <h1 className="text-3xl font-bold tracking-tight text-balance md:text-4xl">
+              {hubTitle}
+            </h1>
+            <span className="mt-4 inline-block text-sm font-semibold tracking-wide text-primary uppercase">
+              {hub.eyebrow}
+            </span>
+            <p className="mx-auto mt-3 max-w-md text-pretty leading-relaxed text-muted-foreground">
+              {hubSubtitle}
+            </p>
+          </>
+        ) : (
+          <>
+            <span className="text-sm font-semibold tracking-wide text-primary uppercase">
+              {hub.eyebrow}
+            </span>
+            <h1 className="mt-5 text-3xl font-bold tracking-tight text-balance md:text-4xl">
+              {hubTitle}
+            </h1>
+            <p className="mt-1 text-sm font-medium text-primary">
+              {hub.brandSubtitle}
+            </p>
+            <p className="mx-auto mt-3 max-w-md text-pretty leading-relaxed text-muted-foreground">
+              {hubSubtitle}
+            </p>
+          </>
+        )}
       </div>
 
       <div className={cn("mt-10 grid gap-4", "sm:grid-cols-2")}>

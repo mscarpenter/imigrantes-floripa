@@ -4,6 +4,7 @@ import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getAllContacts, getAllCategories } from "@/lib/data/queries";
 import { ContactsBrowser } from "@/components/ContactsBrowser";
+import { PortalMenuFabSlot } from "@/components/PortalMenuFabSlot";
 import { Card } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/Reveal";
@@ -68,6 +69,7 @@ export default async function ContactsPage({
           dict={dict}
         />
       </div>
+      <PortalMenuFabSlot locale={lang} />
     </div>
   );
 }

@@ -25,11 +25,24 @@ describe("welcome-submit", () => {
     expect(body.get(GOOGLE_FORM_FIELDS.consent)).toBe("Sim");
   });
 
+  it("requires email", () => {
+    expect(
+      validateWelcomeSubmitInput({
+        firstName: "A",
+        lastName: "B",
+        phone: "1",
+        language: "Inglês",
+        nationality: "Brasil",
+      }),
+    ).toBe("required");
+  });
+
   it("requires nationality", () => {
     expect(
       validateWelcomeSubmitInput({
         firstName: "A",
         lastName: "B",
+        email: "a@example.com",
         phone: "1",
         language: "Inglês",
         nationality: "",
@@ -41,6 +54,7 @@ describe("welcome-submit", () => {
     const body = buildWelcomeFormBody({
       firstName: "A",
       lastName: "B",
+      email: "a@example.com",
       phone: "1",
       language: "Francês",
       nationality: GOOGLE_FORM_NATIONALITY_OTHER,
