@@ -15,6 +15,10 @@ import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { Badge } from "@/components/ui/badge";
 import { CompassMark } from "@/components/CompassMark";
+import {
+  hasSeenNovidadesAlert,
+  NOVIDADES_ALERT_SEEN_EVENT,
+} from "@/lib/novidades-alert";
 import { cn } from "@/lib/utils";
 
 type MenuStrings = Dictionary["portalMenu"];
@@ -29,10 +33,20 @@ interface PortalMenuFabProps {
 
 export function PortalMenuFab({ locale, strings }: PortalMenuFabProps) {
   const [open, setOpen] = useState(false);
+  const [showNewsAlert, setShowNewsAlert] = useState(false);
   const newsRef = useRef<HTMLAnchorElement>(null);
   const newsHref = `/${locale}/novidades`;
   const guidesHref = `/${locale}/guias`;
   const profileHref = `/${locale}/cadastro`;
+
+  useEffect(() => {
+    setShowNewsAlert(!hasSeenNovidadesAlert());
+
+    const hideAlert = () => setShowNewsAlert(false);
+    window.addEventListener(NOVIDADES_ALERT_SEEN_EVENT, hideAlert);
+    return () =>
+      window.removeEventListener(NOVIDADES_ALERT_SEEN_EVENT, hideAlert);
+  }, []);
 
   useEffect(() => {
     if (open) {
@@ -45,7 +59,7 @@ export function PortalMenuFab({ locale, strings }: PortalMenuFabProps) {
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <div className="pointer-events-none fixed bottom-5 right-5 z-40 sm:bottom-7 sm:right-7">
         <div className="pointer-events-auto relative">
-          {!open && (
+          {!open && showNewsAlert && (
             <span
               aria-hidden
               className={cn(
@@ -63,7 +77,7 @@ export function PortalMenuFab({ locale, strings }: PortalMenuFabProps) {
               "flex size-14 items-center justify-center rounded-full bg-warm text-warm-foreground shadow-soft-lg transition-all",
               "hover:scale-105 hover:bg-warm/90 active:scale-95",
               "focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-warm/40",
-              !open && "animate-fab-pulse",
+              !open && showNewsAlert && "animate-fab-pulse",
             )}
           >
             <CompassMark spinOnScroll={!open} className="size-7" />
@@ -107,13 +121,14 @@ export function PortalMenuFab({ locale, strings }: PortalMenuFabProps) {
                   className={cn(
                     menuLinkClass,
                     open &&
+                      showNewsAlert &&
                       "-translate-y-0.5 border-warm/70 bg-warm/[0.08] shadow-soft-lg ring-2 ring-warm/50",
                   )}
                 >
                   <span
                     className={cn(
                       "flex size-10 shrink-0 items-center justify-center rounded-xl transition-colors",
-                      open
+                      open && showNewsAlert
                         ? "bg-warm/15 text-warm"
                         : "bg-primary/10 text-primary",
                     )}
@@ -122,7 +137,7 @@ export function PortalMenuFab({ locale, strings }: PortalMenuFabProps) {
                   </span>
                   <span className="min-w-0 flex-1 text-left">
                     <span className="block font-medium">{strings.news}</span>
-                    {open && (
+                    {open && showNewsAlert && (
                       <span className="mt-0.5 block text-xs font-semibold text-warm">
                         {strings.newsAlert}
                       </span>
@@ -131,7 +146,7 @@ export function PortalMenuFab({ locale, strings }: PortalMenuFabProps) {
                   <ChevronRight
                     className={cn(
                       "size-5 shrink-0 transition-transform group-hover:translate-x-0.5",
-                      open
+                      open && showNewsAlert
                         ? "translate-x-0.5 text-warm"
                         : "text-muted-foreground/50 group-hover:text-warm",
                     )}

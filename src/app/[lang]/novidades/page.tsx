@@ -12,6 +12,7 @@ import { EvBradescoHighlightCard } from "@/components/novidades/EvBradescoHighli
 import { MicrosoftLearnHighlightCard } from "@/components/novidades/MicrosoftLearnHighlight";
 import { ContentFallbackNotice } from "@/components/ContentFallbackNotice";
 import { PortalMenuFabSlot } from "@/components/PortalMenuFabSlot";
+import { NovidadesAlertTracker } from "@/components/NovidadesAlertTracker";
 import type { Course } from "@/lib/data/types";
 
 export async function generateMetadata({
@@ -52,6 +53,7 @@ export default async function NovidadesPage({
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <NovidadesAlertTracker />
       <header>
         <h1 className="font-slab text-4xl font-bold tracking-tight text-primary md:text-5xl">
           {t.title}
