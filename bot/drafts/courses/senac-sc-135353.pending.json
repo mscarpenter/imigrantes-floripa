@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-135353",
+    "createdAt": "2026-06-24",
+    "botRunId": "28107196983",
+    "sourceUrl": "https://portal.sc.senac.br/curso/135353/florianopolis/tecnico-em-massoterapia",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC FLORIANÓPOLIS. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-135353",
+    "slug": "senac-sc-135353",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/135353/florianopolis/tecnico-em-massoterapia",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "ambiente-e-saude"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Técnico em Massoterapia",
+        "summary": "Objetivo geral: Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos: • Promover o desenvolvimento do aluno por meio de ações que articulem e mobilizem conhecimentos, habilidades, valores e atitudes de forma potencialmente criativa e que est",
+        "institution": "SENAC SC — Florianópolis"
+      },
+      "es": {
+        "title": "Técnico em Massoterapia",
+        "summary": "Objetivo geral: Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos: • Promover o desenvolvimento do… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Florianópolis"
+      }
+    }
+  }
+}
