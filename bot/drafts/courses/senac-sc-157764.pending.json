@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-157764",
+    "createdAt": "2026-07-01",
+    "botRunId": "28526492034",
+    "sourceUrl": "https://portal.sc.senac.br/curso/157764/palhoca/talento-pessoal-comunicacao-e-tecnologia",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-157764",
+    "slug": "senac-sc-157764",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/157764/palhoca/talento-pessoal-comunicacao-e-tecnologia",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "desenvolvimento-educacional-e-social"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Talento Pessoal: Comunicação e Tecnologia",
+        "summary": "Este curso tem por objetivo apresentar questões de cidadania, finanças, cuidados pessoais, tecnologia e comunicação que permitam identificação das possibilidades futuras de atuação profissional e o autoconhecimento de talentos pessoais. É destinado a jovens do ensino regular.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Talento Pessoal: Comunicação e Tecnologia",
+        "summary": "Este curso tem por objetivo apresentar questões de cidadania, finanças, cuidados pessoais, tecnologia e comunicação que permitam identificação das possibilidades futuras de atuação… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

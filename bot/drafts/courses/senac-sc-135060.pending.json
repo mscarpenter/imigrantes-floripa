@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-135060",
+    "createdAt": "2026-07-01",
+    "botRunId": "28526492034",
+    "sourceUrl": "https://portal.sc.senac.br/curso/135060/florianopolis/panificacao-tecnicas-e-bases",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC FLORIANÓPOLIS. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-135060",
+    "slug": "senac-sc-135060",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/135060/florianopolis/panificacao-tecnicas-e-bases",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "producao-alimenticia"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Panificação: técnicas e bases",
+        "summary": "O curso de aperfeiçoamento em Panificação: técnicas e bases tem como objetivo desenvolver a seguinte competência: aplicar técnicas em bases da panificação. É destinado a profissionais e alunos da área de produções gastronômicas que estejam buscando aperfeiçoamento técnico para Panificação: técnicas e bases.",
+        "institution": "SENAC SC — Florianópolis"
+      },
+      "es": {
+        "title": "Panificação: técnicas e bases",
+        "summary": "O curso de aperfeiçoamento em Panificação: técnicas e bases tem como objetivo desenvolver a seguinte competência: aplicar técnicas em bases da panificação. É destinado a profission… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Florianópolis"
+      }
+    }
+  }
+}
