@@ -37,7 +37,7 @@ export function ModuleScrollGrid({
     if (!trackVisited) return;
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) setVisited(new Set(JSON.parse(raw) as string[]));
+      if (raw) requestAnimationFrame(() => setVisited(new Set(JSON.parse(raw) as string[])));
     } catch {}
   }, [trackVisited]);
 
