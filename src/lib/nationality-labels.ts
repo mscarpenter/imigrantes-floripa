@@ -216,7 +216,7 @@ const otherLabels: Record<Locale, string> = {
   en: "Other",
 };
 
-let displayNamesCache: Partial<Record<Locale, Intl.DisplayNames>> = {};
+const displayNamesCache: Partial<Record<Locale, Intl.DisplayNames>> = {};
 
 function getDisplayNames(locale: Locale): Intl.DisplayNames | undefined {
   if (displayNamesCache[locale]) return displayNamesCache[locale];

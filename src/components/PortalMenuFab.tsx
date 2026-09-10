@@ -40,7 +40,7 @@ export function PortalMenuFab({ locale, strings }: PortalMenuFabProps) {
   const profileHref = `/${locale}/cadastro`;
 
   useEffect(() => {
-    setShowNewsAlert(!hasSeenNovidadesAlert());
+    requestAnimationFrame(() => setShowNewsAlert(!hasSeenNovidadesAlert()));
 
     const hideAlert = () => setShowNewsAlert(false);
     window.addEventListener(NOVIDADES_ALERT_SEEN_EVENT, hideAlert);

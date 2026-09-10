@@ -55,7 +55,7 @@ export function Reveal({
       "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReduced) {
-      setVisible(true);
+      requestAnimationFrame(() => setVisible(true));
       return;
     }
 
@@ -80,7 +80,7 @@ export function Reveal({
     const inView =
       rect.top < window.innerHeight * 0.9 &&
       rect.bottom > window.innerHeight * 0.05;
-    if (inView) setVisible(true);
+    if (inView) requestAnimationFrame(() => setVisible(true));
 
     return () => observer.disconnect();
   }, [once]);
