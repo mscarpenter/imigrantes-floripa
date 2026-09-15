@@ -10,8 +10,15 @@
     "sourceUrl": "https://neplac.paginas.ufsc.br/",
     "verifiedAt": "2026-06-18",
     "enrollmentStatus": "coming_soon",
-    "contactIds": ["plac-ufsc"],
-    "tags": ["português", "migrantes", "ufsc", "gratuito"],
+    "contactIds": [
+      "plac-ufsc"
+    ],
+    "tags": [
+      "português",
+      "migrantes",
+      "ufsc",
+      "gratuito"
+    ],
     "translations": {
       "pt": {
         "title": "NePLAc — Português para imigrantes e refugiados (UFSC)",
@@ -36,7 +43,12 @@
     "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
     "verifiedAt": "2026-06-18",
     "enrollmentStatus": "open",
-    "tags": ["senac", "gratuito", "presencial", "tecnologia"],
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "tecnologia"
+    ],
     "translations": {
       "pt": {
         "title": "Transformação Digital com Inteligência Artificial",
@@ -61,7 +73,13 @@
     "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
     "verifiedAt": "2026-06-18",
     "enrollmentStatus": "open",
-    "tags": ["senac", "gratuito", "presencial", "tecnologia", "ia"],
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "tecnologia",
+      "ia"
+    ],
     "translations": {
       "pt": {
         "title": "Engenharia de Prompts na Comunicação com IA",
@@ -86,7 +104,12 @@
     "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
     "verifiedAt": "2026-06-18",
     "enrollmentStatus": "open",
-    "tags": ["senac", "gratuito", "presencial", "gestão"],
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "gestão"
+    ],
     "translations": {
       "pt": {
         "title": "Metodologias Ágeis na Gestão de Times",
@@ -111,7 +134,12 @@
     "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
     "verifiedAt": "2026-06-18",
     "enrollmentStatus": "coming_soon",
-    "tags": ["senac", "gratuito", "presencial", "trabalho"],
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "trabalho"
+    ],
     "translations": {
       "pt": {
         "title": "Auxiliar de Cozinha",
@@ -124,5 +152,165 @@
         "institution": "SENAC SC — Florianópolis"
       }
     }
+  },
+  {
+    "id": "senac-sc-160664",
+    "slug": "senac-sc-160664",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/160664/palhoca/programador-web",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Programador Web",
+        "summary": "Objetivo Geral Formar profissionais com competências para atuar em seu campo de trabalho, com foco em resultados. Objetivos Específicos Promover o protagonismo do aluno por meio de situações de aprendizagem, que articulem e mobilizem conhecimentos, habilidades, atitudes e valores, incentivando a resolução de problemas,",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Programador Web",
+        "summary": "Objetivo Geral Formar profissionais com competências para atuar em seu campo de trabalho, com foco em resultados. Objetivos Específicos Promover o protagonismo do aluno por meio de… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-15",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "local",
+    "lastCheckedAt": "2026-09-15"
+  },
+  {
+    "id": "senac-sc-160704",
+    "slug": "senac-sc-160704",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/160704/palhoca/fundamentos-do-python-i",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Fundamentos do Python I",
+        "summary": "Este curso tem como objetivo fornecer conhecimentos iniciais e desenvolver habilidades básicas em programação de computadores por meio da linguagem Python. É destinado a pessoas interessadas em iniciar no universo da programação.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Fundamentos do Python I",
+        "summary": "Este curso tem como objetivo fornecer conhecimentos iniciais e desenvolver habilidades básicas em programação de computadores por meio da linguagem Python. É destinado a pessoas in… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-15",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "local",
+    "lastCheckedAt": "2026-09-15"
+  },
+  {
+    "id": "senac-sc-131614",
+    "slug": "senac-sc-131614",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/131614/palhoca/gestao-da-qualidade-em-processos",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "gestao-e-negocios"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Gestão da Qualidade em Processos",
+        "summary": "Este curso tem como objetivo apresentar as ferramentas da gestão da qualidade, visando promover as melhorias e soluções aos processos organizacionais. É destinado a profissionais que atuam na execução e/ou supervisão de processos de uma organização de qualquer segmento.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Gestão da Qualidade em Processos",
+        "summary": "Este curso tem como objetivo apresentar as ferramentas da gestão da qualidade, visando promover as melhorias e soluções aos processos organizacionais. É destinado a profissionais q… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-15",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "local",
+    "lastCheckedAt": "2026-09-15"
+  },
+  {
+    "id": "senac-sc-135214",
+    "slug": "senac-sc-135214",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/135214/palhoca/marketing-turistico",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Marketing Turístico",
+        "summary": "Este curso tem como objetivo contribuir com os conhecimentos técnicos de marketing turístico. É destinado a profissionais que atuam no segmento de turismo, principalmente na gestão pública.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Marketing Turístico",
+        "summary": "Este curso tem como objetivo contribuir com os conhecimentos técnicos de marketing turístico. É destinado a profissionais que atuam no segmento de turismo, principalmente na gestão… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-15",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "local",
+    "lastCheckedAt": "2026-09-15"
+  },
+  {
+    "id": "senac-sc-160827",
+    "slug": "senac-sc-160827",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/160827/palhoca/sistematizacao-da-assistencia-de-enfermagem",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "ambiente-e-saude"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Sistematização da Assistência de Enfermagem",
+        "summary": "Este curso tem como objetivo aprimorar a atuação profissional na Sistematização da Assistência em Enfermagem, facilitando a execução dos processos de trabalho da Enfermagem, para realização de cuidado de saúde seguro e livre de danos aos usuários. É destinado a Enfermeiros e Técnicos de Enfermagem",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Sistematização da Assistência de Enfermagem",
+        "summary": "Este curso tem como objetivo aprimorar a atuação profissional na Sistematização da Assistência em Enfermagem, facilitando a execução dos processos de trabalho da Enfermagem, para r… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-15",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "local",
+    "lastCheckedAt": "2026-09-15"
   }
 ]

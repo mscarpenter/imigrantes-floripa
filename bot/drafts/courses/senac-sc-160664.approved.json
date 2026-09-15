@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-160664",
+    "createdAt": "2026-09-15",
+    "botRunId": "local",
+    "sourceUrl": "https://portal.sc.senac.br/curso/160664/palhoca/programador-web",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-160664",
+    "slug": "senac-sc-160664",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/160664/palhoca/programador-web",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Programador Web",
+        "summary": "Objetivo Geral Formar profissionais com competências para atuar em seu campo de trabalho, com foco em resultados. Objetivos Específicos Promover o protagonismo do aluno por meio de situações de aprendizagem, que articulem e mobilizem conhecimentos, habilidades, atitudes e valores, incentivando a resolução de problemas,",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Programador Web",
+        "summary": "Objetivo Geral Formar profissionais com competências para atuar em seu campo de trabalho, com foco em resultados. Objetivos Específicos Promover o protagonismo do aluno por meio de… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

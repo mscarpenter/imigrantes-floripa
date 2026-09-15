@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-160827",
+    "createdAt": "2026-09-15",
+    "botRunId": "local",
+    "sourceUrl": "https://portal.sc.senac.br/curso/160827/palhoca/sistematizacao-da-assistencia-de-enfermagem",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-160827",
+    "slug": "senac-sc-160827",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/160827/palhoca/sistematizacao-da-assistencia-de-enfermagem",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "ambiente-e-saude"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Sistematização da Assistência de Enfermagem",
+        "summary": "Este curso tem como objetivo aprimorar a atuação profissional na Sistematização da Assistência em Enfermagem, facilitando a execução dos processos de trabalho da Enfermagem, para realização de cuidado de saúde seguro e livre de danos aos usuários. É destinado a Enfermeiros e Técnicos de Enfermagem",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Sistematização da Assistência de Enfermagem",
+        "summary": "Este curso tem como objetivo aprimorar a atuação profissional na Sistematização da Assistência em Enfermagem, facilitando a execução dos processos de trabalho da Enfermagem, para r… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

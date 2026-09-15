@@ -23,7 +23,6 @@ jobs:
               "Bot — validar rascunhos",
               "Bot — pesquisar e checar contatos",
               "Bot — pesquisar cursos",
-              "Bot — monitoria",
             ];
             const since = new Date(Date.now() - 8 * 24 * 60 * 60 * 1000).toISOString();
             const { data: runs } = await github.rest.actions.listWorkflowRunsForRepo({

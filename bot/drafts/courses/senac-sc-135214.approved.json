@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-135214",
+    "createdAt": "2026-09-15",
+    "botRunId": "local",
+    "sourceUrl": "https://portal.sc.senac.br/curso/135214/palhoca/marketing-turistico",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-135214",
+    "slug": "senac-sc-135214",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/135214/palhoca/marketing-turistico",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Marketing Turístico",
+        "summary": "Este curso tem como objetivo contribuir com os conhecimentos técnicos de marketing turístico. É destinado a profissionais que atuam no segmento de turismo, principalmente na gestão pública.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Marketing Turístico",
+        "summary": "Este curso tem como objetivo contribuir com os conhecimentos técnicos de marketing turístico. É destinado a profissionais que atuam no segmento de turismo, principalmente na gestão… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}
