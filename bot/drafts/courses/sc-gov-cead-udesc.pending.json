@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "draftId": "sc-gov-cead-udesc",
+    "createdAt": "2026-09-16",
+    "botRunId": "35123322086",
+    "sourceUrl": "https://www.udesc.br/cead",
+    "confidence": "medium",
+    "notes": "Seed curado em sc-gov-ead-seeds.json — confirmar gratuidade."
+  },
+  "course": {
+    "id": "sc-gov-cead-udesc",
+    "slug": "sc-gov-cead-udesc",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.udesc.br/cead",
+    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "tags": [
+      "governo",
+      "sc",
+      "ead",
+      "graduação",
+      "uab"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Centro de Educação a Distância — UDESC",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.udesc.br/cead.",
+        "institution": "Governo de Santa Catarina / parceiros"
+      },
+      "es": {
+        "title": "Centro de Educação a Distância — UDESC",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.udesc.br/cead.… (Información en portugués en el sitio oficial.)",
+        "institution": "Gobierno de Santa Catarina / socios"
+      }
+    }
+  }
+}

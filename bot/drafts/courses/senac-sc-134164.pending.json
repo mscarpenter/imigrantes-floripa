@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-134164",
+    "createdAt": "2026-09-16",
+    "botRunId": "35123322086",
+    "sourceUrl": "https://portal.sc.senac.br/curso/134164/palhoca/programacao-em-java-com-orientacao-a-objetos",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-134164",
+    "slug": "senac-sc-134164",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/134164/palhoca/programacao-em-java-com-orientacao-a-objetos",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Programação em Java com Orientação a Objetos",
+        "summary": "Este curso tem como objetivo desenvolver a competência: desenvolver programas orientados a objetos em linguagem Java É destinado a pessoas que desejam desenvolver aplicações utilizando a linguagem Java.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Programação em Java com Orientação a Objetos",
+        "summary": "Este curso tem como objetivo desenvolver a competência: desenvolver programas orientados a objetos em linguagem Java É destinado a pessoas que desejam desenvolver aplicações utiliz… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

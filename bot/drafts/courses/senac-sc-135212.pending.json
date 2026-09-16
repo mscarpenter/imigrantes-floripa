@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-135212",
+    "createdAt": "2026-09-16",
+    "botRunId": "35123322086",
+    "sourceUrl": "https://portal.sc.senac.br/curso/135212/palhoca/qualidade-no-atendimento-ao-turista",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-135212",
+    "slug": "senac-sc-135212",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/135212/palhoca/qualidade-no-atendimento-ao-turista",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Qualidade no Atendimento ao Turista",
+        "summary": "Este curso tem como objetivo aprimorar a qualidade no atendimento ao turista. É destinado a interessados e profissionais do ramo de turismo, hospitalidade e lazer.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Qualidade no Atendimento ao Turista",
+        "summary": "Este curso tem como objetivo aprimorar a qualidade no atendimento ao turista. É destinado a interessados e profissionais do ramo de turismo, hospitalidade e lazer.… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

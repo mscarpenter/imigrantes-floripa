@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "draftId": "sc-gov-ifsc-ead",
+    "createdAt": "2026-09-16",
+    "botRunId": "35123322086",
+    "sourceUrl": "https://www.ifsc.edu.br/ead",
+    "confidence": "medium",
+    "notes": "Seed curado em sc-gov-ead-seeds.json — confirmar gratuidade."
+  },
+  "course": {
+    "id": "sc-gov-ifsc-ead",
+    "slug": "sc-gov-ifsc-ead",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.ifsc.edu.br/ead",
+    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "tags": [
+      "governo",
+      "sc",
+      "ead",
+      "técnico",
+      "uab"
+    ],
+    "translations": {
+      "pt": {
+        "title": "IFSC — Cursos a Distância",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.ifsc.edu.br/ead.",
+        "institution": "Governo de Santa Catarina / parceiros"
+      },
+      "es": {
+        "title": "IFSC — Cursos a Distância",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.ifsc.edu.br/ead.… (Información en portugués en el sitio oficial.)",
+        "institution": "Gobierno de Santa Catarina / socios"
+      }
+    }
+  }
+}
