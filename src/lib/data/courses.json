@@ -312,5 +312,297 @@
     "enrollmentStatus": "coming_soon",
     "botRunId": "local",
     "lastCheckedAt": "2026-09-15"
+  },
+  {
+    "id": "ev-bradesco-trilhas-tecnologia",
+    "slug": "ev-bradesco-trilhas-tecnologia",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.ev.org.br/trilhas-de-conhecimento",
+    "sourceUrl": "https://www.ev.org.br/trilhas-de-conhecimento",
+    "tags": [
+      "trilha",
+      "tecnologia",
+      "gratuito",
+      "online",
+      "rotativo"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Roteiro: trilhas de tecnologia na Escola Virtual Bradesco",
+        "summary": "Catálogo gratuito e 100% online da Fundação Bradesco (ev.org.br). Trilhas tech encontradas na última checagem: Excel 2016 (do b&#225;sico ao avan&#231;ado), Intelig&#234;ncia Artificial para Organiza&#231;&#245;es do Terceiro Setor, Office 365. Estude no seu ritmo e valide certificados no site oficial.",
+        "institution": "Fundação Bradesco — Escola Virtual (ev.org.br)"
+      },
+      "es": {
+        "title": "Ruta: trilhas de tecnología en la Escuela Virtual Bradesco",
+        "summary": "Catálogo gratuito y 100% en línea. Trilhas revisadas: Excel 2016 (do b&#225;sico ao avan&#231;ado), Intelig&#234;ncia Artificial para Organiza&#231;&#245;es do Terceiro Setor, Office 365. Estudia a tu ritmo en ev.org.br.",
+        "institution": "Fundación Bradesco — Escuela Virtual (ev.org.br)"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "sc-gov-cead-udesc",
+    "slug": "sc-gov-cead-udesc",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.udesc.br/cead",
+    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "tags": [
+      "governo",
+      "sc",
+      "ead",
+      "graduação",
+      "uab"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Centro de Educação a Distância — UDESC",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.udesc.br/cead.",
+        "institution": "Governo de Santa Catarina / parceiros"
+      },
+      "es": {
+        "title": "Centro de Educação a Distância — UDESC",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.udesc.br/cead.… (Información en portugués en el sitio oficial.)",
+        "institution": "Gobierno de Santa Catarina / socios"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "sc-gov-ead-hub",
+    "slug": "sc-gov-ead-hub",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "tags": [
+      "governo",
+      "sc",
+      "ead",
+      "online",
+      "gratuito"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Cursos EAD — Governo de Santa Catarina",
+        "summary": "Portal oficial do Governo de Santa Catarina com orientações e links para cursos de educação a distância. Consulte requisitos e matrículas nos sites das instituições parceiras.",
+        "institution": "Governo do Estado de Santa Catarina"
+      },
+      "es": {
+        "title": "Cursos EAD — Gobierno de Santa Catarina",
+        "summary": "Portal oficial do Governo de Santa Catarina com orientações e links para cursos de educação a distância. Consulte requisitos e matrículas nos sites das instituições parceiras.… (Información en portugués en el sitio oficial.)",
+        "institution": "Gobierno del Estado de Santa Catarina"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "sc-gov-ifsc-ead",
+    "slug": "sc-gov-ifsc-ead",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.ifsc.edu.br/ead",
+    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "tags": [
+      "governo",
+      "sc",
+      "ead",
+      "técnico",
+      "uab"
+    ],
+    "translations": {
+      "pt": {
+        "title": "IFSC — Cursos a Distância",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.ifsc.edu.br/ead.",
+        "institution": "Governo de Santa Catarina / parceiros"
+      },
+      "es": {
+        "title": "IFSC — Cursos a Distância",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.ifsc.edu.br/ead.… (Información en portugués en el sitio oficial.)",
+        "institution": "Gobierno de Santa Catarina / socios"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "senac-sc-134164",
+    "slug": "senac-sc-134164",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/134164/palhoca/programacao-em-java-com-orientacao-a-objetos",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Programação em Java com Orientação a Objetos",
+        "summary": "Este curso tem como objetivo desenvolver a competência: desenvolver programas orientados a objetos em linguagem Java É destinado a pessoas que desejam desenvolver aplicações utilizando a linguagem Java.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Programação em Java com Orientação a Objetos",
+        "summary": "Este curso tem como objetivo desenvolver a competência: desenvolver programas orientados a objetos em linguagem Java É destinado a pessoas que desejam desenvolver aplicações utiliz… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "senac-sc-135212",
+    "slug": "senac-sc-135212",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/135212/palhoca/qualidade-no-atendimento-ao-turista",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Qualidade no Atendimento ao Turista",
+        "summary": "Este curso tem como objetivo aprimorar a qualidade no atendimento ao turista. É destinado a interessados e profissionais do ramo de turismo, hospitalidade e lazer.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Qualidade no Atendimento ao Turista",
+        "summary": "Este curso tem como objetivo aprimorar a qualidade no atendimento ao turista. É destinado a interessados e profissionais do ramo de turismo, hospitalidade e lazer.… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "senac-sc-141125",
+    "slug": "senac-sc-141125",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/141125/palhoca/colaboracao-trabalho-em-equipe",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "desenvolvimento-educacional-e-social"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Colaboração: Trabalho em Equipe",
+        "summary": "Este curso tem como objetivo dar subsídios para que os participantes desenvolvam habilidades para o trabalho em equipe, com ênfase no convívio interpessoal e na partilha de responsabilidades.É destinado a profissionais e estudantes de qualquer área ou a pessoas interessadas na temática.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Colaboração: Trabalho em Equipe",
+        "summary": "Este curso tem como objetivo dar subsídios para que os participantes desenvolvam habilidades para o trabalho em equipe, com ênfase no convívio interpessoal e na partilha de respons… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "senac-sc-159268",
+    "slug": "senac-sc-159268",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/159268/florianopolis/atendente-de-lanchonete",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Atendente de Lanchonete",
+        "summary": "Objetivo geral: Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos: • Promover o desenvolvimento do aluno por meio de ações que articulem e mobilizem conhecimentos, habilidades, valores e atitudes de forma potencialmente criativa e que est",
+        "institution": "SENAC SC — Florianópolis"
+      },
+      "es": {
+        "title": "Atendente de Lanchonete",
+        "summary": "Objetivo geral: Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos: • Promover o desenvolvimento do… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Florianópolis"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "senac-sc-160770",
+    "slug": "senac-sc-160770",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/160770/palhoca/elaboracao-de-roteiros-turisticos-receptivos",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Elaboração de Roteiros Turísticos Receptivos",
+        "summary": "Este curso tem como objetivo contribuir com conhecimentos e técnicas de planejamento, execução e avaliação de roteiros turísticos receptivos. É destinado a interessados no segmento de agenciamento de viagens e elaboração de roteiros de turismo receptivo.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Elaboração de Roteiros Turísticos Receptivos",
+        "summary": "Este curso tem como objetivo contribuir com conhecimentos e técnicas de planejamento, execução e avaliação de roteiros turísticos receptivos. É destinado a interessados no segmento… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-09-17",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "35123322086",
+    "lastCheckedAt": "2026-09-17"
   }
 ]

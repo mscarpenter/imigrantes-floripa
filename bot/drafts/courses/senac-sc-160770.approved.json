@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-160770",
+    "createdAt": "2026-09-16",
+    "botRunId": "35123322086",
+    "sourceUrl": "https://portal.sc.senac.br/curso/160770/palhoca/elaboracao-de-roteiros-turisticos-receptivos",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-160770",
+    "slug": "senac-sc-160770",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/160770/palhoca/elaboracao-de-roteiros-turisticos-receptivos",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Elaboração de Roteiros Turísticos Receptivos",
+        "summary": "Este curso tem como objetivo contribuir com conhecimentos e técnicas de planejamento, execução e avaliação de roteiros turísticos receptivos. É destinado a interessados no segmento de agenciamento de viagens e elaboração de roteiros de turismo receptivo.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Elaboração de Roteiros Turísticos Receptivos",
+        "summary": "Este curso tem como objetivo contribuir com conhecimentos e técnicas de planejamento, execução e avaliação de roteiros turísticos receptivos. É destinado a interessados no segmento… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

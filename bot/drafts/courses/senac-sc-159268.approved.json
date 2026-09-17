@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-159268",
+    "createdAt": "2026-09-16",
+    "botRunId": "35123322086",
+    "sourceUrl": "https://portal.sc.senac.br/curso/159268/florianopolis/atendente-de-lanchonete",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC FLORIANÓPOLIS. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-159268",
+    "slug": "senac-sc-159268",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/159268/florianopolis/atendente-de-lanchonete",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Atendente de Lanchonete",
+        "summary": "Objetivo geral: Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos: • Promover o desenvolvimento do aluno por meio de ações que articulem e mobilizem conhecimentos, habilidades, valores e atitudes de forma potencialmente criativa e que est",
+        "institution": "SENAC SC — Florianópolis"
+      },
+      "es": {
+        "title": "Atendente de Lanchonete",
+        "summary": "Objetivo geral: Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos: • Promover o desenvolvimento do… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Florianópolis"
+      }
+    }
+  }
+}
