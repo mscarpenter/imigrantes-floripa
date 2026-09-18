@@ -71,11 +71,15 @@ jobs:
               return;
             }
 
+            const branch = `bot/courses-${context.runNumber}`;
             const branch = "bot/courses-pending";
             execSync(`git config user.name "github-actions[bot]"`);
             execSync(`git config user.email "github-actions[bot]@users.noreply.github.com"`);
+            execSync(`git checkout -b ${branch}`);
             execSync(`git checkout -B ${branch}`);
             execSync(`git add bot/drafts/courses/*.pending.json`);
+            execSync(`git commit -m "bot(courses): rascunhos high para revisão [skip ci]"`);
+            execSync(`git push origin ${branch}`);
             execSync(`git commit -m "bot(courses): rascunhos para revisão [skip ci]"`);
             execSync(`git push -f origin ${branch}`);
 
@@ -84,6 +88,7 @@ jobs:
                 `- **${h.raw.meta.draftId}** — ${h.raw.course.translations?.pt?.title ?? h.file}\n  Fonte: ${h.raw.meta.sourceUrl}\n  Confiança: high`,
             );
 
+            const { data: pr } = await github.rest.pulls.create({
             const prBody = [
               "## Bot de cursos — revisão humana obrigatória",
               "",
@@ -106,10 +111,33 @@ jobs:
             const { data: existingPrs } = await github.rest.pulls.list({
               owner: context.repo.owner,
               repo: context.repo.repo,
+              title: `bot(courses): ${high.length} rascunho(s) para revisão`,
+              head: branch,
+              base: "main",
+              body: [
+                "## Bot de cursos — revisão humana obrigatória",
+                "",
+                "Rascunhos com **confidence: high**. Não faz merge sem checklist em `.github/PULL_REQUEST_TEMPLATE/bot_content.md`.",
+                "",
+                ...lines,
+                "",
+                "### Idiomas",
+                "- PT + ES obrigatórios no rascunho",
+                "- FR + EN: conferir UI (`npm test`) e adicionar traduções se possível",
+                "",
+                "### Após aprovar",
+                "```bash",
+                "npm run bot:promote-course -- bot/drafts/courses/<arquivo>.pending.json",
+                "```",
+                "",
+                `Workflow: ${context.workflow} #${context.runNumber}`,
+              ].join("\n"),
               state: "open",
               head: `${context.repo.owner}:${branch}`,
             });
 
+            core.setOutput("pr_url", pr.html_url);
+            core.info(`PR criado: ${pr.html_url}`);
             let prUrl = "";
             if (existingPrs.length > 0) {
               const prNumber = existingPrs[0].number;
