@@ -1,5 +1,7 @@
 # Imigrantes Floripa
 
+[![CI](https://github.com/mscarpenter/imigrantes-floripa/actions/workflows/ci.yml/badge.svg)](https://github.com/mscarpenter/imigrantes-floripa/actions/workflows/ci.yml)
+
 Portal público e open-source para imigrantes que chegam ou se preparam para morar em Florianópolis. Trilha guiada com módulos práticos (documentos, saúde, transporte, trabalho, etc.) e diretório de contatos úteis. Disponível em português e espanhol.
 
 **🌐 Acesse agora:** [imigrantes-floripa.vercel.app](https://imigrantes-floripa.vercel.app)
