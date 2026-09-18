@@ -49,18 +49,18 @@ export const contacts: Contact[] = [
   {
     id: "cras-floripa",
     categorySlug: "assistencia-social",
-    website: "https://www.pmf.sc.gov.br/entidades/semas/",
+    website: "https://www.pmf.sc.gov.br/servicos/index.php?pagina=servpagina&acao=open&id=5611",
     hours: "Seg-Sex 08:00-18:00",
     translations: {
       pt: {
         name: "CRAS - Centros de Referência de Assistência Social",
         description:
-          "Apoio social, Cadastro Único, Bolsa Família e orientação para famílias em situação de vulnerabilidade. Há 10 unidades em vários bairros. Procure a do seu território (lista no site da SEMAS); atendimento mediante agendamento.",
+          "Apoio social, Cadastro Único, Bolsa Família e orientação para famílias em situação de vulnerabilidade. Há 10 unidades em vários bairros. Procure a do seu território (lista no site da Prefeitura); atendimento mediante agendamento.",
       },
       es: {
         name: "CRAS - Centros de Referencia de Asistencia Social",
         description:
-          "Apoyo social, registro único (CadÚnico), Bolsa Família y orientación para familias en situación de vulnerabilidad. Hay 10 unidades en varios barrios. Busque la de su territorio (lista en el sitio de SEMAS); atención con cita previa.",
+          "Apoyo social, registro único (CadÚnico), Bolsa Família y orientación para familias en situación de vulnerabilidad. Hay 10 unidades en varios barrios. Busque la de su territorio (lista en el sitio de la Municipalidad); atención con cita previa.",
       },
     },
   },
