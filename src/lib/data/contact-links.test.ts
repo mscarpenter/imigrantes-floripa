@@ -26,6 +26,6 @@ describe.skipIf(!runLive)("contact website links (live)", () => {
           ? `dead: ${probe.error}`
           : `unexpected: ${JSON.stringify(probe)}`,
       ).toBe(true);
-    });
+    }, 20000);
   }
 });
