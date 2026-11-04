@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "draftId": "sc-gov-sed-sc-ead",
+    "createdAt": "2026-11-04",
+    "botRunId": "41863535463",
+    "sourceUrl": "https://www.sed.sc.gov.br/",
+    "confidence": "medium",
+    "notes": "Seed curado em sc-gov-ead-seeds.json — confirmar gratuidade."
+  },
+  "course": {
+    "id": "sc-gov-sed-sc-ead",
+    "slug": "sc-gov-sed-sc-ead",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.sed.sc.gov.br/",
+    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "tags": [
+      "governo",
+      "sc",
+      "ead"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Secretaria de Estado da Educação de SC",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.sed.sc.gov.br/.",
+        "institution": "Governo de Santa Catarina / parceiros"
+      },
+      "es": {
+        "title": "Secretaria de Estado da Educação de SC",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.sed.sc.gov.br/.… (Información en portugués en el sitio oficial.)",
+        "institution": "Gobierno de Santa Catarina / socios"
+      }
+    }
+  }
+}
