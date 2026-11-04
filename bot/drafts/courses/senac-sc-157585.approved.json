@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-157585",
+    "createdAt": "2026-11-04",
+    "botRunId": "41863535463",
+    "sourceUrl": "https://portal.sc.senac.br/curso/157585/palhoca/logica-de-programacao",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-157585",
+    "slug": "senac-sc-157585",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/157585/palhoca/logica-de-programacao",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Lógica de Programação",
+        "summary": "Este curso tem como objetivo desenvolver a seguinte competência: desenvolver algoritmos estruturados em lógica de programação. É destinado a pessoas que desejam desenvolver lógica computacional.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Lógica de Programação",
+        "summary": "Este curso tem como objetivo desenvolver a seguinte competência: desenvolver algoritmos estruturados em lógica de programação. É destinado a pessoas que desejam desenvolver lógica … (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

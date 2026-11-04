@@ -604,5 +604,196 @@
     "enrollmentStatus": "coming_soon",
     "botRunId": "35123322086",
     "lastCheckedAt": "2026-09-17"
+  },
+  {
+    "id": "senac-sc-152572",
+    "slug": "senac-sc-152572",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/152572/palhoca/fundamentos-em-banco-de-dados-e-sql",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Fundamentos em Banco de Dados e SQL",
+        "summary": "Este curso tem como objetivo aprimorar a atuação profissional aprofundando os saberes científicos e técnicos sobre a linguagem SQL para efetuar consultar e gerenciar a base de dados interpolando informações e gerando relatórios pré-processados efetuando cálculos e agrupamentos de informações usando o gerenciador SQL. É",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Fundamentos em Banco de Dados e SQL",
+        "summary": "Este curso tem como objetivo aprimorar a atuação profissional aprofundando os saberes científicos e técnicos sobre a linguagem SQL para efetuar consultar e gerenciar a base de dado… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-11-04",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "41863535463",
+    "lastCheckedAt": "2026-11-04"
+  },
+  {
+    "id": "senac-sc-155377",
+    "slug": "senac-sc-155377",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/155377/palhoca/maturidade-digital",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Maturidade Digital",
+        "summary": "Este curso tem como objetivo desenvolver as seguintes competências: operacionalizar sistemas, softwares de edição de textos, apresentações eletrônicas e redes sociais e navegar na internet e redes sociais com segurança, utilizando de conceitos de Inteligência Artificial. É destinado a pessoas com mais de 50 anos que bu",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Maturidade Digital",
+        "summary": "Este curso tem como objetivo desenvolver as seguintes competências: operacionalizar sistemas, softwares de edição de textos, apresentações eletrônicas e redes sociais e navegar na … (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-11-04",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "41863535463",
+    "lastCheckedAt": "2026-11-04"
+  },
+  {
+    "id": "senac-sc-157585",
+    "slug": "senac-sc-157585",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/157585/palhoca/logica-de-programacao",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Lógica de Programação",
+        "summary": "Este curso tem como objetivo desenvolver a seguinte competência: desenvolver algoritmos estruturados em lógica de programação. É destinado a pessoas que desejam desenvolver lógica computacional.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Lógica de Programação",
+        "summary": "Este curso tem como objetivo desenvolver a seguinte competência: desenvolver algoritmos estruturados em lógica de programação. É destinado a pessoas que desejam desenvolver lógica … (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-11-04",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "41863535463",
+    "lastCheckedAt": "2026-11-04"
+  },
+  {
+    "id": "senac-sc-157688",
+    "slug": "senac-sc-157688",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/157688/palhoca/design-thinking",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Design Thinking",
+        "summary": "Este curso tem como objetivo dar subsídio aos profissionais para a promoção de soluções por meio da aplicação da metodologia do design thinking . É destinado a estudantes e profissionais de tecnologia da informação (TI), comunicação, administração, moda, economia criativa, desenvolvimento de produtos, arquitetura e mar",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Design Thinking",
+        "summary": "Este curso tem como objetivo dar subsídio aos profissionais para a promoção de soluções por meio da aplicação da metodologia do design thinking . É destinado a estudantes e profiss… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-11-04",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "41863535463",
+    "lastCheckedAt": "2026-11-04"
+  },
+  {
+    "id": "senac-sc-158495",
+    "slug": "senac-sc-158495",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/158495/palhoca/inteligencia-artificial-em-educacao-e-aprendizagem",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "informacao-e-comunicacao"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Inteligência Artificial em Educação e Aprendizagem",
+        "summary": "Este curso tem como objetivo aplicar conceitos e ferramentas de Inteligência Artificial (IA) para transformar processos educacionais, personalizar experiências de aprendizagem e criar soluções inovadoras de suporte educacional. É destinado a educadores, desenvolvedores de tecnologia educacional, gestores educacionais e",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Inteligência Artificial em Educação e Aprendizagem",
+        "summary": "Este curso tem como objetivo aplicar conceitos e ferramentas de Inteligência Artificial (IA) para transformar processos educacionais, personalizar experiências de aprendizagem e cr… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-11-04",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "41863535463",
+    "lastCheckedAt": "2026-11-04"
+  },
+  {
+    "id": "sc-gov-sed-sc-ead",
+    "slug": "sc-gov-sed-sc-ead",
+    "categorySlug": "educacao",
+    "format": "online",
+    "isFree": true,
+    "url": "https://www.sed.sc.gov.br/",
+    "sourceUrl": "https://www.sc.gov.br/servicos/acessar-cursos-de-educacao-a-distancia",
+    "tags": [
+      "governo",
+      "sc",
+      "ead"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Secretaria de Estado da Educação de SC",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.sed.sc.gov.br/.",
+        "institution": "Governo de Santa Catarina / parceiros"
+      },
+      "es": {
+        "title": "Secretaria de Estado da Educação de SC",
+        "summary": "Recurso oficial de educação a distância vinculado ao ecossistema Gov SC. Verifique cursos abertos e requisitos em https://www.sed.sc.gov.br/.… (Información en portugués en el sitio oficial.)",
+        "institution": "Gobierno de Santa Catarina / socios"
+      }
+    },
+    "status": "published",
+    "verifiedAt": "2026-11-04",
+    "enrollmentStatus": "coming_soon",
+    "botRunId": "41863535463",
+    "lastCheckedAt": "2026-11-04"
   }
 ]
