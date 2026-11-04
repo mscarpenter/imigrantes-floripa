@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-134712",
+    "createdAt": "2026-11-04",
+    "botRunId": "41898947002",
+    "sourceUrl": "https://portal.sc.senac.br/curso/134712/palhoca/calculos-e-seguranca-na-administracao-de-medicamentos",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-134712",
+    "slug": "senac-sc-134712",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/134712/palhoca/calculos-e-seguranca-na-administracao-de-medicamentos",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "ambiente-e-saude"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Cálculos e segurança na administração de medicamentos",
+        "summary": "Este curso tem como objetivo promover o desenvolvimento de habilidades relativas a técnicas e regras de preparação e administração de medicamentos. É destinado a estudantes e profissionais da área de Enfermagem.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Cálculos e segurança na administração de medicamentos",
+        "summary": "Este curso tem como objetivo promover o desenvolvimento de habilidades relativas a técnicas e regras de preparação e administração de medicamentos. É destinado a estudantes e profi… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

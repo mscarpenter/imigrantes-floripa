@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-135041",
+    "createdAt": "2026-11-04",
+    "botRunId": "41898947002",
+    "sourceUrl": "https://portal.sc.senac.br/curso/135041/florianopolis/salgadeiro",
+    "confidence": "high",
+    "notes": "Turma: RESTAURANTE ESCOLA SENAC. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-135041",
+    "slug": "senac-sc-135041",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/135041/florianopolis/salgadeiro",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Salgadeiro",
+        "summary": "Objetivo geral Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos ? Promover o desenvolvimento do aluno por meio de ações que articulem e mobilizem conhecimentos, habilidades, valores e atitudes de forma potencialmente criativa e que estim",
+        "institution": "SENAC SC — Florianópolis"
+      },
+      "es": {
+        "title": "Salgadeiro",
+        "summary": "Objetivo geral Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos ? Promover o desenvolvimento do a… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Florianópolis"
+      }
+    }
+  }
+}

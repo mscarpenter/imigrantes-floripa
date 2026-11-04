@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-152751",
+    "createdAt": "2026-11-04",
+    "botRunId": "41898947002",
+    "sourceUrl": "https://portal.sc.senac.br/curso/152751/palhoca/portugues-para-estrangeiros",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-152751",
+    "slug": "senac-sc-152751",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/152751/palhoca/portugues-para-estrangeiros",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "desenvolvimento-educacional-e-social"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Português para estrangeiros",
+        "summary": "Este curso tem como objetivo desenvolver competências comunicativas em Língua Portuguesa brasileira que permitam ao aluno estrangeiro interagir em diferentes contextos sociais, culturais e profissionais, compreendendo e produzindo enunciados orais e escritos adequados às situações do cotidiano, ao acesso a serviços e à",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Português para estrangeiros",
+        "summary": "Este curso tem como objetivo desenvolver competências comunicativas em Língua Portuguesa brasileira que permitam ao aluno estrangeiro interagir em diferentes contextos sociais, cul… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}
