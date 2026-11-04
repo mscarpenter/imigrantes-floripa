@@ -8,33 +8,7 @@
 
 ---
 
-## Issue #7 — Falhas nos Jobs Automatizados
 
-> **Título:** Bot: falhas recentes nos jobs automatizados
-> **Aberta por:** `github-actions[bot]` em 10/09/2026
-> **Origem:** Workflow `bot-monitor.yml` (roda diariamente às 06h BRT)
-
-### Falhas reportadas (últimos 8 dias)
-
-| Workflow | Run | Link |
-|----------|-----|------|
-| Bot — pesquisar cursos (#12) | 34376717083 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/34376717083) |
-| Bot — monitoria (#84) | 34357595848 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/34357595848) |
-| Bot — monitoria (#83) | 34231574407 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/34231574407) |
-| Bot — pesquisar e checar contatos (#12) | 34148601503 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/34148601503) |
-| Bot — monitoria (#82) | 34135318633 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/34135318633) |
-| Bot — monitoria (#81) | 34033823668 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/34033823668) |
-| Bot — monitoria (#80) | 33966107570 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/33966107570) |
-| Bot — monitoria (#79) | 33876929694 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/33876929694) |
-| Bot — monitoria (#78) | 33760525981 | [Actions](https://github.com/mscarpenter/imigrantes-floripa/actions/runs/33760525981) |
-
-> [!WARNING]
-> São 9 falhas consecutivas em 8 dias. Como o repo ficou parado 3 meses, é provável que:
-> - Os scrapers do bot estejam quebrando por mudanças nos sites-alvo (SENAC, SC Gov EAD, EV Bradesco)
-> - O workflow de monitoria (`bot-monitor.yml`) auto-reporta as falhas dos outros bots, criando um efeito cascata de issues
-> - Pode haver secrets/tokens expirados no GitHub Actions
-
----
 
 ## Stack Tecnológica
 
@@ -57,7 +31,7 @@
 
 ```
 imigrantes-floripa/
-├── .github/workflows/        # 5 workflows CI/CD + bot
+├── .github/workflows/        # 6 workflows CI/CD + bot
 ├── bot/                       # Sistema de automação (drafts, config, reports)
 ├── docs/                      # Design, conteúdo editorial, handoff
 ├── public/                    # Assets estáticos, ícones PWA, GeoJSON
@@ -214,15 +188,16 @@ O bot **nunca** escreve diretamente nos dados de produção. Ele gera:
 - `bot/config/trusted-domains.json` — Domínios oficiais
 - `bot/config/sc-gov-ead-seeds.json` — Seeds para cursos EAD do governo SC
 
-### 5 GitHub Workflows
+### 6 GitHub Workflows
 
 | Workflow | Trigger | O que faz |
 |----------|---------|-----------|
-| `ci.yml` | Push main / PRs | Lint + Testes |
+| `ci.yml` | Push main / PRs | Lint + Testes (Node 20 e 22) |
+| `codeql.yml` | Push main / PRs / Semanal | Varredura estática de segurança |
 | `bot-validate.yml` | PRs em `bot/**` | Valida drafts contra Zod |
 | `bot-contacts-weekly.yml` | Seg 09h BRT | Pesquisa contatos + checa links |
 | `bot-courses-weekly.yml` | Qua 09h BRT | Pesquisa cursos + cria PRs |
-| `bot-monitor.yml` | Diário 06h BRT | Monitora falhas → abre issue (#7) |
+| `bot-monitor.yml` | Diário 06h BRT | Monitora falhas → abre issue |
 
 ---
 
@@ -285,4 +260,3 @@ O bot **nunca** escreve diretamente nos dados de produção. Ele gera:
 5. **4 idiomas** — PT/ES completos, FR/EN com fallback
 6. **Mapas** — Leaflet com dados GeoJSON de saúde, educação, transporte
 7. **User flow bem pensado** — QR Code → Onboarding → Tutorial → Portal → Trilha
-8. **Issue #7 precisa de atenção** — 9 falhas consecutivas nos bots, provável causa: repo parado 3 meses causou drift nos scrapers vs sites-alvo
