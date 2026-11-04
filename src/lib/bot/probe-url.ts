@@ -7,8 +7,9 @@ export type ProbeResult =
   | { status: "dead"; error: string };
 
 /**
- * Verifica se uma URL responde. Sites gov.br costumam bloquear HEAD (403);
- * usamos GET e tratamos 403 em domínio oficial como "blocked", não morto.
+ * Verifica se uma URL responde. Sites gov.br costumam bloquear HEAD (403) ou
+ * rejeitar conexões de datacenters estrangeiros (GitHub Actions).
+ * Usamos GET e tratamos bloqueios e falhas de conexão em domínio oficial gov.br como "blocked", não morto.
  */
 export async function probeUrl(
   url: string,
@@ -16,6 +17,15 @@ export async function probeUrl(
 ): Promise<ProbeResult> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
+
+  let host = "";
+  try {
+    host = new URL(url).hostname;
+  } catch {
+    return { status: "dead", error: "Invalid URL" };
+  }
+
+  const isGov = host.endsWith(".gov.br");
 
   try {
     const res = await fetch(url, {
@@ -29,13 +39,21 @@ export async function probeUrl(
       return { status: "ok", httpStatus: res.status };
     }
 
-    const host = new URL(url).hostname;
-    if (res.status === 403 && host.endsWith(".gov.br")) {
+    if (
+      isGov &&
+      (res.status === 401 ||
+        res.status === 403 ||
+        res.status === 429 ||
+        res.status === 503)
+    ) {
       return { status: "blocked", httpStatus: res.status };
     }
 
     return { status: "dead", error: `HTTP ${res.status}` };
   } catch (err) {
+    if (isGov) {
+      return { status: "blocked", httpStatus: 0 };
+    }
     const message = err instanceof Error ? err.message : String(err);
     return { status: "dead", error: message };
   } finally {
