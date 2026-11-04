@@ -76,6 +76,14 @@ jobs:
             execSync(`git config user.email "github-actions[bot]@users.noreply.github.com"`);
             execSync(`git checkout -B ${branch}`);
             execSync(`git add bot/drafts/courses/*.pending.json`);
+            const hasDiff =
+              execSync(`git status --porcelain bot/drafts/courses/`)
+                .toString()
+                .trim().length > 0;
+            if (!hasDiff) {
+              core.info("Nenhuma alteração nova em rascunhos high para commitar.");
+              return;
+            }
             execSync(`git commit -m "bot(courses): rascunhos para revisão [skip ci]"`);
             execSync(`git push -f origin ${branch}`);
 
@@ -161,46 +169,17 @@ jobs:
               (buckets[c] ?? buckets.unset).push({ file, raw });
             }
 
-            const reportsDir = path.join(process.cwd(), "bot/reports");
-            const reportFiles = fs.existsSync(reportsDir)
-              ? fs
-                  .readdirSync(reportsDir)
-                  .filter((f) => f.startsWith("research-courses-") && f.endsWith(".json"))
-              : [];
-            const latestReport = reportFiles.sort().at(-1);
-            let stubNote = "";
-            if (latestReport) {
-              const data = JSON.parse(
-                fs.readFileSync(path.join(reportsDir, latestReport), "utf8"),
-              );
-              if (data.draftsGenerated === 0) {
-                stubNote =
-                  "\n> Pesquisa automática ainda em stub — 0 rascunhos gerados. Fontes listadas no relatório.\n";
-              }
-            }
-
             const needsIssue =
               buckets.medium.length > 0 ||
               buckets.low.length > 0 ||
-              buckets.unset.length > 0 ||
-              stubNote !== "";
+              buckets.unset.length > 0;
 
-            if (!needsIssue && buckets.high.length > 0) {
-              core.info("Só rascunhos high — PR já aberto.");
-              return;
-            }
-
-            if (
-              !needsIssue &&
-              pending.length === 0 &&
-              stubNote === ""
-            ) {
-              core.info("Nada a notificar.");
+            if (!needsIssue) {
+              core.info("Nenhum rascunho medium/low/unset pendente de revisão via Issue.");
               return;
             }
 
             let body = "Job semanal do bot de cursos.\n";
-            body += stubNote;
             body += `\n- Rascunhos **medium**: ${buckets.medium.length}\n`;
             body += `- Rascunhos **low**: ${buckets.low.length}\n`;
             body += `- Sem confidence: ${buckets.unset.length}\n\n`;

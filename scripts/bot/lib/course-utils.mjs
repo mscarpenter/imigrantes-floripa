@@ -38,16 +38,39 @@ export async function fetchText(url) {
   return res.text();
 }
 
-export async function probeOk(url) {
+export async function probeOk(url, timeoutMs = 15_000) {
+  let isGov = false;
+  try {
+    isGov = new URL(url).hostname.endsWith(".gov.br");
+  } catch {
+    return false;
+  }
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+
   try {
     const res = await fetch(url, {
       method: "GET",
       headers: { "User-Agent": UA },
       redirect: "follow",
+      signal: controller.signal,
     });
-    return res.ok;
-  } catch {
+    if (res.ok) return true;
+    if (
+      isGov &&
+      (res.status === 401 ||
+        res.status === 403 ||
+        res.status === 429 ||
+        res.status === 503)
+    ) {
+      return true;
+    }
     return false;
+  } catch {
+    return isGov;
+  } finally {
+    clearTimeout(timer);
   }
 }
 
@@ -97,12 +120,20 @@ export async function draftPath(draftId) {
 }
 
 export async function draftExists(draftId) {
-  try {
-    await access(await draftPath(draftId));
-    return true;
-  } catch {
-    return false;
+  const candidates = [
+    join(ROOT, "bot/drafts/courses", `${draftId}.pending.json`),
+    join(ROOT, "bot/drafts/courses", `${draftId}.approved.json`),
+    join(ROOT, "bot/drafts/courses", `${draftId}.rejected.json`),
+  ];
+  for (const p of candidates) {
+    try {
+      await access(p);
+      return true;
+    } catch {
+      /* continue */
+    }
   }
+  return false;
 }
 
 export async function writeDraft(draft) {

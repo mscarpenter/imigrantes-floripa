@@ -31,34 +31,48 @@ jobs:
               per_page: 50,
               created: `>=${since}`,
             });
-            const failed = runs.workflow_runs.filter(
-              (r) =>
-                botWorkflows.includes(r.name ?? "") &&
-                r.conclusion === "failure" &&
-                r.status === "completed",
+            const latestByWorkflow = new Map();
+            for (const r of runs.workflow_runs) {
+              if (!botWorkflows.includes(r.name ?? "") || r.status !== "completed") {
+                continue;
+              }
+              if (!latestByWorkflow.has(r.name)) {
+                latestByWorkflow.set(r.name, r);
+              }
+            }
+            const failed = [...latestByWorkflow.values()].filter(
+              (r) => r.conclusion === "failure",
             );
             if (failed.length === 0) {
-              core.info("Nenhuma falha recente nos workflows do bot.");
+              core.info("Nenhuma falha no último run de cada workflow do bot.");
               return;
             }
-            const lines = failed.map(
+            const { data: recentIssues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "all",
+              labels: "bot,monitor",
+              per_page: 20,
+            });
+            const unnotifiedFailed = failed.filter(
+              (r) => !recentIssues.some((i) => (i.body ?? "").includes(r.html_url)),
+            );
+            if (unnotifiedFailed.length === 0) {
+              core.info("Falhas atuais já foram reportadas em issue anterior — não duplicar.");
+              return;
+            }
+            const lines = unnotifiedFailed.map(
               (r) => `- ${r.name} (#${r.run_number}) — ${r.html_url}`,
             );
             const title = "Bot: falhas recentes nos jobs automatizados";
             const body = [
-              "Um ou mais workflows do bot falharam nos últimos 8 dias:",
+              "Um ou mais workflows do bot falharam em sua execução mais recente:",
               "",
               ...lines,
               "",
               "Revise os logs no GitHub Actions e corrija ou dispense conscientemente.",
             ].join("\n");
-            const { data: issues } = await github.rest.issues.listForRepo({
-              owner,
-              repo,
-              state: "open",
-              labels: "bot,monitor",
-            });
-            if (issues.some((i) => i.title === title)) {
+            if (recentIssues.some((i) => i.state === "open" && i.title === title)) {
               core.info("Issue de monitoria já aberta — não duplicar.");
               return;
             }
