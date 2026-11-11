@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-137614",
+    "createdAt": "2026-11-11",
+    "botRunId": "43087570679",
+    "sourceUrl": "https://portal.sc.senac.br/curso/137614/palhoca/assistente-de-logistica",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-137614",
+    "slug": "senac-sc-137614",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/137614/palhoca/assistente-de-logistica",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "gestao-e-negocios"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Assistente de Logística",
+        "summary": "Objetivo geral Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos Promover o desenvolvimento do aluno por meio de ações que articulem e mobilizem conhecimentos, habilidades, valores e atitudes de forma potencialmente criativa e que estimul",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Assistente de Logística",
+        "summary": "Objetivo geral Formar profissionais com competências para atuar e intervir em seu campo de trabalho, com foco em resultados. Objetivos específicos Promover o desenvolvimento do alu… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}
