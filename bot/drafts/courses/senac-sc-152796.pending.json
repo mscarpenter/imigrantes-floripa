@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-152796",
+    "createdAt": "2026-11-25",
+    "botRunId": "45705131947",
+    "sourceUrl": "https://portal.sc.senac.br/curso/152796/palhoca/oratoria-para-lideres",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-152796",
+    "slug": "senac-sc-152796",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/152796/palhoca/oratoria-para-lideres",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "producao-cultural-e-design"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Oratória para Líderes",
+        "summary": "Este curso tem como objetivo complementar a habilidade de comunicação por meio de técnicas de oratória. É destinado a profissionais que atuam em funções de liderança.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Oratória para Líderes",
+        "summary": "Este curso tem como objetivo complementar a habilidade de comunicação por meio de técnicas de oratória. É destinado a profissionais que atuam em funções de liderança.… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}
