@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-133767",
+    "createdAt": "2026-11-25",
+    "botRunId": "45705131947",
+    "sourceUrl": "https://portal.sc.senac.br/curso/133767/palhoca/tecnico-em-multimidia-integrado-ao-ensino-medio",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-133767",
+    "slug": "senac-sc-133767",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/133767/palhoca/tecnico-em-multimidia-integrado-ao-ensino-medio",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "producao-cultural-e-design"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Técnico em Multimídia Integrado ao Ensino Médio",
+        "summary": "Em construção...",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Técnico em Multimídia Integrado ao Ensino Médio",
+        "summary": "Em construção...… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}

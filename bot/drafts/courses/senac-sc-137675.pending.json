@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-137675",
+    "createdAt": "2026-11-25",
+    "botRunId": "45705131947",
+    "sourceUrl": "https://portal.sc.senac.br/curso/137675/florianopolis/elaboracao-de-drinques-e-coqueteis",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC FLORIANÓPOLIS. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-137675",
+    "slug": "senac-sc-137675",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/137675/florianopolis/elaboracao-de-drinques-e-coqueteis",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "turismo-hospitalidade-e-lazer"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Elaboração de Drinques e Coquetéis",
+        "summary": "Este curso tem como objetivo contribuir com os conhecimentos técnicos de elaboração de drinques e coquetéis. É destinado a profissionais que atuam no segmento de gastronomia, principalmente na operação de bares.",
+        "institution": "SENAC SC — Florianópolis"
+      },
+      "es": {
+        "title": "Elaboração de Drinques e Coquetéis",
+        "summary": "Este curso tem como objetivo contribuir com os conhecimentos técnicos de elaboração de drinques e coquetéis. É destinado a profissionais que atuam no segmento de gastronomia, princ… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Florianópolis"
+      }
+    }
+  }
+}

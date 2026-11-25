@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "draftId": "senac-sc-131554",
+    "createdAt": "2026-11-25",
+    "botRunId": "45705131947",
+    "sourceUrl": "https://portal.sc.senac.br/curso/131554/palhoca/primeiros-socorros",
+    "confidence": "high",
+    "notes": "Turma: FACULDADE SENAC PALHOÇA. Revisar requisitos CadÚnico/renda."
+  },
+  "course": {
+    "id": "senac-sc-131554",
+    "slug": "senac-sc-131554",
+    "categorySlug": "educacao",
+    "format": "presencial",
+    "isFree": true,
+    "url": "https://portal.sc.senac.br/curso/131554/palhoca/primeiros-socorros",
+    "sourceUrl": "https://portal.sc.senac.br/cursos-gratuitos",
+    "tags": [
+      "senac",
+      "gratuito",
+      "presencial",
+      "ambiente-e-saude"
+    ],
+    "translations": {
+      "pt": {
+        "title": "Primeiros socorros",
+        "summary": "Este curso objetiva desenvolver habilidades necessárias à prestação de primeiros socorros a vítimas de acidentes ou mal súbito até a chegada do atendimento especializado. É destinado ao público em geral.",
+        "institution": "SENAC SC — Palhoça"
+      },
+      "es": {
+        "title": "Primeiros socorros",
+        "summary": "Este curso objetiva desenvolver habilidades necessárias à prestação de primeiros socorros a vítimas de acidentes ou mal súbito até a chegada do atendimento especializado. É destina… (Información en portugués en el sitio oficial.)",
+        "institution": "SENAC SC — Palhoça"
+      }
+    }
+  }
+}
